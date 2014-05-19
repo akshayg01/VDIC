@@ -1,0 +1,83 @@
+<div class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	<!-- Search panel content -->
+	<div class="srchCritTop" style="display: none;">
+		Criteria:&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$all_checkbox}> {BEGIN all_checkbox_label}all{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$any_checkbox}> {BEGIN any_checkbox_label}any{END any_checkbox_label}
+	</div>
+	
+	<div class="addOption">
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideControlChooseMenu{$id}" class="runner-button" {$showHideCtrls_attrs}>Add field</a>
+		</span>
+		&nbsp;&nbsp;&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideSearchType{$id}" class="runner-button" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>
+		</span>
+	</div>
+	
+	<!-- choose controls div -->
+	<div class="runner-panel controlChooseMenu" {$controlChooseMenuDiv_attrs}>
+		{BEGIN addSearch_DevoteeId}
+			<a href="#" id="addSearchControl_DevoteeId" class="addSearchControl" {$addSearchControl_DevoteeId_attrs}>Devotee Id</a><br>
+		{END addSearch_DevoteeId}
+		{BEGIN addSearch_DonationDate}
+			<a href="#" id="addSearchControl_DonationDate" class="addSearchControl" {$addSearchControl_DonationDate_attrs}>Donation Date</a><br>
+		{END addSearch_DonationDate}
+		{BEGIN addSearch_DonationOnName}
+			<a href="#" id="addSearchControl_DonationOnName" class="addSearchControl" {$addSearchControl_DonationOnName_attrs}>Donation On Name</a><br>
+		{END addSearch_DonationOnName}
+		{BEGIN addSearch_DonationOnNamePanNumber}
+			<a href="#" id="addSearchControl_DonationOnNamePanNumber" class="addSearchControl" {$addSearchControl_DonationOnNamePanNumber_attrs}>Donation On Name Pan Number</a><br>
+		{END addSearch_DonationOnNamePanNumber}
+		{BEGIN addSearch_DonationPurposeId}
+			<a href="#" id="addSearchControl_DonationPurposeId" class="addSearchControl" {$addSearchControl_DonationPurposeId_attrs}>Donation Purpose Id</a><br>
+		{END addSearch_DonationPurposeId}
+		{BEGIN addSearch_Amount}
+			<a href="#" id="addSearchControl_Amount" class="addSearchControl" {$addSearchControl_Amount_attrs}>Amount</a><br>
+		{END addSearch_Amount}
+		{BEGIN addSearch_ReceiptNumber}
+			<a href="#" id="addSearchControl_ReceiptNumber" class="addSearchControl" {$addSearchControl_ReceiptNumber_attrs}>Receipt Number</a><br>
+		{END addSearch_ReceiptNumber}
+		{BEGIN addSearch_DonationMode}
+			<a href="#" id="addSearchControl_DonationMode" class="addSearchControl" {$addSearchControl_DonationMode_attrs}>Donation Mode</a><br>
+		{END addSearch_DonationMode}
+		{BEGIN addSearch_CheckNumber}
+			<a href="#" id="addSearchControl_CheckNumber" class="addSearchControl" {$addSearchControl_CheckNumber_attrs}>Check Number</a><br>
+		{END addSearch_CheckNumber}
+		{BEGIN addSearch_CheckBank}
+			<a href="#" id="addSearchControl_CheckBank" class="addSearchControl" {$addSearchControl_CheckBank_attrs}>Check Bank</a><br>
+		{END addSearch_CheckBank}
+		{BEGIN addSearch_CheckBranch}
+			<a href="#" id="addSearchControl_CheckBranch" class="addSearchControl" {$addSearchControl_CheckBranch_attrs}>Check Branch</a><br>
+		{END addSearch_CheckBranch}
+		{BEGIN addSearch_CheckCleared}
+			<a href="#" id="addSearchControl_CheckCleared" class="addSearchControl" {$addSearchControl_CheckCleared_attrs}>Check Cleared</a><br>
+		{END addSearch_CheckCleared}
+		{BEGIN addSearch_CheckClearedDate}
+			<a href="#" id="addSearchControl_CheckClearedDate" class="addSearchControl" {$addSearchControl_CheckClearedDate_attrs}>Check Cleared Date</a><br>
+		{END addSearch_CheckClearedDate}
+	</div>
+	
+	<div class="controlsBlock">
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow" {$filterRow_attrs}>
+			<div class="srchPanelCell">{$delCtrlButt}&nbsp;{$fLabel}:&nbsp;</div>
+			<div class="srchPanelCell srchPanelCell2">{$searchtype} {$searchcontrol} {$searchcontrol1}</div>
+		</div>
+		{END searchCtrlBlock}
+	</div>
+		
+	<div class="bottomSearchButt" align="left" {$bottomSearchButt_attrs}>
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$searchbutton_attrs}>Search</a>
+		</span>
+	</div>
+</div>

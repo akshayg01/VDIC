@@ -1,0 +1,98 @@
+<div class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	<!-- Search panel content -->
+	<div class="srchCritTop" style="display: none;">
+		Criteria:&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$all_checkbox}> {BEGIN all_checkbox_label}all{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$any_checkbox}> {BEGIN any_checkbox_label}any{END any_checkbox_label}
+	</div>
+	
+	<div class="addOption">
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideControlChooseMenu{$id}" class="runner-button" {$showHideCtrls_attrs}>Add field</a>
+		</span>
+		&nbsp;&nbsp;&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideSearchType{$id}" class="runner-button" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>
+		</span>
+	</div>
+	
+	<!-- choose controls div -->
+	<div class="runner-panel controlChooseMenu" {$controlChooseMenuDiv_attrs}>
+		{BEGIN addSearch_DevoteeId}
+			<a href="#" id="addSearchControl_DevoteeId" class="addSearchControl" {$addSearchControl_DevoteeId_attrs}>Devotee Id</a><br>
+		{END addSearch_DevoteeId}
+		{BEGIN addSearch_TitleId}
+			<a href="#" id="addSearchControl_TitleId" class="addSearchControl" {$addSearchControl_TitleId_attrs}>Title Id</a><br>
+		{END addSearch_TitleId}
+		{BEGIN addSearch_FirstName}
+			<a href="#" id="addSearchControl_FirstName" class="addSearchControl" {$addSearchControl_FirstName_attrs}>First Name</a><br>
+		{END addSearch_FirstName}
+		{BEGIN addSearch_LastName}
+			<a href="#" id="addSearchControl_LastName" class="addSearchControl" {$addSearchControl_LastName_attrs}>Last Name</a><br>
+		{END addSearch_LastName}
+		{BEGIN addSearch_MiddleName}
+			<a href="#" id="addSearchControl_MiddleName" class="addSearchControl" {$addSearchControl_MiddleName_attrs}>Middle Name</a><br>
+		{END addSearch_MiddleName}
+		{BEGIN addSearch_Gender}
+			<a href="#" id="addSearchControl_Gender" class="addSearchControl" {$addSearchControl_Gender_attrs}>Gender</a><br>
+		{END addSearch_Gender}
+		{BEGIN addSearch_DateOfBirth}
+			<a href="#" id="addSearchControl_DateOfBirth" class="addSearchControl" {$addSearchControl_DateOfBirth_attrs}>Date Of Birth</a><br>
+		{END addSearch_DateOfBirth}
+		{BEGIN addSearch_MaritalStatusId}
+			<a href="#" id="addSearchControl_MaritalStatusId" class="addSearchControl" {$addSearchControl_MaritalStatusId_attrs}>Marital Status Id</a><br>
+		{END addSearch_MaritalStatusId}
+		{BEGIN addSearch_DateofMarriage}
+			<a href="#" id="addSearchControl_DateofMarriage" class="addSearchControl" {$addSearchControl_DateofMarriage_attrs}>Dateof Marriage</a><br>
+		{END addSearch_DateofMarriage}
+		{BEGIN addSearch_SpouseDevoteeId}
+			<a href="#" id="addSearchControl_SpouseDevoteeId" class="addSearchControl" {$addSearchControl_SpouseDevoteeId_attrs}>Spouse Devotee Id</a><br>
+		{END addSearch_SpouseDevoteeId}
+		{BEGIN addSearch_MobilePhone}
+			<a href="#" id="addSearchControl_MobilePhone" class="addSearchControl" {$addSearchControl_MobilePhone_attrs}>Mobile Phone</a><br>
+		{END addSearch_MobilePhone}
+		{BEGIN addSearch_WorkPhone}
+			<a href="#" id="addSearchControl_WorkPhone" class="addSearchControl" {$addSearchControl_WorkPhone_attrs}>Work Phone</a><br>
+		{END addSearch_WorkPhone}
+		{BEGIN addSearch_EmailPrimary}
+			<a href="#" id="addSearchControl_EmailPrimary" class="addSearchControl" {$addSearchControl_EmailPrimary_attrs}>Email Primary</a><br>
+		{END addSearch_EmailPrimary}
+		{BEGIN addSearch_EmailSecondary}
+			<a href="#" id="addSearchControl_EmailSecondary" class="addSearchControl" {$addSearchControl_EmailSecondary_attrs}>Email Secondary</a><br>
+		{END addSearch_EmailSecondary}
+		{BEGIN addSearch_CounsellorDevoteeID}
+			<a href="#" id="addSearchControl_CounsellorDevoteeID" class="addSearchControl" {$addSearchControl_CounsellorDevoteeID_attrs}>Counsellor Devotee ID</a><br>
+		{END addSearch_CounsellorDevoteeID}
+		{BEGIN addSearch_IsCounsellor}
+			<a href="#" id="addSearchControl_IsCounsellor" class="addSearchControl" {$addSearchControl_IsCounsellor_attrs}>Is Counsellor</a><br>
+		{END addSearch_IsCounsellor}
+		{BEGIN addSearch_DevoteeId1}
+			<a href="#" id="addSearchControl_DevoteeId1" class="addSearchControl" {$addSearchControl_DevoteeId1_attrs}>Devotee Id1</a><br>
+		{END addSearch_DevoteeId1}
+		{BEGIN addSearch_DateOfHarinamInitiation}
+			<a href="#" id="addSearchControl_DateOfHarinamInitiation" class="addSearchControl" {$addSearchControl_DateOfHarinamInitiation_attrs}>Date Of Harinam Initiation</a><br>
+		{END addSearch_DateOfHarinamInitiation}
+	</div>
+	
+	<div class="controlsBlock">
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow" {$filterRow_attrs}>
+			<div class="srchPanelCell">{$delCtrlButt}&nbsp;{$fLabel}:&nbsp;</div>
+			<div class="srchPanelCell srchPanelCell2">{$searchtype} {$searchcontrol} {$searchcontrol1}</div>
+		</div>
+		{END searchCtrlBlock}
+	</div>
+		
+	<div class="bottomSearchButt" align="left" {$bottomSearchButt_attrs}>
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$searchbutton_attrs}>Search</a>
+		</span>
+	</div>
+</div>

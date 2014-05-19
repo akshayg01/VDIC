@@ -1,0 +1,516 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+
+
+{BEGIN container_view}
+<table class="runner-c runner-c-view" cellpadding="0" align=center>
+
+
+<tr class="runner-toprow style2 header"><td class="runner-cl"><img src="images/spacer.gif"></td><td class="runner-cc" ><div  class="runner-b-viewheader {$brickclass_viewheader}">Vw Counsellee, View record [
+Devotee Id: {$show_key1}
+]</div></td><td class="runner-cr"><img src="images/spacer.gif"></td></tr>
+
+
+
+<tr  class="runner-row style1 runner-b-wrapper {$wrapperclass_fields}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents runner-wrapper" >
+
+{BEGIN container_fields}
+<table class="runner-c runner-c-fields" cellpadding="0" >
+
+
+	{BEGIN DevoteeExtraInfoId_fieldblock}
+	<tr class="runner-toprow header style1 runner-b-viewfields"><td class="runner-cl"><img src="images/spacer.gif"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_DevoteeExtraInfoId {$fielddispclass_DevoteeExtraInfoId}">
+			<b>Devotee Extra Info Id</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_DevoteeExtraInfoId {$fielddispclass_DevoteeExtraInfoId}">
+			{$DevoteeExtraInfoId_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"><img src="images/spacer.gif"></td></tr>
+{END DevoteeExtraInfoId_fieldblock}
+	{BEGIN DevoteeId1_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_DevoteeId1 {$fielddispclass_DevoteeId1}">
+			<b>Devotee Id1</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_DevoteeId1 {$fielddispclass_DevoteeId1}">
+			{$DevoteeId1_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END DevoteeId1_fieldblock}
+	{BEGIN NativeCity_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_NativeCity {$fielddispclass_NativeCity}">
+			<b>Native City</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_NativeCity {$fielddispclass_NativeCity}">
+			{$NativeCity_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END NativeCity_fieldblock}
+	{BEGIN NativeState_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_NativeState {$fielddispclass_NativeState}">
+			<b>Native State</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_NativeState {$fielddispclass_NativeState}">
+			{$NativeState_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END NativeState_fieldblock}
+	{BEGIN BloodGroup_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_BloodGroup {$fielddispclass_BloodGroup}">
+			<b>Blood Group</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_BloodGroup {$fielddispclass_BloodGroup}">
+			{$BloodGroup_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END BloodGroup_fieldblock}
+	{BEGIN FatherName_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_FatherName {$fielddispclass_FatherName}">
+			<b>Father Name</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_FatherName {$fielddispclass_FatherName}">
+			{$FatherName_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END FatherName_fieldblock}
+	{BEGIN MotherName_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_MotherName {$fielddispclass_MotherName}">
+			<b>Mother Name</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_MotherName {$fielddispclass_MotherName}">
+			{$MotherName_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END MotherName_fieldblock}
+	{BEGIN DevoteeLanguageId_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_DevoteeLanguageId {$fielddispclass_DevoteeLanguageId}">
+			<b>Devotee Language Id</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_DevoteeLanguageId {$fielddispclass_DevoteeLanguageId}">
+			{$DevoteeLanguageId_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END DevoteeLanguageId_fieldblock}
+	{BEGIN DevoteeId2_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_DevoteeId2 {$fielddispclass_DevoteeId2}">
+			<b>Devotee Id2</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_DevoteeId2 {$fielddispclass_DevoteeId2}">
+			{$DevoteeId2_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END DevoteeId2_fieldblock}
+	{BEGIN SpeakingLevel_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_SpeakingLevel {$fielddispclass_SpeakingLevel}">
+			<b>Speaking Level</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_SpeakingLevel {$fielddispclass_SpeakingLevel}">
+			{$SpeakingLevel_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END SpeakingLevel_fieldblock}
+	{BEGIN ReadingLevel_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_ReadingLevel {$fielddispclass_ReadingLevel}">
+			<b>Reading Level</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_ReadingLevel {$fielddispclass_ReadingLevel}">
+			{$ReadingLevel_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END ReadingLevel_fieldblock}
+	{BEGIN WritingLevel_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_WritingLevel {$fielddispclass_WritingLevel}">
+			<b>Writing Level</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_WritingLevel {$fielddispclass_WritingLevel}">
+			{$WritingLevel_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END WritingLevel_fieldblock}
+	{BEGIN LanguageId_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_LanguageId {$fielddispclass_LanguageId}">
+			<b>Language Id</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_LanguageId {$fielddispclass_LanguageId}">
+			{$LanguageId_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END LanguageId_fieldblock}
+	{BEGIN TitleId_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_TitleId {$fielddispclass_TitleId}">
+			<b>Title Id</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_TitleId {$fielddispclass_TitleId}">
+			{$TitleId_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END TitleId_fieldblock}
+	{BEGIN Photo_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_Photo {$fielddispclass_Photo}">
+			<b>Photo</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_Photo {$fielddispclass_Photo}">
+			{$Photo_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END Photo_fieldblock}
+	{BEGIN FirstName_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_FirstName {$fielddispclass_FirstName}">
+			<b>First Name</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_FirstName {$fielddispclass_FirstName}">
+			{$FirstName_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END FirstName_fieldblock}
+	{BEGIN LastName_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_LastName {$fielddispclass_LastName}">
+			<b>Last Name</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_LastName {$fielddispclass_LastName}">
+			{$LastName_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END LastName_fieldblock}
+	{BEGIN MiddleName_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_MiddleName {$fielddispclass_MiddleName}">
+			<b>Middle Name</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_MiddleName {$fielddispclass_MiddleName}">
+			{$MiddleName_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END MiddleName_fieldblock}
+	{BEGIN Gender_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_Gender {$fielddispclass_Gender}">
+			<b>Gender</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_Gender {$fielddispclass_Gender}">
+			{$Gender_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END Gender_fieldblock}
+	{BEGIN DateOfBirth_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_DateOfBirth {$fielddispclass_DateOfBirth}">
+			<b>Date Of Birth</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_DateOfBirth {$fielddispclass_DateOfBirth}">
+			{$DateOfBirth_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END DateOfBirth_fieldblock}
+	{BEGIN MaritalStatusId_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_MaritalStatusId {$fielddispclass_MaritalStatusId}">
+			<b>Marital Status Id</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_MaritalStatusId {$fielddispclass_MaritalStatusId}">
+			{$MaritalStatusId_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END MaritalStatusId_fieldblock}
+	{BEGIN DateofMarriage_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_DateofMarriage {$fielddispclass_DateofMarriage}">
+			<b>Dateof Marriage</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_DateofMarriage {$fielddispclass_DateofMarriage}">
+			{$DateofMarriage_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END DateofMarriage_fieldblock}
+	{BEGIN SpouseDevoteeId_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_SpouseDevoteeId {$fielddispclass_SpouseDevoteeId}">
+			<b>Spouse Devotee Id</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_SpouseDevoteeId {$fielddispclass_SpouseDevoteeId}">
+			{$SpouseDevoteeId_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END SpouseDevoteeId_fieldblock}
+	{BEGIN MobilePhone_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_MobilePhone {$fielddispclass_MobilePhone}">
+			<b>Mobile Phone</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_MobilePhone {$fielddispclass_MobilePhone}">
+			{$MobilePhone_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END MobilePhone_fieldblock}
+	{BEGIN WorkPhone_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_WorkPhone {$fielddispclass_WorkPhone}">
+			<b>Work Phone</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_WorkPhone {$fielddispclass_WorkPhone}">
+			{$WorkPhone_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END WorkPhone_fieldblock}
+	{BEGIN EmailPrimary_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_EmailPrimary {$fielddispclass_EmailPrimary}">
+			<b>Email Primary</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_EmailPrimary {$fielddispclass_EmailPrimary}">
+			{$EmailPrimary_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END EmailPrimary_fieldblock}
+	{BEGIN EmailSecondary_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_EmailSecondary {$fielddispclass_EmailSecondary}">
+			<b>Email Secondary</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_EmailSecondary {$fielddispclass_EmailSecondary}">
+			{$EmailSecondary_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END EmailSecondary_fieldblock}
+	{BEGIN CounsellorDevoteeID_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_CounsellorDevoteeID {$fielddispclass_CounsellorDevoteeID}">
+			<b>Counsellor Devotee ID</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_CounsellorDevoteeID {$fielddispclass_CounsellorDevoteeID}">
+			{$CounsellorDevoteeID_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END CounsellorDevoteeID_fieldblock}
+
+
+
+
+<tr  class="runner-row style2 runner-b-viewbuttons {$brickclass_viewbuttons}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" colspan=2>{BEGIN prev_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$prevbutton_attrs}>&lt;&lt;&lt;</a>
+</span>
+{END prev_button}
+{BEGIN back_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$backbutton_attrs}>Back to list</a>
+</span>
+{END back_button}
+{BEGIN next_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$nextbutton_attrs}>&gt;&gt;&gt;</a>
+</span>
+{END next_button}
+</td><td class="runner-cr"></td></tr>
+
+
+<tr class="{$cfooterclass_fields}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_fields}
+
+</td><td class="runner-cr"></td></tr>
+
+
+<tr class="{$cfooterclass_view}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_view}
+
+
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

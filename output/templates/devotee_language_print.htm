@@ -1,0 +1,217 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+{BEGIN container_master}
+<table class="runner-c runner-c-master" cellpadding="0" >
+<tr class="{$cheaderclass_master}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN mastertable_block}
+<td  class="runner-cc runner-bl runner-b-masterinfoprint" {$brickclass_masterinfoprint}><span>{$showmasterfile}
+</span></td>
+{END mastertable_block}
+
+<td class="runner-cc filler"></td>
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_master}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_master}
+
+
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+{BEGIN page}
+<h1>Devotee Language</h1>
+<span>
+{BEGIN page_number}
+Page {$pageno} of {$maxpages} 
+{END page_number}
+</span>
+
+	<div class="runner-s-grid">	
+	<table class="runner-c runner-c-grid" cellpadding="0">
+		<thead>
+		{BEGIN grid_header}
+		<tr class="runner-toprow style1">
+			<td class="runner-cl"><img src="images/spacer.gif"></td>
+			{BEGIN record_header}
+					{BEGIN LanguageId_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN LanguageId_fieldheader}
+	<b>Language</b>
+	{END LanguageId_fieldheader}
+</th>
+{END LanguageId_fieldheadercolumn}
+	{BEGIN SpeakingLevel_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN SpeakingLevel_fieldheader}
+	<b>Speaking Level</b>
+	{END SpeakingLevel_fieldheader}
+</th>
+{END SpeakingLevel_fieldheadercolumn}
+	{BEGIN ReadingLevel_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN ReadingLevel_fieldheader}
+	<b>Reading Level</b>
+	{END ReadingLevel_fieldheader}
+</th>
+{END ReadingLevel_fieldheadercolumn}
+	{BEGIN WritingLevel_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN WritingLevel_fieldheader}
+	<b>Writing Level</b>
+	{END WritingLevel_fieldheader}
+</th>
+{END WritingLevel_fieldheadercolumn}
+		
+			{END record_header}
+			<td class="runner-cr"><img src="images/spacer.gif"></td>
+			{BEGIN endrecordheader_block}
+			<td class="runner-cs">&nbsp;</td>
+			{END endrecordheader_block}
+		</tr>
+	{END grid_header}
+		</thead>
+		<tbody>	
+		{BEGIN grid_row}
+	<tr class="runner-row style1" {$rowattrs} {$rowstyle} {$rowstyle}>
+		<td class="runner-cl"></td>
+		{BEGIN grid_record}
+				{BEGIN LanguageId_fieldcolumn}
+<td  class="runner-cc {$LanguageId_class}" {$LanguageId_style}>
+	{$LanguageId_value}
+</td>
+{END LanguageId_fieldcolumn}
+	{BEGIN SpeakingLevel_fieldcolumn}
+<td  class="runner-cc {$SpeakingLevel_class}" {$SpeakingLevel_style}>
+	{$SpeakingLevel_value}
+</td>
+{END SpeakingLevel_fieldcolumn}
+	{BEGIN ReadingLevel_fieldcolumn}
+<td  class="runner-cc {$ReadingLevel_class}" {$ReadingLevel_style}>
+	{$ReadingLevel_value}
+</td>
+{END ReadingLevel_fieldcolumn}
+	{BEGIN WritingLevel_fieldcolumn}
+<td  class="runner-cc {$WritingLevel_class}" {$WritingLevel_style}>
+	{$WritingLevel_value}
+</td>
+{END WritingLevel_fieldcolumn}
+
+		{END grid_record}
+		<td class="runner-cr"></td>
+		{BEGIN endrecord_block}
+		<td class="runner-cs">&nbsp;</td>
+		{END endrecord_block}
+	</tr>
+{END grid_row}
+										
+								<tr class="runner-bottomrow style1">
+									<td class="runner-cl"><img src="images/spacer.gif"></td>
+									{BEGIN record_footer}
+									{BEGIN LanguageId_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END LanguageId_fieldfootercolumn}
+{BEGIN SpeakingLevel_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END SpeakingLevel_fieldfootercolumn}
+{BEGIN ReadingLevel_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END ReadingLevel_fieldfootercolumn}
+{BEGIN WritingLevel_fieldfootercolumn}
+<td class="runner-cc runner-clast"></td>
+{END WritingLevel_fieldfootercolumn}
+
+									{END record_footer}
+									<td class="runner-cr"><img src="images/spacer.gif"></td>
+									{BEGIN endrecordtotals_block}
+									<td class="runner-cs"></td>
+									{END endrecordtotals_block}
+								</tr>
+
+		</tbody>
+	</table>
+</div>	
+{END page}
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,1911 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+
+
+{BEGIN container_toplinks}
+<table class="runner-c runner-c-toplinks" cellpadding="0" >
+<tr class="{$cheaderclass_toplinks}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+<td class="runner-cc filler"></td>
+{BEGIN prints_block}
+<td  class="runner-cc runner-br runner-b-toplinks_print" {$brickclass_toplinks_print}><span>{BEGIN print_link}
+	<span class="runner-btnframe">
+	<span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a href="#" class="runner-button" {$printlink_attrs}>Print this page</a>
+	</span>
+{END print_link}
+
+{BEGIN printall_link}
+	<span class="runner-btnframe">
+	<span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a href="#" class="runner-button" {$printalllink_attrs}>Print all pages</a>
+	</span>
+{END printall_link}
+
+
+
+
+</span></td>
+{END prints_block}
+
+
+{BEGIN asearch_link}
+<td  class="runner-cc runner-br runner-b-toplinks_advsearch" {$brickclass_toplinks_advsearch}><span>	<span class="runner-btnframe">
+	<span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a href="#" class="runner-button" {$advsearchlink_attrs}>Advanced search</a>
+	</span>
+</span></td>
+{END asearch_link}
+
+
+{BEGIN import_link}
+<td  class="runner-cc runner-br runner-b-toplinks_import" {$brickclass_toplinks_import}><span>	<span class="runner-btnframe">
+	<span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a href="vw_Devotee_full_import.php?{$crosstable_attrs}" class="runner-button" {$importlink_attrs}>Import</a>
+	</span>
+</span></td>
+{END import_link}
+
+
+{BEGIN export_link}
+<td  class="runner-cc runner-br runner-b-toplinks_export" {$brickclass_toplinks_export}><span>	<span class="runner-btnframe">
+	<span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a target="_blank" href="vw_Devotee_full_export.php" class="runner-button" {$exportlink_attrs}>Export results</a>
+	</span>
+</span></td>
+{END export_link}
+
+
+
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_toplinks}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_toplinks}
+
+
+
+{BEGIN container_search}
+<table class="runner-c runner-c-search" cellpadding="0" >
+<tr class="{$cheaderclass_search}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN searchform_block}
+<td  class="runner-cc runner-bl runner-b-search" {$brickclass_search}><span>	<span>
+		{$simpleSearchFieldCombo}
+		{$simpleSearchTypeCombo}
+		{BEGIN searchform_text}
+		<input type="text" {$searchfor_attrs} size="25">
+		{END searchform_text}
+		&nbsp;
+		{BEGIN searchform_search}
+		<span class="runner-btnframe">
+			<span class="runner-btnleft"></span>
+			<span class="runner-btnright"></span>
+			<a href="#" class="runner-button-img" {$searchbutton_attrs}><img src="images/search/search.gif"></a>
+		</span>
+		{END searchform_search}
+		&nbsp;
+		{BEGIN searchform_showall}
+		
+		<span class="runner-btnframe" {$showAllCont_attrs}>
+			<span class="runner-btnleft"></span>
+			<span class="runner-btnright"></span>
+			<a href="#" class="runner-button" {$showallbutton_attrs}>Show all</a>
+		</span>
+		{END searchform_showall}
+	</span>
+</span></td>
+{END searchform_block}
+
+
+{BEGIN searchformbuttons_block}
+<td  class="runner-cc runner-bl runner-b-search_buttons" {$brickclass_search_buttons}><span>	{BEGIN searchPanelTopButtons}
+	<span>
+		&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button-img" id="showSrchWin{$id}" {$showHideSearchWin_attrs}><img src="images/search/showWindowPin.gif"></a>
+		</span>
+		&nbsp;		
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button-img" id="showOptPanel{$id}" {$showHideSearchPanel_attrs}><img src="images/search/showOptions.gif"></a>
+		</span>
+	</span>
+	{END searchPanelTopButtons}
+</span></td>
+{END searchformbuttons_block}
+
+<td class="runner-cc filler"></td>
+{BEGIN details_block}
+<td  class="runner-cc runner-br runner-b-details_found" {$brickclass_details_found}><span>	<span {$details_attrs}>
+		Details found: <b><span class="runner-details_found_count">{$records_found}</span></b>
+	</span>
+</span></td>
+{END details_block}
+
+
+{BEGIN pages_block}
+<td  class="runner-cc runner-br runner-b-page_of" {$brickclass_page_of}><span>	<span {$pages_attrs}>
+		Page <b>{$page}</b> of <b>{$maxpages}</b>
+	</span>
+
+</span></td>
+{END pages_block}
+
+
+{BEGIN recordspp_block}
+<td  class="runner-cc runner-br runner-b-recsperpage" {$brickclass_recsperpage}><span>	<span id="recordspp_block{$id}" name="recordspp_block{$id}">
+			Records Per Page:&nbsp;{$recsPerPage}
+	</span>	
+</span></td>
+{END recordspp_block}
+
+
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_search}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_search}
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+
+
+
+{BEGIN container_logg}
+<table class="runner-c runner-c-logg" cellpadding="0" >
+<tr class="{$cheaderclass_logg}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+
+{BEGIN security_block}
+<tr  class="runner-row style1 runner-b-loggedas {$brickclass_loggedas}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" ><div id="login_block{$id}">
+	{BEGIN loggedas_message}
+	<span>Logged on as&nbsp;<b>{$username}</b><br><br>
+	</span>
+	{END loggedas_message}
+	{BEGIN guestloginbutton}
+	<span class="runner-btnframe">
+	<span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a href="#" class="runner-button" {$guestloginlink_attrs}>Login</a>
+	</span>
+	{END guestloginbutton}
+	{BEGIN logoutbutton}
+	<span class="runner-btnframe">
+	<span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a class="runner-button" href="login.php?a=logout" {$logoutlink_attrs}>Log out</a>
+	</span>
+	{END logoutbutton}
+<!-- Permissions -->
+   {BEGIN adminarea_link}
+<div>
+	<span class="runner-btnframe">
+	<span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a class="runner-button" href="admin_rights_list.php" {$adminarealink_attrs}>Admin Area</a>
+	</span>
+</div>
+  {END adminarea_link}
+{BEGIN changepwd_link}
+<div>
+	<span class="runner-btnframe">
+	<span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a class="runner-button" href="changepwd.php" {$changepwdlink_attrs}>Change password</a>
+	</span>
+</div>
+{END changepwd_link}
+</div>
+</td><td class="runner-cr"></td></tr>{END security_block}
+
+
+<tr class="{$cfooterclass_logg}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_logg}
+
+
+
+{BEGIN container_left}
+<table class="runner-c runner-c-left" cellpadding="0" >
+<tr class="{$cheaderclass_left}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+
+{BEGIN searchPanel}
+<tr  class="runner-row style1 runner-b-searchpanel {$brickclass_searchpanel}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" ><div class="searchPanelContainer">
+{$adv_search_panel}
+</div></td><td class="runner-cr"></td></tr>{END searchPanel}
+
+
+{BEGIN menu_block}
+{$mainmenu}
+{END menu_block}
+
+
+<tr class="{$cfooterclass_left}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_left}
+
+
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+
+{BEGIN container_recordcontrols}
+<table class="runner-c runner-c-recordcontrols" cellpadding="0" >
+<tr class="{$cheaderclass_recordcontrols}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN newrecord_controls_block}
+<td  class="runner-cc runner-bl runner-b-recordcontrols_new" {$brickclass_recordcontrols_new}><span>		{BEGIN add_link}
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$addlink_attrs}>Add new</a>
+		</span>
+	{END add_link}
+
+	
+
+</span></td>
+{END newrecord_controls_block}
+
+
+{BEGIN record_controls_block}
+<td  class="runner-cc runner-bl runner-b-recordcontrol" {$brickclass_recordcontrol}><span>	
+	
+	
+		{BEGIN exportselected_link}
+		<span class="runner-btnframe" {$exportselectedlink_span}>
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$exportselectedlink_attrs}>Export selected</a>
+		</span>
+	{END exportselected_link}
+
+		{BEGIN printselected_link}
+		<span class="runner-btnframe" {$printselectedlink_span}>
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$printselectedlink_attrs}>Print selected</a>
+		</span>
+	{END printselected_link}
+
+</span></td>
+{END record_controls_block}
+
+<td class="runner-cc filler"></td>
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_recordcontrols}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_recordcontrols}
+
+
+
+{BEGIN container_message}
+<table class="runner-c runner-c-message" cellpadding="0" >
+<tr class="{$cheaderclass_message}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN message_block}
+<td  class="runner-cc runner-bc runner-b-message" {$brickclass_message}><span><div class="runner-message">{$message}</div></span></td>
+{END message_block}
+
+
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_message}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_message}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+						<table class="runner-c runner-c-grid runner-b-grid" cellpadding="0" >
+						<thead>
+															{BEGIN grid_header}
+								<tr class="runner-toprow style1 {$gridHeader_class}" >
+									{BEGIN record_header}
+									<th class="runner-cl"><img src="images/spacer.gif"></th>
+																		{BEGIN listIcons_column}
+									<th class="runner-cc" iEditCont="all">&nbsp;</th>
+									{END listIcons_column}	
+
+																		{BEGIN checkbox_column}
+									<th class="runner-cc runner-bc">
+										<input type="checkbox" {$checkboxheader_attrs}>
+									</th>
+									{END checkbox_column}
+
+																										{BEGIN DevoteeId_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN DevoteeId_fieldheader}
+																				<a {$DevoteeId_orderlinkattrs}>
+											Devotee Id
+										</a>
+									{END DevoteeId_fieldheader}
+									</th>
+									{END DevoteeId_fieldheadercolumn}
+
+																	{BEGIN Photo_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN Photo_fieldheader}
+																				Photo
+									{END Photo_fieldheader}
+									</th>
+									{END Photo_fieldheadercolumn}
+
+																	{BEGIN Gender_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN Gender_fieldheader}
+																				<a {$Gender_orderlinkattrs}>
+											Gender
+										</a>
+									{END Gender_fieldheader}
+									</th>
+									{END Gender_fieldheadercolumn}
+
+																	{BEGIN TitleId_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN TitleId_fieldheader}
+																				<a {$TitleId_orderlinkattrs}>
+											Title Id
+										</a>
+									{END TitleId_fieldheader}
+									</th>
+									{END TitleId_fieldheadercolumn}
+
+																	{BEGIN FirstName_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN FirstName_fieldheader}
+																				<a {$FirstName_orderlinkattrs}>
+											First Name
+										</a>
+									{END FirstName_fieldheader}
+									</th>
+									{END FirstName_fieldheadercolumn}
+
+																	{BEGIN LastName_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN LastName_fieldheader}
+																				<a {$LastName_orderlinkattrs}>
+											Last Name
+										</a>
+									{END LastName_fieldheader}
+									</th>
+									{END LastName_fieldheadercolumn}
+
+																	{BEGIN MiddleName_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN MiddleName_fieldheader}
+																				<a {$MiddleName_orderlinkattrs}>
+											Middle Name
+										</a>
+									{END MiddleName_fieldheader}
+									</th>
+									{END MiddleName_fieldheadercolumn}
+
+																	{BEGIN DateOfBirth_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN DateOfBirth_fieldheader}
+																				<a {$DateOfBirth_orderlinkattrs}>
+											Date Of Birth
+										</a>
+									{END DateOfBirth_fieldheader}
+									</th>
+									{END DateOfBirth_fieldheadercolumn}
+
+																	{BEGIN MaritalStatusId_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN MaritalStatusId_fieldheader}
+																				<a {$MaritalStatusId_orderlinkattrs}>
+											Marital Status Id
+										</a>
+									{END MaritalStatusId_fieldheader}
+									</th>
+									{END MaritalStatusId_fieldheadercolumn}
+
+																	{BEGIN DateofMarriage_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN DateofMarriage_fieldheader}
+																				<a {$DateofMarriage_orderlinkattrs}>
+											Date of Marriage
+										</a>
+									{END DateofMarriage_fieldheader}
+									</th>
+									{END DateofMarriage_fieldheadercolumn}
+
+																	{BEGIN SpouseDevoteeId_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN SpouseDevoteeId_fieldheader}
+																				<a {$SpouseDevoteeId_orderlinkattrs}>
+											Spouse Devotee Id
+										</a>
+									{END SpouseDevoteeId_fieldheader}
+									</th>
+									{END SpouseDevoteeId_fieldheadercolumn}
+
+																	{BEGIN MobilePhone_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN MobilePhone_fieldheader}
+																				<a {$MobilePhone_orderlinkattrs}>
+											Mobile Phone
+										</a>
+									{END MobilePhone_fieldheader}
+									</th>
+									{END MobilePhone_fieldheadercolumn}
+
+																	{BEGIN WorkPhone_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN WorkPhone_fieldheader}
+																				<a {$WorkPhone_orderlinkattrs}>
+											Work Phone
+										</a>
+									{END WorkPhone_fieldheader}
+									</th>
+									{END WorkPhone_fieldheadercolumn}
+
+																	{BEGIN EmailPrimary_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN EmailPrimary_fieldheader}
+																				<a {$EmailPrimary_orderlinkattrs}>
+											Email Primary
+										</a>
+									{END EmailPrimary_fieldheader}
+									</th>
+									{END EmailPrimary_fieldheadercolumn}
+
+																	{BEGIN EmailSecondary_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN EmailSecondary_fieldheader}
+																				<a {$EmailSecondary_orderlinkattrs}>
+											Email Secondary
+										</a>
+									{END EmailSecondary_fieldheader}
+									</th>
+									{END EmailSecondary_fieldheadercolumn}
+
+																	{BEGIN Password_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN Password_fieldheader}
+																				<a {$Password_orderlinkattrs}>
+											Password
+										</a>
+									{END Password_fieldheader}
+									</th>
+									{END Password_fieldheadercolumn}
+
+																	{BEGIN Address_AddressId_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN Address_AddressId_fieldheader}
+																				<a {$Address_AddressId_orderlinkattrs}>
+											Address Id
+										</a>
+									{END Address_AddressId_fieldheader}
+									</th>
+									{END Address_AddressId_fieldheadercolumn}
+
+																	{BEGIN address_AddressLine1_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN address_AddressLine1_fieldheader}
+																				<a {$address_AddressLine1_orderlinkattrs}>
+											Address Line1
+										</a>
+									{END address_AddressLine1_fieldheader}
+									</th>
+									{END address_AddressLine1_fieldheadercolumn}
+
+																	{BEGIN address_AddressLine2_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN address_AddressLine2_fieldheader}
+																				<a {$address_AddressLine2_orderlinkattrs}>
+											Address Line2
+										</a>
+									{END address_AddressLine2_fieldheader}
+									</th>
+									{END address_AddressLine2_fieldheadercolumn}
+
+																	{BEGIN address_City_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN address_City_fieldheader}
+																				<a {$address_City_orderlinkattrs}>
+											City
+										</a>
+									{END address_City_fieldheader}
+									</th>
+									{END address_City_fieldheadercolumn}
+
+																	{BEGIN address_State_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN address_State_fieldheader}
+																				<a {$address_State_orderlinkattrs}>
+											State
+										</a>
+									{END address_State_fieldheader}
+									</th>
+									{END address_State_fieldheadercolumn}
+
+																	{BEGIN address_Pincode_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN address_Pincode_fieldheader}
+																				<a {$address_Pincode_orderlinkattrs}>
+											Pincode
+										</a>
+									{END address_Pincode_fieldheader}
+									</th>
+									{END address_Pincode_fieldheadercolumn}
+
+																	{BEGIN address_Country_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN address_Country_fieldheader}
+																				<a {$address_Country_orderlinkattrs}>
+											Country
+										</a>
+									{END address_Country_fieldheader}
+									</th>
+									{END address_Country_fieldheadercolumn}
+
+																	{BEGIN address_IsVerified_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN address_IsVerified_fieldheader}
+																				<a {$address_IsVerified_orderlinkattrs}>
+											IsVerified
+										</a>
+									{END address_IsVerified_fieldheader}
+									</th>
+									{END address_IsVerified_fieldheadercolumn}
+
+																	{BEGIN address_IsWrong_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN address_IsWrong_fieldheader}
+																				<a {$address_IsWrong_orderlinkattrs}>
+											IsWrong
+										</a>
+									{END address_IsWrong_fieldheader}
+									</th>
+									{END address_IsWrong_fieldheadercolumn}
+
+																	{BEGIN address_AddressTypeId_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN address_AddressTypeId_fieldheader}
+																				<a {$address_AddressTypeId_orderlinkattrs}>
+											Address Type Id
+										</a>
+									{END address_AddressTypeId_fieldheader}
+									</th>
+									{END address_AddressTypeId_fieldheadercolumn}
+
+																	{BEGIN organization_OrgName_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN organization_OrgName_fieldheader}
+																				<a {$organization_OrgName_orderlinkattrs}>
+											Org Name
+										</a>
+									{END organization_OrgName_fieldheader}
+									</th>
+									{END organization_OrgName_fieldheadercolumn}
+
+																	{BEGIN organization_OrgId_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN organization_OrgId_fieldheader}
+																				<a {$organization_OrgId_orderlinkattrs}>
+											OrgId
+										</a>
+									{END organization_OrgId_fieldheader}
+									</th>
+									{END organization_OrgId_fieldheadercolumn}
+
+																	{BEGIN organization_OrgLeaderId_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN organization_OrgLeaderId_fieldheader}
+																				<a {$organization_OrgLeaderId_orderlinkattrs}>
+											OrgLeaderId
+										</a>
+									{END organization_OrgLeaderId_fieldheader}
+									</th>
+									{END organization_OrgLeaderId_fieldheadercolumn}
+
+																	{BEGIN organization_OrgOwnerId_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN organization_OrgOwnerId_fieldheader}
+																				<a {$organization_OrgOwnerId_orderlinkattrs}>
+											OrgOwnerId
+										</a>
+									{END organization_OrgOwnerId_fieldheader}
+									</th>
+									{END organization_OrgOwnerId_fieldheadercolumn}
+
+																	{BEGIN organization_Location_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN organization_Location_fieldheader}
+																				<a {$organization_Location_orderlinkattrs}>
+											Location
+										</a>
+									{END organization_Location_fieldheader}
+									</th>
+									{END organization_Location_fieldheadercolumn}
+
+																	{BEGIN spirituallife_SericesRendered_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN spirituallife_SericesRendered_fieldheader}
+																				<a {$spirituallife_SericesRendered_orderlinkattrs}>
+											Serices Rendered
+										</a>
+									{END spirituallife_SericesRendered_fieldheader}
+									</th>
+									{END spirituallife_SericesRendered_fieldheadercolumn}
+
+																	{BEGIN SpiritualLife_DevoteeId_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN SpiritualLife_DevoteeId_fieldheader}
+																				<a {$SpiritualLife_DevoteeId_orderlinkattrs}>
+											Devotee Id
+										</a>
+									{END SpiritualLife_DevoteeId_fieldheader}
+									</th>
+									{END SpiritualLife_DevoteeId_fieldheadercolumn}
+
+																	{BEGIN spirituallife_PreferedServices_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN spirituallife_PreferedServices_fieldheader}
+																				<a {$spirituallife_PreferedServices_orderlinkattrs}>
+											Prefered Services
+										</a>
+									{END spirituallife_PreferedServices_fieldheader}
+									</th>
+									{END spirituallife_PreferedServices_fieldheadercolumn}
+
+																	{BEGIN spirituallife_Chanting16RoundsSince_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN spirituallife_Chanting16RoundsSince_fieldheader}
+																				<a {$spirituallife_Chanting16RoundsSince_orderlinkattrs}>
+											Chanting 16 Rounds Since
+										</a>
+									{END spirituallife_Chanting16RoundsSince_fieldheader}
+									</th>
+									{END spirituallife_Chanting16RoundsSince_fieldheadercolumn}
+
+																	{BEGIN spirituallife_IntroducedInCenter_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN spirituallife_IntroducedInCenter_fieldheader}
+																				<a {$spirituallife_IntroducedInCenter_orderlinkattrs}>
+											Introduced In Center
+										</a>
+									{END spirituallife_IntroducedInCenter_fieldheader}
+									</th>
+									{END spirituallife_IntroducedInCenter_fieldheadercolumn}
+
+																	{BEGIN spirituallife_YearOfIntroduction_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN spirituallife_YearOfIntroduction_fieldheader}
+																				<a {$spirituallife_YearOfIntroduction_orderlinkattrs}>
+											Year Of Introduction
+										</a>
+									{END spirituallife_YearOfIntroduction_fieldheader}
+									</th>
+									{END spirituallife_YearOfIntroduction_fieldheadercolumn}
+
+																	{BEGIN spirituallife_PreviousReligion_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN spirituallife_PreviousReligion_fieldheader}
+																				<a {$spirituallife_PreviousReligion_orderlinkattrs}>
+											Previous Religion
+										</a>
+									{END spirituallife_PreviousReligion_fieldheader}
+									</th>
+									{END spirituallife_PreviousReligion_fieldheadercolumn}
+
+																	{BEGIN spirituallife_SpiritualMasterDevoteeId_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN spirituallife_SpiritualMasterDevoteeId_fieldheader}
+																				<a {$spirituallife_SpiritualMasterDevoteeId_orderlinkattrs}>
+											Spiritual Master Devotee Id
+										</a>
+									{END spirituallife_SpiritualMasterDevoteeId_fieldheader}
+									</th>
+									{END spirituallife_SpiritualMasterDevoteeId_fieldheadercolumn}
+
+																	{BEGIN spirituallife_DateOfBrahmanInitiation_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN spirituallife_DateOfBrahmanInitiation_fieldheader}
+																				<a {$spirituallife_DateOfBrahmanInitiation_orderlinkattrs}>
+											Date Of Brahman Initiation
+										</a>
+									{END spirituallife_DateOfBrahmanInitiation_fieldheader}
+									</th>
+									{END spirituallife_DateOfBrahmanInitiation_fieldheadercolumn}
+
+																	{BEGIN spirituallife_DateOfHarinamInitiation_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN spirituallife_DateOfHarinamInitiation_fieldheader}
+																				<a {$spirituallife_DateOfHarinamInitiation_orderlinkattrs}>
+											Date Of Harinam Initiation
+										</a>
+									{END spirituallife_DateOfHarinamInitiation_fieldheader}
+									</th>
+									{END spirituallife_DateOfHarinamInitiation_fieldheadercolumn}
+
+																	{BEGIN spirituallife_SpiritulLifeId_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN spirituallife_SpiritulLifeId_fieldheader}
+																				<a {$spirituallife_SpiritulLifeId_orderlinkattrs}>
+											Spiritul Life Id
+										</a>
+									{END spirituallife_SpiritulLifeId_fieldheader}
+									</th>
+									{END spirituallife_SpiritulLifeId_fieldheadercolumn}
+
+																	{BEGIN spirituallife_IntroducedBy_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN spirituallife_IntroducedBy_fieldheader}
+																				<a {$spirituallife_IntroducedBy_orderlinkattrs}>
+											Introduced By
+										</a>
+									{END spirituallife_IntroducedBy_fieldheader}
+									</th>
+									{END spirituallife_IntroducedBy_fieldheadercolumn}
+
+																	{BEGIN company_CompanyId_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN company_CompanyId_fieldheader}
+																				<a {$company_CompanyId_orderlinkattrs}>
+											Company Id
+										</a>
+									{END company_CompanyId_fieldheader}
+									</th>
+									{END company_CompanyId_fieldheadercolumn}
+
+																	{BEGIN company_CompanyName_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN company_CompanyName_fieldheader}
+																				<a {$company_CompanyName_orderlinkattrs}>
+											Company Name
+										</a>
+									{END company_CompanyName_fieldheader}
+									</th>
+									{END company_CompanyName_fieldheadercolumn}
+
+																	{BEGIN company_AddressId_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN company_AddressId_fieldheader}
+																				<a {$company_AddressId_orderlinkattrs}>
+											Address Id
+										</a>
+									{END company_AddressId_fieldheader}
+									</th>
+									{END company_AddressId_fieldheadercolumn}
+
+																	{BEGIN company_Remark_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN company_Remark_fieldheader}
+																				<a {$company_Remark_orderlinkattrs}>
+											Remark
+										</a>
+									{END company_Remark_fieldheader}
+									</th>
+									{END company_Remark_fieldheadercolumn}
+
+																	{BEGIN devoteelang_DevoteeLanguageId_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN devoteelang_DevoteeLanguageId_fieldheader}
+																				<a {$devoteelang_DevoteeLanguageId_orderlinkattrs}>
+											Devotee Language Id
+										</a>
+									{END devoteelang_DevoteeLanguageId_fieldheader}
+									</th>
+									{END devoteelang_DevoteeLanguageId_fieldheadercolumn}
+
+																	{BEGIN devoteelang_WritingLevel_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN devoteelang_WritingLevel_fieldheader}
+																				<a {$devoteelang_WritingLevel_orderlinkattrs}>
+											Writing Level
+										</a>
+									{END devoteelang_WritingLevel_fieldheader}
+									</th>
+									{END devoteelang_WritingLevel_fieldheadercolumn}
+
+																	{BEGIN devoteelang_DevoteeId_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN devoteelang_DevoteeId_fieldheader}
+																				<a {$devoteelang_DevoteeId_orderlinkattrs}>
+											Devotee Id
+										</a>
+									{END devoteelang_DevoteeId_fieldheader}
+									</th>
+									{END devoteelang_DevoteeId_fieldheadercolumn}
+
+																	{BEGIN devoteelang_LanguageId_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN devoteelang_LanguageId_fieldheader}
+																				<a {$devoteelang_LanguageId_orderlinkattrs}>
+											Language Id
+										</a>
+									{END devoteelang_LanguageId_fieldheader}
+									</th>
+									{END devoteelang_LanguageId_fieldheadercolumn}
+
+																	{BEGIN devoteelang_SpeakingLevel_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN devoteelang_SpeakingLevel_fieldheader}
+																				<a {$devoteelang_SpeakingLevel_orderlinkattrs}>
+											Speaking Level
+										</a>
+									{END devoteelang_SpeakingLevel_fieldheader}
+									</th>
+									{END devoteelang_SpeakingLevel_fieldheadercolumn}
+
+																	{BEGIN devoteelang_ReadingLevel_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN devoteelang_ReadingLevel_fieldheader}
+																				<a {$devoteelang_ReadingLevel_orderlinkattrs}>
+											Reading Level
+										</a>
+									{END devoteelang_ReadingLevel_fieldheader}
+									</th>
+									{END devoteelang_ReadingLevel_fieldheadercolumn}
+
+																	{BEGIN occupational_DevoteeOccupationalId_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN occupational_DevoteeOccupationalId_fieldheader}
+																				<a {$occupational_DevoteeOccupationalId_orderlinkattrs}>
+											Devotee Occupational Id
+										</a>
+									{END occupational_DevoteeOccupationalId_fieldheader}
+									</th>
+									{END occupational_DevoteeOccupationalId_fieldheadercolumn}
+
+																	{BEGIN Occupational_DevoteeId_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN Occupational_DevoteeId_fieldheader}
+																				<a {$Occupational_DevoteeId_orderlinkattrs}>
+											DevoteeId
+										</a>
+									{END Occupational_DevoteeId_fieldheader}
+									</th>
+									{END Occupational_DevoteeId_fieldheadercolumn}
+
+																	{BEGIN Occupational_Education_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN Occupational_Education_fieldheader}
+																				<a {$Occupational_Education_orderlinkattrs}>
+											Education
+										</a>
+									{END Occupational_Education_fieldheader}
+									</th>
+									{END Occupational_Education_fieldheadercolumn}
+
+																	{BEGIN Occupational_Occupation_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN Occupational_Occupation_fieldheader}
+																				<a {$Occupational_Occupation_orderlinkattrs}>
+											Occupation
+										</a>
+									{END Occupational_Occupation_fieldheader}
+									</th>
+									{END Occupational_Occupation_fieldheadercolumn}
+
+																	{BEGIN Occupational_Designation_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN Occupational_Designation_fieldheader}
+																				<a {$Occupational_Designation_orderlinkattrs}>
+											Designation
+										</a>
+									{END Occupational_Designation_fieldheader}
+									</th>
+									{END Occupational_Designation_fieldheadercolumn}
+
+																	{BEGIN Occupational_AwardsOrMerits_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN Occupational_AwardsOrMerits_fieldheader}
+																				<a {$Occupational_AwardsOrMerits_orderlinkattrs}>
+											Awards Or Merits
+										</a>
+									{END Occupational_AwardsOrMerits_fieldheader}
+									</th>
+									{END Occupational_AwardsOrMerits_fieldheadercolumn}
+
+																	{BEGIN occupational_SkillsOrExperiences_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN occupational_SkillsOrExperiences_fieldheader}
+																				<a {$occupational_SkillsOrExperiences_orderlinkattrs}>
+											Skills Or Experiences
+										</a>
+									{END occupational_SkillsOrExperiences_fieldheader}
+									</th>
+									{END occupational_SkillsOrExperiences_fieldheadercolumn}
+
+																	{BEGIN occupational_CurrentCompanyId_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN occupational_CurrentCompanyId_fieldheader}
+																				<a {$occupational_CurrentCompanyId_orderlinkattrs}>
+											Current Company Id
+										</a>
+									{END occupational_CurrentCompanyId_fieldheader}
+									</th>
+									{END occupational_CurrentCompanyId_fieldheadercolumn}
+
+																	{BEGIN addresstypes_AddressType_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN addresstypes_AddressType_fieldheader}
+																				<a {$addresstypes_AddressType_orderlinkattrs}>
+											Address Type
+										</a>
+									{END addresstypes_AddressType_fieldheader}
+									</th>
+									{END addresstypes_AddressType_fieldheadercolumn}
+
+																	{BEGIN addresstypes_AddressTypeId_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN addresstypes_AddressTypeId_fieldheader}
+																				<a {$addresstypes_AddressTypeId_orderlinkattrs}>
+											AddressTypeId
+										</a>
+									{END addresstypes_AddressTypeId_fieldheader}
+									</th>
+									{END addresstypes_AddressTypeId_fieldheadercolumn}
+
+																	{BEGIN DevoteeOrg_DevoteeOrgId_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN DevoteeOrg_DevoteeOrgId_fieldheader}
+																				<a {$DevoteeOrg_DevoteeOrgId_orderlinkattrs}>
+											Devotee Org Id
+										</a>
+									{END DevoteeOrg_DevoteeOrgId_fieldheader}
+									</th>
+									{END DevoteeOrg_DevoteeOrgId_fieldheadercolumn}
+
+																	{BEGIN DevoteeOrg_DevoteeId_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN DevoteeOrg_DevoteeId_fieldheader}
+																				<a {$DevoteeOrg_DevoteeId_orderlinkattrs}>
+											Devotee Id
+										</a>
+									{END DevoteeOrg_DevoteeId_fieldheader}
+									</th>
+									{END DevoteeOrg_DevoteeId_fieldheadercolumn}
+
+																	{BEGIN DevoteeOrg_FromDate_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN DevoteeOrg_FromDate_fieldheader}
+																				<a {$DevoteeOrg_FromDate_orderlinkattrs}>
+											From Date
+										</a>
+									{END DevoteeOrg_FromDate_fieldheader}
+									</th>
+									{END DevoteeOrg_FromDate_fieldheadercolumn}
+
+																	{BEGIN DevoteeOrg_ToDate_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN DevoteeOrg_ToDate_fieldheader}
+																				<a {$DevoteeOrg_ToDate_orderlinkattrs}>
+											To Date
+										</a>
+									{END DevoteeOrg_ToDate_fieldheader}
+									</th>
+									{END DevoteeOrg_ToDate_fieldheadercolumn}
+
+																	{BEGIN DevoteeOrg_OrgId_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN DevoteeOrg_OrgId_fieldheader}
+																				<a {$DevoteeOrg_OrgId_orderlinkattrs}>
+											Org Id
+										</a>
+									{END DevoteeOrg_OrgId_fieldheader}
+									</th>
+									{END DevoteeOrg_OrgId_fieldheadercolumn}
+
+																	{BEGIN devoteeaddress_devoteeaddressId_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN devoteeaddress_devoteeaddressId_fieldheader}
+																				<a {$devoteeaddress_devoteeaddressId_orderlinkattrs}>
+											Devotee Address Id
+										</a>
+									{END devoteeaddress_devoteeaddressId_fieldheader}
+									</th>
+									{END devoteeaddress_devoteeaddressId_fieldheadercolumn}
+
+																	{BEGIN devoteeaddress_AddressId_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN devoteeaddress_AddressId_fieldheader}
+																				<a {$devoteeaddress_AddressId_orderlinkattrs}>
+											AddressId
+										</a>
+									{END devoteeaddress_AddressId_fieldheader}
+									</th>
+									{END devoteeaddress_AddressId_fieldheadercolumn}
+
+																	{BEGIN devoteeaddress_DevoteeId_fieldheadercolumn}
+									<th class="runner-cc runner-clast">
+									{BEGIN devoteeaddress_DevoteeId_fieldheader}
+																				<a {$devoteeaddress_DevoteeId_orderlinkattrs}>
+											DevoteeId
+										</a>
+									{END devoteeaddress_DevoteeId_fieldheader}
+									</th>
+									{END devoteeaddress_DevoteeId_fieldheadercolumn}
+
+
+									
+									<th class="runner-cr"><img src="images/spacer.gif"></th>
+									{BEGIN endrecordheader_block}
+									<th class="runner-cs">&nbsp;</th>
+									
+									{END endrecordheader_block}
+									
+									{END record_header}
+									
+								</tr>
+								{END grid_header}
+
+						</thead>
+						<tbody>	
+															{BEGIN grid_row}
+								<tr class="runner-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>
+									{BEGIN grid_record}
+									<td class="runner-cl" {$rowstyle}></td>
+
+																		{BEGIN listIcons_column}
+									<td class="runner-cc runner-bc runner-icons" iEditCont="all" {$rowstyle}>
+																		{BEGIN edit_column}
+									{BEGIN edit_link}
+									<a class="runner-button-img" {$editlink_attrs} title="Edit"><img class="runner-cicon" src="images/icon_edit_new.gif" alt="Edit"></a>
+									{END edit_link}
+									{END edit_column}
+
+									
+									
+																		</td>	
+									{END listIcons_column}	
+
+																		{BEGIN checkbox_column}
+									<td class="runner-cc runner-bc" iEditCont="checkBox" {$rowstyle}>
+									{BEGIN checkbox}
+									<input type="checkbox" {$checkbox_attrs}>
+									{END checkbox}
+									</td>
+									{END checkbox_column}
+
+
+										{BEGIN DevoteeId_fieldcolumn}
+	<td class="runner-cc  {$DevoteeId_class}" {$DevoteeId_style}>
+		{$DevoteeId_value}
+	</td>
+{END DevoteeId_fieldcolumn}
+
+	{BEGIN Photo_fieldcolumn}
+	<td class="runner-cc  {$Photo_class}" {$Photo_style}>
+		{$Photo_value}
+	</td>
+{END Photo_fieldcolumn}
+
+	{BEGIN Gender_fieldcolumn}
+	<td class="runner-cc  {$Gender_class}" {$Gender_style}>
+		{$Gender_value}
+	</td>
+{END Gender_fieldcolumn}
+
+	{BEGIN TitleId_fieldcolumn}
+	<td class="runner-cc  {$TitleId_class}" {$TitleId_style}>
+		{$TitleId_value}
+	</td>
+{END TitleId_fieldcolumn}
+
+	{BEGIN FirstName_fieldcolumn}
+	<td class="runner-cc  {$FirstName_class}" {$FirstName_style}>
+		{$FirstName_value}
+	</td>
+{END FirstName_fieldcolumn}
+
+	{BEGIN LastName_fieldcolumn}
+	<td class="runner-cc  {$LastName_class}" {$LastName_style}>
+		{$LastName_value}
+	</td>
+{END LastName_fieldcolumn}
+
+	{BEGIN MiddleName_fieldcolumn}
+	<td class="runner-cc  {$MiddleName_class}" {$MiddleName_style}>
+		{$MiddleName_value}
+	</td>
+{END MiddleName_fieldcolumn}
+
+	{BEGIN DateOfBirth_fieldcolumn}
+	<td class="runner-cc  {$DateOfBirth_class}" {$DateOfBirth_style}>
+		{$DateOfBirth_value}
+	</td>
+{END DateOfBirth_fieldcolumn}
+
+	{BEGIN MaritalStatusId_fieldcolumn}
+	<td class="runner-cc  {$MaritalStatusId_class}" {$MaritalStatusId_style}>
+		{$MaritalStatusId_value}
+	</td>
+{END MaritalStatusId_fieldcolumn}
+
+	{BEGIN DateofMarriage_fieldcolumn}
+	<td class="runner-cc  {$DateofMarriage_class}" {$DateofMarriage_style}>
+		{$DateofMarriage_value}
+	</td>
+{END DateofMarriage_fieldcolumn}
+
+	{BEGIN SpouseDevoteeId_fieldcolumn}
+	<td class="runner-cc  {$SpouseDevoteeId_class}" {$SpouseDevoteeId_style}>
+		{$SpouseDevoteeId_value}
+	</td>
+{END SpouseDevoteeId_fieldcolumn}
+
+	{BEGIN MobilePhone_fieldcolumn}
+	<td class="runner-cc  {$MobilePhone_class}" {$MobilePhone_style}>
+		{$MobilePhone_value}
+	</td>
+{END MobilePhone_fieldcolumn}
+
+	{BEGIN WorkPhone_fieldcolumn}
+	<td class="runner-cc  {$WorkPhone_class}" {$WorkPhone_style}>
+		{$WorkPhone_value}
+	</td>
+{END WorkPhone_fieldcolumn}
+
+	{BEGIN EmailPrimary_fieldcolumn}
+	<td class="runner-cc  {$EmailPrimary_class}" {$EmailPrimary_style}>
+		{$EmailPrimary_value}
+	</td>
+{END EmailPrimary_fieldcolumn}
+
+	{BEGIN EmailSecondary_fieldcolumn}
+	<td class="runner-cc  {$EmailSecondary_class}" {$EmailSecondary_style}>
+		{$EmailSecondary_value}
+	</td>
+{END EmailSecondary_fieldcolumn}
+
+	{BEGIN Password_fieldcolumn}
+	<td class="runner-cc  {$Password_class}" {$Password_style}>
+		{$Password_value}
+	</td>
+{END Password_fieldcolumn}
+
+	{BEGIN Address_AddressId_fieldcolumn}
+	<td class="runner-cc  {$Address_AddressId_class}" {$Address_AddressId_style}>
+		{$Address_AddressId_value}
+	</td>
+{END Address_AddressId_fieldcolumn}
+
+	{BEGIN address_AddressLine1_fieldcolumn}
+	<td class="runner-cc  {$address_AddressLine1_class}" {$address_AddressLine1_style}>
+		{$address_AddressLine1_value}
+	</td>
+{END address_AddressLine1_fieldcolumn}
+
+	{BEGIN address_AddressLine2_fieldcolumn}
+	<td class="runner-cc  {$address_AddressLine2_class}" {$address_AddressLine2_style}>
+		{$address_AddressLine2_value}
+	</td>
+{END address_AddressLine2_fieldcolumn}
+
+	{BEGIN address_City_fieldcolumn}
+	<td class="runner-cc  {$address_City_class}" {$address_City_style}>
+		{$address_City_value}
+	</td>
+{END address_City_fieldcolumn}
+
+	{BEGIN address_State_fieldcolumn}
+	<td class="runner-cc  {$address_State_class}" {$address_State_style}>
+		{$address_State_value}
+	</td>
+{END address_State_fieldcolumn}
+
+	{BEGIN address_Pincode_fieldcolumn}
+	<td class="runner-cc  {$address_Pincode_class}" {$address_Pincode_style}>
+		{$address_Pincode_value}
+	</td>
+{END address_Pincode_fieldcolumn}
+
+	{BEGIN address_Country_fieldcolumn}
+	<td class="runner-cc  {$address_Country_class}" {$address_Country_style}>
+		{$address_Country_value}
+	</td>
+{END address_Country_fieldcolumn}
+
+	{BEGIN address_IsVerified_fieldcolumn}
+	<td class="runner-cc  {$address_IsVerified_class}" {$address_IsVerified_style}>
+		{$address_IsVerified_value}
+	</td>
+{END address_IsVerified_fieldcolumn}
+
+	{BEGIN address_IsWrong_fieldcolumn}
+	<td class="runner-cc  {$address_IsWrong_class}" {$address_IsWrong_style}>
+		{$address_IsWrong_value}
+	</td>
+{END address_IsWrong_fieldcolumn}
+
+	{BEGIN address_AddressTypeId_fieldcolumn}
+	<td class="runner-cc  {$address_AddressTypeId_class}" {$address_AddressTypeId_style}>
+		{$address_AddressTypeId_value}
+	</td>
+{END address_AddressTypeId_fieldcolumn}
+
+	{BEGIN organization_OrgName_fieldcolumn}
+	<td class="runner-cc  {$organization_OrgName_class}" {$organization_OrgName_style}>
+		{$organization_OrgName_value}
+	</td>
+{END organization_OrgName_fieldcolumn}
+
+	{BEGIN organization_OrgId_fieldcolumn}
+	<td class="runner-cc  {$organization_OrgId_class}" {$organization_OrgId_style}>
+		{$organization_OrgId_value}
+	</td>
+{END organization_OrgId_fieldcolumn}
+
+	{BEGIN organization_OrgLeaderId_fieldcolumn}
+	<td class="runner-cc  {$organization_OrgLeaderId_class}" {$organization_OrgLeaderId_style}>
+		{$organization_OrgLeaderId_value}
+	</td>
+{END organization_OrgLeaderId_fieldcolumn}
+
+	{BEGIN organization_OrgOwnerId_fieldcolumn}
+	<td class="runner-cc  {$organization_OrgOwnerId_class}" {$organization_OrgOwnerId_style}>
+		{$organization_OrgOwnerId_value}
+	</td>
+{END organization_OrgOwnerId_fieldcolumn}
+
+	{BEGIN organization_Location_fieldcolumn}
+	<td class="runner-cc  {$organization_Location_class}" {$organization_Location_style}>
+		{$organization_Location_value}
+	</td>
+{END organization_Location_fieldcolumn}
+
+	{BEGIN spirituallife_SericesRendered_fieldcolumn}
+	<td class="runner-cc  {$spirituallife_SericesRendered_class}" {$spirituallife_SericesRendered_style}>
+		{$spirituallife_SericesRendered_value}
+	</td>
+{END spirituallife_SericesRendered_fieldcolumn}
+
+	{BEGIN SpiritualLife_DevoteeId_fieldcolumn}
+	<td class="runner-cc  {$SpiritualLife_DevoteeId_class}" {$SpiritualLife_DevoteeId_style}>
+		{$SpiritualLife_DevoteeId_value}
+	</td>
+{END SpiritualLife_DevoteeId_fieldcolumn}
+
+	{BEGIN spirituallife_PreferedServices_fieldcolumn}
+	<td class="runner-cc  {$spirituallife_PreferedServices_class}" {$spirituallife_PreferedServices_style}>
+		{$spirituallife_PreferedServices_value}
+	</td>
+{END spirituallife_PreferedServices_fieldcolumn}
+
+	{BEGIN spirituallife_Chanting16RoundsSince_fieldcolumn}
+	<td class="runner-cc  {$spirituallife_Chanting16RoundsSince_class}" {$spirituallife_Chanting16RoundsSince_style}>
+		{$spirituallife_Chanting16RoundsSince_value}
+	</td>
+{END spirituallife_Chanting16RoundsSince_fieldcolumn}
+
+	{BEGIN spirituallife_IntroducedInCenter_fieldcolumn}
+	<td class="runner-cc  {$spirituallife_IntroducedInCenter_class}" {$spirituallife_IntroducedInCenter_style}>
+		{$spirituallife_IntroducedInCenter_value}
+	</td>
+{END spirituallife_IntroducedInCenter_fieldcolumn}
+
+	{BEGIN spirituallife_YearOfIntroduction_fieldcolumn}
+	<td class="runner-cc  {$spirituallife_YearOfIntroduction_class}" {$spirituallife_YearOfIntroduction_style}>
+		{$spirituallife_YearOfIntroduction_value}
+	</td>
+{END spirituallife_YearOfIntroduction_fieldcolumn}
+
+	{BEGIN spirituallife_PreviousReligion_fieldcolumn}
+	<td class="runner-cc  {$spirituallife_PreviousReligion_class}" {$spirituallife_PreviousReligion_style}>
+		{$spirituallife_PreviousReligion_value}
+	</td>
+{END spirituallife_PreviousReligion_fieldcolumn}
+
+	{BEGIN spirituallife_SpiritualMasterDevoteeId_fieldcolumn}
+	<td class="runner-cc  {$spirituallife_SpiritualMasterDevoteeId_class}" {$spirituallife_SpiritualMasterDevoteeId_style}>
+		{$spirituallife_SpiritualMasterDevoteeId_value}
+	</td>
+{END spirituallife_SpiritualMasterDevoteeId_fieldcolumn}
+
+	{BEGIN spirituallife_DateOfBrahmanInitiation_fieldcolumn}
+	<td class="runner-cc  {$spirituallife_DateOfBrahmanInitiation_class}" {$spirituallife_DateOfBrahmanInitiation_style}>
+		{$spirituallife_DateOfBrahmanInitiation_value}
+	</td>
+{END spirituallife_DateOfBrahmanInitiation_fieldcolumn}
+
+	{BEGIN spirituallife_DateOfHarinamInitiation_fieldcolumn}
+	<td class="runner-cc  {$spirituallife_DateOfHarinamInitiation_class}" {$spirituallife_DateOfHarinamInitiation_style}>
+		{$spirituallife_DateOfHarinamInitiation_value}
+	</td>
+{END spirituallife_DateOfHarinamInitiation_fieldcolumn}
+
+	{BEGIN spirituallife_SpiritulLifeId_fieldcolumn}
+	<td class="runner-cc  {$spirituallife_SpiritulLifeId_class}" {$spirituallife_SpiritulLifeId_style}>
+		{$spirituallife_SpiritulLifeId_value}
+	</td>
+{END spirituallife_SpiritulLifeId_fieldcolumn}
+
+	{BEGIN spirituallife_IntroducedBy_fieldcolumn}
+	<td class="runner-cc  {$spirituallife_IntroducedBy_class}" {$spirituallife_IntroducedBy_style}>
+		{$spirituallife_IntroducedBy_value}
+	</td>
+{END spirituallife_IntroducedBy_fieldcolumn}
+
+	{BEGIN company_CompanyId_fieldcolumn}
+	<td class="runner-cc  {$company_CompanyId_class}" {$company_CompanyId_style}>
+		{$company_CompanyId_value}
+	</td>
+{END company_CompanyId_fieldcolumn}
+
+	{BEGIN company_CompanyName_fieldcolumn}
+	<td class="runner-cc  {$company_CompanyName_class}" {$company_CompanyName_style}>
+		{$company_CompanyName_value}
+	</td>
+{END company_CompanyName_fieldcolumn}
+
+	{BEGIN company_AddressId_fieldcolumn}
+	<td class="runner-cc  {$company_AddressId_class}" {$company_AddressId_style}>
+		{$company_AddressId_value}
+	</td>
+{END company_AddressId_fieldcolumn}
+
+	{BEGIN company_Remark_fieldcolumn}
+	<td class="runner-cc  {$company_Remark_class}" {$company_Remark_style}>
+		{$company_Remark_value}
+	</td>
+{END company_Remark_fieldcolumn}
+
+	{BEGIN devoteelang_DevoteeLanguageId_fieldcolumn}
+	<td class="runner-cc  {$devoteelang_DevoteeLanguageId_class}" {$devoteelang_DevoteeLanguageId_style}>
+		{$devoteelang_DevoteeLanguageId_value}
+	</td>
+{END devoteelang_DevoteeLanguageId_fieldcolumn}
+
+	{BEGIN devoteelang_WritingLevel_fieldcolumn}
+	<td class="runner-cc  {$devoteelang_WritingLevel_class}" {$devoteelang_WritingLevel_style}>
+		{$devoteelang_WritingLevel_value}
+	</td>
+{END devoteelang_WritingLevel_fieldcolumn}
+
+	{BEGIN devoteelang_DevoteeId_fieldcolumn}
+	<td class="runner-cc  {$devoteelang_DevoteeId_class}" {$devoteelang_DevoteeId_style}>
+		{$devoteelang_DevoteeId_value}
+	</td>
+{END devoteelang_DevoteeId_fieldcolumn}
+
+	{BEGIN devoteelang_LanguageId_fieldcolumn}
+	<td class="runner-cc  {$devoteelang_LanguageId_class}" {$devoteelang_LanguageId_style}>
+		{$devoteelang_LanguageId_value}
+	</td>
+{END devoteelang_LanguageId_fieldcolumn}
+
+	{BEGIN devoteelang_SpeakingLevel_fieldcolumn}
+	<td class="runner-cc  {$devoteelang_SpeakingLevel_class}" {$devoteelang_SpeakingLevel_style}>
+		{$devoteelang_SpeakingLevel_value}
+	</td>
+{END devoteelang_SpeakingLevel_fieldcolumn}
+
+	{BEGIN devoteelang_ReadingLevel_fieldcolumn}
+	<td class="runner-cc  {$devoteelang_ReadingLevel_class}" {$devoteelang_ReadingLevel_style}>
+		{$devoteelang_ReadingLevel_value}
+	</td>
+{END devoteelang_ReadingLevel_fieldcolumn}
+
+	{BEGIN occupational_DevoteeOccupationalId_fieldcolumn}
+	<td class="runner-cc  {$occupational_DevoteeOccupationalId_class}" {$occupational_DevoteeOccupationalId_style}>
+		{$occupational_DevoteeOccupationalId_value}
+	</td>
+{END occupational_DevoteeOccupationalId_fieldcolumn}
+
+	{BEGIN Occupational_DevoteeId_fieldcolumn}
+	<td class="runner-cc  {$Occupational_DevoteeId_class}" {$Occupational_DevoteeId_style}>
+		{$Occupational_DevoteeId_value}
+	</td>
+{END Occupational_DevoteeId_fieldcolumn}
+
+	{BEGIN Occupational_Education_fieldcolumn}
+	<td class="runner-cc  {$Occupational_Education_class}" {$Occupational_Education_style}>
+		{$Occupational_Education_value}
+	</td>
+{END Occupational_Education_fieldcolumn}
+
+	{BEGIN Occupational_Occupation_fieldcolumn}
+	<td class="runner-cc  {$Occupational_Occupation_class}" {$Occupational_Occupation_style}>
+		{$Occupational_Occupation_value}
+	</td>
+{END Occupational_Occupation_fieldcolumn}
+
+	{BEGIN Occupational_Designation_fieldcolumn}
+	<td class="runner-cc  {$Occupational_Designation_class}" {$Occupational_Designation_style}>
+		{$Occupational_Designation_value}
+	</td>
+{END Occupational_Designation_fieldcolumn}
+
+	{BEGIN Occupational_AwardsOrMerits_fieldcolumn}
+	<td class="runner-cc  {$Occupational_AwardsOrMerits_class}" {$Occupational_AwardsOrMerits_style}>
+		{$Occupational_AwardsOrMerits_value}
+	</td>
+{END Occupational_AwardsOrMerits_fieldcolumn}
+
+	{BEGIN occupational_SkillsOrExperiences_fieldcolumn}
+	<td class="runner-cc  {$occupational_SkillsOrExperiences_class}" {$occupational_SkillsOrExperiences_style}>
+		{$occupational_SkillsOrExperiences_value}
+	</td>
+{END occupational_SkillsOrExperiences_fieldcolumn}
+
+	{BEGIN occupational_CurrentCompanyId_fieldcolumn}
+	<td class="runner-cc  {$occupational_CurrentCompanyId_class}" {$occupational_CurrentCompanyId_style}>
+		{$occupational_CurrentCompanyId_value}
+	</td>
+{END occupational_CurrentCompanyId_fieldcolumn}
+
+	{BEGIN addresstypes_AddressType_fieldcolumn}
+	<td class="runner-cc  {$addresstypes_AddressType_class}" {$addresstypes_AddressType_style}>
+		{$addresstypes_AddressType_value}
+	</td>
+{END addresstypes_AddressType_fieldcolumn}
+
+	{BEGIN addresstypes_AddressTypeId_fieldcolumn}
+	<td class="runner-cc  {$addresstypes_AddressTypeId_class}" {$addresstypes_AddressTypeId_style}>
+		{$addresstypes_AddressTypeId_value}
+	</td>
+{END addresstypes_AddressTypeId_fieldcolumn}
+
+	{BEGIN DevoteeOrg_DevoteeOrgId_fieldcolumn}
+	<td class="runner-cc  {$DevoteeOrg_DevoteeOrgId_class}" {$DevoteeOrg_DevoteeOrgId_style}>
+		{$DevoteeOrg_DevoteeOrgId_value}
+	</td>
+{END DevoteeOrg_DevoteeOrgId_fieldcolumn}
+
+	{BEGIN DevoteeOrg_DevoteeId_fieldcolumn}
+	<td class="runner-cc  {$DevoteeOrg_DevoteeId_class}" {$DevoteeOrg_DevoteeId_style}>
+		{$DevoteeOrg_DevoteeId_value}
+	</td>
+{END DevoteeOrg_DevoteeId_fieldcolumn}
+
+	{BEGIN DevoteeOrg_FromDate_fieldcolumn}
+	<td class="runner-cc  {$DevoteeOrg_FromDate_class}" {$DevoteeOrg_FromDate_style}>
+		{$DevoteeOrg_FromDate_value}
+	</td>
+{END DevoteeOrg_FromDate_fieldcolumn}
+
+	{BEGIN DevoteeOrg_ToDate_fieldcolumn}
+	<td class="runner-cc  {$DevoteeOrg_ToDate_class}" {$DevoteeOrg_ToDate_style}>
+		{$DevoteeOrg_ToDate_value}
+	</td>
+{END DevoteeOrg_ToDate_fieldcolumn}
+
+	{BEGIN DevoteeOrg_OrgId_fieldcolumn}
+	<td class="runner-cc  {$DevoteeOrg_OrgId_class}" {$DevoteeOrg_OrgId_style}>
+		{$DevoteeOrg_OrgId_value}
+	</td>
+{END DevoteeOrg_OrgId_fieldcolumn}
+
+	{BEGIN devoteeaddress_devoteeaddressId_fieldcolumn}
+	<td class="runner-cc  {$devoteeaddress_devoteeaddressId_class}" {$devoteeaddress_devoteeaddressId_style}>
+		{$devoteeaddress_devoteeaddressId_value}
+	</td>
+{END devoteeaddress_devoteeaddressId_fieldcolumn}
+
+	{BEGIN devoteeaddress_AddressId_fieldcolumn}
+	<td class="runner-cc  {$devoteeaddress_AddressId_class}" {$devoteeaddress_AddressId_style}>
+		{$devoteeaddress_AddressId_value}
+	</td>
+{END devoteeaddress_AddressId_fieldcolumn}
+
+	{BEGIN devoteeaddress_DevoteeId_fieldcolumn}
+	<td class="runner-cc runner-clast {$devoteeaddress_DevoteeId_class}" {$devoteeaddress_DevoteeId_style}>
+		{$devoteeaddress_DevoteeId_value}
+	</td>
+{END devoteeaddress_DevoteeId_fieldcolumn}
+
+
+																		<td class="runner-cr" {$rowstyle}></td>
+									{BEGIN endrecord_block}
+									<td class="runner-cs" {$endrecordblock_attrs}>&nbsp;</td>
+									{END endrecord_block}
+																	
+									{END grid_record}
+
+								</tr>
+								{END grid_row}
+															{BEGIN grid_footer}
+																<tr class="runner-bottomrow style1{$gridFooter_class}" >
+									{BEGIN record_footer}
+									<td class="runner-cl"><img src="images/spacer.gif"></td>
+																		{BEGIN listIcons_column}
+									<td class="runner-cc"></td>
+									{END listIcons_column}	
+									
+																		{BEGIN checkbox_column}
+									<td class="runner-cc"></td>
+									{END checkbox_column}
+
+
+									{BEGIN DevoteeId_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END DevoteeId_fieldheadercolumn}
+{BEGIN Photo_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END Photo_fieldheadercolumn}
+{BEGIN Gender_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END Gender_fieldheadercolumn}
+{BEGIN TitleId_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END TitleId_fieldheadercolumn}
+{BEGIN FirstName_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END FirstName_fieldheadercolumn}
+{BEGIN LastName_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END LastName_fieldheadercolumn}
+{BEGIN MiddleName_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END MiddleName_fieldheadercolumn}
+{BEGIN DateOfBirth_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END DateOfBirth_fieldheadercolumn}
+{BEGIN MaritalStatusId_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END MaritalStatusId_fieldheadercolumn}
+{BEGIN DateofMarriage_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END DateofMarriage_fieldheadercolumn}
+{BEGIN SpouseDevoteeId_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END SpouseDevoteeId_fieldheadercolumn}
+{BEGIN MobilePhone_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END MobilePhone_fieldheadercolumn}
+{BEGIN WorkPhone_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END WorkPhone_fieldheadercolumn}
+{BEGIN EmailPrimary_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END EmailPrimary_fieldheadercolumn}
+{BEGIN EmailSecondary_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END EmailSecondary_fieldheadercolumn}
+{BEGIN Password_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END Password_fieldheadercolumn}
+{BEGIN Address_AddressId_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END Address_AddressId_fieldheadercolumn}
+{BEGIN address_AddressLine1_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END address_AddressLine1_fieldheadercolumn}
+{BEGIN address_AddressLine2_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END address_AddressLine2_fieldheadercolumn}
+{BEGIN address_City_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END address_City_fieldheadercolumn}
+{BEGIN address_State_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END address_State_fieldheadercolumn}
+{BEGIN address_Pincode_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END address_Pincode_fieldheadercolumn}
+{BEGIN address_Country_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END address_Country_fieldheadercolumn}
+{BEGIN address_IsVerified_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END address_IsVerified_fieldheadercolumn}
+{BEGIN address_IsWrong_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END address_IsWrong_fieldheadercolumn}
+{BEGIN address_AddressTypeId_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END address_AddressTypeId_fieldheadercolumn}
+{BEGIN organization_OrgName_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END organization_OrgName_fieldheadercolumn}
+{BEGIN organization_OrgId_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END organization_OrgId_fieldheadercolumn}
+{BEGIN organization_OrgLeaderId_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END organization_OrgLeaderId_fieldheadercolumn}
+{BEGIN organization_OrgOwnerId_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END organization_OrgOwnerId_fieldheadercolumn}
+{BEGIN organization_Location_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END organization_Location_fieldheadercolumn}
+{BEGIN spirituallife_SericesRendered_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END spirituallife_SericesRendered_fieldheadercolumn}
+{BEGIN SpiritualLife_DevoteeId_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END SpiritualLife_DevoteeId_fieldheadercolumn}
+{BEGIN spirituallife_PreferedServices_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END spirituallife_PreferedServices_fieldheadercolumn}
+{BEGIN spirituallife_Chanting16RoundsSince_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END spirituallife_Chanting16RoundsSince_fieldheadercolumn}
+{BEGIN spirituallife_IntroducedInCenter_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END spirituallife_IntroducedInCenter_fieldheadercolumn}
+{BEGIN spirituallife_YearOfIntroduction_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END spirituallife_YearOfIntroduction_fieldheadercolumn}
+{BEGIN spirituallife_PreviousReligion_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END spirituallife_PreviousReligion_fieldheadercolumn}
+{BEGIN spirituallife_SpiritualMasterDevoteeId_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END spirituallife_SpiritualMasterDevoteeId_fieldheadercolumn}
+{BEGIN spirituallife_DateOfBrahmanInitiation_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END spirituallife_DateOfBrahmanInitiation_fieldheadercolumn}
+{BEGIN spirituallife_DateOfHarinamInitiation_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END spirituallife_DateOfHarinamInitiation_fieldheadercolumn}
+{BEGIN spirituallife_SpiritulLifeId_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END spirituallife_SpiritulLifeId_fieldheadercolumn}
+{BEGIN spirituallife_IntroducedBy_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END spirituallife_IntroducedBy_fieldheadercolumn}
+{BEGIN company_CompanyId_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END company_CompanyId_fieldheadercolumn}
+{BEGIN company_CompanyName_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END company_CompanyName_fieldheadercolumn}
+{BEGIN company_AddressId_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END company_AddressId_fieldheadercolumn}
+{BEGIN company_Remark_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END company_Remark_fieldheadercolumn}
+{BEGIN devoteelang_DevoteeLanguageId_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END devoteelang_DevoteeLanguageId_fieldheadercolumn}
+{BEGIN devoteelang_WritingLevel_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END devoteelang_WritingLevel_fieldheadercolumn}
+{BEGIN devoteelang_DevoteeId_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END devoteelang_DevoteeId_fieldheadercolumn}
+{BEGIN devoteelang_LanguageId_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END devoteelang_LanguageId_fieldheadercolumn}
+{BEGIN devoteelang_SpeakingLevel_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END devoteelang_SpeakingLevel_fieldheadercolumn}
+{BEGIN devoteelang_ReadingLevel_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END devoteelang_ReadingLevel_fieldheadercolumn}
+{BEGIN occupational_DevoteeOccupationalId_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END occupational_DevoteeOccupationalId_fieldheadercolumn}
+{BEGIN Occupational_DevoteeId_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END Occupational_DevoteeId_fieldheadercolumn}
+{BEGIN Occupational_Education_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END Occupational_Education_fieldheadercolumn}
+{BEGIN Occupational_Occupation_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END Occupational_Occupation_fieldheadercolumn}
+{BEGIN Occupational_Designation_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END Occupational_Designation_fieldheadercolumn}
+{BEGIN Occupational_AwardsOrMerits_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END Occupational_AwardsOrMerits_fieldheadercolumn}
+{BEGIN occupational_SkillsOrExperiences_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END occupational_SkillsOrExperiences_fieldheadercolumn}
+{BEGIN occupational_CurrentCompanyId_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END occupational_CurrentCompanyId_fieldheadercolumn}
+{BEGIN addresstypes_AddressType_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END addresstypes_AddressType_fieldheadercolumn}
+{BEGIN addresstypes_AddressTypeId_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END addresstypes_AddressTypeId_fieldheadercolumn}
+{BEGIN DevoteeOrg_DevoteeOrgId_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END DevoteeOrg_DevoteeOrgId_fieldheadercolumn}
+{BEGIN DevoteeOrg_DevoteeId_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END DevoteeOrg_DevoteeId_fieldheadercolumn}
+{BEGIN DevoteeOrg_FromDate_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END DevoteeOrg_FromDate_fieldheadercolumn}
+{BEGIN DevoteeOrg_ToDate_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END DevoteeOrg_ToDate_fieldheadercolumn}
+{BEGIN DevoteeOrg_OrgId_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END DevoteeOrg_OrgId_fieldheadercolumn}
+{BEGIN devoteeaddress_devoteeaddressId_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END devoteeaddress_devoteeaddressId_fieldheadercolumn}
+{BEGIN devoteeaddress_AddressId_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END devoteeaddress_AddressId_fieldheadercolumn}
+{BEGIN devoteeaddress_DevoteeId_fieldheadercolumn}
+<td class="runner-cc runner-clast"></td>
+{END devoteeaddress_DevoteeId_fieldheadercolumn}
+
+									<td class="runner-cr"><img src="images/spacer.gif"></td>
+									
+									
+									{BEGIN endrecordfooter_block}
+									<td class="runner-cs"></td>
+									{END endrecordfooter_block}
+									{END record_footer}
+								</tr>
+								{END grid_footer}
+
+						</tbody>
+					</table>
+					
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+
+{BEGIN container_pagination}
+<table class="runner-c runner-c-pagination" cellpadding="0" >
+<tr class="{$cheaderclass_pagination}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN pagination_block}
+<td  class="runner-cc runner-bc runner-b-pagination" {$brickclass_pagination}><span>{$pagination}</span></td>
+{END pagination_block}
+
+
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_pagination}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_pagination}
+
+
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

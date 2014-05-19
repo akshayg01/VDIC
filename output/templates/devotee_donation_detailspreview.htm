@@ -1,0 +1,97 @@
+<div {$pageattrs}>
+
+{BEGIN container_dcount}
+<table class="runner-c runner-c-dcount" cellpadding="0" >
+<tr class="{$cheaderclass_dcount}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+
+
+<tr  class="runner-row style1 runner-b-detailspreviewheader {$brickclass_detailspreviewheader}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" ><b>Devotee Donation</b>
+</td><td class="runner-cr"></td></tr>
+
+
+
+<tr  class="runner-row style1 runner-b-detailspreviewdetailsfount {$brickclass_detailspreviewdetailsfount}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" >Details found: <strong>{$row_count}.</strong>
+</td><td class="runner-cr"></td></tr>
+
+
+{BEGIN display_first}
+<tr  class="runner-row style1 runner-b-detailspreviewdispfirst {$brickclass_detailspreviewdispfirst}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" >Displaying first: <strong>{$display_count}</strong>.
+</td><td class="runner-cr"></td></tr>{END display_first}
+
+
+<tr class="{$cfooterclass_dcount}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_dcount}
+
+
+
+{BEGIN container_detailspreviewgrid}
+
+
+{BEGIN details_data}
+<table class="runner-c runner-c-detailspreviewgrid runner-b-detailspreviewgrid">
+	<tr  class="runner-toprow style1">
+		<th class="runner-cl"><img src="images/spacer.gif"></th>
+		<th class="runner-cc ">Donation Date</th>
+		<th class="runner-cc ">Donation On Name</th>
+		<th class="runner-cc ">Donation On Name Pan Number</th>
+		<th class="runner-cc ">Donation Purpose Id</th>
+		<th class="runner-cc ">Amount</th>
+		<th class="runner-cc ">Receipt Number</th>
+		<th class="runner-cc ">Donation Mode</th>
+		<th class="runner-cc ">Check Number</th>
+		<th class="runner-cc ">Check Bank</th>
+		<th class="runner-cc ">Check Branch</th>
+		<th class="runner-cc ">Check Cleared</th>
+		<th class="runner-cc runner-clast">Check Cleared Date</th>
+		<th class="runner-cr"><img src="images/spacer.gif"></th>
+	</tr>
+	{BEGIN details_row}
+	<tr class="runner-row style1">
+		<td class="runner-cl"><img src="images/spacer.gif"></td>
+		<td class="runner-cc ">{$DonationDate_value}</td>
+		<td class="runner-cc ">{$DonationOnName_value}</td>
+		<td class="runner-cc ">{$DonationOnNamePanNumber_value}</td>
+		<td class="runner-cc ">{$DonationPurposeId_value}</td>
+		<td class="runner-cc ">{$Amount_value}</td>
+		<td class="runner-cc ">{$ReceiptNumber_value}</td>
+		<td class="runner-cc ">{$DonationMode_value}</td>
+		<td class="runner-cc ">{$CheckNumber_value}</td>
+		<td class="runner-cc ">{$CheckBank_value}</td>
+		<td class="runner-cc ">{$CheckBranch_value}</td>
+		<td class="runner-cc ">{$CheckCleared_value}</td>
+		<td class="runner-cc runner-clast">{$CheckClearedDate_value}</td>
+		<td class="runner-cr"><img src="images/spacer.gif"></td>
+	</tr>
+	{END details_row}
+	<tr class="runner-bottomrow style1">
+		<td class="runner-cl"><img src="images/spacer.gif"></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc runner-clast"></td>
+		<td class="runner-cr"><img src="images/spacer.gif"></td>
+	</tr>
+</table>
+
+{END details_data}
+
+
+
+{END container_detailspreviewgrid}
+
+</div>

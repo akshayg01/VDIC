@@ -1,0 +1,40 @@
+.page-tab,
+  .runner-pagewrapper .page-tab,
+  .runner-pagewrapper .runner-pagewrapper .page-tab
+{
+padding-top:10px; padding-left:10px;
+}
+.page-tab .runner-c-1,
+  .runner-pagewrapper .page-tab .runner-c-1,
+  .runner-pagewrapper .runner-pagewrapper .page-tab .runner-c-1
+{
+margin-bottom:5px;
+}
+.page-tab .runner-c-1,
+  .runner-pagewrapper .page-tab .runner-c-1,
+  .runner-pagewrapper .runner-pagewrapper .page-tab .runner-c-1
+{
+width:100%;
+}
+.page-tab .runner-b-addtabfield, .page-tab .runner-b-addtabfield,
+.page-tab .runner-b-addtabfield, .page-tab .runner-b-addtabfield > *,
+  .runner-pagewrapper .page-tab .runner-b-addtabfield, .page-tab .runner-b-addtabfield,
+  .runner-pagewrapper .page-tab .runner-b-addtabfield, .page-tab .runner-b-addtabfield > *,
+  .runner-pagewrapper .runner-pagewrapper .page-tab .runner-b-addtabfield, .page-tab .runner-b-addtabfield,
+  .runner-pagewrapper .runner-pagewrapper .page-tab .runner-b-addtabfield, .page-tab .runner-b-addtabfield > *
+{
+white-space: nowrap;
+}
+.page-tab .runner-b-addtabfield, .page-tab .runner-b-addtabfield,
+.page-tab .runner-b-addtabfield, .page-tab .runner-b-addtabfield > *,
+  .runner-pagewrapper .page-tab .runner-b-addtabfield, .page-tab .runner-b-addtabfield,
+  .runner-pagewrapper .page-tab .runner-b-addtabfield, .page-tab .runner-b-addtabfield > *,
+  .runner-pagewrapper .runner-pagewrapper .page-tab .runner-b-addtabfield, .page-tab .runner-b-addtabfield,
+  .runner-pagewrapper .runner-pagewrapper .page-tab .runner-b-addtabfield, .page-tab .runner-b-addtabfield > *
+{
+text-align: right;
+}
+body.page-tab .runner-bare
+{
+padding-right: 5px;
+}

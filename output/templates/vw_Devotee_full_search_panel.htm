@@ -1,0 +1,259 @@
+<div class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	
+	<!-- Search panel content -->
+	<div class="srchCritTop" style="display: none;">
+		Criteria:&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$all_checkbox}> {BEGIN all_checkbox_label}all{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$any_checkbox}> {BEGIN any_checkbox_label}any{END any_checkbox_label}
+	</div>
+	
+	<div class="addOption">
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideControlChooseMenu{$id}" class="runner-button" {$showHideCtrls_attrs}>Add field</a>
+		</span>
+		&nbsp;&nbsp;&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideSearchType{$id}" class="runner-button" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>
+		</span>
+	</div>
+	
+	<!-- choose controls div -->
+	<div class="runner-panel controlChooseMenu" {$controlChooseMenuDiv_attrs}>
+		{BEGIN addSearch_DevoteeId}
+			<a href="#" id="addSearchControl_DevoteeId" class="addSearchControl" {$addSearchControl_DevoteeId_attrs}>Devotee Id</a><br>
+		{END addSearch_DevoteeId}
+		{BEGIN addSearch_Gender}
+			<a href="#" id="addSearchControl_Gender" class="addSearchControl" {$addSearchControl_Gender_attrs}>Gender</a><br>
+		{END addSearch_Gender}
+		{BEGIN addSearch_TitleId}
+			<a href="#" id="addSearchControl_TitleId" class="addSearchControl" {$addSearchControl_TitleId_attrs}>Title Id</a><br>
+		{END addSearch_TitleId}
+		{BEGIN addSearch_FirstName}
+			<a href="#" id="addSearchControl_FirstName" class="addSearchControl" {$addSearchControl_FirstName_attrs}>First Name</a><br>
+		{END addSearch_FirstName}
+		{BEGIN addSearch_LastName}
+			<a href="#" id="addSearchControl_LastName" class="addSearchControl" {$addSearchControl_LastName_attrs}>Last Name</a><br>
+		{END addSearch_LastName}
+		{BEGIN addSearch_MiddleName}
+			<a href="#" id="addSearchControl_MiddleName" class="addSearchControl" {$addSearchControl_MiddleName_attrs}>Middle Name</a><br>
+		{END addSearch_MiddleName}
+		{BEGIN addSearch_DateOfBirth}
+			<a href="#" id="addSearchControl_DateOfBirth" class="addSearchControl" {$addSearchControl_DateOfBirth_attrs}>Date Of Birth</a><br>
+		{END addSearch_DateOfBirth}
+		{BEGIN addSearch_MaritalStatusId}
+			<a href="#" id="addSearchControl_MaritalStatusId" class="addSearchControl" {$addSearchControl_MaritalStatusId_attrs}>Marital Status Id</a><br>
+		{END addSearch_MaritalStatusId}
+		{BEGIN addSearch_DateofMarriage}
+			<a href="#" id="addSearchControl_DateofMarriage" class="addSearchControl" {$addSearchControl_DateofMarriage_attrs}>Date of Marriage</a><br>
+		{END addSearch_DateofMarriage}
+		{BEGIN addSearch_SpouseDevoteeId}
+			<a href="#" id="addSearchControl_SpouseDevoteeId" class="addSearchControl" {$addSearchControl_SpouseDevoteeId_attrs}>Spouse Devotee Id</a><br>
+		{END addSearch_SpouseDevoteeId}
+		{BEGIN addSearch_MobilePhone}
+			<a href="#" id="addSearchControl_MobilePhone" class="addSearchControl" {$addSearchControl_MobilePhone_attrs}>Mobile Phone</a><br>
+		{END addSearch_MobilePhone}
+		{BEGIN addSearch_WorkPhone}
+			<a href="#" id="addSearchControl_WorkPhone" class="addSearchControl" {$addSearchControl_WorkPhone_attrs}>Work Phone</a><br>
+		{END addSearch_WorkPhone}
+		{BEGIN addSearch_EmailPrimary}
+			<a href="#" id="addSearchControl_EmailPrimary" class="addSearchControl" {$addSearchControl_EmailPrimary_attrs}>Email Primary</a><br>
+		{END addSearch_EmailPrimary}
+		{BEGIN addSearch_EmailSecondary}
+			<a href="#" id="addSearchControl_EmailSecondary" class="addSearchControl" {$addSearchControl_EmailSecondary_attrs}>Email Secondary</a><br>
+		{END addSearch_EmailSecondary}
+		{BEGIN addSearch_Password}
+			<a href="#" id="addSearchControl_Password" class="addSearchControl" {$addSearchControl_Password_attrs}>Password</a><br>
+		{END addSearch_Password}
+		{BEGIN addSearch_Address_AddressId}
+			<a href="#" id="addSearchControl_Address_AddressId" class="addSearchControl" {$addSearchControl_Address_AddressId_attrs}>Address Id</a><br>
+		{END addSearch_Address_AddressId}
+		{BEGIN addSearch_address_AddressLine1}
+			<a href="#" id="addSearchControl_address_AddressLine1" class="addSearchControl" {$addSearchControl_address_AddressLine1_attrs}>Address Line1</a><br>
+		{END addSearch_address_AddressLine1}
+		{BEGIN addSearch_address_AddressLine2}
+			<a href="#" id="addSearchControl_address_AddressLine2" class="addSearchControl" {$addSearchControl_address_AddressLine2_attrs}>Address Line2</a><br>
+		{END addSearch_address_AddressLine2}
+		{BEGIN addSearch_address_City}
+			<a href="#" id="addSearchControl_address_City" class="addSearchControl" {$addSearchControl_address_City_attrs}>City</a><br>
+		{END addSearch_address_City}
+		{BEGIN addSearch_address_State}
+			<a href="#" id="addSearchControl_address_State" class="addSearchControl" {$addSearchControl_address_State_attrs}>State</a><br>
+		{END addSearch_address_State}
+		{BEGIN addSearch_address_Pincode}
+			<a href="#" id="addSearchControl_address_Pincode" class="addSearchControl" {$addSearchControl_address_Pincode_attrs}>Pincode</a><br>
+		{END addSearch_address_Pincode}
+		{BEGIN addSearch_address_Country}
+			<a href="#" id="addSearchControl_address_Country" class="addSearchControl" {$addSearchControl_address_Country_attrs}>Country</a><br>
+		{END addSearch_address_Country}
+		{BEGIN addSearch_address_IsVerified}
+			<a href="#" id="addSearchControl_address_IsVerified" class="addSearchControl" {$addSearchControl_address_IsVerified_attrs}>IsVerified</a><br>
+		{END addSearch_address_IsVerified}
+		{BEGIN addSearch_address_IsWrong}
+			<a href="#" id="addSearchControl_address_IsWrong" class="addSearchControl" {$addSearchControl_address_IsWrong_attrs}>IsWrong</a><br>
+		{END addSearch_address_IsWrong}
+		{BEGIN addSearch_address_AddressTypeId}
+			<a href="#" id="addSearchControl_address_AddressTypeId" class="addSearchControl" {$addSearchControl_address_AddressTypeId_attrs}>Address Type Id</a><br>
+		{END addSearch_address_AddressTypeId}
+		{BEGIN addSearch_organization_OrgName}
+			<a href="#" id="addSearchControl_organization_OrgName" class="addSearchControl" {$addSearchControl_organization_OrgName_attrs}>Org Name</a><br>
+		{END addSearch_organization_OrgName}
+		{BEGIN addSearch_organization_OrgId}
+			<a href="#" id="addSearchControl_organization_OrgId" class="addSearchControl" {$addSearchControl_organization_OrgId_attrs}>OrgId</a><br>
+		{END addSearch_organization_OrgId}
+		{BEGIN addSearch_organization_OrgLeaderId}
+			<a href="#" id="addSearchControl_organization_OrgLeaderId" class="addSearchControl" {$addSearchControl_organization_OrgLeaderId_attrs}>OrgLeaderId</a><br>
+		{END addSearch_organization_OrgLeaderId}
+		{BEGIN addSearch_organization_OrgOwnerId}
+			<a href="#" id="addSearchControl_organization_OrgOwnerId" class="addSearchControl" {$addSearchControl_organization_OrgOwnerId_attrs}>OrgOwnerId</a><br>
+		{END addSearch_organization_OrgOwnerId}
+		{BEGIN addSearch_organization_Location}
+			<a href="#" id="addSearchControl_organization_Location" class="addSearchControl" {$addSearchControl_organization_Location_attrs}>Location</a><br>
+		{END addSearch_organization_Location}
+		{BEGIN addSearch_spirituallife_SericesRendered}
+			<a href="#" id="addSearchControl_spirituallife_SericesRendered" class="addSearchControl" {$addSearchControl_spirituallife_SericesRendered_attrs}>Serices Rendered</a><br>
+		{END addSearch_spirituallife_SericesRendered}
+		{BEGIN addSearch_SpiritualLife_DevoteeId}
+			<a href="#" id="addSearchControl_SpiritualLife_DevoteeId" class="addSearchControl" {$addSearchControl_SpiritualLife_DevoteeId_attrs}>Devotee Id</a><br>
+		{END addSearch_SpiritualLife_DevoteeId}
+		{BEGIN addSearch_spirituallife_PreferedServices}
+			<a href="#" id="addSearchControl_spirituallife_PreferedServices" class="addSearchControl" {$addSearchControl_spirituallife_PreferedServices_attrs}>Prefered Services</a><br>
+		{END addSearch_spirituallife_PreferedServices}
+		{BEGIN addSearch_spirituallife_Chanting16RoundsSince}
+			<a href="#" id="addSearchControl_spirituallife_Chanting16RoundsSince" class="addSearchControl" {$addSearchControl_spirituallife_Chanting16RoundsSince_attrs}>Chanting 16 Rounds Since</a><br>
+		{END addSearch_spirituallife_Chanting16RoundsSince}
+		{BEGIN addSearch_spirituallife_IntroducedInCenter}
+			<a href="#" id="addSearchControl_spirituallife_IntroducedInCenter" class="addSearchControl" {$addSearchControl_spirituallife_IntroducedInCenter_attrs}>Introduced In Center</a><br>
+		{END addSearch_spirituallife_IntroducedInCenter}
+		{BEGIN addSearch_spirituallife_YearOfIntroduction}
+			<a href="#" id="addSearchControl_spirituallife_YearOfIntroduction" class="addSearchControl" {$addSearchControl_spirituallife_YearOfIntroduction_attrs}>Year Of Introduction</a><br>
+		{END addSearch_spirituallife_YearOfIntroduction}
+		{BEGIN addSearch_spirituallife_PreviousReligion}
+			<a href="#" id="addSearchControl_spirituallife_PreviousReligion" class="addSearchControl" {$addSearchControl_spirituallife_PreviousReligion_attrs}>Previous Religion</a><br>
+		{END addSearch_spirituallife_PreviousReligion}
+		{BEGIN addSearch_spirituallife_SpiritualMasterDevoteeId}
+			<a href="#" id="addSearchControl_spirituallife_SpiritualMasterDevoteeId" class="addSearchControl" {$addSearchControl_spirituallife_SpiritualMasterDevoteeId_attrs}>Spiritual Master Devotee Id</a><br>
+		{END addSearch_spirituallife_SpiritualMasterDevoteeId}
+		{BEGIN addSearch_spirituallife_DateOfBrahmanInitiation}
+			<a href="#" id="addSearchControl_spirituallife_DateOfBrahmanInitiation" class="addSearchControl" {$addSearchControl_spirituallife_DateOfBrahmanInitiation_attrs}>Date Of Brahman Initiation</a><br>
+		{END addSearch_spirituallife_DateOfBrahmanInitiation}
+		{BEGIN addSearch_spirituallife_DateOfHarinamInitiation}
+			<a href="#" id="addSearchControl_spirituallife_DateOfHarinamInitiation" class="addSearchControl" {$addSearchControl_spirituallife_DateOfHarinamInitiation_attrs}>Date Of Harinam Initiation</a><br>
+		{END addSearch_spirituallife_DateOfHarinamInitiation}
+		{BEGIN addSearch_spirituallife_SpiritulLifeId}
+			<a href="#" id="addSearchControl_spirituallife_SpiritulLifeId" class="addSearchControl" {$addSearchControl_spirituallife_SpiritulLifeId_attrs}>Spiritul Life Id</a><br>
+		{END addSearch_spirituallife_SpiritulLifeId}
+		{BEGIN addSearch_spirituallife_IntroducedBy}
+			<a href="#" id="addSearchControl_spirituallife_IntroducedBy" class="addSearchControl" {$addSearchControl_spirituallife_IntroducedBy_attrs}>Introduced By</a><br>
+		{END addSearch_spirituallife_IntroducedBy}
+		{BEGIN addSearch_company_CompanyId}
+			<a href="#" id="addSearchControl_company_CompanyId" class="addSearchControl" {$addSearchControl_company_CompanyId_attrs}>Company Id</a><br>
+		{END addSearch_company_CompanyId}
+		{BEGIN addSearch_company_CompanyName}
+			<a href="#" id="addSearchControl_company_CompanyName" class="addSearchControl" {$addSearchControl_company_CompanyName_attrs}>Company Name</a><br>
+		{END addSearch_company_CompanyName}
+		{BEGIN addSearch_company_AddressId}
+			<a href="#" id="addSearchControl_company_AddressId" class="addSearchControl" {$addSearchControl_company_AddressId_attrs}>Address Id</a><br>
+		{END addSearch_company_AddressId}
+		{BEGIN addSearch_company_Remark}
+			<a href="#" id="addSearchControl_company_Remark" class="addSearchControl" {$addSearchControl_company_Remark_attrs}>Remark</a><br>
+		{END addSearch_company_Remark}
+		{BEGIN addSearch_devoteelang_DevoteeLanguageId}
+			<a href="#" id="addSearchControl_devoteelang_DevoteeLanguageId" class="addSearchControl" {$addSearchControl_devoteelang_DevoteeLanguageId_attrs}>Devotee Language Id</a><br>
+		{END addSearch_devoteelang_DevoteeLanguageId}
+		{BEGIN addSearch_devoteelang_WritingLevel}
+			<a href="#" id="addSearchControl_devoteelang_WritingLevel" class="addSearchControl" {$addSearchControl_devoteelang_WritingLevel_attrs}>Writing Level</a><br>
+		{END addSearch_devoteelang_WritingLevel}
+		{BEGIN addSearch_devoteelang_DevoteeId}
+			<a href="#" id="addSearchControl_devoteelang_DevoteeId" class="addSearchControl" {$addSearchControl_devoteelang_DevoteeId_attrs}>Devotee Id</a><br>
+		{END addSearch_devoteelang_DevoteeId}
+		{BEGIN addSearch_devoteelang_LanguageId}
+			<a href="#" id="addSearchControl_devoteelang_LanguageId" class="addSearchControl" {$addSearchControl_devoteelang_LanguageId_attrs}>Language Id</a><br>
+		{END addSearch_devoteelang_LanguageId}
+		{BEGIN addSearch_devoteelang_SpeakingLevel}
+			<a href="#" id="addSearchControl_devoteelang_SpeakingLevel" class="addSearchControl" {$addSearchControl_devoteelang_SpeakingLevel_attrs}>Speaking Level</a><br>
+		{END addSearch_devoteelang_SpeakingLevel}
+		{BEGIN addSearch_devoteelang_ReadingLevel}
+			<a href="#" id="addSearchControl_devoteelang_ReadingLevel" class="addSearchControl" {$addSearchControl_devoteelang_ReadingLevel_attrs}>Reading Level</a><br>
+		{END addSearch_devoteelang_ReadingLevel}
+		{BEGIN addSearch_occupational_DevoteeOccupationalId}
+			<a href="#" id="addSearchControl_occupational_DevoteeOccupationalId" class="addSearchControl" {$addSearchControl_occupational_DevoteeOccupationalId_attrs}>Devotee Occupational Id</a><br>
+		{END addSearch_occupational_DevoteeOccupationalId}
+		{BEGIN addSearch_Occupational_DevoteeId}
+			<a href="#" id="addSearchControl_Occupational_DevoteeId" class="addSearchControl" {$addSearchControl_Occupational_DevoteeId_attrs}>DevoteeId</a><br>
+		{END addSearch_Occupational_DevoteeId}
+		{BEGIN addSearch_Occupational_Education}
+			<a href="#" id="addSearchControl_Occupational_Education" class="addSearchControl" {$addSearchControl_Occupational_Education_attrs}>Education</a><br>
+		{END addSearch_Occupational_Education}
+		{BEGIN addSearch_Occupational_Occupation}
+			<a href="#" id="addSearchControl_Occupational_Occupation" class="addSearchControl" {$addSearchControl_Occupational_Occupation_attrs}>Occupation</a><br>
+		{END addSearch_Occupational_Occupation}
+		{BEGIN addSearch_Occupational_Designation}
+			<a href="#" id="addSearchControl_Occupational_Designation" class="addSearchControl" {$addSearchControl_Occupational_Designation_attrs}>Designation</a><br>
+		{END addSearch_Occupational_Designation}
+		{BEGIN addSearch_Occupational_AwardsOrMerits}
+			<a href="#" id="addSearchControl_Occupational_AwardsOrMerits" class="addSearchControl" {$addSearchControl_Occupational_AwardsOrMerits_attrs}>Awards Or Merits</a><br>
+		{END addSearch_Occupational_AwardsOrMerits}
+		{BEGIN addSearch_occupational_SkillsOrExperiences}
+			<a href="#" id="addSearchControl_occupational_SkillsOrExperiences" class="addSearchControl" {$addSearchControl_occupational_SkillsOrExperiences_attrs}>Skills Or Experiences</a><br>
+		{END addSearch_occupational_SkillsOrExperiences}
+		{BEGIN addSearch_occupational_CurrentCompanyId}
+			<a href="#" id="addSearchControl_occupational_CurrentCompanyId" class="addSearchControl" {$addSearchControl_occupational_CurrentCompanyId_attrs}>Current Company Id</a><br>
+		{END addSearch_occupational_CurrentCompanyId}
+		{BEGIN addSearch_addresstypes_AddressType}
+			<a href="#" id="addSearchControl_addresstypes_AddressType" class="addSearchControl" {$addSearchControl_addresstypes_AddressType_attrs}>Address Type</a><br>
+		{END addSearch_addresstypes_AddressType}
+		{BEGIN addSearch_addresstypes_AddressTypeId}
+			<a href="#" id="addSearchControl_addresstypes_AddressTypeId" class="addSearchControl" {$addSearchControl_addresstypes_AddressTypeId_attrs}>AddressTypeId</a><br>
+		{END addSearch_addresstypes_AddressTypeId}
+		{BEGIN addSearch_DevoteeOrg_DevoteeOrgId}
+			<a href="#" id="addSearchControl_DevoteeOrg_DevoteeOrgId" class="addSearchControl" {$addSearchControl_DevoteeOrg_DevoteeOrgId_attrs}>Devotee Org Id</a><br>
+		{END addSearch_DevoteeOrg_DevoteeOrgId}
+		{BEGIN addSearch_DevoteeOrg_DevoteeId}
+			<a href="#" id="addSearchControl_DevoteeOrg_DevoteeId" class="addSearchControl" {$addSearchControl_DevoteeOrg_DevoteeId_attrs}>Devotee Id</a><br>
+		{END addSearch_DevoteeOrg_DevoteeId}
+		{BEGIN addSearch_DevoteeOrg_FromDate}
+			<a href="#" id="addSearchControl_DevoteeOrg_FromDate" class="addSearchControl" {$addSearchControl_DevoteeOrg_FromDate_attrs}>From Date</a><br>
+		{END addSearch_DevoteeOrg_FromDate}
+		{BEGIN addSearch_DevoteeOrg_ToDate}
+			<a href="#" id="addSearchControl_DevoteeOrg_ToDate" class="addSearchControl" {$addSearchControl_DevoteeOrg_ToDate_attrs}>To Date</a><br>
+		{END addSearch_DevoteeOrg_ToDate}
+		{BEGIN addSearch_DevoteeOrg_OrgId}
+			<a href="#" id="addSearchControl_DevoteeOrg_OrgId" class="addSearchControl" {$addSearchControl_DevoteeOrg_OrgId_attrs}>Org Id</a><br>
+		{END addSearch_DevoteeOrg_OrgId}
+		{BEGIN addSearch_devoteeaddress_devoteeaddressId}
+			<a href="#" id="addSearchControl_devoteeaddress_devoteeaddressId" class="addSearchControl" {$addSearchControl_devoteeaddress_devoteeaddressId_attrs}>Devotee Address Id</a><br>
+		{END addSearch_devoteeaddress_devoteeaddressId}
+		{BEGIN addSearch_devoteeaddress_AddressId}
+			<a href="#" id="addSearchControl_devoteeaddress_AddressId" class="addSearchControl" {$addSearchControl_devoteeaddress_AddressId_attrs}>AddressId</a><br>
+		{END addSearch_devoteeaddress_AddressId}
+		{BEGIN addSearch_devoteeaddress_DevoteeId}
+			<a href="#" id="addSearchControl_devoteeaddress_DevoteeId" class="addSearchControl" {$addSearchControl_devoteeaddress_DevoteeId_attrs}>DevoteeId</a><br>
+		{END addSearch_devoteeaddress_DevoteeId}
+	</div>
+	
+	<table class="controlsBlock">
+	{BEGIN searchCtrlBlock}
+		<tr class="srchPanelRow" {$filterRow_attrs}>
+			<td class="srchPanelCell">{$delCtrlButt}</td>
+			<td class="srchPanelCell">{$fLabel}:&nbsp;</td>
+			<td class="srchPanelCell srchPanelCell2">
+				<div class="runner-searchtype">{$searchtype}</div>
+				<div class="runner-searchcontrol">{$searchcontrol}</div>
+				<div class="runner-searchcontrol">{$searchcontrol1}</div>
+		</tr>
+	{END searchCtrlBlock}
+	</table>
+	
+	<div class="bottomSearchButt" align="left" {$bottomSearchButt_attrs}>
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$searchbutton_attrs}>Search</a>
+		</span>
+	</div>
+</div>

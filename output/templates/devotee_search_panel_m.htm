@@ -1,0 +1,146 @@
+<div class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	<!-- Search panel content -->
+	<div class="srchCritTop" style="display: none;">
+		Criteria:&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$all_checkbox}> {BEGIN all_checkbox_label}all{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$any_checkbox}> {BEGIN any_checkbox_label}any{END any_checkbox_label}
+	</div>
+	
+	<div class="addOption">
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideControlChooseMenu{$id}" class="runner-button" {$showHideCtrls_attrs}>Add field</a>
+		</span>
+		&nbsp;&nbsp;&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideSearchType{$id}" class="runner-button" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>
+		</span>
+	</div>
+	
+	<!-- choose controls div -->
+	<div class="runner-panel controlChooseMenu" {$controlChooseMenuDiv_attrs}>
+		{BEGIN addSearch_DevoteeId}
+			<a href="#" id="addSearchControl_DevoteeId" class="addSearchControl" {$addSearchControl_DevoteeId_attrs}>Devotee Id</a><br>
+		{END addSearch_DevoteeId}
+		{BEGIN addSearch_FullName}
+			<a href="#" id="addSearchControl_FullName" class="addSearchControl" {$addSearchControl_FullName_attrs}>Name</a><br>
+		{END addSearch_FullName}
+		{BEGIN addSearch_Photo}
+			<a href="#" id="addSearchControl_Photo" class="addSearchControl" {$addSearchControl_Photo_attrs}>Photo</a><br>
+		{END addSearch_Photo}
+		{BEGIN addSearch_TitleId}
+			<a href="#" id="addSearchControl_TitleId" class="addSearchControl" {$addSearchControl_TitleId_attrs}>Mr / Mrs / Miss</a><br>
+		{END addSearch_TitleId}
+		{BEGIN addSearch_FirstName}
+			<a href="#" id="addSearchControl_FirstName" class="addSearchControl" {$addSearchControl_FirstName_attrs}>First Name</a><br>
+		{END addSearch_FirstName}
+		{BEGIN addSearch_LastName}
+			<a href="#" id="addSearchControl_LastName" class="addSearchControl" {$addSearchControl_LastName_attrs}>Last Name</a><br>
+		{END addSearch_LastName}
+		{BEGIN addSearch_MiddleName}
+			<a href="#" id="addSearchControl_MiddleName" class="addSearchControl" {$addSearchControl_MiddleName_attrs}>Middle Name</a><br>
+		{END addSearch_MiddleName}
+		{BEGIN addSearch_InitiatedName}
+			<a href="#" id="addSearchControl_InitiatedName" class="addSearchControl" {$addSearchControl_InitiatedName_attrs}>Initiated Name</a><br>
+		{END addSearch_InitiatedName}
+		{BEGIN addSearch_DateOfBirth}
+			<a href="#" id="addSearchControl_DateOfBirth" class="addSearchControl" {$addSearchControl_DateOfBirth_attrs}>Date Of Birth</a><br>
+		{END addSearch_DateOfBirth}
+		{BEGIN addSearch_Gender}
+			<a href="#" id="addSearchControl_Gender" class="addSearchControl" {$addSearchControl_Gender_attrs}>Gender</a><br>
+		{END addSearch_Gender}
+		{BEGIN addSearch_CounsellorDevoteeID}
+			<a href="#" id="addSearchControl_CounsellorDevoteeID" class="addSearchControl" {$addSearchControl_CounsellorDevoteeID_attrs}>Counsellor</a><br>
+		{END addSearch_CounsellorDevoteeID}
+		{BEGIN addSearch_IsCounsellor}
+			<a href="#" id="addSearchControl_IsCounsellor" class="addSearchControl" {$addSearchControl_IsCounsellor_attrs}>Himself/Herself is a Counsellor?</a><br>
+		{END addSearch_IsCounsellor}
+		{BEGIN addSearch_EmailPrimary}
+			<a href="#" id="addSearchControl_EmailPrimary" class="addSearchControl" {$addSearchControl_EmailPrimary_attrs}>Email</a><br>
+		{END addSearch_EmailPrimary}
+		{BEGIN addSearch_EmailSecondary}
+			<a href="#" id="addSearchControl_EmailSecondary" class="addSearchControl" {$addSearchControl_EmailSecondary_attrs}>Email Secondary</a><br>
+		{END addSearch_EmailSecondary}
+		{BEGIN addSearch_MobilePhone}
+			<a href="#" id="addSearchControl_MobilePhone" class="addSearchControl" {$addSearchControl_MobilePhone_attrs}>Mobile Number</a><br>
+		{END addSearch_MobilePhone}
+		{BEGIN addSearch_WorkPhone}
+			<a href="#" id="addSearchControl_WorkPhone" class="addSearchControl" {$addSearchControl_WorkPhone_attrs}>Work Phone</a><br>
+		{END addSearch_WorkPhone}
+		{BEGIN addSearch_MaritalStatusId}
+			<a href="#" id="addSearchControl_MaritalStatusId" class="addSearchControl" {$addSearchControl_MaritalStatusId_attrs}>Marital Status Id</a><br>
+		{END addSearch_MaritalStatusId}
+		{BEGIN addSearch_DateofMarriage}
+			<a href="#" id="addSearchControl_DateofMarriage" class="addSearchControl" {$addSearchControl_DateofMarriage_attrs}>Dateof Marriage</a><br>
+		{END addSearch_DateofMarriage}
+		{BEGIN addSearch_SpouseDevoteeId}
+			<a href="#" id="addSearchControl_SpouseDevoteeId" class="addSearchControl" {$addSearchControl_SpouseDevoteeId_attrs}>Spouse Devotee Id</a><br>
+		{END addSearch_SpouseDevoteeId}
+		{BEGIN addSearch_NativeCity}
+			<a href="#" id="addSearchControl_NativeCity" class="addSearchControl" {$addSearchControl_NativeCity_attrs}>Native City</a><br>
+		{END addSearch_NativeCity}
+		{BEGIN addSearch_NativeState}
+			<a href="#" id="addSearchControl_NativeState" class="addSearchControl" {$addSearchControl_NativeState_attrs}>Native State</a><br>
+		{END addSearch_NativeState}
+		{BEGIN addSearch_BloodGroup}
+			<a href="#" id="addSearchControl_BloodGroup" class="addSearchControl" {$addSearchControl_BloodGroup_attrs}>Blood Group</a><br>
+		{END addSearch_BloodGroup}
+		{BEGIN addSearch_YearOfIntroduction}
+			<a href="#" id="addSearchControl_YearOfIntroduction" class="addSearchControl" {$addSearchControl_YearOfIntroduction_attrs}>Year Of Introduction</a><br>
+		{END addSearch_YearOfIntroduction}
+		{BEGIN addSearch_IntroducedBy}
+			<a href="#" id="addSearchControl_IntroducedBy" class="addSearchControl" {$addSearchControl_IntroducedBy_attrs}>Introduced By</a><br>
+		{END addSearch_IntroducedBy}
+		{BEGIN addSearch_IntroducedInCenter}
+			<a href="#" id="addSearchControl_IntroducedInCenter" class="addSearchControl" {$addSearchControl_IntroducedInCenter_attrs}>Introduced In Center</a><br>
+		{END addSearch_IntroducedInCenter}
+		{BEGIN addSearch_Chanting16RoundsSince}
+			<a href="#" id="addSearchControl_Chanting16RoundsSince" class="addSearchControl" {$addSearchControl_Chanting16RoundsSince_attrs}>Chanting16Rounds Since</a><br>
+		{END addSearch_Chanting16RoundsSince}
+		{BEGIN addSearch_SpiritualMasterId}
+			<a href="#" id="addSearchControl_SpiritualMasterId" class="addSearchControl" {$addSearchControl_SpiritualMasterId_attrs}>Spiritual Master Id</a><br>
+		{END addSearch_SpiritualMasterId}
+		{BEGIN addSearch_DateOfHarinamInitiation}
+			<a href="#" id="addSearchControl_DateOfHarinamInitiation" class="addSearchControl" {$addSearchControl_DateOfHarinamInitiation_attrs}>Date Of Harinam Initiation</a><br>
+		{END addSearch_DateOfHarinamInitiation}
+		{BEGIN addSearch_DateOfBrahmanInitiation}
+			<a href="#" id="addSearchControl_DateOfBrahmanInitiation" class="addSearchControl" {$addSearchControl_DateOfBrahmanInitiation_attrs}>Date Of Brahman Initiation</a><br>
+		{END addSearch_DateOfBrahmanInitiation}
+		{BEGIN addSearch_PreviousReligion}
+			<a href="#" id="addSearchControl_PreviousReligion" class="addSearchControl" {$addSearchControl_PreviousReligion_attrs}>Previous Religion</a><br>
+		{END addSearch_PreviousReligion}
+		{BEGIN addSearch_PreferedServices}
+			<a href="#" id="addSearchControl_PreferedServices" class="addSearchControl" {$addSearchControl_PreferedServices_attrs}>Prefered Services</a><br>
+		{END addSearch_PreferedServices}
+		{BEGIN addSearch_ServicesRendered}
+			<a href="#" id="addSearchControl_ServicesRendered" class="addSearchControl" {$addSearchControl_ServicesRendered_attrs}>Services Rendered</a><br>
+		{END addSearch_ServicesRendered}
+		{BEGIN addSearch_active}
+			<a href="#" id="addSearchControl_active" class="addSearchControl" {$addSearchControl_active_attrs}>Active</a><br>
+		{END addSearch_active}
+		{BEGIN addSearch_Password}
+			<a href="#" id="addSearchControl_Password" class="addSearchControl" {$addSearchControl_Password_attrs}>Password</a><br>
+		{END addSearch_Password}
+	</div>
+	
+	<div class="controlsBlock">
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow" {$filterRow_attrs}>
+			<div class="srchPanelCell">{$delCtrlButt}&nbsp;{$fLabel}:&nbsp;</div>
+			<div class="srchPanelCell srchPanelCell2">{$searchtype} {$searchcontrol} {$searchcontrol1}</div>
+		</div>
+		{END searchCtrlBlock}
+	</div>
+		
+	<div class="bottomSearchButt" align="left" {$bottomSearchButt_attrs}>
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$searchbutton_attrs}>Search</a>
+		</span>
+	</div>
+</div>

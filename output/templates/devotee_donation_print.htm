@@ -1,0 +1,420 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+{BEGIN container_master}
+<table class="runner-c runner-c-master" cellpadding="0" >
+<tr class="{$cheaderclass_master}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN mastertable_block}
+<td  class="runner-cc runner-bl runner-b-masterinfoprint" {$brickclass_masterinfoprint}><span>{$showmasterfile}
+</span></td>
+{END mastertable_block}
+
+<td class="runner-cc filler"></td>
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_master}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_master}
+
+
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+{BEGIN page}
+<h1>Devotee Donation</h1>
+<span>
+{BEGIN page_number}
+Page {$pageno} of {$maxpages} 
+{END page_number}
+</span>
+
+	<div class="runner-s-grid">	
+	<table class="runner-c runner-c-grid" cellpadding="0">
+		<thead>
+		{BEGIN grid_header}
+		<tr class="runner-toprow style1">
+			<td class="runner-cl"><img src="images/spacer.gif"></td>
+			{BEGIN record_header}
+					{BEGIN DevoteeId_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN DevoteeId_fieldheader}
+	<b>Devotee Id</b>
+	{END DevoteeId_fieldheader}
+</th>
+{END DevoteeId_fieldheadercolumn}
+	{BEGIN DonationDate_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN DonationDate_fieldheader}
+	<b>Donation Date</b>
+	{END DonationDate_fieldheader}
+</th>
+{END DonationDate_fieldheadercolumn}
+	{BEGIN DonationOnName_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN DonationOnName_fieldheader}
+	<b>Donation On Name</b>
+	{END DonationOnName_fieldheader}
+</th>
+{END DonationOnName_fieldheadercolumn}
+	{BEGIN DonationOnNamePanNumber_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN DonationOnNamePanNumber_fieldheader}
+	<b>Donation On Name Pan Number</b>
+	{END DonationOnNamePanNumber_fieldheader}
+</th>
+{END DonationOnNamePanNumber_fieldheadercolumn}
+	{BEGIN DonationPurposeId_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN DonationPurposeId_fieldheader}
+	<b>Donation Purpose Id</b>
+	{END DonationPurposeId_fieldheader}
+</th>
+{END DonationPurposeId_fieldheadercolumn}
+	{BEGIN Amount_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN Amount_fieldheader}
+	<b>Amount</b>
+	{END Amount_fieldheader}
+</th>
+{END Amount_fieldheadercolumn}
+	{BEGIN ReceiptNumber_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN ReceiptNumber_fieldheader}
+	<b>Receipt Number</b>
+	{END ReceiptNumber_fieldheader}
+</th>
+{END ReceiptNumber_fieldheadercolumn}
+	{BEGIN DonationMode_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN DonationMode_fieldheader}
+	<b>Donation Mode</b>
+	{END DonationMode_fieldheader}
+</th>
+{END DonationMode_fieldheadercolumn}
+	{BEGIN CheckNumber_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN CheckNumber_fieldheader}
+	<b>Check Number</b>
+	{END CheckNumber_fieldheader}
+</th>
+{END CheckNumber_fieldheadercolumn}
+	{BEGIN CheckBank_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN CheckBank_fieldheader}
+	<b>Check Bank</b>
+	{END CheckBank_fieldheader}
+</th>
+{END CheckBank_fieldheadercolumn}
+	{BEGIN CheckBranch_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN CheckBranch_fieldheader}
+	<b>Check Branch</b>
+	{END CheckBranch_fieldheader}
+</th>
+{END CheckBranch_fieldheadercolumn}
+	{BEGIN CheckCleared_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN CheckCleared_fieldheader}
+	<b>Check Cleared</b>
+	{END CheckCleared_fieldheader}
+</th>
+{END CheckCleared_fieldheadercolumn}
+	{BEGIN CheckClearedDate_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN CheckClearedDate_fieldheader}
+	<b>Check Cleared Date</b>
+	{END CheckClearedDate_fieldheader}
+</th>
+{END CheckClearedDate_fieldheadercolumn}
+		
+			{END record_header}
+			<td class="runner-cr"><img src="images/spacer.gif"></td>
+			{BEGIN endrecordheader_block}
+			<td class="runner-cs">&nbsp;</td>
+			{END endrecordheader_block}
+		</tr>
+	{END grid_header}
+		</thead>
+		<tbody>	
+		{BEGIN grid_row}
+	<tr class="runner-row style1" {$rowattrs} {$rowstyle} {$rowstyle}>
+		<td class="runner-cl"></td>
+		{BEGIN grid_record}
+				{BEGIN DevoteeId_fieldcolumn}
+<td  class="runner-cc {$DevoteeId_class}" {$DevoteeId_style}>
+	{$DevoteeId_value}
+</td>
+{END DevoteeId_fieldcolumn}
+	{BEGIN DonationDate_fieldcolumn}
+<td  class="runner-cc {$DonationDate_class}" {$DonationDate_style}>
+	{$DonationDate_value}
+</td>
+{END DonationDate_fieldcolumn}
+	{BEGIN DonationOnName_fieldcolumn}
+<td  class="runner-cc {$DonationOnName_class}" {$DonationOnName_style}>
+	{$DonationOnName_value}
+</td>
+{END DonationOnName_fieldcolumn}
+	{BEGIN DonationOnNamePanNumber_fieldcolumn}
+<td  class="runner-cc {$DonationOnNamePanNumber_class}" {$DonationOnNamePanNumber_style}>
+	{$DonationOnNamePanNumber_value}
+</td>
+{END DonationOnNamePanNumber_fieldcolumn}
+	{BEGIN DonationPurposeId_fieldcolumn}
+<td  class="runner-cc {$DonationPurposeId_class}" {$DonationPurposeId_style}>
+	{$DonationPurposeId_value}
+</td>
+{END DonationPurposeId_fieldcolumn}
+	{BEGIN Amount_fieldcolumn}
+<td  class="runner-cc {$Amount_class}" {$Amount_style}>
+	{$Amount_value}
+</td>
+{END Amount_fieldcolumn}
+	{BEGIN ReceiptNumber_fieldcolumn}
+<td  class="runner-cc {$ReceiptNumber_class}" {$ReceiptNumber_style}>
+	{$ReceiptNumber_value}
+</td>
+{END ReceiptNumber_fieldcolumn}
+	{BEGIN DonationMode_fieldcolumn}
+<td  class="runner-cc {$DonationMode_class}" {$DonationMode_style}>
+	{$DonationMode_value}
+</td>
+{END DonationMode_fieldcolumn}
+	{BEGIN CheckNumber_fieldcolumn}
+<td  class="runner-cc {$CheckNumber_class}" {$CheckNumber_style}>
+	{$CheckNumber_value}
+</td>
+{END CheckNumber_fieldcolumn}
+	{BEGIN CheckBank_fieldcolumn}
+<td  class="runner-cc {$CheckBank_class}" {$CheckBank_style}>
+	{$CheckBank_value}
+</td>
+{END CheckBank_fieldcolumn}
+	{BEGIN CheckBranch_fieldcolumn}
+<td  class="runner-cc {$CheckBranch_class}" {$CheckBranch_style}>
+	{$CheckBranch_value}
+</td>
+{END CheckBranch_fieldcolumn}
+	{BEGIN CheckCleared_fieldcolumn}
+<td  class="runner-cc {$CheckCleared_class}" {$CheckCleared_style}>
+	{$CheckCleared_value}
+</td>
+{END CheckCleared_fieldcolumn}
+	{BEGIN CheckClearedDate_fieldcolumn}
+<td  class="runner-cc {$CheckClearedDate_class}" {$CheckClearedDate_style}>
+	{$CheckClearedDate_value}
+</td>
+{END CheckClearedDate_fieldcolumn}
+
+		{END grid_record}
+		<td class="runner-cr"></td>
+		{BEGIN endrecord_block}
+		<td class="runner-cs">&nbsp;</td>
+		{END endrecord_block}
+	</tr>
+{END grid_row}
+																		{BEGIN totals_row}
+								<tr class="runner-row style1">
+									<td class="runner-cl"><img src="images/spacer.gif"></td>
+									{BEGIN totals_record}
+										{BEGIN DevoteeId_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END DevoteeId_fieldfootercolumn}
+	{BEGIN DonationDate_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END DonationDate_fieldfootercolumn}
+	{BEGIN DonationOnName_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END DonationOnName_fieldfootercolumn}
+	{BEGIN DonationOnNamePanNumber_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END DonationOnNamePanNumber_fieldfootercolumn}
+	{BEGIN DonationPurposeId_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END DonationPurposeId_fieldfootercolumn}
+	{BEGIN Amount_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+	{BEGIN Amount_showtotal}
+			Total:
+	{$Amount_total}
+	{END Amount_showtotal}
+</td>
+{END Amount_fieldfootercolumn}
+	{BEGIN ReceiptNumber_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END ReceiptNumber_fieldfootercolumn}
+	{BEGIN DonationMode_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END DonationMode_fieldfootercolumn}
+	{BEGIN CheckNumber_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END CheckNumber_fieldfootercolumn}
+	{BEGIN CheckBank_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END CheckBank_fieldfootercolumn}
+	{BEGIN CheckBranch_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END CheckBranch_fieldfootercolumn}
+	{BEGIN CheckCleared_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END CheckCleared_fieldfootercolumn}
+	{BEGIN CheckClearedDate_fieldfootercolumn}
+<td class="runner-cc runner-bc runner-clast">
+</td>
+{END CheckClearedDate_fieldfootercolumn}
+
+									{END totals_record}
+									<td class="runner-cr"><img src="images/spacer.gif"></td>
+									{BEGIN endrecordtotals_block}
+									<td class="runner-cs"></td>
+									{END endrecordtotals_block}
+								</tr>
+								{END totals_row}
+
+								<tr class="runner-bottomrow style1">
+									<td class="runner-cl"><img src="images/spacer.gif"></td>
+									{BEGIN record_footer}
+									{BEGIN DevoteeId_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END DevoteeId_fieldfootercolumn}
+{BEGIN DonationDate_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END DonationDate_fieldfootercolumn}
+{BEGIN DonationOnName_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END DonationOnName_fieldfootercolumn}
+{BEGIN DonationOnNamePanNumber_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END DonationOnNamePanNumber_fieldfootercolumn}
+{BEGIN DonationPurposeId_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END DonationPurposeId_fieldfootercolumn}
+{BEGIN Amount_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Amount_fieldfootercolumn}
+{BEGIN ReceiptNumber_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END ReceiptNumber_fieldfootercolumn}
+{BEGIN DonationMode_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END DonationMode_fieldfootercolumn}
+{BEGIN CheckNumber_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END CheckNumber_fieldfootercolumn}
+{BEGIN CheckBank_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END CheckBank_fieldfootercolumn}
+{BEGIN CheckBranch_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END CheckBranch_fieldfootercolumn}
+{BEGIN CheckCleared_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END CheckCleared_fieldfootercolumn}
+{BEGIN CheckClearedDate_fieldfootercolumn}
+<td class="runner-cc runner-clast"></td>
+{END CheckClearedDate_fieldfootercolumn}
+
+									{END record_footer}
+									<td class="runner-cr"><img src="images/spacer.gif"></td>
+									{BEGIN endrecordtotals_block}
+									<td class="runner-cs"></td>
+									{END endrecordtotals_block}
+								</tr>
+
+		</tbody>
+	</table>
+</div>	
+{END page}
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

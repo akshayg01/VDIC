@@ -1,0 +1,694 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+{BEGIN page}
+<h1>Vw Counsellee</h1>
+<span>
+{BEGIN page_number}
+Page {$pageno} of {$maxpages} 
+{END page_number}
+</span>
+
+	<div class="runner-s-grid">	
+	<table class="runner-c runner-c-grid" cellpadding="0">
+		<thead>
+		{BEGIN grid_header}
+		<tr class="runner-toprow style1">
+			<td class="runner-cl"><img src="images/spacer.gif"></td>
+			{BEGIN record_header}
+					{BEGIN DevoteeId_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN DevoteeId_fieldheader}
+	<b>Devotee Id</b>
+	{END DevoteeId_fieldheader}
+</th>
+{END DevoteeId_fieldheadercolumn}
+	{BEGIN TitleId_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN TitleId_fieldheader}
+	<b>Title Id</b>
+	{END TitleId_fieldheader}
+</th>
+{END TitleId_fieldheadercolumn}
+	{BEGIN Photo_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN Photo_fieldheader}
+	<b>Photo</b>
+	{END Photo_fieldheader}
+</th>
+{END Photo_fieldheadercolumn}
+	{BEGIN FirstName_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN FirstName_fieldheader}
+	<b>First Name</b>
+	{END FirstName_fieldheader}
+</th>
+{END FirstName_fieldheadercolumn}
+	{BEGIN LastName_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN LastName_fieldheader}
+	<b>Last Name</b>
+	{END LastName_fieldheader}
+</th>
+{END LastName_fieldheadercolumn}
+	{BEGIN MiddleName_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN MiddleName_fieldheader}
+	<b>Middle Name</b>
+	{END MiddleName_fieldheader}
+</th>
+{END MiddleName_fieldheadercolumn}
+	{BEGIN Gender_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN Gender_fieldheader}
+	<b>Gender</b>
+	{END Gender_fieldheader}
+</th>
+{END Gender_fieldheadercolumn}
+	{BEGIN DateOfBirth_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN DateOfBirth_fieldheader}
+	<b>Date Of Birth</b>
+	{END DateOfBirth_fieldheader}
+</th>
+{END DateOfBirth_fieldheadercolumn}
+	{BEGIN MaritalStatusId_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN MaritalStatusId_fieldheader}
+	<b>Marital Status Id</b>
+	{END MaritalStatusId_fieldheader}
+</th>
+{END MaritalStatusId_fieldheadercolumn}
+	{BEGIN DateofMarriage_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN DateofMarriage_fieldheader}
+	<b>Dateof Marriage</b>
+	{END DateofMarriage_fieldheader}
+</th>
+{END DateofMarriage_fieldheadercolumn}
+	{BEGIN SpouseDevoteeId_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN SpouseDevoteeId_fieldheader}
+	<b>Spouse Devotee Id</b>
+	{END SpouseDevoteeId_fieldheader}
+</th>
+{END SpouseDevoteeId_fieldheadercolumn}
+	{BEGIN MobilePhone_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN MobilePhone_fieldheader}
+	<b>Mobile Phone</b>
+	{END MobilePhone_fieldheader}
+</th>
+{END MobilePhone_fieldheadercolumn}
+	{BEGIN WorkPhone_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN WorkPhone_fieldheader}
+	<b>Work Phone</b>
+	{END WorkPhone_fieldheader}
+</th>
+{END WorkPhone_fieldheadercolumn}
+	{BEGIN EmailPrimary_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN EmailPrimary_fieldheader}
+	<b>Email Primary</b>
+	{END EmailPrimary_fieldheader}
+</th>
+{END EmailPrimary_fieldheadercolumn}
+	{BEGIN EmailSecondary_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN EmailSecondary_fieldheader}
+	<b>Email Secondary</b>
+	{END EmailSecondary_fieldheader}
+</th>
+{END EmailSecondary_fieldheadercolumn}
+	{BEGIN CounsellorDevoteeID_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN CounsellorDevoteeID_fieldheader}
+	<b>Counsellor Devotee ID</b>
+	{END CounsellorDevoteeID_fieldheader}
+</th>
+{END CounsellorDevoteeID_fieldheadercolumn}
+	{BEGIN DevoteeExtraInfoId_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN DevoteeExtraInfoId_fieldheader}
+	<b>Devotee Extra Info Id</b>
+	{END DevoteeExtraInfoId_fieldheader}
+</th>
+{END DevoteeExtraInfoId_fieldheadercolumn}
+	{BEGIN DevoteeId1_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN DevoteeId1_fieldheader}
+	<b>Devotee Id1</b>
+	{END DevoteeId1_fieldheader}
+</th>
+{END DevoteeId1_fieldheadercolumn}
+	{BEGIN NativeCity_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN NativeCity_fieldheader}
+	<b>Native City</b>
+	{END NativeCity_fieldheader}
+</th>
+{END NativeCity_fieldheadercolumn}
+	{BEGIN NativeState_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN NativeState_fieldheader}
+	<b>Native State</b>
+	{END NativeState_fieldheader}
+</th>
+{END NativeState_fieldheadercolumn}
+	{BEGIN BloodGroup_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN BloodGroup_fieldheader}
+	<b>Blood Group</b>
+	{END BloodGroup_fieldheader}
+</th>
+{END BloodGroup_fieldheadercolumn}
+	{BEGIN FatherName_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN FatherName_fieldheader}
+	<b>Father Name</b>
+	{END FatherName_fieldheader}
+</th>
+{END FatherName_fieldheadercolumn}
+	{BEGIN MotherName_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN MotherName_fieldheader}
+	<b>Mother Name</b>
+	{END MotherName_fieldheader}
+</th>
+{END MotherName_fieldheadercolumn}
+	{BEGIN DevoteeLanguageId_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN DevoteeLanguageId_fieldheader}
+	<b>Devotee Language Id</b>
+	{END DevoteeLanguageId_fieldheader}
+</th>
+{END DevoteeLanguageId_fieldheadercolumn}
+	{BEGIN DevoteeId2_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN DevoteeId2_fieldheader}
+	<b>Devotee Id2</b>
+	{END DevoteeId2_fieldheader}
+</th>
+{END DevoteeId2_fieldheadercolumn}
+	{BEGIN SpeakingLevel_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN SpeakingLevel_fieldheader}
+	<b>Speaking Level</b>
+	{END SpeakingLevel_fieldheader}
+</th>
+{END SpeakingLevel_fieldheadercolumn}
+	{BEGIN ReadingLevel_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN ReadingLevel_fieldheader}
+	<b>Reading Level</b>
+	{END ReadingLevel_fieldheader}
+</th>
+{END ReadingLevel_fieldheadercolumn}
+	{BEGIN WritingLevel_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN WritingLevel_fieldheader}
+	<b>Writing Level</b>
+	{END WritingLevel_fieldheader}
+</th>
+{END WritingLevel_fieldheadercolumn}
+	{BEGIN LanguageId_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN LanguageId_fieldheader}
+	<b>Language Id</b>
+	{END LanguageId_fieldheader}
+</th>
+{END LanguageId_fieldheadercolumn}
+		
+			{END record_header}
+			<td class="runner-cr"><img src="images/spacer.gif"></td>
+			{BEGIN endrecordheader_block}
+			<td class="runner-cs">&nbsp;</td>
+			{END endrecordheader_block}
+		</tr>
+	{END grid_header}
+		</thead>
+		<tbody>	
+		{BEGIN grid_row}
+	<tr class="runner-row style1" {$rowattrs} {$rowstyle} {$rowstyle}>
+		<td class="runner-cl"></td>
+		{BEGIN grid_record}
+				{BEGIN DevoteeId_fieldcolumn}
+<td  class="runner-cc {$DevoteeId_class}" {$DevoteeId_style}>
+	{$DevoteeId_value}
+</td>
+{END DevoteeId_fieldcolumn}
+	{BEGIN TitleId_fieldcolumn}
+<td  class="runner-cc {$TitleId_class}" {$TitleId_style}>
+	{$TitleId_value}
+</td>
+{END TitleId_fieldcolumn}
+	{BEGIN Photo_fieldcolumn}
+<td  class="runner-cc {$Photo_class}" {$Photo_style}>
+	{$Photo_value}
+</td>
+{END Photo_fieldcolumn}
+	{BEGIN FirstName_fieldcolumn}
+<td  class="runner-cc {$FirstName_class}" {$FirstName_style}>
+	{$FirstName_value}
+</td>
+{END FirstName_fieldcolumn}
+	{BEGIN LastName_fieldcolumn}
+<td  class="runner-cc {$LastName_class}" {$LastName_style}>
+	{$LastName_value}
+</td>
+{END LastName_fieldcolumn}
+	{BEGIN MiddleName_fieldcolumn}
+<td  class="runner-cc {$MiddleName_class}" {$MiddleName_style}>
+	{$MiddleName_value}
+</td>
+{END MiddleName_fieldcolumn}
+	{BEGIN Gender_fieldcolumn}
+<td  class="runner-cc {$Gender_class}" {$Gender_style}>
+	{$Gender_value}
+</td>
+{END Gender_fieldcolumn}
+	{BEGIN DateOfBirth_fieldcolumn}
+<td  class="runner-cc {$DateOfBirth_class}" {$DateOfBirth_style}>
+	{$DateOfBirth_value}
+</td>
+{END DateOfBirth_fieldcolumn}
+	{BEGIN MaritalStatusId_fieldcolumn}
+<td  class="runner-cc {$MaritalStatusId_class}" {$MaritalStatusId_style}>
+	{$MaritalStatusId_value}
+</td>
+{END MaritalStatusId_fieldcolumn}
+	{BEGIN DateofMarriage_fieldcolumn}
+<td  class="runner-cc {$DateofMarriage_class}" {$DateofMarriage_style}>
+	{$DateofMarriage_value}
+</td>
+{END DateofMarriage_fieldcolumn}
+	{BEGIN SpouseDevoteeId_fieldcolumn}
+<td  class="runner-cc {$SpouseDevoteeId_class}" {$SpouseDevoteeId_style}>
+	{$SpouseDevoteeId_value}
+</td>
+{END SpouseDevoteeId_fieldcolumn}
+	{BEGIN MobilePhone_fieldcolumn}
+<td  class="runner-cc {$MobilePhone_class}" {$MobilePhone_style}>
+	{$MobilePhone_value}
+</td>
+{END MobilePhone_fieldcolumn}
+	{BEGIN WorkPhone_fieldcolumn}
+<td  class="runner-cc {$WorkPhone_class}" {$WorkPhone_style}>
+	{$WorkPhone_value}
+</td>
+{END WorkPhone_fieldcolumn}
+	{BEGIN EmailPrimary_fieldcolumn}
+<td  class="runner-cc {$EmailPrimary_class}" {$EmailPrimary_style}>
+	{$EmailPrimary_value}
+</td>
+{END EmailPrimary_fieldcolumn}
+	{BEGIN EmailSecondary_fieldcolumn}
+<td  class="runner-cc {$EmailSecondary_class}" {$EmailSecondary_style}>
+	{$EmailSecondary_value}
+</td>
+{END EmailSecondary_fieldcolumn}
+	{BEGIN CounsellorDevoteeID_fieldcolumn}
+<td  class="runner-cc {$CounsellorDevoteeID_class}" {$CounsellorDevoteeID_style}>
+	{$CounsellorDevoteeID_value}
+</td>
+{END CounsellorDevoteeID_fieldcolumn}
+	{BEGIN DevoteeExtraInfoId_fieldcolumn}
+<td  class="runner-cc {$DevoteeExtraInfoId_class}" {$DevoteeExtraInfoId_style}>
+	{$DevoteeExtraInfoId_value}
+</td>
+{END DevoteeExtraInfoId_fieldcolumn}
+	{BEGIN DevoteeId1_fieldcolumn}
+<td  class="runner-cc {$DevoteeId1_class}" {$DevoteeId1_style}>
+	{$DevoteeId1_value}
+</td>
+{END DevoteeId1_fieldcolumn}
+	{BEGIN NativeCity_fieldcolumn}
+<td  class="runner-cc {$NativeCity_class}" {$NativeCity_style}>
+	{$NativeCity_value}
+</td>
+{END NativeCity_fieldcolumn}
+	{BEGIN NativeState_fieldcolumn}
+<td  class="runner-cc {$NativeState_class}" {$NativeState_style}>
+	{$NativeState_value}
+</td>
+{END NativeState_fieldcolumn}
+	{BEGIN BloodGroup_fieldcolumn}
+<td  class="runner-cc {$BloodGroup_class}" {$BloodGroup_style}>
+	{$BloodGroup_value}
+</td>
+{END BloodGroup_fieldcolumn}
+	{BEGIN FatherName_fieldcolumn}
+<td  class="runner-cc {$FatherName_class}" {$FatherName_style}>
+	{$FatherName_value}
+</td>
+{END FatherName_fieldcolumn}
+	{BEGIN MotherName_fieldcolumn}
+<td  class="runner-cc {$MotherName_class}" {$MotherName_style}>
+	{$MotherName_value}
+</td>
+{END MotherName_fieldcolumn}
+	{BEGIN DevoteeLanguageId_fieldcolumn}
+<td  class="runner-cc {$DevoteeLanguageId_class}" {$DevoteeLanguageId_style}>
+	{$DevoteeLanguageId_value}
+</td>
+{END DevoteeLanguageId_fieldcolumn}
+	{BEGIN DevoteeId2_fieldcolumn}
+<td  class="runner-cc {$DevoteeId2_class}" {$DevoteeId2_style}>
+	{$DevoteeId2_value}
+</td>
+{END DevoteeId2_fieldcolumn}
+	{BEGIN SpeakingLevel_fieldcolumn}
+<td  class="runner-cc {$SpeakingLevel_class}" {$SpeakingLevel_style}>
+	{$SpeakingLevel_value}
+</td>
+{END SpeakingLevel_fieldcolumn}
+	{BEGIN ReadingLevel_fieldcolumn}
+<td  class="runner-cc {$ReadingLevel_class}" {$ReadingLevel_style}>
+	{$ReadingLevel_value}
+</td>
+{END ReadingLevel_fieldcolumn}
+	{BEGIN WritingLevel_fieldcolumn}
+<td  class="runner-cc {$WritingLevel_class}" {$WritingLevel_style}>
+	{$WritingLevel_value}
+</td>
+{END WritingLevel_fieldcolumn}
+	{BEGIN LanguageId_fieldcolumn}
+<td  class="runner-cc {$LanguageId_class}" {$LanguageId_style}>
+	{$LanguageId_value}
+</td>
+{END LanguageId_fieldcolumn}
+
+		{END grid_record}
+		<td class="runner-cr"></td>
+		{BEGIN endrecord_block}
+		<td class="runner-cs">&nbsp;</td>
+		{END endrecord_block}
+	</tr>
+{END grid_row}
+																		{BEGIN totals_row}
+								<tr class="runner-row style1">
+									<td class="runner-cl"><img src="images/spacer.gif"></td>
+									{BEGIN totals_record}
+										{BEGIN DevoteeId_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+	{BEGIN DevoteeId_showtotal}
+			Count:
+	{$DevoteeId_total}
+	{END DevoteeId_showtotal}
+</td>
+{END DevoteeId_fieldfootercolumn}
+	{BEGIN TitleId_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END TitleId_fieldfootercolumn}
+	{BEGIN Photo_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END Photo_fieldfootercolumn}
+	{BEGIN FirstName_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END FirstName_fieldfootercolumn}
+	{BEGIN LastName_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END LastName_fieldfootercolumn}
+	{BEGIN MiddleName_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END MiddleName_fieldfootercolumn}
+	{BEGIN Gender_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END Gender_fieldfootercolumn}
+	{BEGIN DateOfBirth_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END DateOfBirth_fieldfootercolumn}
+	{BEGIN MaritalStatusId_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END MaritalStatusId_fieldfootercolumn}
+	{BEGIN DateofMarriage_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END DateofMarriage_fieldfootercolumn}
+	{BEGIN SpouseDevoteeId_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END SpouseDevoteeId_fieldfootercolumn}
+	{BEGIN MobilePhone_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END MobilePhone_fieldfootercolumn}
+	{BEGIN WorkPhone_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END WorkPhone_fieldfootercolumn}
+	{BEGIN EmailPrimary_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END EmailPrimary_fieldfootercolumn}
+	{BEGIN EmailSecondary_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END EmailSecondary_fieldfootercolumn}
+	{BEGIN CounsellorDevoteeID_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END CounsellorDevoteeID_fieldfootercolumn}
+	{BEGIN DevoteeExtraInfoId_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END DevoteeExtraInfoId_fieldfootercolumn}
+	{BEGIN DevoteeId1_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END DevoteeId1_fieldfootercolumn}
+	{BEGIN NativeCity_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END NativeCity_fieldfootercolumn}
+	{BEGIN NativeState_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END NativeState_fieldfootercolumn}
+	{BEGIN BloodGroup_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END BloodGroup_fieldfootercolumn}
+	{BEGIN FatherName_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END FatherName_fieldfootercolumn}
+	{BEGIN MotherName_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END MotherName_fieldfootercolumn}
+	{BEGIN DevoteeLanguageId_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END DevoteeLanguageId_fieldfootercolumn}
+	{BEGIN DevoteeId2_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END DevoteeId2_fieldfootercolumn}
+	{BEGIN SpeakingLevel_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END SpeakingLevel_fieldfootercolumn}
+	{BEGIN ReadingLevel_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END ReadingLevel_fieldfootercolumn}
+	{BEGIN WritingLevel_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END WritingLevel_fieldfootercolumn}
+	{BEGIN LanguageId_fieldfootercolumn}
+<td class="runner-cc runner-bc runner-clast">
+</td>
+{END LanguageId_fieldfootercolumn}
+
+									{END totals_record}
+									<td class="runner-cr"><img src="images/spacer.gif"></td>
+									{BEGIN endrecordtotals_block}
+									<td class="runner-cs"></td>
+									{END endrecordtotals_block}
+								</tr>
+								{END totals_row}
+
+								<tr class="runner-bottomrow style1">
+									<td class="runner-cl"><img src="images/spacer.gif"></td>
+									{BEGIN record_footer}
+									{BEGIN DevoteeId_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END DevoteeId_fieldfootercolumn}
+{BEGIN TitleId_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END TitleId_fieldfootercolumn}
+{BEGIN Photo_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Photo_fieldfootercolumn}
+{BEGIN FirstName_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END FirstName_fieldfootercolumn}
+{BEGIN LastName_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END LastName_fieldfootercolumn}
+{BEGIN MiddleName_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END MiddleName_fieldfootercolumn}
+{BEGIN Gender_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Gender_fieldfootercolumn}
+{BEGIN DateOfBirth_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END DateOfBirth_fieldfootercolumn}
+{BEGIN MaritalStatusId_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END MaritalStatusId_fieldfootercolumn}
+{BEGIN DateofMarriage_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END DateofMarriage_fieldfootercolumn}
+{BEGIN SpouseDevoteeId_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END SpouseDevoteeId_fieldfootercolumn}
+{BEGIN MobilePhone_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END MobilePhone_fieldfootercolumn}
+{BEGIN WorkPhone_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END WorkPhone_fieldfootercolumn}
+{BEGIN EmailPrimary_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END EmailPrimary_fieldfootercolumn}
+{BEGIN EmailSecondary_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END EmailSecondary_fieldfootercolumn}
+{BEGIN CounsellorDevoteeID_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END CounsellorDevoteeID_fieldfootercolumn}
+{BEGIN DevoteeExtraInfoId_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END DevoteeExtraInfoId_fieldfootercolumn}
+{BEGIN DevoteeId1_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END DevoteeId1_fieldfootercolumn}
+{BEGIN NativeCity_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END NativeCity_fieldfootercolumn}
+{BEGIN NativeState_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END NativeState_fieldfootercolumn}
+{BEGIN BloodGroup_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END BloodGroup_fieldfootercolumn}
+{BEGIN FatherName_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END FatherName_fieldfootercolumn}
+{BEGIN MotherName_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END MotherName_fieldfootercolumn}
+{BEGIN DevoteeLanguageId_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END DevoteeLanguageId_fieldfootercolumn}
+{BEGIN DevoteeId2_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END DevoteeId2_fieldfootercolumn}
+{BEGIN SpeakingLevel_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END SpeakingLevel_fieldfootercolumn}
+{BEGIN ReadingLevel_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END ReadingLevel_fieldfootercolumn}
+{BEGIN WritingLevel_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END WritingLevel_fieldfootercolumn}
+{BEGIN LanguageId_fieldfootercolumn}
+<td class="runner-cc runner-clast"></td>
+{END LanguageId_fieldfootercolumn}
+
+									{END record_footer}
+									<td class="runner-cr"><img src="images/spacer.gif"></td>
+									{BEGIN endrecordtotals_block}
+									<td class="runner-cs"></td>
+									{END endrecordtotals_block}
+								</tr>
+
+		</tbody>
+	</table>
+</div>	
+{END page}
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,187 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+{BEGIN page}
+<h1>Organization</h1>
+<span>
+{BEGIN page_number}
+Page {$pageno} of {$maxpages} 
+{END page_number}
+</span>
+
+	<div class="runner-s-grid">	
+	<table class="runner-c runner-c-grid" cellpadding="0">
+		<thead>
+		{BEGIN grid_header}
+		<tr class="runner-toprow style1">
+			<td class="runner-cl"><img src="images/spacer.gif"></td>
+			{BEGIN record_header}
+					{BEGIN OrgId_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN OrgId_fieldheader}
+	<b>Org Id</b>
+	{END OrgId_fieldheader}
+</th>
+{END OrgId_fieldheadercolumn}
+	{BEGIN OrgName_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN OrgName_fieldheader}
+	<b>Org Name</b>
+	{END OrgName_fieldheader}
+</th>
+{END OrgName_fieldheadercolumn}
+	{BEGIN OrgOwnerId_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN OrgOwnerId_fieldheader}
+	<b>Org Owner Id</b>
+	{END OrgOwnerId_fieldheader}
+</th>
+{END OrgOwnerId_fieldheadercolumn}
+	{BEGIN Location_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN Location_fieldheader}
+	<b>Location</b>
+	{END Location_fieldheader}
+</th>
+{END Location_fieldheadercolumn}
+		
+			{END record_header}
+			<td class="runner-cr"><img src="images/spacer.gif"></td>
+			{BEGIN endrecordheader_block}
+			<td class="runner-cs">&nbsp;</td>
+			{END endrecordheader_block}
+		</tr>
+	{END grid_header}
+		</thead>
+		<tbody>	
+		{BEGIN grid_row}
+	<tr class="runner-row style1" {$rowattrs} {$rowstyle} {$rowstyle}>
+		<td class="runner-cl"></td>
+		{BEGIN grid_record}
+				{BEGIN OrgId_fieldcolumn}
+<td  class="runner-cc {$OrgId_class}" {$OrgId_style}>
+	{$OrgId_value}
+</td>
+{END OrgId_fieldcolumn}
+	{BEGIN OrgName_fieldcolumn}
+<td  class="runner-cc {$OrgName_class}" {$OrgName_style}>
+	{$OrgName_value}
+</td>
+{END OrgName_fieldcolumn}
+	{BEGIN OrgOwnerId_fieldcolumn}
+<td  class="runner-cc {$OrgOwnerId_class}" {$OrgOwnerId_style}>
+	{$OrgOwnerId_value}
+</td>
+{END OrgOwnerId_fieldcolumn}
+	{BEGIN Location_fieldcolumn}
+<td  class="runner-cc {$Location_class}" {$Location_style}>
+	{$Location_value}
+</td>
+{END Location_fieldcolumn}
+
+		{END grid_record}
+		<td class="runner-cr"></td>
+		{BEGIN endrecord_block}
+		<td class="runner-cs">&nbsp;</td>
+		{END endrecord_block}
+	</tr>
+{END grid_row}
+										
+								<tr class="runner-bottomrow style1">
+									<td class="runner-cl"><img src="images/spacer.gif"></td>
+									{BEGIN record_footer}
+									{BEGIN OrgId_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END OrgId_fieldfootercolumn}
+{BEGIN OrgName_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END OrgName_fieldfootercolumn}
+{BEGIN OrgOwnerId_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END OrgOwnerId_fieldfootercolumn}
+{BEGIN Location_fieldfootercolumn}
+<td class="runner-cc runner-clast"></td>
+{END Location_fieldfootercolumn}
+
+									{END record_footer}
+									<td class="runner-cr"><img src="images/spacer.gif"></td>
+									{BEGIN endrecordtotals_block}
+									<td class="runner-cs"></td>
+									{END endrecordtotals_block}
+								</tr>
+
+		</tbody>
+	</table>
+</div>	
+{END page}
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

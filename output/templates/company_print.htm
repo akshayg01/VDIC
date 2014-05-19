@@ -1,0 +1,247 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+{BEGIN page}
+<h1>Company</h1>
+<span>
+{BEGIN page_number}
+Page {$pageno} of {$maxpages} 
+{END page_number}
+</span>
+
+	<div class="runner-s-grid">	
+	<table class="runner-c runner-c-grid" cellpadding="0">
+		<thead>
+		{BEGIN grid_header}
+		<tr class="runner-toprow style1">
+			<td class="runner-cl"><img src="images/spacer.gif"></td>
+			{BEGIN record_header}
+					{BEGIN CompanyName_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN CompanyName_fieldheader}
+	<b>Company Name</b>
+	{END CompanyName_fieldheader}
+</th>
+{END CompanyName_fieldheadercolumn}
+	{BEGIN Address_Line1_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN Address_Line1_fieldheader}
+	<b>Address Line1</b>
+	{END Address_Line1_fieldheader}
+</th>
+{END Address_Line1_fieldheadercolumn}
+	{BEGIN Address_Line2_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN Address_Line2_fieldheader}
+	<b>Address Line2</b>
+	{END Address_Line2_fieldheader}
+</th>
+{END Address_Line2_fieldheadercolumn}
+	{BEGIN City_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN City_fieldheader}
+	<b>City</b>
+	{END City_fieldheader}
+</th>
+{END City_fieldheadercolumn}
+	{BEGIN State_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN State_fieldheader}
+	<b>State</b>
+	{END State_fieldheader}
+</th>
+{END State_fieldheadercolumn}
+	{BEGIN PIN_Code_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN PIN_Code_fieldheader}
+	<b>PIN Code</b>
+	{END PIN_Code_fieldheader}
+</th>
+{END PIN_Code_fieldheadercolumn}
+	{BEGIN Country_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN Country_fieldheader}
+	<b>Country</b>
+	{END Country_fieldheader}
+</th>
+{END Country_fieldheadercolumn}
+	{BEGIN Remark_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN Remark_fieldheader}
+	<b>Remark</b>
+	{END Remark_fieldheader}
+</th>
+{END Remark_fieldheadercolumn}
+		
+			{END record_header}
+			<td class="runner-cr"><img src="images/spacer.gif"></td>
+			{BEGIN endrecordheader_block}
+			<td class="runner-cs">&nbsp;</td>
+			{END endrecordheader_block}
+		</tr>
+	{END grid_header}
+		</thead>
+		<tbody>	
+		{BEGIN grid_row}
+	<tr class="runner-row style1" {$rowattrs} {$rowstyle} {$rowstyle}>
+		<td class="runner-cl"></td>
+		{BEGIN grid_record}
+				{BEGIN CompanyName_fieldcolumn}
+<td  class="runner-cc {$CompanyName_class}" {$CompanyName_style}>
+	{$CompanyName_value}
+</td>
+{END CompanyName_fieldcolumn}
+	{BEGIN Address_Line1_fieldcolumn}
+<td  class="runner-cc {$Address_Line1_class}" {$Address_Line1_style}>
+	{$Address_Line1_value}
+</td>
+{END Address_Line1_fieldcolumn}
+	{BEGIN Address_Line2_fieldcolumn}
+<td  class="runner-cc {$Address_Line2_class}" {$Address_Line2_style}>
+	{$Address_Line2_value}
+</td>
+{END Address_Line2_fieldcolumn}
+	{BEGIN City_fieldcolumn}
+<td  class="runner-cc {$City_class}" {$City_style}>
+	{$City_value}
+</td>
+{END City_fieldcolumn}
+	{BEGIN State_fieldcolumn}
+<td  class="runner-cc {$State_class}" {$State_style}>
+	{$State_value}
+</td>
+{END State_fieldcolumn}
+	{BEGIN PIN_Code_fieldcolumn}
+<td  class="runner-cc {$PIN_Code_class}" {$PIN_Code_style}>
+	{$PIN_Code_value}
+</td>
+{END PIN_Code_fieldcolumn}
+	{BEGIN Country_fieldcolumn}
+<td  class="runner-cc {$Country_class}" {$Country_style}>
+	{$Country_value}
+</td>
+{END Country_fieldcolumn}
+	{BEGIN Remark_fieldcolumn}
+<td  class="runner-cc {$Remark_class}" {$Remark_style}>
+	{$Remark_value}
+</td>
+{END Remark_fieldcolumn}
+
+		{END grid_record}
+		<td class="runner-cr"></td>
+		{BEGIN endrecord_block}
+		<td class="runner-cs">&nbsp;</td>
+		{END endrecord_block}
+	</tr>
+{END grid_row}
+										
+								<tr class="runner-bottomrow style1">
+									<td class="runner-cl"><img src="images/spacer.gif"></td>
+									{BEGIN record_footer}
+									{BEGIN CompanyName_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END CompanyName_fieldfootercolumn}
+{BEGIN Address_Line1_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Address_Line1_fieldfootercolumn}
+{BEGIN Address_Line2_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Address_Line2_fieldfootercolumn}
+{BEGIN City_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END City_fieldfootercolumn}
+{BEGIN State_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END State_fieldfootercolumn}
+{BEGIN PIN_Code_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END PIN_Code_fieldfootercolumn}
+{BEGIN Country_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Country_fieldfootercolumn}
+{BEGIN Remark_fieldfootercolumn}
+<td class="runner-cc runner-clast"></td>
+{END Remark_fieldfootercolumn}
+
+									{END record_footer}
+									<td class="runner-cr"><img src="images/spacer.gif"></td>
+									{BEGIN endrecordtotals_block}
+									<td class="runner-cs"></td>
+									{END endrecordtotals_block}
+								</tr>
+
+		</tbody>
+	</table>
+</div>	
+{END page}
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

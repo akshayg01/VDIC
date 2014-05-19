@@ -1,0 +1,367 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+{BEGIN page}
+<h1>Vw OwnProfile</h1>
+<span>
+{BEGIN page_number}
+Page {$pageno} of {$maxpages} 
+{END page_number}
+</span>
+
+	<div class="runner-s-grid">	
+	<table class="runner-c runner-c-grid" cellpadding="0">
+		<thead>
+		{BEGIN grid_header}
+		<tr class="runner-toprow style1">
+			<td class="runner-cl"><img src="images/spacer.gif"></td>
+			{BEGIN record_header}
+					{BEGIN Title_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN Title_fieldheader}
+	<b>Title</b>
+	{END Title_fieldheader}
+</th>
+{END Title_fieldheadercolumn}
+	{BEGIN Gender_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN Gender_fieldheader}
+	<b>Gender</b>
+	{END Gender_fieldheader}
+</th>
+{END Gender_fieldheadercolumn}
+	{BEGIN DateOfBirth_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN DateOfBirth_fieldheader}
+	<b>Date Of Birth</b>
+	{END DateOfBirth_fieldheader}
+</th>
+{END DateOfBirth_fieldheadercolumn}
+	{BEGIN MaritalStatus_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN MaritalStatus_fieldheader}
+	<b>Marital Status</b>
+	{END MaritalStatus_fieldheader}
+</th>
+{END MaritalStatus_fieldheadercolumn}
+	{BEGIN DateofMarriage_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN DateofMarriage_fieldheader}
+	<b>Dateof Marriage</b>
+	{END DateofMarriage_fieldheader}
+</th>
+{END DateofMarriage_fieldheadercolumn}
+	{BEGIN SpouseName_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN SpouseName_fieldheader}
+	<b>Spouse Name</b>
+	{END SpouseName_fieldheader}
+</th>
+{END SpouseName_fieldheadercolumn}
+	{BEGIN MobilePhone_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN MobilePhone_fieldheader}
+	<b>Mobile Phone</b>
+	{END MobilePhone_fieldheader}
+</th>
+{END MobilePhone_fieldheadercolumn}
+	{BEGIN WorkPhone_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN WorkPhone_fieldheader}
+	<b>Work Phone</b>
+	{END WorkPhone_fieldheader}
+</th>
+{END WorkPhone_fieldheadercolumn}
+	{BEGIN EmailPrimary_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN EmailPrimary_fieldheader}
+	<b>Email Primary</b>
+	{END EmailPrimary_fieldheader}
+</th>
+{END EmailPrimary_fieldheadercolumn}
+	{BEGIN EmailSecondary_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN EmailSecondary_fieldheader}
+	<b>Email Secondary</b>
+	{END EmailSecondary_fieldheader}
+</th>
+{END EmailSecondary_fieldheadercolumn}
+	{BEGIN CounsellorName_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN CounsellorName_fieldheader}
+	<b>Counsellor Name</b>
+	{END CounsellorName_fieldheader}
+</th>
+{END CounsellorName_fieldheadercolumn}
+	{BEGIN FullName_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN FullName_fieldheader}
+	<b>Full Name</b>
+	{END FullName_fieldheader}
+</th>
+{END FullName_fieldheadercolumn}
+		
+			{END record_header}
+			<td class="runner-cr"><img src="images/spacer.gif"></td>
+			{BEGIN endrecordheader_block}
+			<td class="runner-cs">&nbsp;</td>
+			{END endrecordheader_block}
+		</tr>
+	{END grid_header}
+		</thead>
+		<tbody>	
+		{BEGIN grid_row}
+	<tr class="runner-row style1" {$rowattrs} {$rowstyle} {$rowstyle}>
+		<td class="runner-cl"></td>
+		{BEGIN grid_record}
+				{BEGIN Title_fieldcolumn}
+<td  class="runner-cc {$Title_class}" {$Title_style}>
+	{$Title_value}
+</td>
+{END Title_fieldcolumn}
+	{BEGIN Gender_fieldcolumn}
+<td  class="runner-cc {$Gender_class}" {$Gender_style}>
+	{$Gender_value}
+</td>
+{END Gender_fieldcolumn}
+	{BEGIN DateOfBirth_fieldcolumn}
+<td  class="runner-cc {$DateOfBirth_class}" {$DateOfBirth_style}>
+	{$DateOfBirth_value}
+</td>
+{END DateOfBirth_fieldcolumn}
+	{BEGIN MaritalStatus_fieldcolumn}
+<td  class="runner-cc {$MaritalStatus_class}" {$MaritalStatus_style}>
+	{$MaritalStatus_value}
+</td>
+{END MaritalStatus_fieldcolumn}
+	{BEGIN DateofMarriage_fieldcolumn}
+<td  class="runner-cc {$DateofMarriage_class}" {$DateofMarriage_style}>
+	{$DateofMarriage_value}
+</td>
+{END DateofMarriage_fieldcolumn}
+	{BEGIN SpouseName_fieldcolumn}
+<td  class="runner-cc {$SpouseName_class}" {$SpouseName_style}>
+	{$SpouseName_value}
+</td>
+{END SpouseName_fieldcolumn}
+	{BEGIN MobilePhone_fieldcolumn}
+<td  class="runner-cc {$MobilePhone_class}" {$MobilePhone_style}>
+	{$MobilePhone_value}
+</td>
+{END MobilePhone_fieldcolumn}
+	{BEGIN WorkPhone_fieldcolumn}
+<td  class="runner-cc {$WorkPhone_class}" {$WorkPhone_style}>
+	{$WorkPhone_value}
+</td>
+{END WorkPhone_fieldcolumn}
+	{BEGIN EmailPrimary_fieldcolumn}
+<td  class="runner-cc {$EmailPrimary_class}" {$EmailPrimary_style}>
+	{$EmailPrimary_value}
+</td>
+{END EmailPrimary_fieldcolumn}
+	{BEGIN EmailSecondary_fieldcolumn}
+<td  class="runner-cc {$EmailSecondary_class}" {$EmailSecondary_style}>
+	{$EmailSecondary_value}
+</td>
+{END EmailSecondary_fieldcolumn}
+	{BEGIN CounsellorName_fieldcolumn}
+<td  class="runner-cc {$CounsellorName_class}" {$CounsellorName_style}>
+	{$CounsellorName_value}
+</td>
+{END CounsellorName_fieldcolumn}
+	{BEGIN FullName_fieldcolumn}
+<td  class="runner-cc {$FullName_class}" {$FullName_style}>
+	{$FullName_value}
+</td>
+{END FullName_fieldcolumn}
+
+		{END grid_record}
+		<td class="runner-cr"></td>
+		{BEGIN endrecord_block}
+		<td class="runner-cs">&nbsp;</td>
+		{END endrecord_block}
+	</tr>
+{END grid_row}
+																		{BEGIN totals_row}
+								<tr class="runner-row style1">
+									<td class="runner-cl"><img src="images/spacer.gif"></td>
+									{BEGIN totals_record}
+										{BEGIN Title_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END Title_fieldfootercolumn}
+	{BEGIN Gender_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END Gender_fieldfootercolumn}
+	{BEGIN DateOfBirth_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END DateOfBirth_fieldfootercolumn}
+	{BEGIN MaritalStatus_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END MaritalStatus_fieldfootercolumn}
+	{BEGIN DateofMarriage_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END DateofMarriage_fieldfootercolumn}
+	{BEGIN SpouseName_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END SpouseName_fieldfootercolumn}
+	{BEGIN MobilePhone_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END MobilePhone_fieldfootercolumn}
+	{BEGIN WorkPhone_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END WorkPhone_fieldfootercolumn}
+	{BEGIN EmailPrimary_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END EmailPrimary_fieldfootercolumn}
+	{BEGIN EmailSecondary_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END EmailSecondary_fieldfootercolumn}
+	{BEGIN CounsellorName_fieldfootercolumn}
+<td class="runner-cc runner-bc ">
+</td>
+{END CounsellorName_fieldfootercolumn}
+	{BEGIN FullName_fieldfootercolumn}
+<td class="runner-cc runner-bc runner-clast">
+</td>
+{END FullName_fieldfootercolumn}
+
+									{END totals_record}
+									<td class="runner-cr"><img src="images/spacer.gif"></td>
+									{BEGIN endrecordtotals_block}
+									<td class="runner-cs"></td>
+									{END endrecordtotals_block}
+								</tr>
+								{END totals_row}
+
+								<tr class="runner-bottomrow style1">
+									<td class="runner-cl"><img src="images/spacer.gif"></td>
+									{BEGIN record_footer}
+									{BEGIN Title_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Title_fieldfootercolumn}
+{BEGIN Gender_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Gender_fieldfootercolumn}
+{BEGIN DateOfBirth_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END DateOfBirth_fieldfootercolumn}
+{BEGIN MaritalStatus_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END MaritalStatus_fieldfootercolumn}
+{BEGIN DateofMarriage_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END DateofMarriage_fieldfootercolumn}
+{BEGIN SpouseName_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END SpouseName_fieldfootercolumn}
+{BEGIN MobilePhone_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END MobilePhone_fieldfootercolumn}
+{BEGIN WorkPhone_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END WorkPhone_fieldfootercolumn}
+{BEGIN EmailPrimary_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END EmailPrimary_fieldfootercolumn}
+{BEGIN EmailSecondary_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END EmailSecondary_fieldfootercolumn}
+{BEGIN CounsellorName_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END CounsellorName_fieldfootercolumn}
+{BEGIN FullName_fieldfootercolumn}
+<td class="runner-cc runner-clast"></td>
+{END FullName_fieldfootercolumn}
+
+									{END record_footer}
+									<td class="runner-cr"><img src="images/spacer.gif"></td>
+									{BEGIN endrecordtotals_block}
+									<td class="runner-cs"></td>
+									{END endrecordtotals_block}
+								</tr>
+
+		</tbody>
+	</table>
+</div>	
+{END page}
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

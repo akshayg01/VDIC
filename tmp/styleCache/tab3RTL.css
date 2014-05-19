@@ -1,0 +1,40 @@
+.page-preview,
+  .runner-pagewrapper .page-preview,
+  .runner-pagewrapper .runner-pagewrapper .page-preview
+{
+padding-top:10px; padding-left:10px;
+}
+.page-preview .runner-c-1,
+  .runner-pagewrapper .page-preview .runner-c-1,
+  .runner-pagewrapper .runner-pagewrapper .page-preview .runner-c-1
+{
+margin-bottom:5px;
+}
+.page-preview .runner-c-1,
+  .runner-pagewrapper .page-preview .runner-c-1,
+  .runner-pagewrapper .runner-pagewrapper .page-preview .runner-c-1
+{
+width:100%;
+}
+.page-preview .runner-b-addtabfield, .page-preview .runner-b-addtabfield,
+.page-preview .runner-b-addtabfield, .page-preview .runner-b-addtabfield > *,
+  .runner-pagewrapper .page-preview .runner-b-addtabfield, .page-preview .runner-b-addtabfield,
+  .runner-pagewrapper .page-preview .runner-b-addtabfield, .page-preview .runner-b-addtabfield > *,
+  .runner-pagewrapper .runner-pagewrapper .page-preview .runner-b-addtabfield, .page-preview .runner-b-addtabfield,
+  .runner-pagewrapper .runner-pagewrapper .page-preview .runner-b-addtabfield, .page-preview .runner-b-addtabfield > *
+{
+white-space: nowrap;
+}
+.page-preview .runner-b-addtabfield, .page-preview .runner-b-addtabfield,
+.page-preview .runner-b-addtabfield, .page-preview .runner-b-addtabfield > *,
+  .runner-pagewrapper .page-preview .runner-b-addtabfield, .page-preview .runner-b-addtabfield,
+  .runner-pagewrapper .page-preview .runner-b-addtabfield, .page-preview .runner-b-addtabfield > *,
+  .runner-pagewrapper .runner-pagewrapper .page-preview .runner-b-addtabfield, .page-preview .runner-b-addtabfield,
+  .runner-pagewrapper .runner-pagewrapper .page-preview .runner-b-addtabfield, .page-preview .runner-b-addtabfield > *
+{
+text-align: right;
+}
+body.page-preview .runner-bare
+{
+padding-right: 5px;
+}

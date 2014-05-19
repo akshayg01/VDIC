@@ -1,0 +1,40 @@
+.page-viewtab,
+  .runner-pagewrapper .page-viewtab,
+  .runner-pagewrapper .runner-pagewrapper .page-viewtab
+{
+padding-top:10px; padding-left:10px;
+}
+.page-viewtab .runner-c-1,
+  .runner-pagewrapper .page-viewtab .runner-c-1,
+  .runner-pagewrapper .runner-pagewrapper .page-viewtab .runner-c-1
+{
+margin-bottom:5px;
+}
+.page-viewtab .runner-c-1,
+  .runner-pagewrapper .page-viewtab .runner-c-1,
+  .runner-pagewrapper .runner-pagewrapper .page-viewtab .runner-c-1
+{
+width:100%;
+}
+.page-viewtab .runner-b-viewtabfield, .page-viewtab .runner-b-viewtabfield,
+.page-viewtab .runner-b-viewtabfield, .page-viewtab .runner-b-viewtabfield > *,
+  .runner-pagewrapper .page-viewtab .runner-b-viewtabfield, .page-viewtab .runner-b-viewtabfield,
+  .runner-pagewrapper .page-viewtab .runner-b-viewtabfield, .page-viewtab .runner-b-viewtabfield > *,
+  .runner-pagewrapper .runner-pagewrapper .page-viewtab .runner-b-viewtabfield, .page-viewtab .runner-b-viewtabfield,
+  .runner-pagewrapper .runner-pagewrapper .page-viewtab .runner-b-viewtabfield, .page-viewtab .runner-b-viewtabfield > *
+{
+white-space: nowrap;
+}
+.page-viewtab .runner-b-viewtabfield, .page-viewtab .runner-b-viewtabfield,
+.page-viewtab .runner-b-viewtabfield, .page-viewtab .runner-b-viewtabfield > *,
+  .runner-pagewrapper .page-viewtab .runner-b-viewtabfield, .page-viewtab .runner-b-viewtabfield,
+  .runner-pagewrapper .page-viewtab .runner-b-viewtabfield, .page-viewtab .runner-b-viewtabfield > *,
+  .runner-pagewrapper .runner-pagewrapper .page-viewtab .runner-b-viewtabfield, .page-viewtab .runner-b-viewtabfield,
+  .runner-pagewrapper .runner-pagewrapper .page-viewtab .runner-b-viewtabfield, .page-viewtab .runner-b-viewtabfield > *
+{
+text-align: right;
+}
+body.page-viewtab .runner-bare
+{
+padding-right: 5px;
+}

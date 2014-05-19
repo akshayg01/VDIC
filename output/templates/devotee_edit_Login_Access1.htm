@@ -1,0 +1,44 @@
+<div {$pageattrs}>
+
+{BEGIN container_1}
+
+
+
+<table class="runner-c" cellpadding="0">
+{BEGIN active_tabfieldblock}
+	<tr class="runner-row style1">
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_active {$fielddispclass_active}">
+				{BEGIN active_label}Active{END active_label}
+			</div>
+		</td>
+		<td class="runner-cc alt">
+			<div class="fieldcontrol_active {$fielddispclass_active}">
+				{$active_editcontrol}
+			</div>
+		</td>
+	</tr>
+{END active_tabfieldblock}
+{BEGIN Password_tabfieldblock}
+	<tr class="runner-row style1">
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_Password {$fielddispclass_Password}">
+				{BEGIN Password_label}Password{END Password_label}
+			</div>
+		</td>
+		<td class="runner-cc alt">
+			<div class="fieldcontrol_Password {$fielddispclass_Password}">
+				{$Password_editcontrol}
+			</div>
+		</td>
+	</tr>
+{END Password_tabfieldblock}
+</table>
+
+
+
+
+
+{END container_1}
+
+</div>
