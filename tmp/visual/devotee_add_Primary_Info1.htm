@@ -1,10 +1,9 @@
-<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#cfdbea"><tr><td>
-<DIV 
-{$pageattrs}>
+
+<DIV {$pageattrs}>
 {BEGIN container_1}
 <TABLE class=runner-c cellPadding=0>
   <TBODY>
-  {BEGIN Photo_tabfieldblock}<TR class="runner-row style1">
+  {BEGIN Photo_tabfieldblock}<TR class="runner-row style1" style="HEIGHT: 20px">
     <TD class="runner-cc runner-cc1">
       
       <DIV class="fieldlabel_Photo {$fielddispclass_Photo}">{BEGIN Photo_label}Photo 
@@ -17,35 +16,16 @@
       
       <DIV class="fieldlabel_TitleId {$fielddispclass_TitleId}">{BEGIN TitleId_label}Mr 
       / Mrs / Miss {END TitleId_label}</DIV></TD>
-    <TD class="runner-cc alt">
+    <TD class="runner-cc alt" style="WHITE-SPACE: nowrap">
       
-      <DIV class="fieldcontrol_TitleId {$fielddispclass_TitleId}">{$TitleId_editcontrol} 
-  </DIV></TD></TR>
-  {END TitleId_tabfieldblock}{BEGIN FirstName_tabfieldblock}<TR class="runner-row style1">
-    <TD class="runner-cc runner-cc1">
-      
-      <DIV class="fieldlabel_FirstName {$fielddispclass_FirstName}">{BEGIN FirstName_label}First Name {END FirstName_label}</DIV></TD>
-    <TD class="runner-cc alt">
-      
-      <DIV class="fieldcontrol_FirstName {$fielddispclass_FirstName}">{$FirstName_editcontrol} 
-    </DIV></TD></TR>
-  {END FirstName_tabfieldblock}{BEGIN LastName_tabfieldblock}<TR class="runner-row style1">
-    <TD class="runner-cc runner-cc1">
-      
-      <DIV class="fieldlabel_LastName {$fielddispclass_LastName}">{BEGIN LastName_label}Last Name {END LastName_label}</DIV></TD>
-    <TD class="runner-cc alt">
-      
-      <DIV class="fieldcontrol_LastName {$fielddispclass_LastName}">{$LastName_editcontrol} 
-  </DIV></TD></TR>
-  {END LastName_tabfieldblock}{BEGIN MiddleName_tabfieldblock}<TR class="runner-row style1">
-    <TD class="runner-cc runner-cc1">
-      
-      <DIV class="fieldlabel_MiddleName {$fielddispclass_MiddleName}">{BEGIN MiddleName_label}Middle Name {END MiddleName_label}</DIV></TD>
-    <TD class="runner-cc alt">
-      
-      <DIV class="fieldcontrol_MiddleName {$fielddispclass_MiddleName}">{$MiddleName_editcontrol} 
-      </DIV></TD></TR>
-  {END MiddleName_tabfieldblock}{BEGIN InitiatedName_tabfieldblock}<TR class="runner-row style1">
+      <DIV class="fieldcontrol_TitleId {$fielddispclass_TitleId}">{$TitleId_editcontrol} {$FirstName_editcontrol}{$LastName_editcontrol}{$MiddleName_editcontrol} 
+      <INPUT id=FName 
+      placeholder="First Name" required>&nbsp;&nbsp;&nbsp;<STRONG><FONT 
+      color=#ff0000>*</FONT></STRONG>&nbsp; <INPUT id=LName 
+      placeholder="Last Name" required>&nbsp;&nbsp;<STRONG><FONT 
+      color=#ff0000>*</FONT></STRONG>&nbsp;&nbsp; <INPUT id=MName 
+      placeholder="Middle Name"></DIV></TD></TR>
+  {END TitleId_tabfieldblock}{BEGIN InitiatedName_tabfieldblock}<TR class="runner-row style1">
     <TD class="runner-cc runner-cc1">
       
       <DIV class="fieldlabel_InitiatedName {$fielddispclass_InitiatedName}">{BEGIN InitiatedName_label}Initiated Name {END InitiatedName_label}</DIV></TD>
@@ -78,4 +58,3 @@
       <DIV 
       class="fieldcontrol_CounsellorDevoteeID {$fielddispclass_CounsellorDevoteeID}">{$CounsellorDevoteeID_editcontrol} 
       </DIV></TD></TR>{END CounsellorDevoteeID_tabfieldblock}</TBODY></TABLE>{END container_1}</DIV>
-</TD></TR></table>

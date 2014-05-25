@@ -66,7 +66,72 @@
           <TD class=runner-cc></TD>
           <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TABLE>{END container_message}
       {BEGIN container_grid}{BEGIN grid_block}<TABLE class="runner-c-grid runner-b-grid" cellPadding=0>{BEGIN grid_row}<TR {$rowstyle} {$rowattrs} {$rowclass}>{BEGIN grid_record}<TD class=runner-cg>{BEGIN grid_vrecord}<TABLE class=runner-c cellPadding=0>{BEGIN grid_recordheader}<TR class="runner-toprow style1"><TH class=runner-cl><IMG src="images/spacer.gif"></TH>
-                <TH class=runner-cc colSpan=2 iEditCont="all">{BEGIN edit_column}{BEGIN edit_link}<A title=Edit class=runner-verticalicons {$editlink_attrs}><IMG border=0 alt=Edit src="images/icon_edit_new.gif"></A> {END edit_link}{END edit_column}{BEGIN devotee_dtable_column}<SPAN>{BEGIN devotee_donation_dtable_link}&nbsp;{END devotee_donation_dtable_link}</SPAN>{END devotee_dtable_column}</TH>
+                <TH class=runner-cc colSpan=2 iEditCont="all">{BEGIN edit_column}{BEGIN edit_link}<A title=Edit class=runner-verticalicons {$editlink_attrs}><IMG border=0 alt=Edit src="images/icon_edit_new.gif"></A> {END edit_link}{END edit_column}{BEGIN devotee_dtable_column}<SPAN>{BEGIN devotee_donation_dtable_link}&nbsp;<a  {$devotee_donation_dtablelink_attrs}>Devotee Donation
+																									<span {$devotee_donation_childnumber_attr} dir="ltr">{BEGIN devotee_donation_childcount}
+													({$devotee_donation_childnumber})
+													{END devotee_donation_childcount}
+													</span>
+												</a>&nbsp;
+												{END devotee_donation_dtable_link}</SPAN>{END devotee_dtable_column}{BEGIN MyProfile_dtable_column}<span>{BEGIN devotee_address_dtable_link}
+												&nbsp;<a  {$devotee_address_dtablelink_attrs}>Devotee Address
+																									<span {$devotee_address_childnumber_attr} dir="ltr">{BEGIN devotee_address_childcount}
+													({$devotee_address_childnumber})
+													{END devotee_address_childcount}
+													</span>
+												</a>&nbsp;
+												{END devotee_address_dtable_link}
+												</span>
+												{END MyProfile_dtable_column}
+												{BEGIN MyProfile_dtable_column}<span>{BEGIN devotee_donation_dtable_link}&nbsp;<a  {$devotee_donation_dtablelink_attrs}>Devotee Donation
+																									<span {$devotee_donation_childnumber_attr} dir="ltr">{BEGIN devotee_donation_childcount}
+													({$devotee_donation_childnumber})
+													{END devotee_donation_childcount}
+													</span>
+												</a>&nbsp;
+												{END devotee_donation_dtable_link}
+												</span>
+												{END MyProfile_dtable_column}
+												{BEGIN MyProfile_dtable_column}<span>{BEGIN devotee_language_dtable_link}
+												&nbsp;<a  {$devotee_language_dtablelink_attrs}>Devotee Language
+																									<span {$devotee_language_childnumber_attr} dir="ltr">{BEGIN devotee_language_childcount}
+													({$devotee_language_childnumber})
+													{END devotee_language_childcount}
+													</span>
+												</a>&nbsp;
+												{END devotee_language_dtable_link}
+												</span>
+												{END MyProfile_dtable_column}
+												{BEGIN MyProfile_dtable_column}<span>{BEGIN devotee_org_dtable_link}
+												&nbsp;<a  {$devotee_org_dtablelink_attrs}>Devotee Org
+																									<span {$devotee_org_childnumber_attr} dir="ltr">{BEGIN devotee_org_childcount}
+													({$devotee_org_childnumber})
+													{END devotee_org_childcount}
+													</span>
+												</a>&nbsp;
+												{END devotee_org_dtable_link}
+												</span>
+												{END MyProfile_dtable_column}
+												{BEGIN MyProfile_dtable_column}<span>{BEGIN devotee_family_member_dtable_link}
+												&nbsp;<a  {$devotee_family_member_dtablelink_attrs}>Devotee Family Member
+																									<span {$devotee_family_member_childnumber_attr} dir="ltr">{BEGIN devotee_family_member_childcount}
+													({$devotee_family_member_childnumber})
+													{END devotee_family_member_childcount}
+													</span>
+												</a>&nbsp;
+												{END devotee_family_member_dtable_link}
+												</span>
+												{END MyProfile_dtable_column}
+												{BEGIN MyProfile_dtable_column}<span>{BEGIN devotee_company_dtable_link}
+												&nbsp;<a  {$devotee_company_dtablelink_attrs}>Devotee Company
+																									<span {$devotee_company_childnumber_attr} dir="ltr">{BEGIN devotee_company_childcount}
+													({$devotee_company_childnumber})
+													{END devotee_company_childcount}
+													</span>
+												</a>&nbsp;
+												{END devotee_company_dtable_link}
+												</span>
+												{END MyProfile_dtable_column}
+											</TH>
                 <TD class=runner-cc></TD>
                 <TH class=runner-cr><IMG src="images/spacer.gif"></TH></TR>
               {END grid_recordheader}{BEGIN FullName_fieldcolumn}<TR class="runner-row style1"><TD class=runner-cl></TD>

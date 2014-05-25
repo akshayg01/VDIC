@@ -1,0 +1,19 @@
+
+<DIV {$pageattrs}>
+{BEGIN container_1}
+<TABLE class=runner-c cellPadding=0>
+  <TBODY></TBODY></TABLE>{END container_1}</DIV>
+{BEGIN container_details}
+<TABLE class="runner-c runner-c-details" cellPadding=0>
+  <TBODY>
+  <TR class="{$cheaderclass_details}">
+    <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+    <TD class=runner-cc></TD>
+    <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
+  {BEGIN detail_tables}<TR class="runner-row style1 runner-b-adddetails {$brickclass_adddetails}">
+    <TD class=runner-cl></TD>{$displayDetailTable_devotee_language} </TD>
+    <TD class=runner-cr></TD></TR>
+  {END detail_tables}<TR class="{$cfooterclass_details}">
+    <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+    <TD class=runner-cc></TD>
+    <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TBODY></TABLE>{END container_details}

@@ -86,19 +86,7 @@
                 <TH class=runner-cc colSpan=2 iEditCont="all">{BEGIN edit_column}{BEGIN edit_link}<A title=Edit class=runner-verticalicons {$editlink_attrs}><IMG border=0 alt=Edit src="images/icon_edit_new.gif"></A> {END edit_link}{END edit_column}{BEGIN view_column}{BEGIN view_link}<A title=View class=runner-verticalicons {$viewlink_attrs}><IMG border=0 alt=View src="images/icon_view_new.gif"></A> {END view_link}{END view_column}{BEGIN checkbox_column}{BEGIN checkbox}<INPUT class=runner-verticalcheckbox type=checkbox {$checkbox_attrs}>{END checkbox}{END checkbox_column}&nbsp;{BEGIN devotee_dtable_column}<SPAN>{BEGIN devotee_donation_dtable_link}&nbsp;{END devotee_donation_dtable_link}</SPAN>{END devotee_dtable_column}</TH>
                 <TD class=runner-cc></TD>
                 <TH class=runner-cr><IMG src="images/spacer.gif"></TH></TR>
-              {END grid_recordheader}{BEGIN ProfileApprovalStatus_fieldcolumn}<tr class="runner-row style1"><td class="runner-cl"></td>
-	<td class="runner-cc runner-cc1">Profile Approval Status</td>
-	<td class="runner-cc alt runner-cc2 {$ProfileApprovalStatus_class}" {$ProfileApprovalStatus_style}>{$ProfileApprovalStatus_value}&nbsp;</td>
-	<td class="runner-cr alt"></td>
-</tr>
-{END ProfileApprovalStatus_fieldcolumn}
-	{BEGIN LoginAccessStatus_fieldcolumn}<tr class="runner-row style1"><td class="runner-cl"></td>
-	<td class="runner-cc runner-cc1">Login Access Status</td>
-	<td class="runner-cc alt runner-cc2 {$LoginAccessStatus_class}" {$LoginAccessStatus_style}>{$LoginAccessStatus_value}&nbsp;</td>
-	<td class="runner-cr alt"></td>
-</tr>
-{END LoginAccessStatus_fieldcolumn}
-	{BEGIN FullName_fieldcolumn}<TR class="runner-row style1"><TD class=runner-cl></TD>
+              {END grid_recordheader}{BEGIN FullName_fieldcolumn}<TR class="runner-row style1"><TD class=runner-cl></TD>
                 <TD class="runner-cc runner-cc1">
                   Name</TD>
                 <TD class="runner-cc alt runner-cc2 {$FullName_class}" 

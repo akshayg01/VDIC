@@ -319,7 +319,17 @@
 									{END listIcons_column}	
 
 									
-																										{BEGIN DevoteeId_fieldheadercolumn}
+																										{BEGIN ProfileApprovalStatus_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN ProfileApprovalStatus_fieldheader}
+																				<a {$ProfileApprovalStatus_orderlinkattrs}>
+											Profile Approval Status
+										</a>
+									{END ProfileApprovalStatus_fieldheader}
+									</th>
+									{END ProfileApprovalStatus_fieldheadercolumn}
+
+																	{BEGIN DevoteeId_fieldheadercolumn}
 									<th class="runner-cc ">
 									{BEGIN DevoteeId_fieldheader}
 																				<a {$DevoteeId_orderlinkattrs}>
@@ -424,7 +434,13 @@
 
 									
 
-										{BEGIN DevoteeId_fieldcolumn}
+										{BEGIN ProfileApprovalStatus_fieldcolumn}
+	<td class="runner-cc  {$ProfileApprovalStatus_class}" {$ProfileApprovalStatus_style}>
+		{$ProfileApprovalStatus_value}
+	</td>
+{END ProfileApprovalStatus_fieldcolumn}
+
+	{BEGIN DevoteeId_fieldcolumn}
 	<td class="runner-cc  {$DevoteeId_class}" {$DevoteeId_style}>
 		{$DevoteeId_value}
 	</td>
@@ -487,7 +503,11 @@
 
 									
 
-										{BEGIN DevoteeId_fieldfootercolumn}
+										{BEGIN ProfileApprovalStatus_fieldfootercolumn}
+<td class="runner-cc  {$ProfileApprovalStatus_class}">
+</td>
+{END ProfileApprovalStatus_fieldfootercolumn}
+	{BEGIN DevoteeId_fieldfootercolumn}
 <td class="runner-cc  {$DevoteeId_class}">
 	{BEGIN DevoteeId_showtotal}
 			Count:
@@ -536,7 +556,10 @@
 									
 									
 
-									{BEGIN DevoteeId_fieldheadercolumn}
+									{BEGIN ProfileApprovalStatus_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END ProfileApprovalStatus_fieldheadercolumn}
+{BEGIN DevoteeId_fieldheadercolumn}
 <td class="runner-cc "></td>
 {END DevoteeId_fieldheadercolumn}
 {BEGIN Name_fieldheadercolumn}

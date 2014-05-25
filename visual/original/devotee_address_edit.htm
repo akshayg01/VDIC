@@ -50,8 +50,22 @@ Address Id: {$show_key1}
 <table class="runner-c runner-c-fields" cellpadding="0" >
 
 
-	{BEGIN AddressLine1_fieldblock}
+	{BEGIN AddressTypeID_fieldblock}
 	<tr class="runner-toprow header style1 runner-b-editfields"><td class="runner-cl"><img src="images/spacer.gif"></td>
+		<td class="runner-cc runner-cc1">
+			<div class="fieldlabel_AddressTypeID {$fielddispclass_AddressTypeID}">
+				{BEGIN AddressTypeID_label}Address Type{END AddressTypeID_label}
+			</div>
+		</td>
+		<td class="runner-cc alt runner-fixedcell">
+			<div class="fieldcontrol_AddressTypeID {$fielddispclass_AddressTypeID}">
+				{$AddressTypeID_editcontrol}&nbsp;
+			</div>
+		</td>
+	<td class="runner-cr alt"><img src="images/spacer.gif"></td></tr>
+{END AddressTypeID_fieldblock}
+	{BEGIN AddressLine1_fieldblock}
+	<tr class="runner-row style1 runner-b-editfields"><td class="runner-cl"></td>
 		<td class="runner-cc runner-cc1">
 			<div class="fieldlabel_AddressLine1 {$fielddispclass_AddressLine1}">
 				{BEGIN AddressLine1_label}Address Line1{END AddressLine1_label}
@@ -62,7 +76,7 @@ Address Id: {$show_key1}
 				{$AddressLine1_editcontrol}&nbsp;
 			</div>
 		</td>
-	<td class="runner-cr alt"><img src="images/spacer.gif"></td></tr>
+	<td class="runner-cr alt"></td></tr>
 {END AddressLine1_fieldblock}
 	{BEGIN AddressLine2_fieldblock}
 	<tr class="runner-row style1 runner-b-editfields"><td class="runner-cl"></td>
@@ -134,20 +148,6 @@ Address Id: {$show_key1}
 		</td>
 	<td class="runner-cr alt"></td></tr>
 {END pincode_fieldblock}
-	{BEGIN AddressTypeID_fieldblock}
-	<tr class="runner-row style1 runner-b-editfields"><td class="runner-cl"></td>
-		<td class="runner-cc runner-cc1">
-			<div class="fieldlabel_AddressTypeID {$fielddispclass_AddressTypeID}">
-				{BEGIN AddressTypeID_label}Address Type ID{END AddressTypeID_label}
-			</div>
-		</td>
-		<td class="runner-cc alt runner-fixedcell">
-			<div class="fieldcontrol_AddressTypeID {$fielddispclass_AddressTypeID}">
-				{$AddressTypeID_editcontrol}&nbsp;
-			</div>
-		</td>
-	<td class="runner-cr alt"></td></tr>
-{END AddressTypeID_fieldblock}
 
 
 

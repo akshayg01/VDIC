@@ -76,14 +76,19 @@ Devotee Id: {$show_key1}
 	</td>
 	<td class="runner-cr"></td></tr>
 
-										
-										
-										
-										
-										
-										
-										
-										
+		<tr class="runner-row style1 runner-b-editfields"><td class="runner-cl"></td>
+	<td colspan="2" class="runner-cc">	
+		{$Section Marital_Info1}&nbsp;	
+	</td>
+	<td class="runner-cr"></td></tr>
+
+									
+									
+									
+									
+									
+									
+									
 
 
 
@@ -137,6 +142,28 @@ Devotee Id: {$show_key1}
 {END container_edit}
 
 
+
+{BEGIN container_details}
+<table class="runner-c runner-c-details" cellpadding="0" >
+<tr class="{$cheaderclass_details}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+
+{BEGIN detail_tables}
+<tr  class="runner-row style1 runner-b-editdetails {$brickclass_editdetails}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" >		{$displayDetailTable_devotee_address}
+			{$displayDetailTable_devotee_family_member}
+		{$displayDetailTable_devotee_company}
+		{$displayDetailTable_devotee_language}
+	</td><td class="runner-cr"></td></tr>{END detail_tables}
+
+
+<tr class="{$cfooterclass_details}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_details}
 
 
 				</td>

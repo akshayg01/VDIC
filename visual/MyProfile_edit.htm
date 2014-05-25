@@ -23,7 +23,22 @@
                 <TD class=runner-cc colSpan=2>{$Section Contact_Info1}&nbsp; 
                   </TD>
                 <TD class=runner-cr></TD></tr>
-              {BEGIN legend}<TR class="runner-row style3 runner-b-legend {$brickclass_legend}"><TD class=runner-cl></TD>
+              <tr class="runner-row style1 runner-b-editfields"><td class="runner-cl"></td>
+	<td colspan="2" class="runner-cc">{$Section Marital_Info1}&nbsp;	
+	</td>
+	<td class="runner-cr"></td></tr>
+
+									
+									
+									
+									
+									
+									
+									
+
+
+
+{BEGIN legend}<TR class="runner-row style3 runner-b-legend {$brickclass_legend}"><TD class=runner-cl></TD>
                 <TD class="runner-cc runner-brickcontents" colSpan=2><SPAN id=required_block{$id}><IMG alt=bullet src="images/icon_required.gif"> - Required field </SPAN></TD>
                 <TD class=runner-cr></TD></TR>
               {END legend}<TR 
@@ -40,7 +55,25 @@
           <TD class=runner-cr></TD></TR>
         <TR class="{$cfooterclass_edit}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
           <TD class=runner-cc></TD>
-          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TABLE>{END container_edit}</TD></TR>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TABLE>{END container_edit}{BEGIN container_details}<table class="runner-c runner-c-details" cellpadding="0" ><tr class="{$cheaderclass_details}"><td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+
+{BEGIN detail_tables}<tr  class="runner-row style1 runner-b-editdetails {$brickclass_editdetails}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" >{$displayDetailTable_devotee_address}
+			{$displayDetailTable_devotee_family_member}
+		{$displayDetailTable_devotee_company}
+		{$displayDetailTable_devotee_language}
+	</td><td class="runner-cr"></td></tr>{END detail_tables}
+
+
+<tr class="{$cfooterclass_details}"><td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_details}
+
+
+				</TD></TR>
   <TR class=runner-body><TD class="runner-left {$blockclass_left}"></TD>
     <TD class="runner-center {$blockclass_center}"></TD>
     <TD class="runner-right {$blockclass_right}"></TD></TR>
