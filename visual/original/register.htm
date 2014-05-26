@@ -30,20 +30,26 @@
 				<td class="runner-top" colspan=3>
 					
 
-{BEGIN container_fields}
-<table class="runner-c runner-c-fields" cellpadding="0" align=center>
+{BEGIN container_register}
+<table class="runner-c runner-c-register" cellpadding="0" align=center>
 
 
-<tr class="runner-toprow style2 header"><td class="runner-cl"><img src="images/spacer.gif"></td><td class="runner-cc" colspan=2><div  class="runner-b-regheader {$brickclass_regheader}">Register</div></td><td class="runner-cr"><img src="images/spacer.gif"></td></tr>
+<tr class="runner-toprow style2 header"><td class="runner-cl"><img src="images/spacer.gif"></td><td class="runner-cc" ><div  class="runner-b-regheader {$brickclass_regheader}">Register</div></td><td class="runner-cr"><img src="images/spacer.gif"></td></tr>
 
 
 {BEGIN message_block}
-<tr  class="runner-row style1 runner-b-message {$brickclass_message}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" colspan=2><div class="runner-message">{$message}</div></td><td class="runner-cr"></td></tr>{END message_block}
+<tr  class="runner-row style1 runner-b-message {$brickclass_message}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" ><div class="runner-message">{$message}</div></td><td class="runner-cr"></td></tr>{END message_block}
 
+
+
+<tr  class="runner-row style1 runner-b-wrapper {$wrapperclass_fields}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents runner-wrapper" >
+
+{BEGIN container_fields}
+<table class="runner-c runner-c-fields" cellpadding="0" >
 
 
 		{BEGIN EmailPrimary_fieldblock}
-		<tr class="runner-row style1 runner-b-regfields"><td class="runner-cl"></td>
+		<tr class="runner-toprow header style1 runner-b-regfields"><td class="runner-cl"><img src="images/spacer.gif"></td>
 		<td class="runner-cc runner-cc1">
 			<div class="fieldlabel_EmailPrimary {$fielddispclass_EmailPrimary}">
 				{BEGIN EmailPrimary_label}Email:{END EmailPrimary_label}
@@ -54,7 +60,7 @@
 				{$EmailPrimary_editcontrol}
 			</div>
 		</td>
-		<td class="runner-cr alt"></td></tr>
+		<td class="runner-cr alt"><img src="images/spacer.gif"></td></tr>
 		{END EmailPrimary_fieldblock}
 						{BEGIN _fieldblock}
 		<tr class="runner-row style1 runner-b-regfields"><td class="runner-cl"></td>
@@ -167,6 +173,16 @@
 </tr>
 </table>
 {END container_fields}
+
+</td><td class="runner-cr"></td></tr>
+
+
+<tr class="{$cfooterclass_register}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_register}
 
 
 				</td>
