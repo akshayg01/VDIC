@@ -1,76 +1,224 @@
-<!DOCTYPE html>
-<HTML {$html_attrs}><HEAD><TITLE>{$pagetitle}</TITLE>
-<META content=IE=7 http-equiv=X-UA-Compatible>
-<META content="text/html; charset=utf-8" http-equiv=Content-Type><LINK rel=stylesheet type=text/css href="styles/default.css">{BEGIN rtlCSS}<LINK rel=stylesheet type=text/css href="styles/defaultRTL.css">{END rtlCSS}{BEGIN styleCSSFiles}<LINK rel=stylesheet type=text/css href="{$stylepath}">{END styleCSSFiles}{BEGIN pageCSSFiles}<LINK rel=stylesheet type=text/css href="{$pagestylepath}">{END pageCSSFiles}<!--[if IE]><LINK rel=stylesheet type=text/css href="styles/defaultIE.css">{BEGIN IEcssFiles}<LINK rel=stylesheet type=text/css href="{$stylepathIE}">{END IEcssFiles}<![endif]-->
-<META name=GENERATOR content="MSHTML 10.00.9200.16736"></HEAD>
-<BODY class="{$stylename}" {$bodyattrs}>{BEGIN body}{$header} 
-<TABLE class=runner-toptable cellPadding=0><TR class=runner-header><TD class=runner-top colSpan=3>{BEGIN container_search}<TABLE class="runner-c runner-c-search" cellPadding=0><TR class="{$cheaderclass_search}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
-          <TD class=runner-cc></TD>
-          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
-        <TR class="runner-row style1"><TD class=runner-cl></TD>
-          <TD class=runner-cc><TABLE class=runner-hc cellPadding=0 border=0><TR><TD class="runner-cc filler"></TD>
-                {BEGIN details_block}<TD class="runner-cc runner-br runner-b-details_found" {$brickclass_details_found}><SPAN><SPAN 
-                  {$details_attrs}>Details found: <B><SPAN 
-                  class=runner-details_found_count>{$records_found}</SPAN></B> 
-                  </SPAN></SPAN></TD>
-                {END details_block}{BEGIN pages_block}<TD class="runner-cc runner-br runner-b-page_of" {$brickclass_page_of}><SPAN><SPAN 
-                  {$pages_attrs}>Page <B>{$page}</B> of <B>{$maxpages}</B> </SPAN></SPAN></TD>
-                {END pages_block}{BEGIN recordspp_block}<TD class="runner-cc runner-br runner-b-recsperpage" {$brickclass_recsperpage}><SPAN><SPAN id=recordspp_block{$id} name="recordspp_block{$id}">Records Per Page:&nbsp;{$recsPerPage} 
-              </SPAN></SPAN></TD>{END recordspp_block}</TR></TABLE></TD>
-          <TD class=runner-cr></TD></TR>
-        <TR class="{$cfooterclass_search}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
-          <TD class=runner-cc></TD>
-          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TABLE>{END container_search}</TD></TR>
-  <TR class=runner-body><TD class="runner-left {$blockclass_left}">{BEGIN container_logg}<TABLE class="runner-c runner-c-logg" cellPadding=0><TR class="{$cheaderclass_logg}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
-          <TD class=runner-cc></TD>
-          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
-        {BEGIN security_block}<TR class="runner-row style1 runner-b-loggedas {$brickclass_loggedas}"><TD class=runner-cl></TD>
-          <TD class="runner-cc runner-brickcontents"><DIV id=login_block{$id}>{BEGIN loggedas_message}<SPAN>Logged on as&nbsp;<B>{$username}</B><BR><BR></SPAN>{END loggedas_message}{BEGIN guestloginbutton}<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$guestloginlink_attrs}>Login</A> </SPAN>{END guestloginbutton}{BEGIN logoutbutton}<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="login.php?a=logout" {$logoutlink_attrs}>Log out</A> </SPAN><!-- Permissions -->
-            {END logoutbutton}{BEGIN adminarea_link}<DIV><SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="admin_rights_list.php" {$adminarealink_attrs}>Admin Area</A> </SPAN></DIV>
-            {END adminarea_link}{BEGIN changepwd_link}<DIV><SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="changepwd.php" {$changepwdlink_attrs}>Change password</A> 
-          </SPAN></DIV>{END changepwd_link}</DIV></TD>
-          <TD class=runner-cr></TD></TR>
-        {END security_block}<TR class="{$cfooterclass_logg}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
-          <TD class=runner-cc></TD>
-          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TABLE>{END container_logg}
-      {BEGIN container_left}<TABLE class="runner-c runner-c-left" cellPadding=0><TR class="{$cheaderclass_left}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
-          <TD class=runner-cc></TD>
-          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
-        {BEGIN menu_block}{$mainmenu}{END menu_block}<TR class="{$cfooterclass_left}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
-          <TD class=runner-cc></TD>
-          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TABLE>{END container_left}</TD>
-    <TD class="runner-center {$blockclass_center}">{BEGIN container_message}<TABLE class="runner-c runner-c-message" cellPadding=0><TR class="{$cheaderclass_message}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
-          <TD class=runner-cc></TD>
-          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
-        <TR class="runner-row style1"><TD class=runner-cl></TD>
-          <TD class=runner-cc><TABLE class=runner-hc cellPadding=0 border=0><TR>{BEGIN message_block}<TD class="runner-cc runner-bc runner-b-message" {$brickclass_message}><SPAN><DIV class=runner-message>{$message}</DIV></SPAN></TD>{END message_block}</TR></TABLE></TD>
-          <TD class=runner-cr></TD></TR>
-        <TR class="{$cfooterclass_message}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
-          <TD class=runner-cc></TD>
-          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TABLE>{END container_message}
-      {BEGIN container_grid}{BEGIN grid_block}<TABLE class="runner-c-grid runner-b-grid" cellPadding=0>{BEGIN grid_row}<TR {$rowstyle} {$rowattrs} {$rowclass}>{BEGIN grid_record}<TD class=runner-cg>{BEGIN grid_vrecord}<TABLE class=runner-c cellPadding=0>{BEGIN grid_recordheader}<TR class="runner-toprow style1"><TH class=runner-cl><IMG src="images/spacer.gif"></TH>
-                <TH class=runner-cc colSpan=2 iEditCont="all"></TH>
-                <TH class=runner-cr><IMG src="images/spacer.gif"></TH></TR>
-              {END grid_recordheader}{BEGIN InitiatedName_fieldcolumn}<tr class="runner-row style1"><td class="runner-cl"></td>
-	<td class="runner-cc runner-cc1">Initiated Name</td>
-	<td class="runner-cc alt runner-cc2 {$InitiatedName_class}" {$InitiatedName_style}>{$InitiatedName_value}&nbsp;</td>
-	<td class="runner-cr alt"></td>
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-list" {$bodyattrs}>
+	{BEGIN body}{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+
+
+{BEGIN container_toplinks}<div class="rnr-c rnr-ch rnr-c-toplinks">
+<div class="rnr-hfiller"></div>
+{BEGIN security_block}<div  class="style1 rnr-br rnr-b-loggedas {$brickclass_loggedas}">{BEGIN loggedas_message}<span>Logged on as&nbsp;<b>{$username}</b>&nbsp;</span> 
+{END loggedas_message}
+{BEGIN guestloginbutton}<span>
+<a href="#" class="rnr-button" {$guestloginlink_attrs}>Login</a>
+</span>
+{END guestloginbutton}
+{BEGIN logoutbutton}<a href="#" class="rnr-button" {$logoutlink_attrs}>Log out</a>
+{END logoutbutton}
+{BEGIN adminarea_link}<a href="admin_rights_list.php" class="rnr-button" {$adminarealink_attrs}>Admin Area</a>
+{END adminarea_link}
+
+{BEGIN changepwd_link}<a href="#" class="rnr-button" {$changepwdlink_attrs}>Change password</a>
+{END changepwd_link}
+</div>
+{END security_block}
+
+
+
+</div>
+{END container_toplinks}
+
+
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+
+{BEGIN container_left}<div class="rnr-c rnr-cv rnr-c-left">
+
+{BEGIN menu_block}{$menu main}
+{END menu_block}
+
+
+
+
+</div>
+{END container_left}
+
+
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+
+{BEGIN container_recordcontrols}<div class="rnr-c rnr-ch rnr-c-recordcontrols">
+
+
+
+{BEGIN more_list}<div  class="style1 rnr-bl rnr-b-toplinks {$brickclass_toplinks}"><span class="rnr-buttons-group">
+</span></div>
+{END more_list}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_recordcontrols}
+
+
+
+{BEGIN container_message}<div class="rnr-c rnr-ch rnr-c-message">
+
+{BEGIN message_block}<div  class="style1 rnr-bc rnr-b-message {$brickclass_message}"><div class="rnr-message">{$message}</div></div>
+{END message_block}
+
+
+</div>
+{END container_message}
+
+
+
+{BEGIN container_pagination}<div class="rnr-c rnr-ch rnr-multialign rnr-c-pagination">
+
+{BEGIN pagination_block}<div  class="style1 rnr-bc rnr-b-pagination {$brickclass_pagination}">{$pagination}</div>
+{END pagination_block}
+
+<div class="rnr-leftbricks">
+{BEGIN details_block}<div  class="style1 rnr-bl rnr-b-details_found {$brickclass_details_found}">	<span {$details_attrs}>
+			Details found: <b><span class="rnr-details_found_count">{$records_found}</span></b>
+	</span>
+</div>
+{END details_block}
+
+</div><div class="rnr-rightbricks">
+{BEGIN pages_block}<div  class="style1 rnr-br rnr-b-page_of {$brickclass_page_of}">	<span {$pages_attrs}>
+		Page <b>{$page}</b> of <b>{$maxpages}</b>
+	</span>
+
+</div>
+{END pages_block}
+
+
+{BEGIN recordspp_block}<div  class="style1 rnr-br rnr-b-recsperpage {$brickclass_recsperpage}">	<span id="recordspp_block{$id}" name="recordspp_block{$id}">
+			Records Per Page:&nbsp;{$recsPerPage}
+	</span>	
+</div>
+{END recordspp_block}
+
+</div>
+</div>
+{END container_pagination}
+
+
+
+{BEGIN container_grid}{BEGIN grid_block}<table cellpadding="0" class="rnr-cont rnr-c-grid rnr-b-grid vertical">
+							{BEGIN grid_row}<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+								{BEGIN grid_record}<td class="rnr-cg" style="width:100%;" {$recordattrs}>
+									{BEGIN grid_vrecord}<table class="rnr-c rnr-vrecord " cellpadding="0" >
+										{BEGIN grid_recordheader}<thead>
+										<tr class="rnr-toprow style1">
+											<th class="rnr-edge" colspan="2" iEditCont="all">
+												
+												
+												
+												
+												
+											</th>
+										</tr>
+										</thead>
+										{END grid_recordheader}
+										<tbody>
+											{BEGIN InitiatedName_fieldcolumn}<tr class="rnr-row style1">
+	<td class="rnr-gridfieldlabel {$InitiatedName_label_class}">{$label vw_counsellors InitiatedName}</td>
+	<td class="alt rnr-edge {$InitiatedName_class}" {$InitiatedName_style}>{$InitiatedName_value}&nbsp;</td>
 </tr>
-{END InitiatedName_fieldcolumn}<TR class="runner-bottomrow style1"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
-                <TD class=runner-cc></TD>
-                <TD class="runner-cc alt"></TD>
-                <TD class="runner-cr alt"><IMG src="images/spacer.gif"></TD></TR></TABLE>{END grid_vrecord}</TD>
-          {BEGIN endrecord_block}<TD class=runner-cs {$endrecordblock_attrs}>&nbsp;</TD>{END endrecord_block}{END grid_record}</TR>
-        {BEGIN grid_rowspace}<TR class="runner-rs {$rsclass}">{BEGIN grid_recordspace}<TD>&nbsp;</TD>{END grid_recordspace}</TR>{END grid_rowspace}{END grid_row}</TABLE>{END grid_block}{END container_grid}
-      {BEGIN container_pagination}<TABLE class="runner-c runner-c-pagination" cellPadding=0><TR class="{$cheaderclass_pagination}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
-          <TD class=runner-cc></TD>
-          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
-        <TR class="runner-row style1"><TD class=runner-cl></TD>
-          <TD class=runner-cc><TABLE class=runner-hc cellPadding=0 border=0><TR>{BEGIN pagination_block}<TD class="runner-cc runner-bc runner-b-pagination" {$brickclass_pagination}><SPAN>{$pagination}</SPAN></TD>{END pagination_block}</TR></TABLE></TD>
-          <TD class=runner-cr></TD></TR>
-        <TR class="{$cfooterclass_pagination}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
-          <TD class=runner-cc></TD>
-          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TABLE>{END container_pagination}</TD>
-    <TD class="runner-right {$blockclass_right}"></TD></TR>
-  <TR class=runner-footer><TD class=runner-bottom 
-colSpan=3><!--%%bottom%%--></TD></TR></TABLE>{$footer}{END body} </BODY></HTML>
+{END InitiatedName_fieldcolumn}
+
+										</tbody>
+									</table>
+									{END grid_vrecord}
+								</td>
+								{BEGIN endrecord_block}<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+								{END endrecord_block}
+								{END grid_record}
+							</tr>
+							{BEGIN grid_rowspace}<tr class="rnr-rs {$rsclass}">
+								{BEGIN grid_recordspace}<td>&nbsp;</td>
+								{END grid_recordspace}
+							</tr>
+							{END grid_rowspace}
+							{END grid_row}
+						</table>
+						
+				
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+
+{BEGIN container_pagination_bottom}<div class="rnr-c rnr-ch rnr-multialign rnr-c-pagination_bottom">
+
+{BEGIN pagination_block}<div  class="style1 rnr-bc rnr-b-pagination {$brickclass_pagination}">{$pagination}</div>
+{END pagination_block}
+
+<div class="rnr-leftbricks">
+{BEGIN details_block}<div  class="style1 rnr-bl rnr-b-details_found {$brickclass_details_found}">	<span {$details_attrs}>
+			Details found: <b><span class="rnr-details_found_count">{$records_found}</span></b>
+	</span>
+</div>
+{END details_block}
+
+</div><div class="rnr-rightbricks">
+{BEGIN pages_block}<div  class="style1 rnr-br rnr-b-page_of {$brickclass_page_of}">	<span {$pages_attrs}>
+		Page <b>{$page}</b> of <b>{$maxpages}</b>
+	</span>
+
+</div>
+{END pages_block}
+
+
+{BEGIN recordspp_block}<div  class="style1 rnr-br rnr-b-recsperpage {$brickclass_recsperpage}">	<span id="recordspp_block{$id}" name="recordspp_block{$id}">
+			Records Per Page:&nbsp;{$recsPerPage}
+	</span>	
+</div>
+{END recordspp_block}
+
+</div>
+</div>
+{END container_pagination_bottom}
+
+
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

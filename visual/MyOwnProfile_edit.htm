@@ -1,86 +1,175 @@
-<!DOCTYPE html>
-<HTML {$html_attrs}><HEAD><TITLE>{$pagetitle}</TITLE>
-<META content=IE=7 http-equiv=X-UA-Compatible>
-<META content="text/html; charset=utf-8" http-equiv=Content-Type><LINK rel=stylesheet type=text/css href="styles/default.css">{BEGIN rtlCSS}<LINK rel=stylesheet type=text/css href="styles/defaultRTL.css">{END rtlCSS}{BEGIN styleCSSFiles}<LINK rel=stylesheet type=text/css href="{$stylepath}">{END styleCSSFiles}{BEGIN pageCSSFiles}<LINK rel=stylesheet type=text/css href="{$pagestylepath}">{END pageCSSFiles}<!--[if IE]><LINK rel=stylesheet type=text/css href="styles/defaultIE.css">{BEGIN IEcssFiles}<LINK rel=stylesheet type=text/css href="{$stylepathIE}">{END IEcssFiles}<![endif]-->
-<META name=GENERATOR content="MSHTML 11.00.9600.17107"></HEAD>
-<BODY class="{$stylename}" {$bodyattrs}>{BEGIN body}{$header} 
-<TABLE class=runner-toptable cellPadding=0>
-  <TBODY>
-  <TR class=runner-header>
-    <TD class=runner-top colSpan=3>
-      {BEGIN container_edit}
-      <TABLE class="runner-c runner-c-edit" style="WIDTH: 90%" 
-      borderColor=#ce0a00 cellPadding=0 align=center bgColor=#b0de00>
-        <TBODY>
-        <TR class="runner-toprow style2 header">
-          <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
-          <TD class=runner-cc>
-            
-            <DIV class="runner-b-editheader {$brickclass_editheader}">Edit 
-            Devotee Record [ Devotee Id: {$show_key1} ]</DIV></TD>
-          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
-        {BEGIN message_block}<TR class="runner-row style1 runner-b-message {$brickclass_message}">
-          <TD class=runner-cl></TD>
-          <TD class="runner-cc runner-brickcontents">
-            
-            <DIV class=runner-message>{$message}</DIV></TD>
-          <TD class=runner-cr></TD></TR>
-        {END message_block}<TR class="runner-row style1 runner-b-wrapper {$wrapperclass_fields}">
-          <TD class=runner-cl></TD>
-          <TD class="runner-cc runner-brickcontents runner-wrapper">
-            
-            {BEGIN container_fields}
-            <TABLE class="runner-c runner-c-fields" cellPadding=0>
-              <TBODY>
-              <TR class="runner-toprow header style1 runner-b-editfields">
-                <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
-                <TD class=runner-cc colSpan=2>
-                  {$TabGroup Primary_Info1}&nbsp; 
-                  </TD>
-                <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
-              {BEGIN legend}<TR class="runner-row style3 runner-b-legend {$brickclass_legend}">
-                <TD class=runner-cl></TD>
-                <TD class="runner-cc runner-brickcontents" colSpan=2>
-                  <SPAN id=required_block{$id}><IMG alt=bullet src="images/icon_required.gif"> - Required field </SPAN></TD>
-                <TD class=runner-cr></TD></TR>
-              {END legend}<TR 
-              class="runner-row style2 runner-b-editbuttons {$brickclass_editbuttons}">
-                <TD class=runner-cl></TD>
-                <TD class="runner-cc runner-brickcontents" colSpan=2>
-                  {BEGIN save_button}<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$savebutton_attrs}>Save</A> 
-                  </SPAN>{END save_button}{BEGIN reset_button}<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$resetbutton_attrs}>Reset</A> 
-                  </SPAN>{END reset_button}</TD>
-                <TD class=runner-cr></TD></TR>
-              <TR class="{$cfooterclass_fields}">
-                <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
-                <TD class=runner-cc></TD>
-                <TD class=runner-cc></TD>
-                <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TBODY></TABLE>{END container_fields}</TD>
-          <TD class=runner-cr></TD></TR>
-        <TR class="{$cfooterclass_edit}">
-          <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
-          <TD class=runner-cc></TD>
-          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TBODY></TABLE>{END container_edit}
-      {BEGIN container_details}
-      <TABLE class="runner-c runner-c-details" cellPadding=0>
-        <TBODY>
-        <TR class="{$cheaderclass_details}">
-          <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
-          <TD class=runner-cc></TD>
-          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
-        {BEGIN detail_tables}<TR class="runner-row style1 runner-b-editdetails {$brickclass_editdetails}">
-          <TD class=runner-cl></TD>
-          <TD class="runner-cc runner-brickcontents">
-             </TD>
-          <TD class=runner-cr></TD></TR>
-        {END detail_tables}<TR class="{$cfooterclass_details}">
-          <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
-          <TD class=runner-cc></TD>
-          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TBODY></TABLE>{END container_details}</TD></TR>
-  <TR class=runner-body>
-    <TD class="runner-left {$blockclass_left}"></TD>
-    <TD class="runner-center {$blockclass_center}"></TD>
-    <TD class="runner-right {$blockclass_right}"></TD></TR>
-  <TR class=runner-footer>
-    <TD class=runner-bottom 
-colSpan=3><!--%%bottom%%--></TD></TR></TBODY></TABLE>{$footer}{END body} </BODY></HTML>
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-edit" {$bodyattrs}>
+	{BEGIN body}{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_all}<div class="rnr-c rnr-cv rnr-c-all">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_edit} rnr-wrapper rnr-cbw-edit">
+
+{BEGIN container_edit}<div class="rnr-c rnr-cv rnr-c-edit">
+
+{BEGIN editheader}<div  class="rnr-brickcontents style2 rnr-b-editheader {$brickclass_editheader}"><span>	{$pagetitlelabel MyOwnProfile edit}
+</span></div>{END editheader}
+
+
+{BEGIN message_block}<div  class="rnr-brickcontents style1 rnr-b-message {$brickclass_message}"><div class="rnr-message">{$message}</div></div>{END message_block}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fields} rnr-wrapper rnr-cbw-fields">
+
+{BEGIN container_fields}<div class="rnr-c rnr-cv rnr-c-fields">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-editfields2_atop {$brickclass_editfields2_atop}"><table class="fieldGrid fieldGrid2 edit">
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+</tr>
+		<tr>
+	<td colspan="2">
+		<div class="rnr-field">
+		{$TabGroup Primary_Info1}&nbsp;		
+		</div>
+	</td>
+</tr>
+										
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+</table></div>
+
+
+{BEGIN editbuttons}<div  class="rnr-brickcontents style2 rnr-b-editbuttons {$brickclass_editbuttons}"><div class="rnr-buttons-left">
+{BEGIN save_button}<a href="#" class="rnr-button main" {$savebutton_attrs}>Save</a>
+{END save_button}
+{BEGIN reset_button}<a href="#" class="rnr-button" {$resetbutton_attrs}>Reset</a>
+{END reset_button}
+{BEGIN back_button}<a href="#" class="rnr-button" {$backbutton_attrs}>Back to list</a>
+{END back_button}
+{BEGIN close_button}<a href="#" class="rnr-button" {$closebutton_attrs}>Close window</a>
+{END close_button}
+{BEGIN view_page_button}<a href="#" class="rnr-button" {$view_page_button_attrs}>View</a>
+{END view_page_button}
+</div>
+</div>{END editbuttons}
+
+
+</div>
+{END container_fields}
+
+</div>
+
+
+</div>
+
+Edit 
+            Devotee Record [ Devotee Id: {END container_edit}
+
+</div>
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_details} rnr-wrapper rnr-cbw-details">
+
+{BEGIN container_details}<div class="rnr-c rnr-cv rnr-c-details">
+
+{BEGIN detail_tables}{BEGIN details_devotee_address}<div class="rnr-cw-detailsdevotee_address rnr-s-empty aslinks {$pageStyleName}">
+<div class="rnr-c rnr-cv rnr-c-detailsdevotee_address rnr-c-details">
+<div class="rnr-brickcontents style1 rnr-b-editdetailsdevotee_address rnr-b-editdetails">
+
+	<div class="rnr-dcaption">
+		Devotee Address
+	</div>
+	{$displayDetailTable_devotee_address}
+</div>
+</div>
+</div>
+	{END details_devotee_address}
+			{BEGIN details_devotee_language}<div class="rnr-cw-detailsdevotee_language rnr-s-empty aslinks {$pageStyleName}">
+<div class="rnr-c rnr-cv rnr-c-detailsdevotee_language rnr-c-details">
+<div class="rnr-brickcontents style1 rnr-b-editdetailsdevotee_language rnr-b-editdetails">
+
+	<div class="rnr-dcaption">
+		Devotee Language
+	</div>
+	{$displayDetailTable_devotee_language}
+</div>
+</div>
+</div>
+	{END details_devotee_language}
+				{BEGIN details_devotee_company}<div class="rnr-cw-detailsdevotee_company rnr-s-empty aslinks {$pageStyleName}">
+<div class="rnr-c rnr-cv rnr-c-detailsdevotee_company rnr-c-details">
+<div class="rnr-brickcontents style1 rnr-b-editdetailsdevotee_company rnr-b-editdetails">
+
+	<div class="rnr-dcaption">
+		Devotee Company
+	</div>
+	{$displayDetailTable_devotee_company}
+</div>
+</div>
+</div>
+	{END details_devotee_company}
+{END detail_tables}
+
+
+</div>
+{END container_details}
+
+</div>
+
+
+</div>
+{END container_all}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

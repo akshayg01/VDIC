@@ -1,58 +1,309 @@
 <!DOCTYPE html>
-<HTML {$html_attrs}><HEAD><TITLE>{$pagetitle}</TITLE>
-<META content=IE=7 http-equiv=X-UA-Compatible>
-<META content="text/html; charset=utf-8" http-equiv=Content-Type><LINK rel=stylesheet type=text/css href="styles/default.css">{BEGIN rtlCSS}<LINK rel=stylesheet type=text/css href="styles/defaultRTL.css">{END rtlCSS}{BEGIN styleCSSFiles}<LINK rel=stylesheet type=text/css href="{$stylepath}">{END styleCSSFiles}{BEGIN pageCSSFiles}<LINK rel=stylesheet type=text/css href="{$pagestylepath}">{END pageCSSFiles}<!--[if IE]><LINK rel=stylesheet type=text/css href="styles/defaultIE.css">{BEGIN IEcssFiles}<LINK rel=stylesheet type=text/css href="{$stylepathIE}">{END IEcssFiles}<![endif]-->
-<META name=GENERATOR content="MSHTML 11.00.9600.17105"></HEAD>
-<BODY class="{$stylename}" {$bodyattrs}>{BEGIN body}{$header} 
-<TABLE class=runner-toptable cellPadding=0><TR class=runner-header><TD class=runner-top colSpan=3>{BEGIN container_add}<TABLE class="runner-c runner-c-add" style="WIDTH: 90%" 
-      borderColor=#ce0a00 cellPadding=0 align=center bgColor=#b0de00><TR class="runner-toprow style2 header"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
-          <TD class=runner-cc><DIV 
-            class="runner-b-addheader {$brickclass_addheader}">Create New Devotee Record</DIV></TD>
-          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
-        {BEGIN message_block}<TR class="runner-row style1 runner-b-message {$brickclass_message}"><TD class=runner-cl></TD>
-          <TD class="runner-cc runner-brickcontents"><DIV class=runner-message>{$message}</DIV></TD>
-          <TD class=runner-cr></TD></TR>
-        {END message_block}<TR class="runner-row style1 runner-b-wrapper {$wrapperclass_fields}"><TD class=runner-cl></TD>
-          <TD class="runner-cc runner-brickcontents runner-wrapper">{BEGIN container_fields}<TABLE class="runner-c runner-c-fields" cellPadding=0><TR class="{$cheaderclass_fields}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
-                <TD class=runner-cc></TD>
-                <TD class="runner-cc alt"></TD>
-                <TD class="runner-cr alt"><IMG src="images/spacer.gif"></TD></TR>
-              <tr class="runner-row style1"><td class="runner-cl"></td>
-	<td colspan="2" class="runner-cc">{$TabGroup Primary_Info1}&nbsp;		
-	</td>
-	<td class="runner-cr"></td>
-</tr>
-										
-												
-												
-												
-												
-												
-												
-												
-												
-												
-												
-	{BEGIN legend}<TR class="runner-row style3 runner-b-legend {$brickclass_legend}"><TD class=runner-cl></TD>
-                <TD class="runner-cc runner-brickcontents" colSpan=2><SPAN id=required_block{$id}><IMG alt=bullet src="images/icon_required.gif"> - Required field </SPAN></TD>
-                <TD class=runner-cr></TD></TR>
-              {END legend}<TR 
-              class="runner-row style2 runner-b-addbuttons {$brickclass_addbuttons}"><TD class=runner-cl></TD>
-                <TD class="runner-cc runner-brickcontents" colSpan=2>{BEGIN save_button}<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$savebutton_attrs}>Save</A> 
-                  </SPAN>{END save_button}{BEGIN cancel_button}<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$cancelbutton_attrs}>Cancel</A> 
-                  </SPAN>{END cancel_button}{BEGIN back_button}<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$backbutton_attrs}>Back to 
-                  list</A> </SPAN>{END back_button}{BEGIN backToMenu_button}<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$backToMenubutton_attrs}>Back to menu</A> </SPAN>{END backToMenu_button}</TD>
-                <TD class=runner-cr></TD></TR>
-              <TR class="{$cfooterclass_fields}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
-                <TD class=runner-cc></TD>
-                <TD class=runner-cc></TD>
-                <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TABLE>{END container_fields}</TD>
-          <TD class=runner-cr></TD></TR>
-        <TR class="{$cfooterclass_add}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
-          <TD class=runner-cc></TD>
-          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TABLE>{END container_add}</TD></TR>
-  <TR class=runner-body><TD class="runner-left {$blockclass_left}"></TD>
-    <TD class="runner-center {$blockclass_center}"></TD>
-    <TD class="runner-right {$blockclass_right}"></TD></TR>
-  <TR class=runner-footer><TD class=runner-bottom 
-colSpan=3><!--%%bottom%%--></TD></TR></TABLE>{$footer}{END body} </BODY></HTML>
+<HTML {$html_attrs}>
+  <HEAD>
+    <META http-equiv="X-UA-Compatible" content="IE=Edge">
+    <TITLE>
+      {$pagetitle}
+    </TITLE>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <LINK href="styles/default.css" rel="stylesheet" type="text/css">
+    {BEGIN rtlCSS}
+      <LINK href="styles/defaultRTL.css" rel="stylesheet" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <LINK href="{$stylepath}" rel="stylesheet" type="text/css">
+    {END styleCSSFiles}
+    {BEGIN pageCSSFiles}
+      <LINK href="{$pagestylepath}" rel="stylesheet" type="text/css">
+    {END pageCSSFiles}
+    <META name="GENERATOR" content="MSHTML 10.00.9200.16736">
+  </HEAD>
+  <BODY class="{$stylename} function-add" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <DIV class="rnr-page">
+        <DIV class="rnr-top {$blockclass_top}">
+          {BEGIN container_all}
+            <DIV class="rnr-c rnr-cv rnr-c-all">
+              <DIV class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_add} rnr-wrapper rnr-cbw-add">
+                {BEGIN container_add}
+                  <DIV class="rnr-c rnr-cv rnr-c-add">
+                    {BEGIN addheader}
+                      <DIV class="rnr-brickcontents style2 rnr-b-addheader {$brickclass_addheader}">
+                        <SPAN>
+                          {$pagetitlelabel devotee add}
+                        </SPAN>
+                      </DIV>
+                    {END addheader}
+                    {BEGIN message_block}
+                      <DIV class="rnr-brickcontents style1 rnr-b-message {$brickclass_message}">
+                        <DIV class="rnr-message">
+                          {$message}
+                        </DIV>
+                      </DIV>
+                    {END message_block}
+                    <DIV class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fields} rnr-wrapper rnr-cbw-fields">
+                      {BEGIN container_fields}
+                        <DIV class="rnr-c rnr-cv rnr-c-fields">
+                          <DIV class="rnr-brickcontents style1 rnr-b-addfields2_atop {$brickclass_addfields2_atop}">
+                            <TABLE class="fieldGrid fieldGrid2 edit">
+                              <TBODY>
+                                <TR>
+                                  <TD>
+                                    {BEGIN Photo_fieldblock}
+                                      <DIV class="rnr-field style1 {$fielddispclass_Photo}" data-fieldname="Photo">
+                                        <DIV class="rnr-label above">
+                                          {BEGIN Photo_label}
+                                            {$label devotee Photo}
+                                          {END Photo_label}
+                                        </DIV>
+                                        <DIV class="rnr-control style3">
+                                          {$Photo_editcontrol}
+                                        </DIV>
+                                      </DIV>
+                                    {END Photo_fieldblock}
+                                    {BEGIN TitleId_fieldblock}
+                                      <DIV class="rnr-field style1 {$fielddispclass_TitleId}" data-fieldname="TitleId">
+                                        <DIV class="rnr-label above">
+                                          {BEGIN TitleId_label}
+                                            {$label devotee TitleId}
+                                          {END TitleId_label}
+                                        </DIV>
+                                        <DIV class="rnr-control style3">
+                                          {$TitleId_editcontrol}
+                                        </DIV>
+                                      </DIV>
+                                    {END TitleId_fieldblock}
+                                    {BEGIN FirstName_fieldblock}
+                                      <DIV class="rnr-field style1 {$fielddispclass_FirstName}" data-fieldname="FirstName">
+                                        <DIV class="rnr-label above">
+                                          {BEGIN FirstName_label}
+                                            {$label devotee FirstName}
+                                          {END FirstName_label}
+                                        </DIV>
+                                        <DIV class="rnr-control style3">
+                                          {$FirstName_editcontrol}
+                                        </DIV>
+                                      </DIV>
+                                    {END FirstName_fieldblock}
+                                    {BEGIN LastName_fieldblock}
+                                      <DIV class="rnr-field style1 {$fielddispclass_LastName}" data-fieldname="LastName">
+                                        <DIV class="rnr-label above">
+                                          {BEGIN LastName_label}
+                                            {$label devotee LastName}
+                                          {END LastName_label}
+                                        </DIV>
+                                        <DIV class="rnr-control style3">
+                                          {$LastName_editcontrol}
+                                        </DIV>
+                                      </DIV>
+                                    {END LastName_fieldblock}
+                                    {BEGIN MiddleName_fieldblock}
+                                      <DIV class="rnr-field style1 {$fielddispclass_MiddleName}" data-fieldname="MiddleName">
+                                        <DIV class="rnr-label above">
+                                          {BEGIN MiddleName_label}
+                                            {$label devotee MiddleName}
+                                          {END MiddleName_label}
+                                        </DIV>
+                                        <DIV class="rnr-control style3">
+                                          {$MiddleName_editcontrol}
+                                        </DIV>
+                                      </DIV>
+                                    {END MiddleName_fieldblock}
+                                    {BEGIN InitiatedName_fieldblock}
+                                      <DIV class="rnr-field style1 {$fielddispclass_InitiatedName}" data-fieldname="InitiatedName">
+                                        <DIV class="rnr-label above">
+                                          {BEGIN InitiatedName_label}
+                                            {$label devotee InitiatedName}
+                                          {END InitiatedName_label}
+                                        </DIV>
+                                        <DIV class="rnr-control style3">
+                                          {$InitiatedName_editcontrol}
+                                        </DIV>
+                                      </DIV>
+                                    {END InitiatedName_fieldblock}
+                                    {BEGIN SpiritualMasterId_fieldblock}
+                                      <DIV class="rnr-field style1 {$fielddispclass_SpiritualMasterId}" data-fieldname="SpiritualMasterId">
+                                        <DIV class="rnr-label above">
+                                          {BEGIN SpiritualMasterId_label}
+                                            {$label devotee SpiritualMasterId}
+                                          {END SpiritualMasterId_label}
+                                        </DIV>
+                                        <DIV class="rnr-control style3">
+                                          {$SpiritualMasterId_editcontrol}
+                                        </DIV>
+                                      </DIV>
+                                    {END SpiritualMasterId_fieldblock}
+                                  </TD>
+                                  <TD>
+                                    {BEGIN DateOfBirth_fieldblock}
+                                      <DIV class="rnr-field style1 {$fielddispclass_DateOfBirth}" data-fieldname="DateOfBirth">
+                                        <DIV class="rnr-label above">
+                                          {BEGIN DateOfBirth_label}
+                                            {$label devotee DateOfBirth}
+                                          {END DateOfBirth_label}
+                                        </DIV>
+                                        <DIV class="rnr-control style3">
+                                          {$DateOfBirth_editcontrol}
+                                        </DIV>
+                                      </DIV>
+                                    {END DateOfBirth_fieldblock}
+                                    {BEGIN Gender_fieldblock}
+                                      <DIV class="rnr-field style1 {$fielddispclass_Gender}" data-fieldname="Gender">
+                                        <DIV class="rnr-label above">
+                                          {BEGIN Gender_label}
+                                            {$label devotee Gender}
+                                          {END Gender_label}
+                                        </DIV>
+                                        <DIV class="rnr-control style3">
+                                          {$Gender_editcontrol}
+                                        </DIV>
+                                      </DIV>
+                                    {END Gender_fieldblock}
+                                    {BEGIN CounsellorDevoteeID_fieldblock}
+                                      <DIV class="rnr-field style1 {$fielddispclass_CounsellorDevoteeID}" data-fieldname="CounsellorDevoteeID">
+                                        <DIV class="rnr-label above">
+                                          {BEGIN CounsellorDevoteeID_label}
+                                            {$label devotee CounsellorDevoteeID}
+                                          {END CounsellorDevoteeID_label}
+                                        </DIV>
+                                        <DIV class="rnr-control style3">
+                                          {$CounsellorDevoteeID_editcontrol}
+                                        </DIV>
+                                      </DIV>
+                                    {END CounsellorDevoteeID_fieldblock}
+                                    {BEGIN MobilePhone_fieldblock}
+                                      <DIV class="rnr-field style1 {$fielddispclass_MobilePhone}" data-fieldname="MobilePhone">
+                                        <DIV class="rnr-label above">
+                                          {BEGIN MobilePhone_label}
+                                            {$label devotee MobilePhone}
+                                          {END MobilePhone_label}
+                                        </DIV>
+                                        <DIV class="rnr-control style3">
+                                          {$MobilePhone_editcontrol}
+                                        </DIV>
+                                      </DIV>
+                                    {END MobilePhone_fieldblock}
+                                    {BEGIN WorkPhone_fieldblock}
+                                      <DIV class="rnr-field style1 {$fielddispclass_WorkPhone}" data-fieldname="WorkPhone">
+                                        <DIV class="rnr-label above">
+                                          {BEGIN WorkPhone_label}
+                                            {$label devotee WorkPhone}
+                                          {END WorkPhone_label}
+                                        </DIV>
+                                        <DIV class="rnr-control style3">
+                                          {$WorkPhone_editcontrol}
+                                        </DIV>
+                                      </DIV>
+                                    {END WorkPhone_fieldblock}
+                                    {BEGIN EmailPrimary_fieldblock}
+                                      <DIV class="rnr-field style1 {$fielddispclass_EmailPrimary}" data-fieldname="EmailPrimary">
+                                        <DIV class="rnr-label above">
+                                          {BEGIN EmailPrimary_label}
+                                            {$label devotee EmailPrimary}
+                                          {END EmailPrimary_label}
+                                        </DIV>
+                                        <DIV class="rnr-control style3">
+                                          {$EmailPrimary_editcontrol}
+                                        </DIV>
+                                      </DIV>
+                                    {END EmailPrimary_fieldblock}
+                                    {BEGIN EmailSecondary_fieldblock}
+                                      <DIV class="rnr-field style1 {$fielddispclass_EmailSecondary}" data-fieldname="EmailSecondary">
+                                        <DIV class="rnr-label above">
+                                          {BEGIN EmailSecondary_label}
+                                            {$label devotee EmailSecondary}
+                                          {END EmailSecondary_label}
+                                        </DIV>
+                                        <DIV class="rnr-control style3">
+                                          {$EmailSecondary_editcontrol}
+                                        </DIV>
+                                      </DIV>
+                                    {END EmailSecondary_fieldblock}
+                                  </TD>
+                                </TR>
+                              </TBODY>
+                            </TABLE>
+                          </DIV>
+                          {BEGIN addbuttons}
+                            <DIV class="rnr-brickcontents style2 rnr-b-addbuttons {$brickclass_addbuttons}">
+                              {BEGIN save_button}
+                                <A class="rnr-button main" href="#" {$savebutton_attrs}>
+                                  Save
+                                </A>
+                              {END save_button}
+                              {BEGIN cancel_button}
+                                <A class="rnr-button" href="#" {$cancelbutton_attrs}>
+                                  Cancel
+                                </A>
+                              {END cancel_button}
+                              {BEGIN back_button}
+                                <A class="rnr-button" href="#" {$backbutton_attrs}>
+                                  Back to list
+                                </A>
+                              {END back_button}
+                              {BEGIN backToMenu_button}
+                                <A class="rnr-button" href="#" {$backToMenubutton_attrs}>
+                                  Back to menu
+                                </A>
+                              {END backToMenu_button}
+                            </DIV>
+                          {END addbuttons}
+                        </DIV>
+                      {END container_fields}
+                    </DIV>
+                  </DIV>
+                {END container_add}
+              </DIV>
+              <DIV class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_details} rnr-wrapper rnr-cbw-details">
+                {BEGIN container_details}
+                  <DIV class="rnr-c rnr-cv rnr-c-details">
+                    {BEGIN detail_tables}
+											{BEGIN details_devotee_address}
+                        <DIV class="rnr-cw-detailsdevotee_address rnr-s-empty aslinks {$pageStyleName}">
+                          <DIV class="rnr-c rnr-cv rnr-c-detailsdevotee_address rnr-c-details">
+                            <DIV class="rnr-brickcontents style1 rnr-b-adddetailsdevotee_address rnr-b-adddetails">
+                              <DIV class="rnr-dcaption">
+                                Devotee Address
+                              </DIV>
+                              {$displayDetailTable_devotee_address}
+                            </DIV>
+                          </DIV>
+                        </DIV>
+                      {END details_devotee_address}
+
+                      {BEGIN details_devotee_donation}
+                        <DIV class="rnr-cw-detailsdevotee_donation rnr-s-empty aslinks {$pageStyleName}">
+                          <DIV class="rnr-c rnr-cv rnr-c-detailsdevotee_donation rnr-c-details">
+                            <DIV class="rnr-brickcontents style1 rnr-b-adddetailsdevotee_donation rnr-b-adddetails">
+                              <DIV class="rnr-dcaption">
+                                Devotee Donation
+                              </DIV>
+                              {$displayDetailTable_devotee_donation}
+                            </DIV>
+                          </DIV>
+                        </DIV>
+                      {END details_devotee_donation}
+                      
+                    {END detail_tables}
+                  </DIV>
+                {END container_details}
+              </DIV>
+            </DIV>
+          {END container_all}
+        </DIV>
+        <DIV class="rnr-middle">
+          <DIV class="rnr-left {$blockclass_left}">
+          </DIV>
+          <DIV class="rnr-center {$blockclass_center}">
+          </DIV>
+          <DIV class="rnr-right {$blockclass_right}">
+          </DIV>
+        </DIV>
+        <DIV class="rnr-bottom {$blockclass_bottom}">
+        </DIV>
+      </DIV>
+      {$footer}
+    {END body}
+  </BODY>
+</HTML>

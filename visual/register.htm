@@ -1,125 +1,165 @@
 <!DOCTYPE html>
-<HTML {$html_attrs}><HEAD><TITLE>{$pagetitle}</TITLE>
-<META content=IE=7 http-equiv=X-UA-Compatible>
-<META content="text/html; charset=utf-8" http-equiv=Content-Type><LINK rel=stylesheet type=text/css href="styles/default.css">{BEGIN rtlCSS}<LINK rel=stylesheet type=text/css href="styles/defaultRTL.css">{END rtlCSS}{BEGIN styleCSSFiles}<LINK rel=stylesheet type=text/css href="{$stylepath}">{END styleCSSFiles}{BEGIN pageCSSFiles}<LINK rel=stylesheet type=text/css href="{$pagestylepath}">{END pageCSSFiles}<!--[if IE]><LINK rel=stylesheet type=text/css href="styles/defaultIE.css">{BEGIN IEcssFiles}<LINK rel=stylesheet type=text/css href="{$stylepathIE}">{END IEcssFiles}<![endif]-->
-<META name=GENERATOR content="MSHTML 11.00.9600.17105"></HEAD>
-<BODY class="{$stylename}" {$bodyattrs}>{BEGIN body}{$header} 
-<TABLE class=runner-toptable cellPadding=0><TR class=runner-header><TD class=runner-top colSpan=3>{BEGIN container_register}<table class="runner-c runner-c-register" cellpadding="0" align=center><tr class="runner-toprow style2 header"><td class="runner-cl"><img src="images/spacer.gif"></td><td class="runner-cc" ><div  class="runner-b-regheader {$brickclass_regheader}">Register</div></td><td class="runner-cr"><img src="images/spacer.gif"></td></tr>
-
-
-{BEGIN message_block}<TR class="runner-row style1 runner-b-message {$brickclass_message}"><TD class=runner-cl></TD>
-          <td class="runner-cc runner-brickcontents" ><DIV class=runner-message>{$message}</DIV></td>
-          <TD class="runner-cc runner-brickcontents"></TD>
-          <TD class="runner-cc runner-brickcontents"></TD>
-          <TD class=runner-cr></TD></TR>
-        {END message_block}
-
-
-
-<tr  class="runner-row style1 runner-b-wrapper {$wrapperclass_fields}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents runner-wrapper" >{BEGIN container_fields}<table class="runner-c runner-c-fields" cellpadding="0" >
-          
-          <TD class=runner-cc></TD>
-          <TD class=runner-cc></TD>
-          {BEGIN EmailPrimary_fieldblock}<tr class="runner-toprow header style1 runner-b-regfields"><TD class=runner-cl><img src="images/spacer.gif"></TD>
-          <TD class="runner-cc runner-cc1"><DIV class="fieldlabel_EmailPrimary {$fielddispclass_EmailPrimary}">{BEGIN EmailPrimary_label}Email: {END EmailPrimary_label}</DIV></TD>
-          <TD class="runner-cc alt runner-fixedcell"><DIV 
-            class="fieldcontrol_EmailPrimary {$fielddispclass_EmailPrimary}">{$EmailPrimary_editcontrol} 
-            </DIV></TD>
-          <TD class="runner-cc alt runner-fixedcell"></TD>
-          <TD class="runner-cc alt runner-fixedcell"></TD>
-          <TD class="runner-cr alt"><img src="images/spacer.gif"></TD></tr>
-        {END EmailPrimary_fieldblock}{BEGIN _fieldblock}<TR class="runner-row style1 runner-b-regfields"><TD class=runner-cl></TD>
-          <TD class="runner-cc runner-cc1"><DIV class="fieldlabel_ {$fielddispclass_}">{BEGIN _label}Devotee: 
-            {END _label}</DIV></TD>
-          <TD class="runner-cc alt runner-fixedcell"><DIV class="fieldcontrol_ {$fielddispclass_}">{$_editcontrol} </DIV></TD>
-          <TD class="runner-cc alt runner-fixedcell"></TD>
-          <TD class="runner-cc alt runner-fixedcell"></TD>
-          <TD class="runner-cr alt"></TD></TR>
-        {END _fieldblock}{BEGIN Password_fieldblock}<TR class="runner-row style1 runner-b-regfields"><TD class=runner-cl></TD>
-          <TD class="runner-cc runner-cc1"><DIV class="fieldlabel_Password {$fielddispclass_Password}">{BEGIN Password_label}Password: {END Password_label}</DIV></TD>
-          <TD class="runner-cc alt runner-fixedcell"><DIV class="fieldcontrol_Password {$fielddispclass_Password}">{$Password_editcontrol} 
-            </DIV></TD>
-          <TD class="runner-cc alt runner-fixedcell"></TD>
-          <TD class="runner-cc alt runner-fixedcell"></TD>
-          <TD class="runner-cr alt"></TD></TR>
-        {END Password_fieldblock}{BEGIN confirm_block}<TR class="runner-row style1 runner-b-regfields"><TD class=runner-cl></TD>
-          <TD class="runner-cc runner-cc1">{BEGIN confirm_label}
-            Re-enter password:{END confirm_label}</TD>
-          <TD class="runner-cc alt">{$confirm_editcontrol1} 
-            <DIV class=error>{$reenter_msg}</DIV></TD>
-          <TD class="runner-cc alt"></TD>
-          <TD class="runner-cc alt"></TD>
-          <TD class="runner-cr alt"></TD></TR>
-        {END confirm_block}{BEGIN FirstName_fieldblock}<TR class="runner-row style1 runner-b-regfields"><TD class=runner-cl></TD>
-          <TD class="runner-cc runner-cc1"><DIV class="fieldlabel_FirstName {$fielddispclass_FirstName}">{BEGIN FirstName_label}First Name: {END FirstName_label}</DIV></TD>
-          <TD class="runner-cc alt runner-fixedcell"><DIV 
-            class="fieldcontrol_FirstName {$fielddispclass_FirstName}">{$FirstName_editcontrol} 
-            </DIV></TD>
-          <TD class="runner-cc alt runner-fixedcell"><DIV class="fieldlabel_LastName {$fielddispclass_LastName}">{BEGIN LastName_label}<STRONG>Last Name:</STRONG>{END LastName_label} </DIV></TD>
-          <TD class="runner-cc alt runner-fixedcell">{$LastName_editcontrol}</TD>
-          <TD class="runner-cr alt"></TD></TR>
-        {END FirstName_fieldblock}{BEGIN LastName_fieldblock}<TR class="runner-row style1 runner-b-regfields"><TD class=runner-cl></TD>
-          <TD class="runner-cc runner-cc1"><DIV class="fieldlabel_LastName {$fielddispclass_LastName}">{BEGIN LastName_label}&nbsp;{END LastName_label}</DIV></TD>
-          <TD class="runner-cc alt runner-fixedcell"><DIV 
-            class="fieldcontrol_LastName {$fielddispclass_LastName}">&nbsp;</DIV></TD>
-          <TD class="runner-cc alt runner-fixedcell"></TD>
-          <TD class="runner-cc alt runner-fixedcell"></TD>
-          <TD class="runner-cr alt"></TD></TR>
-        <TR class="runner-row style1 runner-b-regfields"><TD class=runner-cl></TD>
-          <TD class="runner-cc runner-cc1"><DIV class="fieldlabel_CounsellorDevoteeID {$fielddispclass_CounsellorDevoteeID}">{BEGIN CounsellorDevoteeID_label}Counsellor: {END CounsellorDevoteeID_label}</DIV></TD>
-          <TD class="runner-cc alt runner-fixedcell">{$CounsellorDevoteeID_editcontrol}</TD>
-          <TD class="runner-cc alt runner-fixedcell"></TD>
-          <TD class="runner-cc alt runner-fixedcell"></TD>
-          <TD class="runner-cr alt"></TD></TR>
-        <TR class="runner-row style1 runner-b-regfields"><TD class=runner-cl></TD>
-          <TD class="runner-cc runner-cc1"></TD>
-          <TD class="runner-cc alt runner-fixedcell">{$event captcha1}</TD>
-          <TD class="runner-cc alt runner-fixedcell"></TD>
-          <TD class="runner-cc alt runner-fixedcell"></TD>
-          <TD class="runner-cr alt"></TD></TR>
-        {END LastName_fieldblock}{BEGIN CounsellorDevoteeID_fieldblock}<TR class="runner-row style1 runner-b-regfields"><TD class=runner-cl></TD>
-          <TD class="runner-cc runner-cc1"><DIV class="fieldlabel_CounsellorDevoteeID {$fielddispclass_CounsellorDevoteeID}">{BEGIN CounsellorDevoteeID_label}&nbsp;{END CounsellorDevoteeID_label}</DIV></TD>
-          <TD class="runner-cc alt runner-fixedcell"><DIV 
-            class="fieldcontrol_CounsellorDevoteeID {$fielddispclass_CounsellorDevoteeID}">&nbsp;</DIV></TD>
-          <TD class="runner-cc alt runner-fixedcell"></TD>
-          <TD class="runner-cc alt runner-fixedcell"></TD>
-          <TD class="runner-cr alt"></TD></TR>
-        {END CounsellorDevoteeID_fieldblock}{BEGIN legend}<TR class="runner-row style3 runner-b-legend {$brickclass_legend}"><TD class=runner-cl></TD>
-          <TD class="runner-cc runner-brickcontents" colSpan=2><SPAN id=required_block{$id}><IMG alt=bullet src="images/icon_required.gif"> - Required field </SPAN></TD>
-          <TD class="runner-cc runner-brickcontents"></TD>
-          <TD class="runner-cc runner-brickcontents"></TD>
-          <TD class=runner-cr></TD></TR>
-        {END legend}<TR 
-class="runner-row style3 runner-b-mesbackto {$brickclass_mesbackto}"><TD class=runner-cl></TD>
-          <TD class="runner-cc runner-brickcontents" colSpan=2><A href="login.php" 
-            {$backlink_attrs}>Back to login page</A></TD>
-          <TD class="runner-cc runner-brickcontents"></TD>
-          <TD class="runner-cc runner-brickcontents"></TD>
-          <TD class=runner-cr></TD></TR>
-        <TR 
-        class="runner-row style2 runner-b-regbuttons {$brickclass_regbuttons}"><TD class=runner-cl></TD>
-          <TD class="runner-cc runner-brickcontents" colSpan=2><SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$submit_attrs}>Submit</A> 
-            </SPAN></TD>
-          <TD class="runner-cc runner-brickcontents"></TD>
-          <TD class="runner-cc runner-brickcontents"></TD>
-          <TD class=runner-cr></TD></TR>
-        <TR class="{$cfooterclass_fields}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
-          <TD class=runner-cc></TD>
-          <TD class=runner-cc></TD>
-          <TD class=runner-cc></TD>
-          <TD class=runner-cc></TD>
-          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></table>{END container_fields}
-
-</td><td class="runner-cr"></td></tr>
-
-
-<tr class="{$cfooterclass_register}"><td class="runner-cl"><img src="images/spacer.gif"></td>
-<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
-</tr>
-</table>
-{END container_register}</TD></TR>
-  <TR class=runner-body><TD class="runner-left {$blockclass_left}"></TD>
-    <TD class="runner-center {$blockclass_center}"></TD>
-    <TD class="runner-right {$blockclass_right}"></TD></TR>
-  <TR class=runner-footer><TD class=runner-bottom 
-colSpan=3><!--%%bottom%%--></TD></TR></TABLE>{$footer}{END body} </BODY></HTML>
+<HTML {$html_attrs}>
+  <HEAD>
+    <META http-equiv="X-UA-Compatible" content="IE=Edge">
+    <TITLE>
+      {$pagetitle}
+    </TITLE>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <LINK href="styles/default.css" rel="stylesheet" type="text/css">
+    {BEGIN rtlCSS}
+      <LINK href="styles/defaultRTL.css" rel="stylesheet" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <LINK href="{$stylepath}" rel="stylesheet" type="text/css">
+    {END styleCSSFiles}
+    {BEGIN pageCSSFiles}
+      <LINK href="{$pagestylepath}" rel="stylesheet" type="text/css">
+    {END pageCSSFiles}
+    <META name="GENERATOR" content="MSHTML 10.00.9200.16736">
+  </HEAD>
+  <BODY class="{$stylename} function-register" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <DIV class="rnr-page">
+        <DIV class="rnr-top {$blockclass_top}">
+          {BEGIN container_fields}
+            <DIV class="rnr-c rnr-cv rnr-c-fields">
+              {BEGIN regheader}
+                <DIV class="rnr-brickcontents style2 rnr-b-regheader {$brickclass_regheader}">
+                  <SPAN>
+                    {$pagetitlelabel register}
+                  </SPAN>
+                </DIV>
+              {END regheader}
+              {BEGIN message_block}
+                <DIV class="rnr-brickcontents style1 rnr-b-message {$brickclass_message}">
+                  <DIV class="rnr-message">
+                    {$message}
+                  </DIV>
+                </DIV>
+              {END message_block}
+              <DIV class="rnr-brickcontents style1 rnr-b-regfields_simple {$brickclass_regfields_simple}">
+                <DIV class="rnr-simplefields edit register">
+                  {BEGIN EmailPrimary_fieldblock}
+                    <DIV class="rnr-field style1 {$fielddispclass_EmailPrimary}" data-fieldname="EmailPrimary">
+                      <SPAN class="rnr-label">
+                        {BEGIN EmailPrimary_label}
+                          {$label devotee EmailPrimary}
+                        {END EmailPrimary_label}
+                      </SPAN>
+                      <SPAN class="rnr-control style3">
+                        {$EmailPrimary_editcontrol}
+                      </SPAN>
+                    </DIV>
+                  {END EmailPrimary_fieldblock}
+                  {BEGIN _fieldblock}
+                    <DIV class="rnr-field style1 {$fielddispclass_}" data-fieldname>
+                      <SPAN class="rnr-label">
+                        {BEGIN _label}
+                          {$label devotee}
+                        {END _label}
+                      </SPAN>
+                      <SPAN class="rnr-control style3">
+                        {$_editcontrol}
+                      </SPAN>
+                    </DIV>
+                  {END _fieldblock}
+                  {BEGIN Password_fieldblock}
+                    <DIV class="rnr-field style1 {$fielddispclass_Password}" data-fieldname="Password">
+                      <SPAN class="rnr-label">
+                        {BEGIN Password_label}
+                          {$label devotee Password}
+                        {END Password_label}
+                      </SPAN>
+                      <SPAN class="rnr-control style3">
+                        {$Password_editcontrol}
+                      </SPAN>
+                    </DIV>
+                  {END Password_fieldblock}
+                  {BEGIN confirm_block}
+                    <DIV class="rnr-field style1 {$fielddispclass_Password}" data-fieldname="Password">
+                      <SPAN class="rnr-label">
+                        {BEGIN confirm_label}
+                          Re-enter password
+                        {END confirm_label}
+                      </SPAN>
+                      <SPAN class="rnr-control style3">
+                        {$confirm_editcontrol1}
+                      </SPAN>
+                      <DIV class="error">
+                        {$reenter_msg}
+                      </DIV>
+                    </DIV>
+                  {END confirm_block}
+                  {BEGIN FirstName_fieldblock}
+                    <DIV class="rnr-field style1 {$fielddispclass_FirstName}" data-fieldname="FirstName">
+                      <SPAN class="rnr-label">
+                        {BEGIN FirstName_label}
+                          {$label devotee FirstName}
+                        {END FirstName_label}
+                      </SPAN>
+                      <SPAN class="rnr-control style3">
+                        {$FirstName_editcontrol}
+                      </SPAN>
+                    </DIV>
+                  {END FirstName_fieldblock}
+                  {BEGIN LastName_fieldblock}
+                    <DIV class="rnr-field style1 {$fielddispclass_LastName}" data-fieldname="LastName">
+                      <SPAN class="rnr-label">
+                        {BEGIN LastName_label}
+                          {$label devotee LastName}
+                        {END LastName_label}
+                      </SPAN>
+                      <SPAN class="rnr-control style3">
+                        {$LastName_editcontrol}
+                      </SPAN>
+                    </DIV>
+                  {END LastName_fieldblock}
+                  {BEGIN CounsellorDevoteeID_fieldblock}
+                    <DIV class="rnr-field style1 {$fielddispclass_CounsellorDevoteeID}" data-fieldname="CounsellorDevoteeID">
+                      <SPAN class="rnr-label">
+                        {BEGIN CounsellorDevoteeID_label}
+                          {$label devotee CounsellorDevoteeID}
+                        {END CounsellorDevoteeID_label}
+                      </SPAN>
+                      <SPAN 
+class="rnr-control style3">
+                        {$CounsellorDevoteeID_editcontrol}
+                      </SPAN>
+                    </DIV>
+                  {END CounsellorDevoteeID_fieldblock}
+{$event captcha1}
+                </DIV>
+              </DIV>
+              {BEGIN regbuttons}
+                <DIV class="rnr-brickcontents style2 rnr-b-regbuttons {$brickclass_regbuttons}">
+                  <DIV class="rnr-withsidelink">
+                    <A class="rnr-button main" href="#" {$submit_attrs}>
+                      Register
+                    </A>
+                    <A class="rnr-button link rnr-sidelink" href="login.php" {$backlink_attrs}>
+                      Back to login page
+                    </A>
+                  </DIV>
+                </DIV>
+              {END regbuttons}
+            </DIV>
+          {END container_fields}
+        </DIV>
+        <DIV class="rnr-middle">
+          <DIV class="rnr-left {$blockclass_left}">
+          </DIV>
+          <DIV class="rnr-center {$blockclass_center}">
+          </DIV>
+          <DIV class="rnr-right {$blockclass_right}">
+          </DIV>
+        </DIV>
+        <DIV class="rnr-bottom {$blockclass_bottom}">
+          <!--%%bottom%%-->
+        </DIV>
+      </DIV>
+      {$footer}
+    {END body}
+  </BODY>
+</HTML>

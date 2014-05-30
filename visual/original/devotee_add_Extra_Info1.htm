@@ -4,51 +4,38 @@
 
 
 
-<table class="runner-c" cellpadding="0">
+<table class="fieldGrid">
 {BEGIN NativeCity_tabfieldblock}
-	<tr class="runner-row style1">
-		<td class="runner-cc runner-cc1">
-			<div class="fieldlabel_NativeCity {$fielddispclass_NativeCity}">
-				{BEGIN NativeCity_label}Native City{END NativeCity_label}
-			</div>
-		</td>
-		<td class="runner-cc alt">
-			<div class="fieldcontrol_NativeCity {$fielddispclass_NativeCity}">
-				{$NativeCity_editcontrol}
-			</div>
-		</td>
-	</tr>
+<tr class="{$fielddispclass_NativeCity}" data-fieldname="NativeCity">
+	<td class="style1 rnr-label">
+		{BEGIN NativeCity_label}{$label devotee NativeCity}{END NativeCity_label}
+	</td>
+	<td class="rnr-control style3">
+		{$NativeCity_editcontrol}&nbsp;
+	</td>
+</tr>
 {END NativeCity_tabfieldblock}
 {BEGIN NativeState_tabfieldblock}
-	<tr class="runner-row style1">
-		<td class="runner-cc runner-cc1">
-			<div class="fieldlabel_NativeState {$fielddispclass_NativeState}">
-				{BEGIN NativeState_label}Native State{END NativeState_label}
-			</div>
-		</td>
-		<td class="runner-cc alt">
-			<div class="fieldcontrol_NativeState {$fielddispclass_NativeState}">
-				{$NativeState_editcontrol}
-			</div>
-		</td>
-	</tr>
+<tr class="{$fielddispclass_NativeState}" data-fieldname="NativeState">
+	<td class="style1 rnr-label">
+		{BEGIN NativeState_label}{$label devotee NativeState}{END NativeState_label}
+	</td>
+	<td class="rnr-control style3">
+		{$NativeState_editcontrol}&nbsp;
+	</td>
+</tr>
 {END NativeState_tabfieldblock}
 {BEGIN BloodGroup_tabfieldblock}
-	<tr class="runner-row style1">
-		<td class="runner-cc runner-cc1">
-			<div class="fieldlabel_BloodGroup {$fielddispclass_BloodGroup}">
-				{BEGIN BloodGroup_label}Blood Group{END BloodGroup_label}
-			</div>
-		</td>
-		<td class="runner-cc alt">
-			<div class="fieldcontrol_BloodGroup {$fielddispclass_BloodGroup}">
-				{$BloodGroup_editcontrol}
-			</div>
-		</td>
-	</tr>
+<tr class="{$fielddispclass_BloodGroup}" data-fieldname="BloodGroup">
+	<td class="style1 rnr-label">
+		{BEGIN BloodGroup_label}{$label devotee BloodGroup}{END BloodGroup_label}
+	</td>
+	<td class="rnr-control style3">
+		{$BloodGroup_editcontrol}&nbsp;
+	</td>
+</tr>
 {END BloodGroup_tabfieldblock}
 </table>
-
 
 
 

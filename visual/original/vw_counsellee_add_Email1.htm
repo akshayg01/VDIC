@@ -4,37 +4,28 @@
 
 
 
-<table class="runner-c" cellpadding="0">
+<table class="fieldGrid">
 {BEGIN EmailPrimary_tabfieldblock}
-	<tr class="runner-row style1">
-		<td class="runner-cc runner-cc1">
-			<div class="fieldlabel_EmailPrimary {$fielddispclass_EmailPrimary}">
-				{BEGIN EmailPrimary_label}Email Primary{END EmailPrimary_label}
-			</div>
-		</td>
-		<td class="runner-cc alt">
-			<div class="fieldcontrol_EmailPrimary {$fielddispclass_EmailPrimary}">
-				{$EmailPrimary_editcontrol}
-			</div>
-		</td>
-	</tr>
+<tr class="{$fielddispclass_EmailPrimary}" data-fieldname="EmailPrimary">
+	<td class="style1 rnr-label">
+		{BEGIN EmailPrimary_label}{$label vw_counsellee EmailPrimary}{END EmailPrimary_label}
+	</td>
+	<td class="rnr-control style3">
+		{$EmailPrimary_editcontrol}&nbsp;
+	</td>
+</tr>
 {END EmailPrimary_tabfieldblock}
 {BEGIN EmailSecondary_tabfieldblock}
-	<tr class="runner-row style1">
-		<td class="runner-cc runner-cc1">
-			<div class="fieldlabel_EmailSecondary {$fielddispclass_EmailSecondary}">
-				{BEGIN EmailSecondary_label}Email Secondary{END EmailSecondary_label}
-			</div>
-		</td>
-		<td class="runner-cc alt">
-			<div class="fieldcontrol_EmailSecondary {$fielddispclass_EmailSecondary}">
-				{$EmailSecondary_editcontrol}
-			</div>
-		</td>
-	</tr>
+<tr class="{$fielddispclass_EmailSecondary}" data-fieldname="EmailSecondary">
+	<td class="style1 rnr-label">
+		{BEGIN EmailSecondary_label}{$label vw_counsellee EmailSecondary}{END EmailSecondary_label}
+	</td>
+	<td class="rnr-control style3">
+		{$EmailSecondary_editcontrol}&nbsp;
+	</td>
+</tr>
 {END EmailSecondary_tabfieldblock}
 </table>
-
 
 
 

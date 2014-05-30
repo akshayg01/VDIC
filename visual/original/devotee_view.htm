@@ -1,8 +1,9 @@
 <!doctype html>
 <html  {$html_attrs}>
 	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 		<title>{$pagetitle}</title>
-		<meta http-equiv="X-UA-Compatible" content="IE=7">
+
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<link REL="stylesheet" href="styles/default.css" type="text/css">
 		{BEGIN rtlCSS}
@@ -14,149 +15,281 @@
 		{BEGIN pageCSSFiles}
 		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
 		{END pageCSSFiles}
-		<!--[if IE]>
-			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
-			{BEGIN IEcssFiles}
-			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
-			{END IEcssFiles}
-		<![endif]-->
 	</head>
 	
-	<body class="{$stylename}" {$bodyattrs}>
+	<body class="{$stylename} function-view" {$bodyattrs}>
 	{BEGIN body}
 		{$header}
-		<table   cellpadding="0" class="runner-toptable">
-			<tr class="runner-header">
-				<td class="runner-top" colspan=3>
-					
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_all}
+<div class="rnr-c rnr-cv rnr-c-all">
 
 
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_view} rnr-wrapper rnr-cbw-view">
 
 {BEGIN container_view}
-<table class="runner-c runner-c-view" cellpadding="0" align=center>
-
-
-<tr class="runner-toprow style2 header"><td class="runner-cl"><img src="images/spacer.gif"></td><td class="runner-cc" ><div  class="runner-b-viewheader {$brickclass_viewheader}">Devotee, View record [
-Devotee Id: {$show_key1}
-]</div></td><td class="runner-cr"><img src="images/spacer.gif"></td></tr>
+<div class="rnr-c rnr-cv rnr-c-view">
 
 
 
-<tr  class="runner-row style1 runner-b-wrapper {$wrapperclass_fields}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents runner-wrapper" >
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fields} rnr-wrapper rnr-cbw-fields">
 
 {BEGIN container_fields}
-<table class="runner-c runner-c-fields" cellpadding="0" >
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+{BEGIN viewheader}
+<div  class="rnr-brickcontents style2 rnr-b-viewheader {$brickclass_viewheader}"><span>	{$pagetitlelabel devotee view}
+</span></div>{END viewheader}
 
 
-		<tr class="runner-row style1">
-	<td class="runner-cl"></td>
-	<td colspan="2" class="runner-cc">
-		{$TabGroup Primary_Info1}&nbsp;		
+
+<div  class="rnr-brickcontents style1 rnr-b-viewfields2 {$brickclass_viewfields2}"><table class="fieldGrid fieldGrid2">
+
+<tr>
+<td>
+	{BEGIN Photo_fieldblock}
+<div data-fieldname="Photo" class="rnr-field style1 {$fielddispclass_Photo}">
+  <span class="rnr-label">{$label devotee Photo}:</span>
+  <span class="rnr-control style3">{$Photo_value}</span>
+</div>
+{END Photo_fieldblock}
+	{BEGIN TitleId_fieldblock}
+<div data-fieldname="TitleId" class="rnr-field style1 {$fielddispclass_TitleId}">
+  <span class="rnr-label">{$label devotee TitleId}:</span>
+  <span class="rnr-control style3">{$TitleId_value}</span>
+</div>
+{END TitleId_fieldblock}
+	{BEGIN FirstName_fieldblock}
+<div data-fieldname="FirstName" class="rnr-field style1 {$fielddispclass_FirstName}">
+  <span class="rnr-label">{$label devotee FirstName}:</span>
+  <span class="rnr-control style3">{$FirstName_value}</span>
+</div>
+{END FirstName_fieldblock}
+	{BEGIN LastName_fieldblock}
+<div data-fieldname="LastName" class="rnr-field style1 {$fielddispclass_LastName}">
+  <span class="rnr-label">{$label devotee LastName}:</span>
+  <span class="rnr-control style3">{$LastName_value}</span>
+</div>
+{END LastName_fieldblock}
+	{BEGIN MiddleName_fieldblock}
+<div data-fieldname="MiddleName" class="rnr-field style1 {$fielddispclass_MiddleName}">
+  <span class="rnr-label">{$label devotee MiddleName}:</span>
+  <span class="rnr-control style3">{$MiddleName_value}</span>
+</div>
+{END MiddleName_fieldblock}
+	{BEGIN InitiatedName_fieldblock}
+<div data-fieldname="InitiatedName" class="rnr-field style1 {$fielddispclass_InitiatedName}">
+  <span class="rnr-label">{$label devotee InitiatedName}:</span>
+  <span class="rnr-control style3">{$InitiatedName_value}</span>
+</div>
+{END InitiatedName_fieldblock}
+	{BEGIN DateOfBirth_fieldblock}
+<div data-fieldname="DateOfBirth" class="rnr-field style1 {$fielddispclass_DateOfBirth}">
+  <span class="rnr-label">{$label devotee DateOfBirth}:</span>
+  <span class="rnr-control style3">{$DateOfBirth_value}</span>
+</div>
+{END DateOfBirth_fieldblock}
+</td>
+<td>
+	{BEGIN Gender_fieldblock}
+<div data-fieldname="Gender" class="rnr-field style1 {$fielddispclass_Gender}">
+  <span class="rnr-label">{$label devotee Gender}:</span>
+  <span class="rnr-control style3">{$Gender_value}</span>
+</div>
+{END Gender_fieldblock}
+	{BEGIN CounsellorDevoteeID_fieldblock}
+<div data-fieldname="CounsellorDevoteeID" class="rnr-field style1 {$fielddispclass_CounsellorDevoteeID}">
+  <span class="rnr-label">{$label devotee CounsellorDevoteeID}:</span>
+  <span class="rnr-control style3">{$CounsellorDevoteeID_value}</span>
+</div>
+{END CounsellorDevoteeID_fieldblock}
+	{BEGIN MobilePhone_fieldblock}
+<div data-fieldname="MobilePhone" class="rnr-field style1 {$fielddispclass_MobilePhone}">
+  <span class="rnr-label">{$label devotee MobilePhone}:</span>
+  <span class="rnr-control style3">{$MobilePhone_value}</span>
+</div>
+{END MobilePhone_fieldblock}
+	{BEGIN WorkPhone_fieldblock}
+<div data-fieldname="WorkPhone" class="rnr-field style1 {$fielddispclass_WorkPhone}">
+  <span class="rnr-label">{$label devotee WorkPhone}:</span>
+  <span class="rnr-control style3">{$WorkPhone_value}</span>
+</div>
+{END WorkPhone_fieldblock}
+	{BEGIN EmailPrimary_fieldblock}
+<div data-fieldname="EmailPrimary" class="rnr-field style1 {$fielddispclass_EmailPrimary}">
+  <span class="rnr-label">{$label devotee EmailPrimary}:</span>
+  <span class="rnr-control style3">{$EmailPrimary_value}</span>
+</div>
+{END EmailPrimary_fieldblock}
+	{BEGIN EmailSecondary_fieldblock}
+<div data-fieldname="EmailSecondary" class="rnr-field style1 {$fielddispclass_EmailSecondary}">
+  <span class="rnr-label">{$label devotee EmailSecondary}:</span>
+  <span class="rnr-control style3">{$EmailSecondary_value}</span>
+</div>
+{END EmailSecondary_fieldblock}
+</td>
+</tr>
+		<tr>
+	<td colspan="2">
+		<div class="rnr-field">
+		{$TabGroup Marital_Status1}&nbsp;		
+		</div>
 	</td>
-	<td class="runner-cr"></td>
 </tr>
-										
+		
 
-												
+				
 
-												
+				
 
-												
-
-												
-
-												
-
-												
-
-												
-
-												
-
-												
-
-												
+</table></div>
 
 
-
-
-
-<tr  class="runner-row style2 runner-b-viewbuttons {$brickclass_viewbuttons}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" colspan=2>{BEGIN back_button}
-<span class="runner-btnframe">
-<span class="runner-btnleft"></span>
-<span class="runner-btnright"></span>
-<a href="#" class="runner-button" {$backbutton_attrs}>Back to list</a>
-</span>
+{BEGIN viewbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-viewbuttons {$brickclass_viewbuttons}"><div class="rnr-buttons-left">
+{BEGIN back_button}
+<a href="#" class="rnr-button" {$backbutton_attrs}>Back to list</a>
 {END back_button}
-</td><td class="runner-cr"></td></tr>
+{BEGIN close_button}
+<a href="#" class="rnr-button" {$closebutton_attrs}>Close window</a>
+{END close_button}
+{BEGIN edit_page_button}
+<a href="#" class="rnr-button" {$edit_page_button_attrs}>Edit</a>
+{END edit_page_button}
+</div>
+</div>{END viewbuttons}
 
 
-<tr class="{$cfooterclass_fields}">
-<td class="runner-cl"><img src="images/spacer.gif"></td>
-<td class="runner-cc"></td><td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
-</tr>
-</table>
+</div>
 {END container_fields}
 
-</td><td class="runner-cr"></td></tr>
+</div>
 
 
-<tr class="{$cfooterclass_view}">
-<td class="runner-cl"><img src="images/spacer.gif"></td>
-<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
-</tr>
-</table>
+</div>
 {END container_view}
 
+</div>
 
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_details} rnr-wrapper rnr-cbw-details">
 
 {BEGIN container_details}
-<table class="runner-c runner-c-details" cellpadding="0" >
-<tr class="{$cheaderclass_details}">
-<td class="runner-cl"><img src="images/spacer.gif"></td>
-<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
-</tr>
+<div class="rnr-c rnr-cv rnr-c-details">
 
 {BEGIN detail_tables}
-<tr  class="runner-row style1 runner-b-viewdetails {$brickclass_viewdetails}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" >		{$displayDetailTable_devotee_donation}
-		{$displayDetailTable_devotee_language}
-		{$displayDetailTable_devotee_org}
-			{$displayDetailTable_devotee_address}
-		{$displayDetailTable_devotee_company}
-		{$displayDetailTable_devotee_family_member}
-</td><td class="runner-cr"></td></tr>{END detail_tables}
+		{BEGIN details_devotee_donation}
+<div class="rnr-cw-detailsdevotee_donation rnr-s-empty aslinks {$pageStyleName}">
+<div class="rnr-c rnr-cv rnr-c-detailsdevotee_donation rnr-c-details">
+<div class="rnr-brickcontents style1 rnr-b-viewdetailsdevotee_donation rnr-b-viewdetails">
+
+	<div class="rnr-dcaption">
+		Devotee Donation
+	</div>
+	{$displayDetailTable_devotee_donation}
+</div>
+</div>
+</div>
+	{END details_devotee_donation}
+		{BEGIN details_devotee_language}
+<div class="rnr-cw-detailsdevotee_language rnr-s-empty aslinks {$pageStyleName}">
+<div class="rnr-c rnr-cv rnr-c-detailsdevotee_language rnr-c-details">
+<div class="rnr-brickcontents style1 rnr-b-viewdetailsdevotee_language rnr-b-viewdetails">
+
+	<div class="rnr-dcaption">
+		Devotee Language
+	</div>
+	{$displayDetailTable_devotee_language}
+</div>
+</div>
+</div>
+	{END details_devotee_language}
+		{BEGIN details_devotee_org}
+<div class="rnr-cw-detailsdevotee_org rnr-s-empty aslinks {$pageStyleName}">
+<div class="rnr-c rnr-cv rnr-c-detailsdevotee_org rnr-c-details">
+<div class="rnr-brickcontents style1 rnr-b-viewdetailsdevotee_org rnr-b-viewdetails">
+
+	<div class="rnr-dcaption">
+		Devotee Org
+	</div>
+	{$displayDetailTable_devotee_org}
+</div>
+</div>
+</div>
+	{END details_devotee_org}
+			{BEGIN details_devotee_address}
+<div class="rnr-cw-detailsdevotee_address rnr-s-empty aslinks {$pageStyleName}">
+<div class="rnr-c rnr-cv rnr-c-detailsdevotee_address rnr-c-details">
+<div class="rnr-brickcontents style1 rnr-b-viewdetailsdevotee_address rnr-b-viewdetails">
+
+	<div class="rnr-dcaption">
+		Devotee Address
+	</div>
+	{$displayDetailTable_devotee_address}
+</div>
+</div>
+</div>
+	{END details_devotee_address}
+		{BEGIN details_devotee_company}
+<div class="rnr-cw-detailsdevotee_company rnr-s-empty aslinks {$pageStyleName}">
+<div class="rnr-c rnr-cv rnr-c-detailsdevotee_company rnr-c-details">
+<div class="rnr-brickcontents style1 rnr-b-viewdetailsdevotee_company rnr-b-viewdetails">
+
+	<div class="rnr-dcaption">
+		Devotee Company
+	</div>
+	{$displayDetailTable_devotee_company}
+</div>
+</div>
+</div>
+	{END details_devotee_company}
+		{BEGIN details_devotee_family_member}
+<div class="rnr-cw-detailsdevotee_family_member rnr-s-empty aslinks {$pageStyleName}">
+<div class="rnr-c rnr-cv rnr-c-detailsdevotee_family_member rnr-c-details">
+<div class="rnr-brickcontents style1 rnr-b-viewdetailsdevotee_family_member rnr-b-viewdetails">
+
+	<div class="rnr-dcaption">
+		Devotee Family Member
+	</div>
+	{$displayDetailTable_devotee_family_member}
+</div>
+</div>
+</div>
+	{END details_devotee_family_member}
+{END detail_tables}
 
 
-<tr class="{$cfooterclass_details}">
-<td class="runner-cl"><img src="images/spacer.gif"></td>
-<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
-</tr>
-</table>
+</div>
 {END container_details}
 
+</div>
 
-				</td>
-			</tr>
-			<tr class="runner-body">
-				
-				<td class="runner-left {$blockclass_left}" >
-					
-				</td>	
-				
-				<td class="runner-center {$blockclass_center}">
-					
-				</td>	
 
-				<td class="runner-right {$blockclass_right}">
-					
-				</td>	
-			</tr>
-			<tr class="runner-footer">
-				<td class="runner-bottom" colspan=3>
-					<!--%%bottom%%-->
-				</td>
-			</tr>
-		</table>
+</div>
+{END container_all}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
 		{$footer}
 	{END body}
 	</body>

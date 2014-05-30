@@ -1,8 +1,9 @@
 <!doctype html>
 <html  {$html_attrs}>
 	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 		<title>{$pagetitle}</title>
-		<meta http-equiv="X-UA-Compatible" content="IE=7">
+
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<link REL="stylesheet" href="styles/default.css" type="text/css">
 		{BEGIN rtlCSS}
@@ -14,439 +15,304 @@
 		{BEGIN pageCSSFiles}
 		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
 		{END pageCSSFiles}
-		<!--[if IE]>
-			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
-			{BEGIN IEcssFiles}
-			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
-			{END IEcssFiles}
-		<![endif]-->
 	</head>
 	
-	<body class="{$stylename}" {$bodyattrs}>
+	<body class="{$stylename} function-list" {$bodyattrs}>
 	{BEGIN body}
 		{$header}
-		<table   cellpadding="0" class="runner-toptable">
-			<tr class="runner-header">
-				<td class="runner-top" colspan=3>
-					
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
 
 {BEGIN container_master}
-<table class="runner-c runner-c-master" cellpadding="0" >
-<tr class="{$cheaderclass_master}">
-<td class="runner-cl"><img src="images/spacer.gif"></td>
-<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
-</tr>
-<tr class="runner-row style1">
-<td class="runner-cl"></td>
-<td class="runner-cc">
-<table border="0" cellpadding="0" class="runner-hc">
-<tr>
+<div class="rnr-c rnr-ch rnr-c-master">
 
 {BEGIN mastertable_block}
-<td  class="runner-cc runner-bl runner-b-masterinfo" {$brickclass_masterinfo}><span>{$showmasterfile}
+<div  class="style1 rnr-bl rnr-b-masterinfo {$brickclass_masterinfo}">{$showmasterfile}
 <a class="runner-link" {$backtomasterlink_attrs}>
 	<b>Back to {$backtomasterlink_caption}</b>
-</a></span></td>
+</a></div>
 {END mastertable_block}
 
-<td class="runner-cc filler"></td>
-</tr>
-</table></td>
-<td class="runner-cr"></td>
-</tr>
-
-<tr class="{$cfooterclass_master}">
-<td class="runner-cl"><img src="images/spacer.gif"></td>
-<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
-</tr>
-</table>
+<div class="rnr-hfiller"></div>
+</div>
 {END container_master}
 
 
 
 {BEGIN container_toplinks}
-<table class="runner-c runner-c-toplinks" cellpadding="0" >
-<tr class="{$cheaderclass_toplinks}">
-<td class="runner-cl"><img src="images/spacer.gif"></td>
-<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
-</tr>
-<tr class="runner-row style1">
-<td class="runner-cl"></td>
-<td class="runner-cc">
-<table border="0" cellpadding="0" class="runner-hc">
-<tr>
-<td class="runner-cc filler"></td>
-{BEGIN prints_block}
-<td  class="runner-cc runner-br runner-b-toplinks_print" {$brickclass_toplinks_print}><span>{BEGIN print_link}
-	<span class="runner-btnframe">
-	<span class="runner-btnleft"></span>
-	<span class="runner-btnright"></span>
-	<a href="#" class="runner-button" {$printlink_attrs}>Print this page</a>
-	</span>
-{END print_link}
+<div class="rnr-c rnr-ch rnr-c-toplinks">
+<div class="rnr-hfiller"></div>
+{BEGIN security_block}
+<div  class="style1 rnr-br rnr-b-loggedas {$brickclass_loggedas}">{BEGIN loggedas_message} 
+<span>Logged on as&nbsp;<b>{$username}</b>&nbsp;</span> 
+{END loggedas_message}
+{BEGIN guestloginbutton}
+<span>
+<a href="#" class="rnr-button" {$guestloginlink_attrs}>Login</a>
+</span>
+{END guestloginbutton}
+{BEGIN logoutbutton}
+<a href="#" class="rnr-button" {$logoutlink_attrs}>Log out</a>
+{END logoutbutton}
+{BEGIN adminarea_link}
+	<a href="admin_rights_list.php" class="rnr-button" {$adminarealink_attrs}>Admin Area</a>
+{END adminarea_link}
 
-{BEGIN printall_link}
-	<span class="runner-btnframe">
-	<span class="runner-btnleft"></span>
-	<span class="runner-btnright"></span>
-	<a href="#" class="runner-button" {$printalllink_attrs}>Print all pages</a>
-	</span>
-{END printall_link}
+{BEGIN changepwd_link}
+	<a href="#" class="rnr-button" {$changepwdlink_attrs}>Change password</a>
+{END changepwd_link}
+</div>
+{END security_block}
 
 
 
-
-</span></td>
-{END prints_block}
-
-
-{BEGIN asearch_link}
-<td  class="runner-cc runner-br runner-b-toplinks_advsearch" {$brickclass_toplinks_advsearch}><span>	<span class="runner-btnframe">
-	<span class="runner-btnleft"></span>
-	<span class="runner-btnright"></span>
-	<a href="#" class="runner-button" {$advsearchlink_attrs}>Advanced search</a>
-	</span>
-</span></td>
-{END asearch_link}
-
-
-
-
-
-</tr>
-</table></td>
-<td class="runner-cr"></td>
-</tr>
-
-<tr class="{$cfooterclass_toplinks}">
-<td class="runner-cl"><img src="images/spacer.gif"></td>
-<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
-</tr>
-</table>
+</div>
 {END container_toplinks}
 
 
 
-{BEGIN container_search}
-<table class="runner-c runner-c-search" cellpadding="0" >
-<tr class="{$cheaderclass_search}">
-<td class="runner-cl"><img src="images/spacer.gif"></td>
-<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
-</tr>
-<tr class="runner-row style1">
-<td class="runner-cl"></td>
-<td class="runner-cc">
-<table border="0" cellpadding="0" class="runner-hc">
-<tr>
+{BEGIN container_hmenu}
+<div class="rnr-c rnr-ch rnr-c-hmenu">
 
 {BEGIN searchform_block}
-<td  class="runner-cc runner-bl runner-b-search" {$brickclass_search}><span>	<span>
+<div  class="style1 rnr-bl rnr-b-search {$brickclass_search}">	<span>
 		{$simpleSearchFieldCombo}
 		{$simpleSearchTypeCombo}
 		{BEGIN searchform_text}
 		<input type="text" {$searchfor_attrs} size="25">
 		{END searchform_text}
-		&nbsp;
 		{BEGIN searchform_search}
-		<span class="runner-btnframe">
-			<span class="runner-btnleft"></span>
-			<span class="runner-btnright"></span>
-			<a href="#" class="runner-button-img" {$searchbutton_attrs}><img src="images/search/search.gif"></a>
-		</span>
+			<a href="#" class="rnr-button img" data-icon="search" {$searchbutton_attrs}></a>
 		{END searchform_search}
-		&nbsp;
-		{BEGIN searchform_showall}
-		
-		<span class="runner-btnframe" {$showAllCont_attrs}>
-			<span class="runner-btnleft"></span>
-			<span class="runner-btnright"></span>
-			<a href="#" class="runner-button" {$showallbutton_attrs}>Show all</a>
-		</span>
+		{BEGIN searchform_showall}	
+		<a href="#" class="rnr-button" {$showAllCont_attrs} {$showallbutton_attrs}>Show all</a>
 		{END searchform_showall}
 	</span>
-</span></td>
+</div>
 {END searchform_block}
 
 
 {BEGIN searchformbuttons_block}
-<td  class="runner-cc runner-bl runner-b-search_buttons" {$brickclass_search_buttons}><span>	{BEGIN searchPanelTopButtons}
-	<span>
-		&nbsp;
-		<span class="runner-btnframe">
-		<span class="runner-btnleft"></span>
-		<span class="runner-btnright"></span>
-		<a href="#" class="runner-button-img" id="showSrchWin{$id}" {$showHideSearchWin_attrs}><img src="images/search/showWindowPin.gif"></a>
-		</span>
-		&nbsp;		
-		<span class="runner-btnframe">
-		<span class="runner-btnleft"></span>
-		<span class="runner-btnright"></span>
-		<a href="#" class="runner-button-img" id="showOptPanel{$id}" {$showHideSearchPanel_attrs}><img src="images/search/showOptions.gif"></a>
-		</span>
-	</span>
-	{END searchPanelTopButtons}
-</span></td>
+<div  class="style1 rnr-bl rnr-b-search_buttons {$brickclass_search_buttons}">{BEGIN searchPanelTopButtons}
+<span>
+	<a href="#" class="rnr-button img" id="showSrchWin{$id}" data-icon="panelfloat" {$showHideSearchWin_attrs}></a>
+	<a href="#" class="rnr-button img" id="showOptPanel{$id}" data-icon="paneldown" {$showHideSearchPanel_attrs}></a>
+</span>
+{END searchPanelTopButtons}
+</div>
 {END searchformbuttons_block}
 
-<td class="runner-cc filler"></td>
-{BEGIN details_block}
-<td  class="runner-cc runner-br runner-b-details_found" {$brickclass_details_found}><span>	<span {$details_attrs}>
-		Details found: <b><span class="runner-details_found_count">{$records_found}</span></b>
-	</span>
-</span></td>
-{END details_block}
+
+{BEGIN searchsaving_block}
+<div  class="style1 rnr-bl rnr-b-search_saving_buttons {$brickclass_search_saving_buttons}"></div>
+{END searchsaving_block}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_hmenu}
 
 
-{BEGIN pages_block}
-<td  class="runner-cc runner-br runner-b-page_of" {$brickclass_page_of}><span>	<span {$pages_attrs}>
-		Page <b>{$page}</b> of <b>{$maxpages}</b>
-	</span>
-
-</span></td>
-{END pages_block}
-
-
-{BEGIN recordspp_block}
-<td  class="runner-cc runner-br runner-b-recsperpage" {$brickclass_recsperpage}><span>	<span id="recordspp_block{$id}" name="recordspp_block{$id}">
-			Records Per Page:&nbsp;{$recsPerPage}
-	</span>	
-</span></td>
-{END recordspp_block}
-
-
-</tr>
-</table></td>
-<td class="runner-cr"></td>
-</tr>
-
-<tr class="{$cfooterclass_search}">
-<td class="runner-cl"><img src="images/spacer.gif"></td>
-<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
-</tr>
-</table>
-{END container_search}
-
-
-				</td>
-			</tr>
-			<tr class="runner-body">
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
 				
-				<td class="runner-left {$blockclass_left}" >
-					
-
-
-
-{BEGIN container_logg}
-<table class="runner-c runner-c-logg" cellpadding="0" >
-<tr class="{$cheaderclass_logg}">
-<td class="runner-cl"><img src="images/spacer.gif"></td>
-<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
-</tr>
-
-{BEGIN security_block}
-<tr  class="runner-row style1 runner-b-loggedas {$brickclass_loggedas}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" ><div id="login_block{$id}">
-	{BEGIN loggedas_message}
-	<span>Logged on as&nbsp;<b>{$username}</b><br><br>
-	</span>
-	{END loggedas_message}
-	{BEGIN guestloginbutton}
-	<span class="runner-btnframe">
-	<span class="runner-btnleft"></span>
-	<span class="runner-btnright"></span>
-	<a href="#" class="runner-button" {$guestloginlink_attrs}>Login</a>
-	</span>
-	{END guestloginbutton}
-	{BEGIN logoutbutton}
-	<span class="runner-btnframe">
-	<span class="runner-btnleft"></span>
-	<span class="runner-btnright"></span>
-	<a class="runner-button" href="login.php?a=logout" {$logoutlink_attrs}>Log out</a>
-	</span>
-	{END logoutbutton}
-<!-- Permissions -->
-   {BEGIN adminarea_link}
-<div>
-	<span class="runner-btnframe">
-	<span class="runner-btnleft"></span>
-	<span class="runner-btnright"></span>
-	<a class="runner-button" href="admin_rights_list.php" {$adminarealink_attrs}>Admin Area</a>
-	</span>
-</div>
-  {END adminarea_link}
-{BEGIN changepwd_link}
-<div>
-	<span class="runner-btnframe">
-	<span class="runner-btnleft"></span>
-	<span class="runner-btnright"></span>
-	<a class="runner-button" href="changepwd.php" {$changepwdlink_attrs}>Change password</a>
-	</span>
-</div>
-{END changepwd_link}
-</div>
-</td><td class="runner-cr"></td></tr>{END security_block}
-
-
-<tr class="{$cfooterclass_logg}">
-<td class="runner-cl"><img src="images/spacer.gif"></td>
-<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
-</tr>
-</table>
-{END container_logg}
-
-
 
 {BEGIN container_left}
-<table class="runner-c runner-c-left" cellpadding="0" >
-<tr class="{$cheaderclass_left}">
-<td class="runner-cl"><img src="images/spacer.gif"></td>
-<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
-</tr>
-
-{BEGIN searchPanel}
-<tr  class="runner-row style1 runner-b-searchpanel {$brickclass_searchpanel}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" ><div class="searchPanelContainer">
-{$adv_search_panel}
-</div></td><td class="runner-cr"></td></tr>{END searchPanel}
-
+<div class="rnr-c rnr-cv rnr-c-left">
 
 {BEGIN menu_block}
-{$mainmenu}
+{$menu main}
 {END menu_block}
 
 
-<tr class="{$cfooterclass_left}">
-<td class="runner-cl"><img src="images/spacer.gif"></td>
-<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
-</tr>
-</table>
+{BEGIN searchPanel}
+<div  class="rnr-brickcontents style1 rnr-b-searchpanel {$brickclass_searchpanel}"><div class="searchPanelContainer">
+<div class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	
+	<!-- Search panel content -->
+	<div class="srchCritTop" style="display: none;">
+		Criteria:&nbsp;
+		<input type="radio" name="srchType" class="rnr-radio-button" {$all_checkbox}>&nbsp;{BEGIN all_checkbox_label}<span>all</span>{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType" class="rnr-radio-button" {$any_checkbox}>&nbsp;{BEGIN any_checkbox_label}<span>any</span>{END any_checkbox_label}
+	</div>
+	
+	<div class="addOption">
+		<span class="rnr-buttons-group">
+			<a href="#" id="showHideControlChooseMenu{$id}" class="rnr-button" {$showHideCtrls_attrs}>Add field</a>
+		</span>
+		
+		<a href="#" id="showHideSearchType{$id}" class="rnr-button" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>
+	</div>
+	
+
+	<table class="controlsBlock {$controls_block_class}">
+				{BEGIN searchCtrlBlock}
+		<tr class="srchPanelRow" {$filterRow_attrs}>
+			<td class="srchPanelCell">{$delCtrlButt}</td>	
+			<td class="srchPanelCell">{$fLabel}:&nbsp;</td>
+			<td class="srchPanelCell srchPanelCell2">
+				<div class="rnr-searchtype">{$searchtype}</div>
+				<div class="rnr-searchcontrol">{$searchcontrol}</div>
+				<div class="rnr-searchcontrol">{$searchcontrol1}</div>
+			</td>	
+		</tr>
+		{END searchCtrlBlock}
+	</table>	
+
+
+	
+	<div class="bottomSearchButt" align="left" {$bottomSearchButt_attrs}>
+		<a href="#" class="rnr-button" id="searchButton{$id}" {$searchbutton_attrs}>Search</a>
+	</div>
+</div>
+
+</div></div>{END searchPanel}
+
+
+
+</div>
 {END container_left}
 
 
-				</td>	
+			</div>
+			<div class="rnr-center {$blockclass_center}">
 				
-				<td class="runner-center {$blockclass_center}">
-					
 
 {BEGIN container_recordcontrols}
-<table class="runner-c runner-c-recordcontrols" cellpadding="0" >
-<tr class="{$cheaderclass_recordcontrols}">
-<td class="runner-cl"><img src="images/spacer.gif"></td>
-<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
-</tr>
-<tr class="runner-row style1">
-<td class="runner-cl"></td>
-<td class="runner-cc">
-<table border="0" cellpadding="0" class="runner-hc">
-<tr>
+<div class="rnr-c rnr-ch rnr-c-recordcontrols">
 
 {BEGIN newrecord_controls_block}
-<td  class="runner-cc runner-bl runner-b-recordcontrols_new" {$brickclass_recordcontrols_new}><span>	
+<div  class="style1 rnr-bl rnr-b-recordcontrols_new {$brickclass_recordcontrols_new}">	
 		{BEGIN inlineadd_link}
-		<span class="runner-btnframe">
-		<span class="runner-btnleft"></span>
-		<span class="runner-btnright"></span>
-		<a href="#" class="runner-button" {$inlineaddlink_attrs}>Inline Add</a>
-		</span>
+		<a href="#" class="rnr-button" {$inlineaddlink_attrs}>Inline Add</a>
 	{END inlineadd_link}
 
 
-</span></td>
+</div>
 {END newrecord_controls_block}
 
 
 {BEGIN record_controls_block}
-<td  class="runner-cc runner-bl runner-b-recordcontrol" {$brickclass_recordcontrol}><span>			{BEGIN selectall_link}
-		<span class="runner-btnframe" {$selectalllink_span}>
-		<span class="runner-btnleft"></span>
-		<span class="runner-btnright"></span>
-		<a href="#" class="runner-button" {$selectalllink_attrs}>Select/Unselect all</a>
-		</span>
-	{END selectall_link}
+<div  class="style1 rnr-bl rnr-b-recordcontrol {$brickclass_recordcontrol}">{BEGIN widhtSelected}
+<span class="rnr-buttons-group">
+<a class="rnr-button {$withSelectedClass}" href="#" id="selectButtonsToggler{$id}">With selected...</a>
+<ul class="rnr-list" id="selectButtonsGroup{$id}">
 
-			{BEGIN editselected_link}
-		<span class="runner-btnframe" {$editselectedlink_span}>
-		<span class="runner-btnleft"></span>
-		<span class="runner-btnright"></span>
-		<a href="#" class="runner-button" {$editselectedlink_attrs}>Edit selected</a>
-		</span>
+		{BEGIN editselected_link}
+<li>
+		<a href="#" class="rnr-button link" {$editselectedlink_attrs} {$editselectedlink_span}>Edit</a>
+</li>
 	{END editselected_link}
-	{BEGIN saveall_link}
-		<span class="runner-btnframe" {$savealllink_span}>
-		<span class="runner-btnleft"></span>
-		<span class="runner-btnright"></span>
-		<a href="#" class="runner-button" {$savealllink_attrs}>Save all</a>
-		</span>
-	{END saveall_link}
-	{BEGIN cancelall_link}
-		<span class="runner-btnframe" {$cancelalllink_span}>
-		<span class="runner-btnleft"></span>
-		<span class="runner-btnright"></span>
-		<a href="#" class="runner-button" {$cancelalllink_attrs}>Cancel</a>
-		</span>
-	{END cancelall_link}
 
 		{BEGIN deleteselected_link}
-		<span class="runner-btnframe" {$deleteselectedlink_span}>
-		<span class="runner-btnleft"></span>
-		<span class="runner-btnright"></span>
-		<a href="#" class="runner-button" {$deleteselectedlink_attrs}>Delete selected</a>
-		</span>
+<li>
+		<a href="#" class="rnr-button link" {$deleteselectedlink_attrs} {$deleteselectedlink_span}>Delete</a>
+</li>
 	{END deleteselected_link}
 
 	
 		{BEGIN printselected_link}
-		<span class="runner-btnframe" {$printselectedlink_span}>
-		<span class="runner-btnleft"></span>
-		<span class="runner-btnright"></span>
-		<a href="#" class="runner-button" {$printselectedlink_attrs}>Print selected</a>
-		</span>
+<li>
+		<a href="#" class="rnr-button link" {$printselectedlink_attrs} {$printselectedlink_span}>Print</a>
+</li>
 	{END printselected_link}
-
-</span></td>
+</ul>
+</span>
+{END widhtSelected}
+		{BEGIN saveall_link}
+		<a href="#" class="rnr-button" {$savealllink_attrs} {$savealllink_span}>Save all</a>
+	{END saveall_link}
+	{BEGIN cancelall_link}
+		<a href="#" class="rnr-button" {$cancelalllink_attrs} {$cancelalllink_span}>Cancel</a>
+	{END cancelall_link}
+</div>
 {END record_controls_block}
 
-<td class="runner-cc filler"></td>
-</tr>
-</table></td>
-<td class="runner-cr"></td>
-</tr>
 
-<tr class="{$cfooterclass_recordcontrols}">
-<td class="runner-cl"><img src="images/spacer.gif"></td>
-<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
-</tr>
-</table>
+{BEGIN more_list}
+<div  class="style1 rnr-bl rnr-b-toplinks {$brickclass_toplinks}"><span class="rnr-buttons-group">
+{BEGIN moreButtons}
+<a class="rnr-button" id="extraButtonsToggler{$id}" href="#">More...</a>
+<ul class="rnr-list rnr-buttons-group" id="extraButtonsGroup{$id}">
+{BEGIN print_link}
+<li>
+	<a target="_blank" href="devotee_address_print.php?{$crosstable_attrs}" class="rnr-button link" {$printlink_attrs}>Print this page</a>
+</li>
+{END print_link}
+{BEGIN printall_link}
+<li>
+	<a target="_blank" href="devotee_address_print.php?all=1&amp;{$crosstable_attrs}" class="rnr-button link" {$printalllink_attrs}>Print all pages</a>
+</li>
+{END printall_link}
+
+{BEGIN asearch_link}
+<li>
+	<a href="devotee_address_search.php" class="rnr-button link" {$advsearchlink_attrs}>Advanced search</a>
+</li>
+{END asearch_link}
+
+
+</ul>
+{END moreButtons}
+</span></div>
+{END more_list}
+
+<div class="rnr-hfiller"></div>
+</div>
 {END container_recordcontrols}
 
 
 
 {BEGIN container_message}
-<table class="runner-c runner-c-message" cellpadding="0" >
-<tr class="{$cheaderclass_message}">
-<td class="runner-cl"><img src="images/spacer.gif"></td>
-<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
-</tr>
-<tr class="runner-row style1">
-<td class="runner-cl"></td>
-<td class="runner-cc">
-<table border="0" cellpadding="0" class="runner-hc">
-<tr>
+<div class="rnr-c rnr-ch rnr-c-message">
 
 {BEGIN message_block}
-<td  class="runner-cc runner-bc runner-b-message" {$brickclass_message}><span><div class="runner-message">{$message}</div></span></td>
+<div  class="style1 rnr-bc rnr-b-message {$brickclass_message}"><div class="rnr-message">{$message}</div></div>
 {END message_block}
 
 
-</tr>
-</table></td>
-<td class="runner-cr"></td>
-</tr>
-
-<tr class="{$cfooterclass_message}">
-<td class="runner-cl"><img src="images/spacer.gif"></td>
-<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
-</tr>
-</table>
+</div>
 {END container_message}
+
+
+
+{BEGIN container_pagination}
+<div class="rnr-c rnr-ch rnr-multialign rnr-c-pagination">
+
+{BEGIN pagination_block}
+<div  class="style1 rnr-bc rnr-b-pagination {$brickclass_pagination}">{$pagination}</div>
+{END pagination_block}
+
+<div class="rnr-leftbricks">
+{BEGIN details_block}
+<div  class="style1 rnr-bl rnr-b-details_found {$brickclass_details_found}">	<span {$details_attrs}>
+			Details found: <b><span class="rnr-details_found_count">{$records_found}</span></b>
+	</span>
+</div>
+{END details_block}
+
+</div><div class="rnr-rightbricks">
+{BEGIN pages_block}
+<div  class="style1 rnr-br rnr-b-page_of {$brickclass_page_of}">	<span {$pages_attrs}>
+		Page <b>{$page}</b> of <b>{$maxpages}</b>
+	</span>
+
+</div>
+{END pages_block}
+
+
+{BEGIN recordspp_block}
+<div  class="style1 rnr-br rnr-b-recsperpage {$brickclass_recsperpage}">	<span id="recordspp_block{$id}" name="recordspp_block{$id}">
+			Records Per Page:&nbsp;{$recsPerPage}
+	</span>	
+</div>
+{END recordspp_block}
+
+</div>
+</div>
+{END container_pagination}
 
 
 
@@ -454,120 +320,187 @@
 
 
 {BEGIN grid_block}
-							<table cellpadding="0" class="runner-c-grid runner-b-grid">
-							{BEGIN grid_row}
-							<tr {$rowclass} {$rowattrs} {$rowstyle}>
-								{BEGIN grid_record}
-								<td class="runner-cg">
-									{BEGIN grid_vrecord}
-									<table class="runner-c" cellpadding="0">
-										{BEGIN grid_recordheader}
-										<tr class="runner-toprow style1">
-											<th class="runner-cl"><img src="images/spacer.gif"/></th>
-											<th class="runner-cc" colspan="2" iEditCont="all">
-												
-																								{BEGIN inlineedit_column}
-												{BEGIN inlineedit_link}
-																								<a  {$inlineeditlink_attrs} title="Inline Edit" class="runner-verticalicons"><img src="images/icon_inline_edit_new.gif" alt="Inline Edit" border="0"></a>
-												{END inlineedit_link}
-												{END inlineedit_column}
+						<table class="rnr-c rnr-cont rnr-c-grid rnr-b-grid rnr-gridtable  hoverable " cellpadding="0" >
+						<thead>
+															{BEGIN grid_header}
+								<tr class="rnr-toprow style1 {$gridHeader_class}" >
+									{BEGIN record_header}
+									{BEGIN listIcons_column}
+									<th iEditCont="all">&nbsp;</th>
+									{END listIcons_column}	
 
-												
-												
-																								{BEGIN checkbox_column}
-												{BEGIN checkbox}
-												<input type="checkbox" {$checkbox_attrs} class="runner-verticalcheckbox">
-												{END checkbox}
-												{END checkbox_column}
+																		{BEGIN checkbox_column}
+									<th class="rnr-bc">
+										<input type="checkbox" {$checkboxheader_attrs}>
+									</th>
+									{END checkbox_column}
 
-											</th>
-											<th class="runner-cr"><img src="images/spacer.gif"/></th>
-										</tr>
-										{END grid_recordheader}
-										
-											{BEGIN AddressType_fieldcolumn}
-<tr class="runner-row style1">
-	<td class="runner-cl"></td>
-	<td class="runner-cc runner-cc1">Address Type</td>
-	<td class="runner-cc alt runner-cc2 {$AddressType_class}" {$AddressType_style}>{$AddressType_value}&nbsp;</td>
-	<td class="runner-cr alt"></td>
-</tr>
+																																			{BEGIN AddressType_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$AddressType_class}">
+									{BEGIN AddressType_fieldheader}
+																				<span {$AddressType_orderlinkattrs}>
+											{$label devotee_address AddressType}
+										</span>
+									{END AddressType_fieldheader}
+									</th>
+									{END AddressType_fieldheadercolumn}
+
+																	{BEGIN AddressLine1_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$AddressLine1_class}">
+									{BEGIN AddressLine1_fieldheader}
+																				<span {$AddressLine1_orderlinkattrs}>
+											{$label devotee_address AddressLine1}
+										</span>
+									{END AddressLine1_fieldheader}
+									</th>
+									{END AddressLine1_fieldheadercolumn}
+
+																	{BEGIN AddressLine2_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$AddressLine2_class}">
+									{BEGIN AddressLine2_fieldheader}
+																				<span {$AddressLine2_orderlinkattrs}>
+											{$label devotee_address AddressLine2}
+										</span>
+									{END AddressLine2_fieldheader}
+									</th>
+									{END AddressLine2_fieldheadercolumn}
+
+																	{BEGIN State_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$State_class}">
+									{BEGIN State_fieldheader}
+																				<span {$State_orderlinkattrs}>
+											{$label devotee_address State}
+										</span>
+									{END State_fieldheader}
+									</th>
+									{END State_fieldheadercolumn}
+
+																	{BEGIN City_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$City_class}">
+									{BEGIN City_fieldheader}
+																				<span {$City_orderlinkattrs}>
+											{$label devotee_address City}
+										</span>
+									{END City_fieldheader}
+									</th>
+									{END City_fieldheadercolumn}
+
+																	{BEGIN Country_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Country_class}">
+									{BEGIN Country_fieldheader}
+																				<span {$Country_orderlinkattrs}>
+											{$label devotee_address Country}
+										</span>
+									{END Country_fieldheader}
+									</th>
+									{END Country_fieldheadercolumn}
+
+																	{BEGIN Pincode_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Pincode_class}">
+									{BEGIN Pincode_fieldheader}
+																				<span {$Pincode_orderlinkattrs}>
+											{$label devotee_address Pincode}
+										</span>
+									{END Pincode_fieldheader}
+									</th>
+									{END Pincode_fieldheadercolumn}
+
+
+									
+									<th class="rnr-edge">&nbsp;</th>
+									{BEGIN endrecordheader_block}
+									<th class="rnr-cs">&nbsp;</th>
+									
+									{END endrecordheader_block}
+									
+									{END record_header}
+									
+								</tr>
+								{END grid_header}
+
+						</thead>
+						<tbody>	
+															{BEGIN grid_row}
+								<tr class="rnr-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>
+									{BEGIN grid_record}
+									{BEGIN listIcons_column}
+									<td class="rnr-cc rnr-bc rnr-icons" iEditCont="all" {$rowstyle} {$recordattrs}>
+									
+																		{BEGIN inlineedit_column}
+									{BEGIN inlineedit_link}
+																			<a class="rnr-button-img" {$inlineeditlink_attrs} data-icon="inlineedit" title="Inline Edit"></a>
+									{END inlineedit_link}
+									{END inlineedit_column}
+
+									
+																		</td>	
+									{END listIcons_column}	
+
+																		{BEGIN checkbox_column}
+									<td class="rnr-bc" iEditCont="checkBox" {$rowstyle} {$recordattrs}>
+									{BEGIN checkbox}
+									<input type="checkbox" {$checkbox_attrs}>
+									{END checkbox}
+									</td>
+									{END checkbox_column}
+
+
+										{BEGIN AddressType_fieldcolumn}
+	<td class="{$AddressType_class}" {$AddressType_style} {$recordattrs}>
+		{$AddressType_value}
+	</td>
 {END AddressType_fieldcolumn}
-	{BEGIN AddressLine1_fieldcolumn}
-<tr class="runner-row style1">
-	<td class="runner-cl"></td>
-	<td class="runner-cc runner-cc1">Address Line1</td>
-	<td class="runner-cc alt runner-cc2 {$AddressLine1_class}" {$AddressLine1_style}>{$AddressLine1_value}&nbsp;</td>
-	<td class="runner-cr alt"></td>
-</tr>
-{END AddressLine1_fieldcolumn}
-	{BEGIN AddressLine2_fieldcolumn}
-<tr class="runner-row style1">
-	<td class="runner-cl"></td>
-	<td class="runner-cc runner-cc1">Address Line2</td>
-	<td class="runner-cc alt runner-cc2 {$AddressLine2_class}" {$AddressLine2_style}>{$AddressLine2_value}&nbsp;</td>
-	<td class="runner-cr alt"></td>
-</tr>
-{END AddressLine2_fieldcolumn}
-	{BEGIN State_fieldcolumn}
-<tr class="runner-row style1">
-	<td class="runner-cl"></td>
-	<td class="runner-cc runner-cc1">State</td>
-	<td class="runner-cc alt runner-cc2 {$State_class}" {$State_style}>{$State_value}&nbsp;</td>
-	<td class="runner-cr alt"></td>
-</tr>
-{END State_fieldcolumn}
-	{BEGIN City_fieldcolumn}
-<tr class="runner-row style1">
-	<td class="runner-cl"></td>
-	<td class="runner-cc runner-cc1">City</td>
-	<td class="runner-cc alt runner-cc2 {$City_class}" {$City_style}>{$City_value}&nbsp;</td>
-	<td class="runner-cr alt"></td>
-</tr>
-{END City_fieldcolumn}
-	{BEGIN country_fieldcolumn}
-<tr class="runner-row style1">
-	<td class="runner-cl"></td>
-	<td class="runner-cc runner-cc1">Country</td>
-	<td class="runner-cc alt runner-cc2 {$country_class}" {$country_style}>{$country_value}&nbsp;</td>
-	<td class="runner-cr alt"></td>
-</tr>
-{END country_fieldcolumn}
-	{BEGIN pincode_fieldcolumn}
-<tr class="runner-row style1">
-	<td class="runner-cl"></td>
-	<td class="runner-cc runner-cc1">Pincode</td>
-	<td class="runner-cc alt runner-cc2 {$pincode_class}" {$pincode_style}>{$pincode_value}&nbsp;</td>
-	<td class="runner-cr alt"></td>
-</tr>
-{END pincode_fieldcolumn}
 
-										
-										<tr class="runner-bottomrow style1">
-											<td class="runner-cl"><img src="images/spacer.gif"/></td>
-											<td class="runner-cc"></td>
-											<td class="runner-cc alt"></td>
-											<td class="runner-cr alt"><img src="images/spacer.gif"/></td>
-										</tr>
-									</table>
-									{END grid_vrecord}
-								</td>
-								{BEGIN endrecord_block}
-								<td class="runner-cs" {$endrecordblock_attrs}>&nbsp;</td>
-								{END endrecord_block}
-								{END grid_record}
-							</tr>
-							{BEGIN grid_rowspace}
-							<tr class="runner-rs {$rsclass}">
-								{BEGIN grid_recordspace}
-								<td>&nbsp;</td>
-								{END grid_recordspace}
-							</tr>
-							{END grid_rowspace}
-							{END grid_row}
-						</table>
-						
-				
+	{BEGIN AddressLine1_fieldcolumn}
+	<td class="{$AddressLine1_class}" {$AddressLine1_style} {$recordattrs}>
+		{$AddressLine1_value}
+	</td>
+{END AddressLine1_fieldcolumn}
+
+	{BEGIN AddressLine2_fieldcolumn}
+	<td class="{$AddressLine2_class}" {$AddressLine2_style} {$recordattrs}>
+		{$AddressLine2_value}
+	</td>
+{END AddressLine2_fieldcolumn}
+
+	{BEGIN State_fieldcolumn}
+	<td class="{$State_class}" {$State_style} {$recordattrs}>
+		{$State_value}
+	</td>
+{END State_fieldcolumn}
+
+	{BEGIN City_fieldcolumn}
+	<td class="{$City_class}" {$City_style} {$recordattrs}>
+		{$City_value}
+	</td>
+{END City_fieldcolumn}
+
+	{BEGIN Country_fieldcolumn}
+	<td class="{$Country_class}" {$Country_style} {$recordattrs}>
+		{$Country_value}
+	</td>
+{END Country_fieldcolumn}
+
+	{BEGIN Pincode_fieldcolumn}
+	<td class="{$Pincode_class}" {$Pincode_style} {$recordattrs}>
+		{$Pincode_value}
+	</td>
+{END Pincode_fieldcolumn}
+
+
+									<td class="rnr-edge" {$recordattrs}>&nbsp;</td>
+									{BEGIN endrecord_block}
+									<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+									{END endrecord_block}
+																	
+									{END grid_record}
+
+								</tr>
+								{END grid_row}
+															
+						</tbody>
+					</table>
+					
 
 {END grid_block}
 
@@ -577,48 +510,53 @@
 
 
 
-{BEGIN container_pagination}
-<table class="runner-c runner-c-pagination" cellpadding="0" >
-<tr class="{$cheaderclass_pagination}">
-<td class="runner-cl"><img src="images/spacer.gif"></td>
-<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
-</tr>
-<tr class="runner-row style1">
-<td class="runner-cl"></td>
-<td class="runner-cc">
-<table border="0" cellpadding="0" class="runner-hc">
-<tr>
+{BEGIN container_pagination_bottom}
+<div class="rnr-c rnr-ch rnr-multialign rnr-c-pagination_bottom">
 
 {BEGIN pagination_block}
-<td  class="runner-cc runner-bc runner-b-pagination" {$brickclass_pagination}><span>{$pagination}</span></td>
+<div  class="style1 rnr-bc rnr-b-pagination {$brickclass_pagination}">{$pagination}</div>
 {END pagination_block}
 
+<div class="rnr-leftbricks">
+{BEGIN details_block}
+<div  class="style1 rnr-bl rnr-b-details_found {$brickclass_details_found}">	<span {$details_attrs}>
+			Details found: <b><span class="rnr-details_found_count">{$records_found}</span></b>
+	</span>
+</div>
+{END details_block}
 
-</tr>
-</table></td>
-<td class="runner-cr"></td>
-</tr>
+</div><div class="rnr-rightbricks">
+{BEGIN pages_block}
+<div  class="style1 rnr-br rnr-b-page_of {$brickclass_page_of}">	<span {$pages_attrs}>
+		Page <b>{$page}</b> of <b>{$maxpages}</b>
+	</span>
 
-<tr class="{$cfooterclass_pagination}">
-<td class="runner-cl"><img src="images/spacer.gif"></td>
-<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
-</tr>
-</table>
-{END container_pagination}
+</div>
+{END pages_block}
 
 
-				</td>	
+{BEGIN recordspp_block}
+<div  class="style1 rnr-br rnr-b-recsperpage {$brickclass_recsperpage}">	<span id="recordspp_block{$id}" name="recordspp_block{$id}">
+			Records Per Page:&nbsp;{$recsPerPage}
+	</span>	
+</div>
+{END recordspp_block}
 
-				<td class="runner-right {$blockclass_right}">
-					
-				</td>	
-			</tr>
-			<tr class="runner-footer">
-				<td class="runner-bottom" colspan=3>
-					<!--%%bottom%%-->
-				</td>
-			</tr>
-		</table>
+</div>
+</div>
+{END container_pagination_bottom}
+
+
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
 		{$footer}
 	{END body}
 	</body>

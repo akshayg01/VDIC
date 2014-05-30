@@ -1,8 +1,9 @@
 <!doctype html>
 <html  {$html_attrs}>
 	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 		<title>{$pagetitle}</title>
-		<meta http-equiv="X-UA-Compatible" content="IE=7">
+
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<link REL="stylesheet" href="styles/default.css" type="text/css">
 		{BEGIN rtlCSS}
@@ -14,183 +15,124 @@
 		{BEGIN pageCSSFiles}
 		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
 		{END pageCSSFiles}
-		<!--[if IE]>
-			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
-			{BEGIN IEcssFiles}
-			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
-			{END IEcssFiles}
-		<![endif]-->
 	</head>
 	
-	<body class="{$stylename}" {$bodyattrs}>
+	<body class="{$stylename} function-add" {$bodyattrs}>
 	{BEGIN body}
 		{$header}
-		<table   cellpadding="0" class="runner-toptable">
-			<tr class="runner-header">
-				<td class="runner-top" colspan=3>
-					
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_all}
+<div class="rnr-c rnr-cv rnr-c-all">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_add} rnr-wrapper rnr-cbw-add">
 
 {BEGIN container_add}
-<table class="runner-c runner-c-add" cellpadding="0" align=center>
+<div class="rnr-c rnr-cv rnr-c-add">
 
-
-<tr class="runner-toprow style2 header"><td class="runner-cl"><img src="images/spacer.gif"></td><td class="runner-cc" ><div  class="runner-b-addheader {$brickclass_addheader}">Msg Sms Dev, Add new record</div></td><td class="runner-cr"><img src="images/spacer.gif"></td></tr>
+{BEGIN addheader}
+<div  class="rnr-brickcontents style2 rnr-b-addheader {$brickclass_addheader}"><span>	{$pagetitlelabel msg_sms_dev add}
+</span></div>{END addheader}
 
 
 {BEGIN message_block}
-<tr  class="runner-row style1 runner-b-message {$brickclass_message}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" ><div class="runner-message">{$message}</div></td><td class="runner-cr"></td></tr>{END message_block}
+<div  class="rnr-brickcontents style1 rnr-b-message {$brickclass_message}"><div class="rnr-message">{$message}</div></div>{END message_block}
 
 
 
-<tr  class="runner-row style1 runner-b-wrapper {$wrapperclass_fields}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents runner-wrapper" >
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fields} rnr-wrapper rnr-cbw-fields">
 
 {BEGIN container_fields}
-<table class="runner-c runner-c-fields" cellpadding="0" >
-<tr class="{$cheaderclass_fields}">
-<td class="runner-cl"><img src="images/spacer.gif"></td>
-<td class="runner-cc"></td><td class="runner-cc alt"></td><td class="runner-cr alt"><img src="images/spacer.gif"></td>
-</tr>
+<div class="rnr-c rnr-cv rnr-c-fields">
 
 
+<div  class="rnr-brickcontents style1 rnr-b-addfields2_atop {$brickclass_addfields2_atop}"><table class="fieldGrid fieldGrid2 edit">
+
+<tr>
+<td>
 	{BEGIN SenderId_fieldblock}
-	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
-	<td class="runner-cc runner-cc1">
-		<div class="fieldlabel_SenderId {$fielddispclass_SenderId}">
-			{BEGIN SenderId_label}Sender Id{END SenderId_label}
-		</div>
-	</td>
-	<td class="runner-cc alt runner-fixedcell">
-		<div class="fieldcontrol_SenderId {$fielddispclass_SenderId}">
-			{$SenderId_editcontrol}&nbsp;
-		</div>
-	</td>
-	<td class="runner-cr alt"></td></tr>
+<div data-fieldname="SenderId" class="rnr-field style1 {$fielddispclass_SenderId}">
+  <div class="rnr-label above">{BEGIN SenderId_label}{$label msg_sms_dev SenderId}{END SenderId_label}</div>
+  <div class="rnr-control style3">{$SenderId_editcontrol}</div>
+</div>
 {END SenderId_fieldblock}
 	{BEGIN ToDevoteeIDs_fieldblock}
-	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
-	<td class="runner-cc runner-cc1">
-		<div class="fieldlabel_ToDevoteeIDs {$fielddispclass_ToDevoteeIDs}">
-			{BEGIN ToDevoteeIDs_label}To Devotee IDs{END ToDevoteeIDs_label}
-		</div>
-	</td>
-	<td class="runner-cc alt runner-fixedcell">
-		<div class="fieldcontrol_ToDevoteeIDs {$fielddispclass_ToDevoteeIDs}">
-			{$ToDevoteeIDs_editcontrol}&nbsp;
-		</div>
-	</td>
-	<td class="runner-cr alt"></td></tr>
+<div data-fieldname="ToDevoteeIDs" class="rnr-field style1 {$fielddispclass_ToDevoteeIDs}">
+  <div class="rnr-label above">{BEGIN ToDevoteeIDs_label}{$label msg_sms_dev ToDevoteeIDs}{END ToDevoteeIDs_label}</div>
+  <div class="rnr-control style3">{$ToDevoteeIDs_editcontrol}</div>
+</div>
 {END ToDevoteeIDs_fieldblock}
+</td>
+<td>
 	{BEGIN TemplateID_fieldblock}
-	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
-	<td class="runner-cc runner-cc1">
-		<div class="fieldlabel_TemplateID {$fielddispclass_TemplateID}">
-			{BEGIN TemplateID_label}Template ID{END TemplateID_label}
-		</div>
-	</td>
-	<td class="runner-cc alt runner-fixedcell">
-		<div class="fieldcontrol_TemplateID {$fielddispclass_TemplateID}">
-			{$TemplateID_editcontrol}&nbsp;
-		</div>
-	</td>
-	<td class="runner-cr alt"></td></tr>
+<div data-fieldname="TemplateID" class="rnr-field style1 {$fielddispclass_TemplateID}">
+  <div class="rnr-label above">{BEGIN TemplateID_label}{$label msg_sms_dev TemplateID}{END TemplateID_label}</div>
+  <div class="rnr-control style3">{$TemplateID_editcontrol}</div>
+</div>
 {END TemplateID_fieldblock}
 	{BEGIN Message_fieldblock}
-	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
-	<td class="runner-cc runner-cc1">
-		<div class="fieldlabel_Message {$fielddispclass_Message}">
-			{BEGIN Message_label}Message{END Message_label}
-		</div>
-	</td>
-	<td class="runner-cc alt runner-fixedcell">
-		<div class="fieldcontrol_Message {$fielddispclass_Message}">
-			{$Message_editcontrol}&nbsp;
-		</div>
-	</td>
-	<td class="runner-cr alt"></td></tr>
+<div data-fieldname="Message" class="rnr-field style1 {$fielddispclass_Message}">
+  <div class="rnr-label above">{BEGIN Message_label}{$label msg_sms_dev Message}{END Message_label}</div>
+  <div class="rnr-control style3">{$Message_editcontrol}</div>
+</div>
 {END Message_fieldblock}
+</td>
+</tr>
+</table></div>
 
 
-
-{BEGIN legend}
-<tr  class="runner-row style3 runner-b-legend {$brickclass_legend}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" colspan=2><span id="required_block{$id}">
-<img src="images/icon_required.gif" alt="bullet"> - Required field
-</span>
-</td><td class="runner-cr"></td></tr>{END legend}
-
-
-
-<tr  class="runner-row style2 runner-b-addbuttons {$brickclass_addbuttons}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" colspan=2>{BEGIN save_button}
-<span class="runner-btnframe">
-<span class="runner-btnleft"></span>
-<span class="runner-btnright"></span>
-<a href="#" class="runner-button" {$savebutton_attrs}>Save</a>
-</span>
+{BEGIN addbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-addbuttons {$brickclass_addbuttons}">{BEGIN save_button}
+<a href="#" class="rnr-button main" {$savebutton_attrs}>Save</a>
 {END save_button}
 {BEGIN cancel_button}
-<span class="runner-btnframe">
-<span class="runner-btnleft"></span>
-<span class="runner-btnright"></span>
-<a href="#" class="runner-button" {$cancelbutton_attrs}>Cancel</a>
-</span>
+<a href="#" class="rnr-button" {$cancelbutton_attrs}>Cancel</a>
 {END cancel_button}
 {BEGIN back_button}
-<span class="runner-btnframe">
-<span class="runner-btnleft"></span>
-<span class="runner-btnright"></span>
-<a href="#" class="runner-button" {$backbutton_attrs}>Back to list</a>
-</span>
+<a href="#" class="rnr-button" {$backbutton_attrs}>Back to list</a>
 {END back_button}
 {BEGIN backToMenu_button}
-<span class="runner-btnframe">
-<span class="runner-btnleft"></span>
-<span class="runner-btnright"></span>
-<a href="#" class="runner-button" {$backToMenubutton_attrs}>Back to menu</a>
-</span>
-{END backToMenu_button}</td><td class="runner-cr"></td></tr>
+<a href="#" class="rnr-button" {$backToMenubutton_attrs}>Back to menu</a>
+{END backToMenu_button}</div>{END addbuttons}
 
 
-<tr class="{$cfooterclass_fields}">
-<td class="runner-cl"><img src="images/spacer.gif"></td>
-<td class="runner-cc"></td><td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
-</tr>
-</table>
+</div>
 {END container_fields}
 
-</td><td class="runner-cr"></td></tr>
+</div>
 
 
-<tr class="{$cfooterclass_add}">
-<td class="runner-cl"><img src="images/spacer.gif"></td>
-<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
-</tr>
-</table>
+</div>
 {END container_add}
 
+</div>
 
 
 
-				</td>
-			</tr>
-			<tr class="runner-body">
+</div>
+{END container_all}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
 				
-				<td class="runner-left {$blockclass_left}" >
-					
-				</td>	
+			</div>
+			<div class="rnr-center {$blockclass_center}">
 				
-				<td class="runner-center {$blockclass_center}">
-					
-				</td>	
-
-				<td class="runner-right {$blockclass_right}">
-					
-				</td>	
-			</tr>
-			<tr class="runner-footer">
-				<td class="runner-bottom" colspan=3>
-					<!--%%bottom%%-->
-				</td>
-			</tr>
-		</table>
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
 		{$footer}
 	{END body}
 	</body>

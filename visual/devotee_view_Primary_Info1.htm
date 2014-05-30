@@ -1,44 +1,88 @@
-<TABLE cellSpacing=0 cellPadding=0 width="100%" bgColor=#cfdbea border=0><TR><TD><DIV {$pageattrs}>{BEGIN container_1}<TABLE class=runner-c cellPadding=0>{BEGIN TitleId_tabfieldblock}<TR class="runner-row style1"><TD class="runner-cc runner-cc1"><DIV class="fieldlabel_TitleId {$fielddispclass_TitleId}">Mr / Mrs / 
-            Miss </DIV></TD>
-          <TD 
-            class="runner-cc alt"><DIV class="fieldvalue_TitleId {$fielddispclass_TitleId}">{$TitleId_value} 
-            </DIV></TD>
-          <TD class="runner-cc alt" rowSpan=8>{$Photo_value}
-            
-            
-            
-            
-            
-            
-            </TD></TR>
-        {END TitleId_tabfieldblock}{BEGIN FullName_tabfieldblock}<tr class="runner-row style1"><td class="runner-cc runner-cc1"><div class="fieldlabel_FullName {$fielddispclass_FullName}">
-				Name
-			</div>
-		</td>
-		<td class="runner-cc alt"><div class="fieldvalue_FullName {$fielddispclass_FullName}">{$FullName_value}
-			</div>
-		</td>
-	</tr>
-{END FullName_tabfieldblock}{BEGIN InitiatedName_tabfieldblock}<TR class="runner-row style1"><TD class="runner-cc runner-cc1"><DIV 
-            class="fieldlabel_InitiatedName {$fielddispclass_InitiatedName}">Initiated 
-            Name </DIV></TD>
-          <TD class="runner-cc alt"><DIV 
-            class="fieldvalue_InitiatedName {$fielddispclass_InitiatedName}">{$InitiatedName_value} 
-          </DIV></TD></TR>
-        {END InitiatedName_tabfieldblock}{BEGIN DateOfBirth_tabfieldblock}<TR class="runner-row style1"><TD class="runner-cc runner-cc1"><DIV 
-            class="fieldlabel_DateOfBirth {$fielddispclass_DateOfBirth}">Date Of 
-            Birth </DIV></TD>
-          <TD class="runner-cc alt"><DIV 
-            class="fieldvalue_DateOfBirth {$fielddispclass_DateOfBirth}">{$DateOfBirth_value} 
-            </DIV></TD></TR>
-        {END DateOfBirth_tabfieldblock}{BEGIN Gender_tabfieldblock}<TR class="runner-row style1"><TD 
-          class="runner-cc runner-cc1"><DIV class="fieldlabel_Gender {$fielddispclass_Gender}">Gender 
-            </DIV></TD>
-          <TD class="runner-cc alt"><DIV class="fieldvalue_Gender {$fielddispclass_Gender}">{$Gender_value} 
-          </DIV></TD></TR>
-        {END Gender_tabfieldblock}{BEGIN CounsellorDevoteeID_tabfieldblock}<TR class="runner-row style1"><TD class="runner-cc runner-cc1"><DIV 
-            class="fieldlabel_CounsellorDevoteeID {$fielddispclass_CounsellorDevoteeID}">Counsellor 
-            </DIV></TD>
-          <TD class="runner-cc alt"><DIV 
-            class="fieldvalue_CounsellorDevoteeID {$fielddispclass_CounsellorDevoteeID}">{$CounsellorDevoteeID_value} 
-            </DIV></TD></TR>{END CounsellorDevoteeID_tabfieldblock}</TABLE>{END container_1}</DIV></TD></TR></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" bgColor=#cfdbea border=0><TR><TD><div {$pageattrs}>
+
+{BEGIN container_1}<table class="fieldGrid">
+{BEGIN InitiatedName_tabfieldblock}<tr class="{$fielddispclass_InitiatedName}" data-fieldname="InitiatedName">
+	<td class="style1 rnr-label">
+		{$label devotee InitiatedName}
+	</td>
+	<td class="rnr-control style3">
+		<div class="fieldvalue_InitiatedName">
+		{$InitiatedName_value}
+		</div>
+	</td>
+</tr>
+{END InitiatedName_tabfieldblock}
+{BEGIN DateOfBirth_tabfieldblock}<tr class="{$fielddispclass_DateOfBirth}" data-fieldname="DateOfBirth">
+	<td class="style1 rnr-label">
+		{$label devotee DateOfBirth}
+	</td>
+	<td class="rnr-control style3">
+		<div class="fieldvalue_DateOfBirth">
+		{$DateOfBirth_value}
+		</div>
+	</td>
+</tr>
+{END DateOfBirth_tabfieldblock}
+{BEGIN CounsellorDevoteeID_tabfieldblock}<tr class="{$fielddispclass_CounsellorDevoteeID}" data-fieldname="CounsellorDevoteeID">
+	<td class="style1 rnr-label">
+		{$label devotee CounsellorDevoteeID}
+	</td>
+	<td class="rnr-control style3">
+		<div class="fieldvalue_CounsellorDevoteeID">
+		{$CounsellorDevoteeID_value}
+		</div>
+	</td>
+</tr>
+{END CounsellorDevoteeID_tabfieldblock}
+{BEGIN MobilePhone_tabfieldblock}<tr class="{$fielddispclass_MobilePhone}" data-fieldname="MobilePhone">
+	<td class="style1 rnr-label">
+		{$label devotee MobilePhone}
+	</td>
+	<td class="rnr-control style3">
+		<div class="fieldvalue_MobilePhone">
+		{$MobilePhone_value}
+		</div>
+	</td>
+</tr>
+{END MobilePhone_tabfieldblock}
+{BEGIN WorkPhone_tabfieldblock}<tr class="{$fielddispclass_WorkPhone}" data-fieldname="WorkPhone">
+	<td class="style1 rnr-label">
+		{$label devotee WorkPhone}
+	</td>
+	<td class="rnr-control style3">
+		<div class="fieldvalue_WorkPhone">
+		{$WorkPhone_value}
+		</div>
+	</td>
+</tr>
+{END WorkPhone_tabfieldblock}
+{BEGIN EmailPrimary_tabfieldblock}<tr class="{$fielddispclass_EmailPrimary}" data-fieldname="EmailPrimary">
+	<td class="style1 rnr-label">
+		{$label devotee EmailPrimary}
+	</td>
+	<td class="rnr-control style3">
+		<div class="fieldvalue_EmailPrimary">
+		{$EmailPrimary_value}
+		</div>
+	</td>
+</tr>
+{END EmailPrimary_tabfieldblock}
+{BEGIN EmailSecondary_tabfieldblock}<tr class="{$fielddispclass_EmailSecondary}" data-fieldname="EmailSecondary">
+	<td class="style1 rnr-label">
+		{$label devotee EmailSecondary}
+	</td>
+	<td class="rnr-control style3">
+		<div class="fieldvalue_EmailSecondary">
+		{$EmailSecondary_value}
+		</div>
+	</td>
+</tr>
+{END EmailSecondary_tabfieldblock}
+</table>
+
+
+
+
+{END container_1}
+
+</div></TD></TR></TABLE>
