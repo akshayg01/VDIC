@@ -1,295 +1,503 @@
-<!doctype html>
-<html  {$html_attrs}>
-	<head>
-		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-		<title>{$pagetitle}</title>
-
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<link REL="stylesheet" href="styles/default.css" type="text/css">
-		{BEGIN rtlCSS}<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
-		{END rtlCSS}
-		{BEGIN styleCSSFiles}<link REL="stylesheet" href="{$stylepath}" type="text/css">
-		{END styleCSSFiles}
-		{BEGIN pageCSSFiles}<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
-		{END pageCSSFiles}
-	<LINK rel=stylesheet type=text/css href="styles/defaultIE.css">{BEGIN IEcssFiles}<LINK rel=stylesheet type=text/css href="{$stylepathIE}">{END IEcssFiles}
-<META name=GENERATOR content="MSHTML 11.00.9600.17107"></head>
-	
-	<BODY class="{$stylename}" {$bodyattrs}>{BEGIN body}{$header}
-	<TABLE class=runner-toptable cellPadding=0><TR class=runner-header><TD class=runner-top colSpan=3>{BEGIN container_toplinks}<TABLE class="runner-c runner-c-toplinks" cellPadding=0><TR class="{$cheaderclass_toplinks}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
-          <TD class=runner-cc></TD>
-          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
-        <TR class="runner-row style1"><TD class=runner-cl></TD>
-          <TD class=runner-cc><TABLE class=runner-hc cellPadding=0 border=0><TR><TD class="runner-cc filler"></TD>
-                {BEGIN prints_block}<TD class="runner-cc runner-br runner-b-toplinks_print" {$brickclass_toplinks_print}><SPAN>{BEGIN print_link}<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$printlink_attrs}>Print this page</a>
-</SPAN>{END print_link}{BEGIN printall_link}<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$printalllink_attrs}>Print all pages</a>
-</SPAN>{END printall_link}</SPAN></TD>
-                {END prints_block}{BEGIN asearch_link}<TD class="runner-cc runner-br runner-b-toplinks_advsearch" {$brickclass_toplinks_advsearch}><SPAN><SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$advsearchlink_attrs}>Advanced search</a>
-</SPAN></SPAN></TD>{END asearch_link}</TR></TABLE></TD>
-          <TD class=runner-cr></TD></TR>
-        <TR class="{$cfooterclass_toplinks}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
-          <TD class=runner-cc></TD>
-          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TABLE>{END container_toplinks}
-
-
-
-{BEGIN container_search}<TABLE class="runner-c runner-c-search" cellPadding=0><TR class="{$cheaderclass_search}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
-          <TD class=runner-cc></TD>
-          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
-        <TR class="runner-row style1"><TD class=runner-cl></TD>
-          <TD class=runner-cc><TABLE class=runner-hc cellPadding=0 border=0><TR>{BEGIN searchform_block}<div  class="style1 rnr-bl rnr-b-search {$brickclass_search}">	<span>
-		{$simpleSearchFieldCombo}
-		{$simpleSearchTypeCombo}
-		{BEGIN searchform_text}<input type="text" {$searchfor_attrs} size="25">
-		{END searchform_text}
-		{BEGIN searchform_search}<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button-img href="#" {$searchbutton_attrs}><IMG src="images/search/search.gif"></a>
-		</SPAN>{END searchform_search}
-		{BEGIN searchform_showall}<SPAN class=runner-btnframe {$showAllCont_attrs}><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$showallbutton_attrs}>Show all</a>
-		</SPAN>{END searchform_showall}
-	</span>
-</div>
-{END searchform_block}{BEGIN searchformbuttons_block}<div  class="style1 rnr-bl rnr-b-search_buttons {$brickclass_search_buttons}">{BEGIN searchPanelTopButtons}<span>
-	<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A id=showSrchWin{$id} class=runner-button-img href="#" {$showHideSearchWin_attrs}><IMG src="images/search/showWindowPin.gif"></a>
-	</SPAN>&nbsp; <SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A id=showOptPanel{$id} class=runner-button-img href="#" {$showHideSearchPanel_attrs}><IMG src="images/search/showOptions.gif"></a>
-</SPAN></span>
-{END searchPanelTopButtons}
-</div>
-{END searchformbuttons_block}<TD class="runner-cc filler"></TD>
-                {BEGIN details_block}<TD class="runner-cc runner-br runner-b-details_found" {$brickclass_details_found}><SPAN><span {$details_attrs}>
-			Details found: <b><SPAN 
-                  class=runner-details_found_count>{$records_found}</span></b>
-	</span>
-</SPAN></TD>
-                {END details_block}{BEGIN pages_block}<TD class="runner-cc runner-br runner-b-page_of" {$brickclass_page_of}><SPAN><span {$pages_attrs}>
-		Page <b>{$page}</b> of <b>{$maxpages}</b>
-	</span>
-
-</SPAN></TD>
-                {END pages_block}{BEGIN recordspp_block}<TD class="runner-cc runner-br runner-b-recsperpage" {$brickclass_recsperpage}><SPAN><span id="recordspp_block{$id}" name="recordspp_block{$id}">
-			Records Per Page:&nbsp;{$recsPerPage}
-	</span>	
-</SPAN></TD>{END recordspp_block}</TR></TABLE></TD>
-          <TD class=runner-cr></TD></TR>
-        <TR class="{$cfooterclass_search}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
-          <TD class=runner-cc></TD>
-          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TABLE>{END container_search}</TD></TR>
-  <TR class=runner-body><TD class="runner-left {$blockclass_left}">{BEGIN container_logg}<TABLE class="runner-c runner-c-logg" cellPadding=0><TR class="{$cheaderclass_logg}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
-          <TD class=runner-cc></TD>
-          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
-        {BEGIN security_block}<TR class="runner-row style1 runner-b-loggedas {$brickclass_loggedas}"><TD class=runner-cl></TD>
-          <TD class="runner-cc runner-brickcontents"><DIV id=login_block{$id}>{BEGIN loggedas_message}<span>Logged on as&nbsp;<b>{$username}</b>&nbsp;<BR><BR></span> 
-{END loggedas_message}
-{BEGIN guestloginbutton}<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$guestloginlink_attrs}>Login</a>
-</span>
-{END guestloginbutton}
-{BEGIN logoutbutton}<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="login.php?a=logout" {$logoutlink_attrs}>Log out</a>
-</SPAN>
-            {END logoutbutton}
-{BEGIN adminarea_link}<DIV><SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="admin_rights_list.php" {$adminarealink_attrs}>Admin Area</a>
-</SPAN></DIV>
-            {END adminarea_link}
-
-{BEGIN changepwd_link}<DIV><SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="changepwd.php" {$changepwdlink_attrs}>Change password</a>
-</SPAN></DIV>{END changepwd_link}
-</div>
-</TD>
-          <TD class=runner-cr></TD></TR>
-        {END security_block}<TR class="{$cfooterclass_logg}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
-          <TD class=runner-cc></TD>
-          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TABLE>{END container_logg}
-      {BEGIN container_left}<div class="rnr-c rnr-cv rnr-c-left">
-
-{BEGIN menu_block}{$menu main}
-{$mainmenu}{END menu_block}
-
-
-{BEGIN searchPanel}<TR class="runner-row style1 runner-b-searchpanel {$brickclass_searchpanel}"><TD class=runner-cl></TD>
-          <TD class="runner-cc runner-brickcontents"><div class="searchPanelContainer">
-{$adv_search_panel} </div></TD>
-          <TD class=runner-cr></TD></TR>
-        {END searchPanel}
-
-
-
-</div>
-{END container_left}
-
-
-			</TD>
-    <TD class="runner-center {$blockclass_center}">{BEGIN container_recordcontrols}<TABLE class="runner-c runner-c-recordcontrols" cellPadding=0><TR class="{$cheaderclass_recordcontrols}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
-          <TD class=runner-cc></TD>
-          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
-        <TR class="runner-row style1"><TD class=runner-cl></TD>
-          <TD class=runner-cc><TABLE class=runner-hc cellPadding=0 border=0><TR>{BEGIN record_controls_block}<TD class="runner-cc runner-bl runner-b-recordcontrol" {$brickclass_recordcontrol}><SPAN>{BEGIN printselected_link}<SPAN class=runner-btnframe {$printselectedlink_span}><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$printselectedlink_attrs}>Print 
-                  selected</a>
-</SPAN>{END printselected_link}</SPAN></TD>
+<!DOCTYPE html>
+<HTML {$html_attrs}>
+  <HEAD>
+    <META http-equiv="X-UA-Compatible" content="IE=Edge">
+    <TITLE>
+      {$pagetitle}
+    </TITLE>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <LINK href="styles/default.css" rel="stylesheet" type="text/css">
+    {BEGIN rtlCSS}
+      <LINK href="styles/defaultRTL.css" rel="stylesheet" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <LINK href="{$stylepath}" rel="stylesheet" type="text/css">
+    {END styleCSSFiles}
+    {BEGIN pageCSSFiles}
+      <LINK href="{$pagestylepath}" rel="stylesheet" type="text/css">
+    {END pageCSSFiles}
+    <META name="GENERATOR" content="MSHTML 10.00.9200.16736">
+  </HEAD>
+  <BODY class="{$stylename} function-list" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <DIV class="rnr-page">
+        <DIV class="rnr-top {$blockclass_top}">
+          {BEGIN container_toplinks}
+            <DIV class="rnr-c rnr-ch rnr-c-toplinks">
+              <DIV class="rnr-hfiller">
+              </DIV>
+              {BEGIN security_block}
+                <DIV class="style1 rnr-br rnr-b-loggedas {$brickclass_loggedas}">
+                  {BEGIN loggedas_message}
+                    <SPAN>
+                      Logged on as&nbsp;
+                      <B>
+                        {$username}
+                      </B>
+                      &nbsp;
+                    </SPAN>
+                  {END loggedas_message}
+                  {BEGIN guestloginbutton}
+                    <SPAN>
+                      <A class="rnr-button" href="#" {$guestloginlink_attrs}>
+                        Login
+                      </A>
+                    </SPAN>
+                  {END guestloginbutton}
+                  {BEGIN logoutbutton}
+                    <A class="rnr-button" href="#" {$logoutlink_attrs}>
+                      Log out
+                    </A>
+                  {END logoutbutton}
+                  {BEGIN adminarea_link}
+                    <A class="rnr-button" href="admin_rights_list.php" {$adminarealink_attrs}>
+                      Admin Area
+                    </A>
+                  {END adminarea_link}
+                  {BEGIN changepwd_link}
+                    <A class="rnr-button" href="#" {$changepwdlink_attrs}>
+                      Change password
+                    </A>
+                  {END changepwd_link}
+                </DIV>
+              {END security_block}
+            </DIV>
+          {END container_toplinks}
+          {BEGIN container_hmenu}
+            <DIV class="rnr-c rnr-ch rnr-c-hmenu">
+              {BEGIN searchform_block}
+                <DIV class="style1 rnr-bl rnr-b-search {$brickclass_search}">
+                  <SPAN>
+                    {$simpleSearchFieldCombo}
+                    {$simpleSearchTypeCombo}
+                    {BEGIN searchform_text}
+                      <INPUT type="text" size="25" {$searchfor_attrs}>
+                    {END searchform_text}
+                    {BEGIN searchform_search}
+                      <A class="rnr-button img" href="#" data-icon="search" {$searchbutton_attrs}>
+                      </A>
+                    {END searchform_search}
+                    {BEGIN searchform_showall}
+                      <A class="rnr-button" href="#" {$showAllCont_attrs} {$showallbutton_attrs}>
+                        Show all
+                      </A>
+                    {END searchform_showall}
+                  </SPAN>
+                </DIV>
+              {END searchform_block}
+              {BEGIN searchformbuttons_block}
+                <DIV class="style1 rnr-bl rnr-b-search_buttons {$brickclass_search_buttons}">
+                  {BEGIN searchPanelTopButtons}
+                    <SPAN>
+                      <A class="rnr-button img" id="showSrchWin{$id}" href="#" data-icon="panelfloat" {$showHideSearchWin_attrs}>
+                      </A>
+                      <A class="rnr-button img" id="showOptPanel{$id}" href="#" data-icon="paneldown" {$showHideSearchPanel_attrs}>
+                      </A>
+                    </SPAN>
+                  {END searchPanelTopButtons}
+                </DIV>
+              {END searchformbuttons_block}
+              {BEGIN searchsaving_block}
+                <DIV class="style1 rnr-bl rnr-b-search_saving_buttons {$brickclass_search_saving_buttons}">
+                </DIV>
+              {END searchsaving_block}
+              <DIV class="rnr-hfiller">
+              </DIV>
+            </DIV>
+          {END container_hmenu}
+        </DIV>
+        <DIV class="rnr-middle">
+          <DIV class="rnr-left {$blockclass_left}">
+            {BEGIN container_left}
+              <DIV class="rnr-c rnr-cv rnr-c-left">
+                {BEGIN menu_block}
+                  {$menu main}
+                {END menu_block}
+                {BEGIN searchPanel}
+                  <DIV class="rnr-brickcontents style1 rnr-b-searchpanel {$brickclass_searchpanel}">
+                    <DIV class="searchPanelContainer">
+                      <DIV class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+                        <!-- Search panel content -->
+                        <DIV class="srchCritTop" style="display: none;">
+                          Criteria:&nbsp;<INPUT name="srchType" class="rnr-radio-button" type="radio" {$all_checkbox}>&nbsp;
+                          {BEGIN all_checkbox_label}
+                            <SPAN>
+                              all
+                            </SPAN>
+                          {END all_checkbox_label}
+                          &nbsp;&nbsp;&nbsp;<INPUT name="srchType" class="rnr-radio-button" type="radio" {$any_checkbox}>&nbsp;
+                          {BEGIN any_checkbox_label}
+                            <SPAN>
+                              any
+                            </SPAN>
+                          {END any_checkbox_label}
+                        </DIV>
+                        <DIV class="addOption">
+                          <SPAN class="rnr-buttons-group">
+                            <A class="rnr-button" id="showHideControlChooseMenu{$id}" href="#" {$showHideCtrls_attrs}>
+                              Add field
+                            </A>
+                          </SPAN>
+                          <A class="rnr-button" id="showHideSearchType{$id}" href="#" {$showHideCtrlsOpt_attrs}>
+                            {$showHideOpt_mess}
+                          </A>
+                        </DIV>
+                        <TABLE class="controlsBlock {$controls_block_class}">
+                          {BEGIN searchCtrlBlock}
+                            <TBODY>
+                              <TR class="srchPanelRow" {$filterRow_attrs}>
+                                <TD class="srchPanelCell">
+                                  {$delCtrlButt}
+                                </TD>
+                                <TD class="srchPanelCell">
+                                  {$fLabel}
+                                  :&nbsp;
+                                </TD>
+                                <TD class="srchPanelCell srchPanelCell2">
+                                  <DIV class="rnr-searchtype">
+                                    {$searchtype}
+                                  </DIV>
+                                  <DIV class="rnr-searchcontrol">
+                                    {$searchcontrol}
+                                  </DIV>
+                                  <DIV class="rnr-searchcontrol">
+                                    {$searchcontrol1}
+                                  </DIV>
+                                </TD>
+                              </TR>
+                            </TBODY>
+                          {END searchCtrlBlock}
+                        </TABLE>
+                        <DIV align="left" class="bottomSearchButt" {$bottomSearchButt_attrs}>
+                          <A class="rnr-button" id="searchButton{$id}" href="#" {$searchbutton_attrs}>
+                            Search
+                          </A>
+                        </DIV>
+                      </DIV>
+                    </DIV>
+                  </DIV>
+                {END searchPanel}
+              </DIV>
+            {END container_left}
+          </DIV>
+          <DIV class="rnr-center {$blockclass_center}">
+            {BEGIN container_recordcontrols}
+              <DIV class="rnr-c rnr-ch rnr-c-recordcontrols">
+                {BEGIN record_controls_block}
+                  <DIV class="style1 rnr-bl rnr-b-recordcontrol {$brickclass_recordcontrol}">
+                    {BEGIN widhtSelected}
+                      <SPAN class="rnr-buttons-group">
+                        <A class="rnr-button {$withSelectedClass}" id="selectButtonsToggler{$id}" href="#">
+                          With selected...
+                        </A>
+                        <UL class="rnr-list" id="selectButtonsGroup{$id}">
+                          {BEGIN printselected_link}
+                            <LI>
+                              <A class="rnr-button link" href="#" {$printselectedlink_attrs} {$printselectedlink_span}>
+                                Print
+                              </A>
+                            </LI>
+                          {END printselected_link}
+                        </UL>
+                      </SPAN>
+                    {END widhtSelected}
+                  </DIV>
                 {END record_controls_block}
-
-
-<TD class="runner-cc filler"><SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A id=Activate_Selected_Devotees class=runner-button href="#" typeid="ib">Activate&nbsp;Selected&nbsp;Devotees</A></SPAN></TD></TR></TABLE></TD>
-          <TD class=runner-cr></TD></TR>
-        <TR class="{$cfooterclass_recordcontrols}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
-          <TD class=runner-cc></TD>
-          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TABLE>{END container_recordcontrols}
-
-
-
-{BEGIN container_message}<TABLE class="runner-c runner-c-message" cellPadding=0><TR class="{$cheaderclass_message}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
-          <TD class=runner-cc></TD>
-          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
-        <TR class="runner-row style1"><TD class=runner-cl></TD>
-          <TD class=runner-cc><TABLE class=runner-hc cellPadding=0 border=0><TR>{BEGIN message_block}<TD class="runner-cc runner-bc runner-b-message" {$brickclass_message}><SPAN><DIV class=runner-message>{$message}</div>
-</SPAN></TD>{END message_block}
-
-
-</TR></TABLE></TD>
-          <TD class=runner-cr></TD></TR>
-        <TR class="{$cfooterclass_message}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
-          <TD class=runner-cc></TD>
-          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TABLE>{END container_message}
-
-
-
-{BEGIN container_grid}{BEGIN grid_block}<TABLE class="runner-c runner-c-grid runner-b-grid" cellPadding=0><thead>
-															{BEGIN grid_header}<TR class="runner-toprow style1 {$gridHeader_class}">{BEGIN record_header}<TH class=runner-cl><IMG src="images/spacer.gif"></TH>
-          {BEGIN listIcons_column}<TH class=runner-cc iEditCont="all"></th>
-									{END listIcons_column}	
-
-																		{BEGIN checkbox_column}<TH class="runner-cc runner-bc"><input type="checkbox" {$checkboxheader_attrs}>
-									</th>
-									{END checkbox_column}
-
-																		{BEGIN ActivateNewDevotees_dtable_column}<TH class=runner-cc></th>
-									{END ActivateNewDevotees_dtable_column}
-																										{BEGIN FullName_fieldheadercolumn}<TH class="runner-cc ">{BEGIN FullName_fieldheader}<A {$FullName_orderlinkattrs}>Name </A>{END FullName_fieldheader}
-									</th>
-									{END FullName_fieldheadercolumn}
-
-																	{BEGIN EmailPrimary_fieldheadercolumn}<TH class="runner-cc ">{BEGIN EmailPrimary_fieldheader}<A {$EmailPrimary_orderlinkattrs}>Email </A>{END EmailPrimary_fieldheader}
-									</th>
-									{END EmailPrimary_fieldheadercolumn}
-
-																	{BEGIN EmailSecondary_fieldheadercolumn}<TH class="runner-cc ">{BEGIN EmailSecondary_fieldheader}<A {$EmailSecondary_orderlinkattrs}>Email Secondary </A>{END EmailSecondary_fieldheader}
-									</th>
-									{END EmailSecondary_fieldheadercolumn}
-
-																	{BEGIN MobilePhone_fieldheadercolumn}<TH class="runner-cc ">{BEGIN MobilePhone_fieldheader}<A {$MobilePhone_orderlinkattrs}>Mobile Number </A>{END MobilePhone_fieldheader}
-									</th>
-									{END MobilePhone_fieldheadercolumn}
-
-																	{BEGIN WorkPhone_fieldheadercolumn}<th class="runner-cc ">{BEGIN WorkPhone_fieldheader}<A {$WorkPhone_orderlinkattrs}>Work Phone </A>{END WorkPhone_fieldheader}
-									</th>
-									{END WorkPhone_fieldheadercolumn}
-
-																	{BEGIN Photo_fieldheadercolumn}<th class="runner-cc runner-clast">{BEGIN Photo_fieldheader}
-            Photo {END Photo_fieldheader}
-									</th>
-									{END Photo_fieldheadercolumn}
-
-
-									
-									<TH class=runner-cr><IMG src="images/spacer.gif"></th>
-									{BEGIN endrecordheader_block}<TH class=runner-cs></th>
-									
-									{END endrecordheader_block}
-									
-									{END record_header}
-									
-								</tr>
-								{END grid_header}
-
-						</thead>
-						{BEGIN grid_row}<TR class="runner-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>{BEGIN grid_record}<TD class=runner-cl {$rowstyle}></TD>
-          {BEGIN listIcons_column}<TD class="runner-cc runner-bc runner-icons" {$rowstyle} iEditCont="all"></td>	
-									{END listIcons_column}	
-
-																		{BEGIN checkbox_column}<TD class="runner-cc runner-bc" {$rowstyle} iEditCont="checkBox">{BEGIN checkbox}<input type="checkbox" {$checkbox_attrs}>
-									{END checkbox}
-									</td>
-									{END checkbox_column}
-
-																		{BEGIN ActivateNewDevotees_dtable_column}<TD class="runner-cc runner-nowrap" {$rowstyle}>{BEGIN ViewInactiveDevotees_dtable_link}<span>
-									<a {$ViewInactiveDevotees_dtablelink_attrs}>View&nbsp;Detail 
-            <span {$ViewInactiveDevotees_childnumber_attr} dir="ltr">{BEGIN ViewInactiveDevotees_childcount}({$ViewInactiveDevotees_childnumber}){END ViewInactiveDevotees_childcount}</span>
-									</a>
-																		&nbsp;
-									</span>
-									{END ViewInactiveDevotees_dtable_link}
-																		</td>
-									{END ActivateNewDevotees_dtable_column}
-
-										{BEGIN FullName_fieldcolumn}<TD class="runner-cc  {$FullName_class}" {$FullName_style}>{$FullName_value}
-	</td>
-{END FullName_fieldcolumn}
-
-	{BEGIN EmailPrimary_fieldcolumn}<TD class="runner-cc  {$EmailPrimary_class}" {$EmailPrimary_style}>{$EmailPrimary_value}
-	</td>
-{END EmailPrimary_fieldcolumn}
-
-	{BEGIN EmailSecondary_fieldcolumn}<TD class="runner-cc  {$EmailSecondary_class}" {$EmailSecondary_style}>{$EmailSecondary_value}
-	</td>
-{END EmailSecondary_fieldcolumn}
-
-	{BEGIN MobilePhone_fieldcolumn}<TD class="runner-cc  {$MobilePhone_class}" {$MobilePhone_style}>{$MobilePhone_value}
-	</td>
-{END MobilePhone_fieldcolumn}
-
-	{BEGIN WorkPhone_fieldcolumn}<td class="runner-cc  {$WorkPhone_class}" {$WorkPhone_style}>{$WorkPhone_value}
-	</td>
-{END WorkPhone_fieldcolumn}
-
-	{BEGIN Photo_fieldcolumn}<td class="runner-cc runner-clast {$Photo_class}" {$Photo_style}>{$Photo_value}
-	</td>
-{END Photo_fieldcolumn}
-
-
-									<TD class=runner-cr {$rowstyle}></td>
-									{BEGIN endrecord_block}<TD class=runner-cs {$endrecordblock_attrs}></td>
-									{END endrecord_block}
-																	
-									{END grid_record}
-
-								</tr>
-								{END grid_row}
-															
-						{BEGIN grid_footer}<TR class="runner-bottomrow style1{$gridFooter_class}">{BEGIN record_footer}<TD class=runner-cl><IMG src="images/spacer.gif"></TD>
-          {BEGIN listIcons_column}<TD class=runner-cc></TD>
-          {END listIcons_column}{BEGIN checkbox_column}<TD class=runner-cc></TD>
-          {END checkbox_column}{BEGIN ActivateNewDevotees_dtable_column}<TD class=runner-cc></TD>
-          {END ActivateNewDevotees_dtable_column}{BEGIN FullName_fieldheadercolumn}<TD class="runner-cc "></TD>
-          {END FullName_fieldheadercolumn}{BEGIN EmailPrimary_fieldheadercolumn}<TD class="runner-cc "></TD>
-          {END EmailPrimary_fieldheadercolumn}{BEGIN EmailSecondary_fieldheadercolumn}<TD class="runner-cc "></TD>
-          {END EmailSecondary_fieldheadercolumn}
-{BEGIN MobilePhone_fieldheadercolumn}<TD class="runner-cc "></TD>
-          {END MobilePhone_fieldheadercolumn}{BEGIN WorkPhone_fieldheadercolumn}<td class="runner-cc "></td>
-          {END WorkPhone_fieldheadercolumn}
-{BEGIN Photo_fieldheadercolumn}<td class="runner-cc runner-clast"></td>
-          {END Photo_fieldheadercolumn}<TD class=runner-cr><IMG src="images/spacer.gif"></TD>
-          {BEGIN endrecordfooter_block}<TD class=runner-cs></TD>{END endrecordfooter_block}{END record_footer}</TR>{END grid_footer}</table>
-					
-
-{END grid_block}
-
-
-
-{END container_grid}
-
-
-
-{BEGIN container_pagination}<TABLE class="runner-c runner-c-pagination" cellPadding=0><TR class="{$cheaderclass_pagination}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
-          <TD class=runner-cc></TD>
-          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
-        <TR class="runner-row style1"><TD class=runner-cl></TD>
-          <TD class=runner-cc><TABLE class=runner-hc cellPadding=0 border=0><TR>{BEGIN pagination_block}<TD class="runner-cc runner-bc runner-b-pagination" {$brickclass_pagination}><SPAN>{$pagination}</SPAN></TD>{END pagination_block}
-
-</TR></TABLE></TD>
-          <TD class=runner-cr></TD></TR>
-        <TR class="{$cfooterclass_pagination}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
-          <TD class=runner-cc></TD>
-          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TABLE>{END container_pagination}</TD>
-    <TD class="runner-right {$blockclass_right}"></TD></TR>
-  <TR class=runner-footer><TD class=runner-bottom 
-colSpan=3></TD></TR></TABLE>{$footer}
-	{END body}
-	</body>
-</html>
+                {BEGIN more_list}
+                  <DIV class="style1 rnr-bl rnr-b-toplinks {$brickclass_toplinks}">
+                    <SPAN class="rnr-buttons-group">
+                      {BEGIN moreButtons}
+                        <A class="rnr-button" id="extraButtonsToggler{$id}" href="#">
+                          More...
+                        </A>
+                        <UL class="rnr-list rnr-buttons-group" id="extraButtonsGroup{$id}">
+                          {BEGIN print_link}
+                            <LI>
+                              <A class="rnr-button link" href="ActivateNewDevotees_print.php?{$crosstable_attrs}" target="_blank" {$printlink_attrs}>
+                                Print this page
+                              </A>
+                            </LI>
+                          {END print_link}
+                          {BEGIN printall_link}
+                            <LI>
+                              <A class="rnr-button link" href="ActivateNewDevotees_print.php?all=1&amp;{$crosstable_attrs}" target="_blank" {$printalllink_attrs}>
+                                Print all pages
+                              </A>
+                            </LI>
+                          {END printall_link}
+                          {BEGIN asearch_link}
+                            <LI>
+                              <A class="rnr-button link" href="ActivateNewDevotees_search.php" {$advsearchlink_attrs}>
+                                Advanced search
+                              </A>
+                            </LI>
+                          {END asearch_link}
+                        </UL>
+                      {END moreButtons}
+                    </SPAN>
+                  </DIV>
+                {END more_list}
+								  <A class="rnr-button button" id="Activate_Selected_Devotees" href="#" typeid="ib">
+									 Activate&nbsp;Selected&nbsp;Devotees
+								  </A>
+                <DIV class="rnr-hfiller">
+                </DIV>
+              </DIV>
+            {END container_recordcontrols}
+            {BEGIN container_message}
+              <DIV class="rnr-c rnr-ch rnr-c-message">
+                {BEGIN message_block}
+                  <DIV class="style1 rnr-bc rnr-b-message {$brickclass_message}">
+                    <DIV class="rnr-message">
+                      {$message}
+                    </DIV>
+                  </DIV>
+                {END message_block}
+              </DIV>
+            {END container_message}
+            {BEGIN container_pagination}
+              <DIV class="rnr-c rnr-ch rnr-multialign rnr-c-pagination">
+                {BEGIN pagination_block}
+                  <DIV class="style1 rnr-bc rnr-b-pagination {$brickclass_pagination}">
+                    {$pagination}
+                  </DIV>
+                {END pagination_block}
+                <DIV class="rnr-leftbricks">
+                  {BEGIN details_block}
+                    <DIV class="style1 rnr-bl rnr-b-details_found {$brickclass_details_found}">
+                      <SPAN {$details_attrs}>
+                        Details found:
+                        <B>
+                          <SPAN class="rnr-details_found_count">
+                            {$records_found}
+                          </SPAN>
+                        </B>
+                      </SPAN>
+                    </DIV>
+                  {END details_block}
+                </DIV>
+                <DIV class="rnr-rightbricks">
+                  {BEGIN pages_block}
+                    <DIV class="style1 rnr-br rnr-b-page_of {$brickclass_page_of}">
+                      <SPAN {$pages_attrs}>
+                        Page
+                        <B>
+                          {$page}
+                        </B>
+                        of
+                        <B>
+                          {$maxpages}
+                        </B>
+                      </SPAN>
+                    </DIV>
+                  {END pages_block}
+                  {BEGIN recordspp_block}
+                    <DIV class="style1 rnr-br rnr-b-recsperpage {$brickclass_recsperpage}">
+                      <SPAN id="recordspp_block{$id}" name="recordspp_block{$id}">
+                        Records Per Page:&nbsp;{$recsPerPage}
+                      </SPAN>
+                    </DIV>
+                  {END recordspp_block}
+                </DIV>
+              </DIV>
+            {END container_pagination}
+            {BEGIN container_grid}
+              {BEGIN grid_block}
+                <TABLE class="rnr-c rnr-cont rnr-c-grid rnr-b-grid rnr-gridtable  hoverable " cellpadding="0">
+                  <THEAD>
+                    {BEGIN grid_header}
+                      <TR class="rnr-toprow style1 {$gridHeader_class}">
+                        {BEGIN record_header}
+                          {BEGIN listIcons_column}
+                            <TH rowspan="1" colspan="1" ieditcont="all">
+                              &nbsp;
+                            </TH>
+                          {END listIcons_column}
+                          {BEGIN checkbox_column}
+                            <TH class="rnr-bc" rowspan="1" colspan="1">
+                              <INPUT type="checkbox" {$checkboxheader_attrs}>
+                            </TH>
+                          {END checkbox_column}
+                          {BEGIN FullName_fieldheadercolumn}
+                            <TH class="rnr-gridfieldlabel {$FullName_class}" rowspan="1" colspan="1">
+                              {BEGIN FullName_fieldheader}
+                                <SPAN {$FullName_orderlinkattrs}>
+                                  {$label ActivateNewDevotees FullName}
+                                </SPAN>
+                              {END FullName_fieldheader}
+                            </TH>
+                          {END FullName_fieldheadercolumn}
+                          {BEGIN EmailPrimary_fieldheadercolumn}
+                            <TH class="rnr-gridfieldlabel {$EmailPrimary_class}" rowspan="1" colspan="1">
+                              {BEGIN EmailPrimary_fieldheader}
+                                <SPAN {$EmailPrimary_orderlinkattrs}>
+                                  {$label ActivateNewDevotees EmailPrimary}
+                                </SPAN>
+                              {END EmailPrimary_fieldheader}
+                            </TH>
+                          {END EmailPrimary_fieldheadercolumn}
+                          {BEGIN EmailSecondary_fieldheadercolumn}
+                            <TH class="rnr-gridfieldlabel {$EmailSecondary_class}" rowspan="1" colspan="1">
+                              {BEGIN EmailSecondary_fieldheader}
+                                <SPAN {$EmailSecondary_orderlinkattrs}>
+                                  {$label ActivateNewDevotees EmailSecondary}
+                                </SPAN>
+                              {END EmailSecondary_fieldheader}
+                            </TH>
+                          {END EmailSecondary_fieldheadercolumn}
+                          {BEGIN MobilePhone_fieldheadercolumn}
+                            <TH class="rnr-gridfieldlabel {$MobilePhone_class}" rowspan="1" colspan="1">
+                              {BEGIN MobilePhone_fieldheader}
+                                <SPAN {$MobilePhone_orderlinkattrs}>
+                                  {$label ActivateNewDevotees MobilePhone}
+                                </SPAN>
+                              {END MobilePhone_fieldheader}
+                            </TH>
+                          {END MobilePhone_fieldheadercolumn}
+                          {BEGIN WorkPhone_fieldheadercolumn}
+                            <TH class="rnr-gridfieldlabel {$WorkPhone_class}" rowspan="1" colspan="1">
+                              {BEGIN WorkPhone_fieldheader}
+                                <SPAN {$WorkPhone_orderlinkattrs}>
+                                  {$label ActivateNewDevotees WorkPhone}
+                                </SPAN>
+                              {END WorkPhone_fieldheader}
+                            </TH>
+                          {END WorkPhone_fieldheadercolumn}
+                          {BEGIN Photo_fieldheadercolumn}
+                            <TH class="rnr-gridfieldlabel {$Photo_class}" rowspan="1" colspan="1">
+                              {BEGIN Photo_fieldheader}
+                                {$label ActivateNewDevotees Photo}
+                              {END Photo_fieldheader}
+                            </TH>
+                          {END Photo_fieldheadercolumn}
+                          <TH class="rnr-edge" rowspan="1" colspan="1">
+                            &nbsp;
+                          </TH>
+                          {BEGIN endrecordheader_block}
+                            <TH class="rnr-cs" rowspan="1" colspan="1">
+                              &nbsp;
+                            </TH>
+                          {END endrecordheader_block}
+                        {END record_header}
+                      </TR>
+                    {END grid_header}
+                  </THEAD>
+                  <TBODY>
+                    {BEGIN grid_row}
+                      <TR class="rnr-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>
+                        {BEGIN grid_record}
+                          {BEGIN listIcons_column}
+                            <TD class="rnr-cc rnr-bc rnr-icons" rowspan="1" colspan="1" ieditcont="all" {$rowstyle} {$recordattrs}>
+                            </TD>
+                          {END listIcons_column}
+                          {BEGIN checkbox_column}
+                            <TD class="rnr-bc" rowspan="1" colspan="1" ieditcont="checkBox" {$rowstyle} {$recordattrs}>
+                              {BEGIN checkbox}
+                                <INPUT type="checkbox" {$checkbox_attrs}>
+                              {END checkbox}
+                            </TD>
+                          {END checkbox_column}
+                          {BEGIN FullName_fieldcolumn}
+                            <TD class="{$FullName_class}" rowspan="1" colspan="1" {$FullName_style} {$recordattrs}>
+                              {$FullName_value}
+                            </TD>
+                          {END FullName_fieldcolumn}
+                          {BEGIN EmailPrimary_fieldcolumn}
+                            <TD class="{$EmailPrimary_class}" rowspan="1" colspan="1" {$EmailPrimary_style} {$recordattrs}>
+                              {$EmailPrimary_value}
+                            </TD>
+                          {END EmailPrimary_fieldcolumn}
+                          {BEGIN EmailSecondary_fieldcolumn}
+                            <TD class="{$EmailSecondary_class}" rowspan="1" colspan="1" {$EmailSecondary_style} {$recordattrs}>
+                              {$EmailSecondary_value}
+                            </TD>
+                          {END EmailSecondary_fieldcolumn}
+                          {BEGIN MobilePhone_fieldcolumn}
+                            <TD class="{$MobilePhone_class}" rowspan="1" colspan="1" {$MobilePhone_style} {$recordattrs}>
+                              {$MobilePhone_value}
+                            </TD>
+                          {END MobilePhone_fieldcolumn}
+                          {BEGIN WorkPhone_fieldcolumn}
+                            <TD class="{$WorkPhone_class}" rowspan="1" colspan="1" {$WorkPhone_style} {$recordattrs}>
+                              {$WorkPhone_value}
+                            </TD>
+                          {END WorkPhone_fieldcolumn}
+                          {BEGIN Photo_fieldcolumn}
+                            <TD class="{$Photo_class}" rowspan="1" colspan="1" {$Photo_style} {$recordattrs}>
+                              {$Photo_value}
+                            </TD>
+                          {END Photo_fieldcolumn}
+                          <TD class="rnr-edge" rowspan="1" colspan="1" {$recordattrs}>
+                            &nbsp;
+                          </TD>
+                          {BEGIN endrecord_block}
+                            <TD class="rnr-cs" rowspan="1" colspan="1" {$endrecordblock_attrs}>
+                              &nbsp;
+                            </TD>
+                          {END endrecord_block}
+                        {END grid_record}
+                      </TR>
+                    {END grid_row}
+                  </TBODY>
+                </TABLE>
+              {END grid_block}
+            {END container_grid}
+            {BEGIN container_pagination_bottom}
+              <DIV class="rnr-c rnr-ch rnr-multialign rnr-c-pagination_bottom">
+                {BEGIN pagination_block}
+                  <DIV class="style1 rnr-bc rnr-b-pagination {$brickclass_pagination}">
+                    {$pagination}
+                  </DIV>
+                {END pagination_block}
+                <DIV class="rnr-leftbricks">
+                  {BEGIN details_block}
+                    <DIV class="style1 rnr-bl rnr-b-details_found {$brickclass_details_found}">
+                      <SPAN {$details_attrs}>
+                        Details found:
+                        <B>
+                          <SPAN class="rnr-details_found_count">
+                            {$records_found}
+                          </SPAN>
+                        </B>
+                      </SPAN>
+                    </DIV>
+                  {END details_block}
+                </DIV>
+                <DIV class="rnr-rightbricks">
+                  {BEGIN pages_block}
+                    <DIV class="style1 rnr-br rnr-b-page_of {$brickclass_page_of}">
+                      <SPAN {$pages_attrs}>
+                        Page
+                        <B>
+                          {$page}
+                        </B>
+                        of
+                        <B>
+                          {$maxpages}
+                        </B>
+                      </SPAN>
+                    </DIV>
+                  {END pages_block}
+                  {BEGIN recordspp_block}
+                    <DIV class="style1 rnr-br rnr-b-recsperpage {$brickclass_recsperpage}">
+                      <SPAN id="recordspp_block{$id}" name="recordspp_block{$id}">
+                        Records Per Page:&nbsp;{$recsPerPage}
+                      </SPAN>
+                    </DIV>
+                  {END recordspp_block}
+                </DIV>
+              </DIV>
+            {END container_pagination_bottom}
+          </DIV>
+          <DIV class="rnr-right {$blockclass_right}">
+          </DIV>
+        </DIV>
+        <DIV class="rnr-bottom {$blockclass_bottom}">
+          <!--%%bottom%%-->
+        </DIV>
+      </DIV>
+      {$footer}
+    {END body}
+  </BODY>
+</HTML>
