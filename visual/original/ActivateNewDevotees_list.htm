@@ -295,10 +295,7 @@
 									</th>
 									{END checkbox_column}
 
-																		{BEGIN ActivateNewDevotees_dtable_column}
-									<th >&nbsp;</th>
-									{END ActivateNewDevotees_dtable_column}
-																										{BEGIN FullName_fieldheadercolumn}
+																																			{BEGIN FullName_fieldheadercolumn}
 									<th class="rnr-gridfieldlabel {$FullName_class}">
 									{BEGIN FullName_fieldheader}
 																				<span {$FullName_orderlinkattrs}>
@@ -390,19 +387,6 @@
 									</td>
 									{END checkbox_column}
 
-																		{BEGIN ActivateNewDevotees_dtable_column}
-									<td class="rnr-nowrap" {$rowstyle} {$recordattrs}>
-									{BEGIN ViewInactiveDevotees_dtable_link}
-									<span>
-									<a {$ViewInactiveDevotees_dtablelink_attrs}>
-										View Inactive Devotees
-																				<span {$ViewInactiveDevotees_childnumber_attr} dir="ltr">{BEGIN ViewInactiveDevotees_childcount}({$ViewInactiveDevotees_childnumber}){END ViewInactiveDevotees_childcount}</span>
-									</a>
-																		&nbsp;
-									</span>
-									{END ViewInactiveDevotees_dtable_link}
-																		</td>
-									{END ActivateNewDevotees_dtable_column}
 
 										{BEGIN FullName_fieldcolumn}
 	<td class="{$FullName_class}" {$FullName_style} {$recordattrs}>
