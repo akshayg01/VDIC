@@ -1,8 +1,9 @@
 <!doctype html>
 <html  {$html_attrs}>
 	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 		<title>{$pagetitle}</title>
-		<meta http-equiv="X-UA-Compatible" content="IE=7">
+
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<link REL="stylesheet" href="styles/default.css" type="text/css">
 		{BEGIN rtlCSS}
@@ -14,225 +15,154 @@
 		{BEGIN pageCSSFiles}
 		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
 		{END pageCSSFiles}
-		<!--[if IE]>
-			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
-			{BEGIN IEcssFiles}
-			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
-			{END IEcssFiles}
-		<![endif]-->
 	</head>
 	
-	<body class="{$stylename}" {$bodyattrs}>
+	<body class="{$stylename} function-add" {$bodyattrs}>
 	{BEGIN body}
 		{$header}
-		<table   cellpadding="0" class="runner-toptable">
-			<tr class="runner-header">
-				<td class="runner-top" colspan=3>
-					
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_all}
+<div class="rnr-c rnr-cv rnr-c-all">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_add} rnr-wrapper rnr-cbw-add">
 
 {BEGIN container_add}
-<table class="runner-c runner-c-add" cellpadding="0" align=center>
+<div class="rnr-c rnr-cv rnr-c-add">
 
-
-<tr class="runner-toprow style2 header"><td class="runner-cl"><img src="images/spacer.gif"></td><td class="runner-cc" ><div  class="runner-b-addheader {$brickclass_addheader}">Devotee Address, Add new record</div></td><td class="runner-cr"><img src="images/spacer.gif"></td></tr>
+{BEGIN addheader}
+<div  class="rnr-brickcontents style2 rnr-b-addheader {$brickclass_addheader}"><span>	{$pagetitlelabel devotee_address add}
+</span></div>{END addheader}
 
 
 {BEGIN message_block}
-<tr  class="runner-row style1 runner-b-message {$brickclass_message}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" ><div class="runner-message">{$message}</div></td><td class="runner-cr"></td></tr>{END message_block}
+<div  class="rnr-brickcontents style1 rnr-b-message {$brickclass_message}"><div class="rnr-message">{$message}</div></div>{END message_block}
 
 
 
-<tr  class="runner-row style1 runner-b-wrapper {$wrapperclass_fields}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents runner-wrapper" >
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fields} rnr-wrapper rnr-cbw-fields">
 
 {BEGIN container_fields}
-<table class="runner-c runner-c-fields" cellpadding="0" >
-<tr class="{$cheaderclass_fields}">
-<td class="runner-cl"><img src="images/spacer.gif"></td>
-<td class="runner-cc"></td><td class="runner-cc alt"></td><td class="runner-cr alt"><img src="images/spacer.gif"></td>
-</tr>
+<div class="rnr-c rnr-cv rnr-c-fields">
 
 
-	{BEGIN AddressTypeID_fieldblock}
-	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
-	<td class="runner-cc runner-cc1">
-		<div class="fieldlabel_AddressTypeID {$fielddispclass_AddressTypeID}">
-			{BEGIN AddressTypeID_label}Address Type{END AddressTypeID_label}
-		</div>
-	</td>
-	<td class="runner-cc alt runner-fixedcell">
-		<div class="fieldcontrol_AddressTypeID {$fielddispclass_AddressTypeID}">
-			{$AddressTypeID_editcontrol}&nbsp;
-		</div>
-	</td>
-	<td class="runner-cr alt"></td></tr>
-{END AddressTypeID_fieldblock}
+<div  class="rnr-brickcontents style1 rnr-b-addfields2_atop {$brickclass_addfields2_atop}"><table class="fieldGrid fieldGrid2 edit">
+
+<tr>
+<td>
+	{BEGIN AddressType_fieldblock}
+<div data-fieldname="AddressType" class="rnr-field style1 {$fielddispclass_AddressType}">
+  <div class="rnr-label above">{BEGIN AddressType_label}{$label devotee_address AddressType}{END AddressType_label}</div>
+  <div class="rnr-control style3">{$AddressType_editcontrol}</div>
+</div>
+{END AddressType_fieldblock}
 	{BEGIN AddressLine1_fieldblock}
-	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
-	<td class="runner-cc runner-cc1">
-		<div class="fieldlabel_AddressLine1 {$fielddispclass_AddressLine1}">
-			{BEGIN AddressLine1_label}Address Line1{END AddressLine1_label}
-		</div>
-	</td>
-	<td class="runner-cc alt runner-fixedcell">
-		<div class="fieldcontrol_AddressLine1 {$fielddispclass_AddressLine1}">
-			{$AddressLine1_editcontrol}&nbsp;
-		</div>
-	</td>
-	<td class="runner-cr alt"></td></tr>
+<div data-fieldname="AddressLine1" class="rnr-field style1 {$fielddispclass_AddressLine1}">
+  <div class="rnr-label above">{BEGIN AddressLine1_label}{$label devotee_address AddressLine1}{END AddressLine1_label}</div>
+  <div class="rnr-control style3">{$AddressLine1_editcontrol}</div>
+</div>
 {END AddressLine1_fieldblock}
 	{BEGIN AddressLine2_fieldblock}
-	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
-	<td class="runner-cc runner-cc1">
-		<div class="fieldlabel_AddressLine2 {$fielddispclass_AddressLine2}">
-			{BEGIN AddressLine2_label}Address Line2{END AddressLine2_label}
-		</div>
-	</td>
-	<td class="runner-cc alt runner-fixedcell">
-		<div class="fieldcontrol_AddressLine2 {$fielddispclass_AddressLine2}">
-			{$AddressLine2_editcontrol}&nbsp;
-		</div>
-	</td>
-	<td class="runner-cr alt"></td></tr>
+<div data-fieldname="AddressLine2" class="rnr-field style1 {$fielddispclass_AddressLine2}">
+  <div class="rnr-label above">{BEGIN AddressLine2_label}{$label devotee_address AddressLine2}{END AddressLine2_label}</div>
+  <div class="rnr-control style3">{$AddressLine2_editcontrol}</div>
+</div>
 {END AddressLine2_fieldblock}
 	{BEGIN State_fieldblock}
-	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
-	<td class="runner-cc runner-cc1">
-		<div class="fieldlabel_State {$fielddispclass_State}">
-			{BEGIN State_label}State{END State_label}
-		</div>
-	</td>
-	<td class="runner-cc alt runner-fixedcell">
-		<div class="fieldcontrol_State {$fielddispclass_State}">
-			{$State_editcontrol}&nbsp;
-		</div>
-	</td>
-	<td class="runner-cr alt"></td></tr>
+<div data-fieldname="State" class="rnr-field style1 {$fielddispclass_State}">
+  <div class="rnr-label above">{BEGIN State_label}{$label devotee_address State}{END State_label}</div>
+  <div class="rnr-control style3">{$State_editcontrol}</div>
+</div>
 {END State_fieldblock}
 	{BEGIN City_fieldblock}
-	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
-	<td class="runner-cc runner-cc1">
-		<div class="fieldlabel_City {$fielddispclass_City}">
-			{BEGIN City_label}City{END City_label}
-		</div>
-	</td>
-	<td class="runner-cc alt runner-fixedcell">
-		<div class="fieldcontrol_City {$fielddispclass_City}">
-			{$City_editcontrol}&nbsp;
-		</div>
-	</td>
-	<td class="runner-cr alt"></td></tr>
+<div data-fieldname="City" class="rnr-field style1 {$fielddispclass_City}">
+  <div class="rnr-label above">{BEGIN City_label}{$label devotee_address City}{END City_label}</div>
+  <div class="rnr-control style3">{$City_editcontrol}</div>
+</div>
 {END City_fieldblock}
-	{BEGIN country_fieldblock}
-	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
-	<td class="runner-cc runner-cc1">
-		<div class="fieldlabel_country {$fielddispclass_country}">
-			{BEGIN country_label}Country{END country_label}
-		</div>
-	</td>
-	<td class="runner-cc alt runner-fixedcell">
-		<div class="fieldcontrol_country {$fielddispclass_country}">
-			{$country_editcontrol}&nbsp;
-		</div>
-	</td>
-	<td class="runner-cr alt"></td></tr>
-{END country_fieldblock}
-	{BEGIN pincode_fieldblock}
-	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
-	<td class="runner-cc runner-cc1">
-		<div class="fieldlabel_pincode {$fielddispclass_pincode}">
-			{BEGIN pincode_label}Pincode{END pincode_label}
-		</div>
-	</td>
-	<td class="runner-cc alt runner-fixedcell">
-		<div class="fieldcontrol_pincode {$fielddispclass_pincode}">
-			{$pincode_editcontrol}&nbsp;
-		</div>
-	</td>
-	<td class="runner-cr alt"></td></tr>
-{END pincode_fieldblock}
+</td>
+<td>
+	{BEGIN Country_fieldblock}
+<div data-fieldname="Country" class="rnr-field style1 {$fielddispclass_Country}">
+  <div class="rnr-label above">{BEGIN Country_label}{$label devotee_address Country}{END Country_label}</div>
+  <div class="rnr-control style3">{$Country_editcontrol}</div>
+</div>
+{END Country_fieldblock}
+	{BEGIN Pincode_fieldblock}
+<div data-fieldname="Pincode" class="rnr-field style1 {$fielddispclass_Pincode}">
+  <div class="rnr-label above">{BEGIN Pincode_label}{$label devotee_address Pincode}{END Pincode_label}</div>
+  <div class="rnr-control style3">{$Pincode_editcontrol}</div>
+</div>
+{END Pincode_fieldblock}
+	{BEGIN IsVerified_fieldblock}
+<div data-fieldname="IsVerified" class="rnr-field style1 {$fielddispclass_IsVerified}">
+  <div class="rnr-label above">{BEGIN IsVerified_label}{$label devotee_address IsVerified}{END IsVerified_label}</div>
+  <div class="rnr-control style3">{$IsVerified_editcontrol}</div>
+</div>
+{END IsVerified_fieldblock}
+	{BEGIN IsWrong_fieldblock}
+<div data-fieldname="IsWrong" class="rnr-field style1 {$fielddispclass_IsWrong}">
+  <div class="rnr-label above">{BEGIN IsWrong_label}{$label devotee_address IsWrong}{END IsWrong_label}</div>
+  <div class="rnr-control style3">{$IsWrong_editcontrol}</div>
+</div>
+{END IsWrong_fieldblock}
+</td>
+</tr>
+</table></div>
 
 
-
-{BEGIN legend}
-<tr  class="runner-row style3 runner-b-legend {$brickclass_legend}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" colspan=2><span id="required_block{$id}">
-<img src="images/icon_required.gif" alt="bullet"> - Required field
-</span>
-</td><td class="runner-cr"></td></tr>{END legend}
-
-
-
-<tr  class="runner-row style2 runner-b-addbuttons {$brickclass_addbuttons}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" colspan=2>{BEGIN save_button}
-<span class="runner-btnframe">
-<span class="runner-btnleft"></span>
-<span class="runner-btnright"></span>
-<a href="#" class="runner-button" {$savebutton_attrs}>Save</a>
-</span>
+{BEGIN addbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-addbuttons {$brickclass_addbuttons}">{BEGIN save_button}
+<a href="#" class="rnr-button main" {$savebutton_attrs}>Save</a>
 {END save_button}
 {BEGIN cancel_button}
-<span class="runner-btnframe">
-<span class="runner-btnleft"></span>
-<span class="runner-btnright"></span>
-<a href="#" class="runner-button" {$cancelbutton_attrs}>Cancel</a>
-</span>
+<a href="#" class="rnr-button" {$cancelbutton_attrs}>Cancel</a>
 {END cancel_button}
 {BEGIN back_button}
-<span class="runner-btnframe">
-<span class="runner-btnleft"></span>
-<span class="runner-btnright"></span>
-<a href="#" class="runner-button" {$backbutton_attrs}>Back to list</a>
-</span>
+<a href="#" class="rnr-button" {$backbutton_attrs}>Back to list</a>
 {END back_button}
 {BEGIN backToMenu_button}
-<span class="runner-btnframe">
-<span class="runner-btnleft"></span>
-<span class="runner-btnright"></span>
-<a href="#" class="runner-button" {$backToMenubutton_attrs}>Back to menu</a>
-</span>
-{END backToMenu_button}</td><td class="runner-cr"></td></tr>
+<a href="#" class="rnr-button" {$backToMenubutton_attrs}>Back to menu</a>
+{END backToMenu_button}</div>{END addbuttons}
 
 
-<tr class="{$cfooterclass_fields}">
-<td class="runner-cl"><img src="images/spacer.gif"></td>
-<td class="runner-cc"></td><td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
-</tr>
-</table>
+</div>
 {END container_fields}
 
-</td><td class="runner-cr"></td></tr>
+</div>
 
 
-<tr class="{$cfooterclass_add}">
-<td class="runner-cl"><img src="images/spacer.gif"></td>
-<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
-</tr>
-</table>
+</div>
 {END container_add}
 
+</div>
 
 
 
-				</td>
-			</tr>
-			<tr class="runner-body">
+</div>
+{END container_all}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
 				
-				<td class="runner-left {$blockclass_left}" >
-					
-				</td>	
+			</div>
+			<div class="rnr-center {$blockclass_center}">
 				
-				<td class="runner-center {$blockclass_center}">
-					
-				</td>	
-
-				<td class="runner-right {$blockclass_right}">
-					
-				</td>	
-			</tr>
-			<tr class="runner-footer">
-				<td class="runner-bottom" colspan=3>
-					<!--%%bottom%%-->
-				</td>
-			</tr>
-		</table>
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
 		{$footer}
 	{END body}
 	</body>

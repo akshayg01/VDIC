@@ -198,10 +198,7 @@
 
 
 {BEGIN record_controls_block}
-<div  class="style1 rnr-bl rnr-b-recordcontrol {$brickclass_recordcontrol}">{BEGIN selectall_link}
-	<a href="#" class="rnr-button" {$selectalllink_span} {$selectalllink_attrs}>Select all</a>
-{END selectall_link}
-{BEGIN widhtSelected}
+<div  class="style1 rnr-bl rnr-b-recordcontrol {$brickclass_recordcontrol}">{BEGIN widhtSelected}
 <span class="rnr-buttons-group">
 <a class="rnr-button {$withSelectedClass}" href="#" id="selectButtonsToggler{$id}">With selected...</a>
 <ul class="rnr-list" id="selectButtonsGroup{$id}">
@@ -218,18 +215,8 @@
 </li>
 	{END deleteselected_link}
 
-		{BEGIN exportselected_link}
-<li>
-		<a href="#" class="rnr-button link" {$exportselectedlink_attrs} {$exportselectedlink_span}>Export</a>
-</li>
-	{END exportselected_link}
-
-		{BEGIN printselected_link}
-<li>
-		<a href="#" class="rnr-button link" {$printselectedlink_attrs} {$printselectedlink_span}>Print</a>
-</li>
-	{END printselected_link}
-</ul>
+	
+	</ul>
 </span>
 {END widhtSelected}
 		{BEGIN saveall_link}
@@ -247,16 +234,6 @@
 {BEGIN moreButtons}
 <a class="rnr-button" id="extraButtonsToggler{$id}" href="#">More...</a>
 <ul class="rnr-list rnr-buttons-group" id="extraButtonsGroup{$id}">
-{BEGIN print_link}
-<li>
-	<a target="_blank" href="devotee_language_print.php?{$crosstable_attrs}" class="rnr-button link" {$printlink_attrs}>Print this page</a>
-</li>
-{END print_link}
-{BEGIN printall_link}
-<li>
-	<a target="_blank" href="devotee_language_print.php?all=1&amp;{$crosstable_attrs}" class="rnr-button link" {$printalllink_attrs}>Print all pages</a>
-</li>
-{END printall_link}
 
 {BEGIN asearch_link}
 <li>
@@ -264,17 +241,7 @@
 </li>
 {END asearch_link}
 
-{BEGIN export_link}
-<li>
-	<a target="_blank" href="devotee_language_export.php" class="rnr-button link" {$exportlink_attrs}>Export results</a>
-</li>
-{END export_link}
 
-{BEGIN import_link}
-<li>
-	<a href="devotee_language_import.php?{$crosstable_attrs}" class="rnr-button link" {$importlink_attrs}>Import</a>
-</li>
-{END import_link}
 </ul>
 {END moreButtons}
 </span></div>
@@ -341,98 +308,149 @@
 
 
 {BEGIN grid_block}
-	
-						<table cellpadding="0" class="rnr-cont rnr-c-grid rnr-b-grid vertical">
-							{BEGIN grid_row}
-							<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
-								{BEGIN grid_record}
-								<td class="rnr-cg" style="width:100%;" {$recordattrs}>
-									{BEGIN grid_vrecord}
-									<table class="rnr-c rnr-vrecord " cellpadding="0" >
-										{BEGIN grid_recordheader}
-										<thead>
-										<tr class="rnr-toprow style1">
-											<th class="rnr-edge" colspan="2" iEditCont="all">
-																								{BEGIN edit_column}
-												{BEGIN edit_link}
-																								<a {$editlink_attrs} title="Edit" data-icon="edit" class="rnr-verticalicons"></a>
-												{END edit_link}
-												{END edit_column}
+						<table class="rnr-c rnr-cont rnr-c-grid rnr-b-grid rnr-gridtable  hoverable " cellpadding="0" >
+						<thead>
+															{BEGIN grid_header}
+								<tr class="rnr-toprow style1 {$gridHeader_class}" >
+									{BEGIN record_header}
+									{BEGIN listIcons_column}
+									<th iEditCont="all">&nbsp;</th>
+									{END listIcons_column}	
 
-																								{BEGIN inlineedit_column}
-												{BEGIN inlineedit_link}
-																								<a  {$inlineeditlink_attrs} title="Inline Edit" data-icon="inlineedit" class="rnr-verticalicons"></a>
-												{END inlineedit_link}
-												{END inlineedit_column}
+																		{BEGIN checkbox_column}
+									<th class="rnr-bc">
+										<input type="checkbox" {$checkboxheader_attrs}>
+									</th>
+									{END checkbox_column}
 
-																								{BEGIN copy_column}
-												{BEGIN copy_link}
-																								<a {$copylink_attrs} title="Copy" data-icon="copy" class="rnr-verticalicons"></a>
-												{END copy_link}
-												{END copy_column}
+																																			{BEGIN LanguageId_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$LanguageId_class}">
+									{BEGIN LanguageId_fieldheader}
+																				<span {$LanguageId_orderlinkattrs}>
+											{$label devotee_language LanguageId}
+										</span>
+									{END LanguageId_fieldheader}
+									</th>
+									{END LanguageId_fieldheadercolumn}
 
-																								{BEGIN view_column}
-												{BEGIN view_link}
-																								<a {$viewlink_attrs} title="View" data-icon="view" class="rnr-verticalicons"></a>
-												{END view_link}
-												{END view_column}
+																	{BEGIN SpeakingLevel_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$SpeakingLevel_class}">
+									{BEGIN SpeakingLevel_fieldheader}
+																				<span {$SpeakingLevel_orderlinkattrs}>
+											{$label devotee_language SpeakingLevel}
+										</span>
+									{END SpeakingLevel_fieldheader}
+									</th>
+									{END SpeakingLevel_fieldheadercolumn}
 
-																								{BEGIN checkbox_column}
-												{BEGIN checkbox}
-												<input type="checkbox" {$checkbox_attrs} class="rnr-verticalcheckbox">
-												{END checkbox}
-												{END checkbox_column}
+																	{BEGIN ReadingLevel_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$ReadingLevel_class}">
+									{BEGIN ReadingLevel_fieldheader}
+																				<span {$ReadingLevel_orderlinkattrs}>
+											{$label devotee_language ReadingLevel}
+										</span>
+									{END ReadingLevel_fieldheader}
+									</th>
+									{END ReadingLevel_fieldheadercolumn}
 
-											</th>
-										</tr>
-										</thead>
-										{END grid_recordheader}
-										<tbody>
-											{BEGIN LanguageId_fieldcolumn}
-<tr class="rnr-row style1">
-	<td class="rnr-gridfieldlabel {$LanguageId_label_class}">{$label devotee_language LanguageId}</td>
-	<td class="alt rnr-edge {$LanguageId_class}" {$LanguageId_style}>{$LanguageId_value}&nbsp;</td>
-</tr>
+																	{BEGIN WritingLevel_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$WritingLevel_class}">
+									{BEGIN WritingLevel_fieldheader}
+																				<span {$WritingLevel_orderlinkattrs}>
+											{$label devotee_language WritingLevel}
+										</span>
+									{END WritingLevel_fieldheader}
+									</th>
+									{END WritingLevel_fieldheadercolumn}
+
+
+									
+									<th class="rnr-edge">&nbsp;</th>
+									{BEGIN endrecordheader_block}
+									<th class="rnr-cs">&nbsp;</th>
+									
+									{END endrecordheader_block}
+									
+									{END record_header}
+									
+								</tr>
+								{END grid_header}
+
+						</thead>
+						<tbody>	
+															{BEGIN grid_row}
+								<tr class="rnr-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>
+									{BEGIN grid_record}
+									{BEGIN listIcons_column}
+									<td class="rnr-cc rnr-bc rnr-icons" iEditCont="all" {$rowstyle} {$recordattrs}>
+																		{BEGIN edit_column}
+									{BEGIN edit_link}
+																			<a class="rnr-button-img" {$editlink_attrs} data-icon="edit" title="Edit"></a>
+									{END edit_link}
+									{END edit_column}
+
+																		{BEGIN inlineedit_column}
+									{BEGIN inlineedit_link}
+																			<a class="rnr-button-img" {$inlineeditlink_attrs} data-icon="inlineedit" title="Inline Edit"></a>
+									{END inlineedit_link}
+									{END inlineedit_column}
+
+									
+																		{BEGIN view_column}
+									{BEGIN view_link}
+																			<a class="rnr-button-img" {$viewlink_attrs} data-icon="view" title="View"></a>
+									{END view_link}
+									{END view_column}
+									</td>	
+									{END listIcons_column}	
+
+																		{BEGIN checkbox_column}
+									<td class="rnr-bc" iEditCont="checkBox" {$rowstyle} {$recordattrs}>
+									{BEGIN checkbox}
+									<input type="checkbox" {$checkbox_attrs}>
+									{END checkbox}
+									</td>
+									{END checkbox_column}
+
+
+										{BEGIN LanguageId_fieldcolumn}
+	<td class="{$LanguageId_class}" {$LanguageId_style} {$recordattrs}>
+		{$LanguageId_value}
+	</td>
 {END LanguageId_fieldcolumn}
+
 	{BEGIN SpeakingLevel_fieldcolumn}
-<tr class="rnr-row style1">
-	<td class="rnr-gridfieldlabel {$SpeakingLevel_label_class}">{$label devotee_language SpeakingLevel}</td>
-	<td class="alt rnr-edge {$SpeakingLevel_class}" {$SpeakingLevel_style}>{$SpeakingLevel_value}&nbsp;</td>
-</tr>
+	<td class="{$SpeakingLevel_class}" {$SpeakingLevel_style} {$recordattrs}>
+		{$SpeakingLevel_value}
+	</td>
 {END SpeakingLevel_fieldcolumn}
+
 	{BEGIN ReadingLevel_fieldcolumn}
-<tr class="rnr-row style1">
-	<td class="rnr-gridfieldlabel {$ReadingLevel_label_class}">{$label devotee_language ReadingLevel}</td>
-	<td class="alt rnr-edge {$ReadingLevel_class}" {$ReadingLevel_style}>{$ReadingLevel_value}&nbsp;</td>
-</tr>
+	<td class="{$ReadingLevel_class}" {$ReadingLevel_style} {$recordattrs}>
+		{$ReadingLevel_value}
+	</td>
 {END ReadingLevel_fieldcolumn}
+
 	{BEGIN WritingLevel_fieldcolumn}
-<tr class="rnr-row style1">
-	<td class="rnr-gridfieldlabel {$WritingLevel_label_class}">{$label devotee_language WritingLevel}</td>
-	<td class="alt rnr-edge {$WritingLevel_class}" {$WritingLevel_style}>{$WritingLevel_value}&nbsp;</td>
-</tr>
+	<td class="{$WritingLevel_class}" {$WritingLevel_style} {$recordattrs}>
+		{$WritingLevel_value}
+	</td>
 {END WritingLevel_fieldcolumn}
 
-										</tbody>
-									</table>
-									{END grid_vrecord}
-								</td>
-								{BEGIN endrecord_block}
-								<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
-								{END endrecord_block}
-								{END grid_record}
-							</tr>
-							{BEGIN grid_rowspace}
-							<tr class="rnr-rs {$rsclass}">
-								{BEGIN grid_recordspace}
-								<td>&nbsp;</td>
-								{END grid_recordspace}
-							</tr>
-							{END grid_rowspace}
-							{END grid_row}
-						</table>
-						
-				
+
+									<td class="rnr-edge" {$recordattrs}>&nbsp;</td>
+									{BEGIN endrecord_block}
+									<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+									{END endrecord_block}
+																	
+									{END grid_record}
+
+								</tr>
+								{END grid_row}
+															
+						</tbody>
+					</table>
+					
 
 {END grid_block}
 

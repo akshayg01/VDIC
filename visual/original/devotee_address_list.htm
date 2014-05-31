@@ -184,7 +184,10 @@
 <div class="rnr-c rnr-ch rnr-c-recordcontrols">
 
 {BEGIN newrecord_controls_block}
-<div  class="style1 rnr-bl rnr-b-recordcontrols_new {$brickclass_recordcontrols_new}">	
+<div  class="style1 rnr-bl rnr-b-recordcontrols_new {$brickclass_recordcontrols_new}">		{BEGIN add_link}
+		<a href="devotee_address_add.php" class="rnr-button" {$addlink_attrs}>Add new</a>
+	{END add_link}
+
 		{BEGIN inlineadd_link}
 		<a href="#" class="rnr-button" {$inlineaddlink_attrs}>Inline Add</a>
 	{END inlineadd_link}
@@ -213,12 +216,7 @@
 	{END deleteselected_link}
 
 	
-		{BEGIN printselected_link}
-<li>
-		<a href="#" class="rnr-button link" {$printselectedlink_attrs} {$printselectedlink_span}>Print</a>
-</li>
-	{END printselected_link}
-</ul>
+	</ul>
 </span>
 {END widhtSelected}
 		{BEGIN saveall_link}
@@ -236,16 +234,6 @@
 {BEGIN moreButtons}
 <a class="rnr-button" id="extraButtonsToggler{$id}" href="#">More...</a>
 <ul class="rnr-list rnr-buttons-group" id="extraButtonsGroup{$id}">
-{BEGIN print_link}
-<li>
-	<a target="_blank" href="devotee_address_print.php?{$crosstable_attrs}" class="rnr-button link" {$printlink_attrs}>Print this page</a>
-</li>
-{END print_link}
-{BEGIN printall_link}
-<li>
-	<a target="_blank" href="devotee_address_print.php?all=1&amp;{$crosstable_attrs}" class="rnr-button link" {$printalllink_attrs}>Print all pages</a>
-</li>
-{END printall_link}
 
 {BEGIN asearch_link}
 <li>
@@ -425,7 +413,12 @@
 									{BEGIN grid_record}
 									{BEGIN listIcons_column}
 									<td class="rnr-cc rnr-bc rnr-icons" iEditCont="all" {$rowstyle} {$recordattrs}>
-									
+																		{BEGIN edit_column}
+									{BEGIN edit_link}
+																			<a class="rnr-button-img" {$editlink_attrs} data-icon="edit" title="Edit"></a>
+									{END edit_link}
+									{END edit_column}
+
 																		{BEGIN inlineedit_column}
 									{BEGIN inlineedit_link}
 																			<a class="rnr-button-img" {$inlineeditlink_attrs} data-icon="inlineedit" title="Inline Edit"></a>
@@ -433,7 +426,12 @@
 									{END inlineedit_column}
 
 									
-																		</td>	
+																		{BEGIN view_column}
+									{BEGIN view_link}
+																			<a class="rnr-button-img" {$viewlink_attrs} data-icon="view" title="View"></a>
+									{END view_link}
+									{END view_column}
+									</td>	
 									{END listIcons_column}	
 
 																		{BEGIN checkbox_column}
