@@ -315,15 +315,15 @@
 									</th>
 									{END checkbox_column}
 
-																																			{BEGIN DevoteeId_fieldheadercolumn}
-									<th class="rnr-gridfieldlabel {$DevoteeId_class}">
-									{BEGIN DevoteeId_fieldheader}
-																				<span {$DevoteeId_orderlinkattrs}>
-											{$label Receive_Donation DevoteeId}
+																																			{BEGIN FullName_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$FullName_class}">
+									{BEGIN FullName_fieldheader}
+																				<span {$FullName_orderlinkattrs}>
+											{$label Receive_Donation FullName}
 										</span>
-									{END DevoteeId_fieldheader}
+									{END FullName_fieldheader}
 									</th>
-									{END DevoteeId_fieldheadercolumn}
+									{END FullName_fieldheadercolumn}
 
 																	{BEGIN DonationDate_fieldheadercolumn}
 									<th class="rnr-gridfieldlabel {$DonationDate_class}">
@@ -430,11 +430,11 @@
 									{END checkbox_column}
 
 
-										{BEGIN DevoteeId_fieldcolumn}
-	<td class="{$DevoteeId_class}" {$DevoteeId_style} {$recordattrs}>
-		{$DevoteeId_value}
+										{BEGIN FullName_fieldcolumn}
+	<td class="{$FullName_class}" {$FullName_style} {$recordattrs}>
+		{$FullName_value}
 	</td>
-{END DevoteeId_fieldcolumn}
+{END FullName_fieldcolumn}
 
 	{BEGIN DonationDate_fieldcolumn}
 	<td class="{$DonationDate_class}" {$DonationDate_style} {$recordattrs}>
@@ -494,10 +494,10 @@
 									{END checkbox_column}
 
 									
-										{BEGIN DevoteeId_fieldfootercolumn}
-<td class="{$DevoteeId_class}">
+										{BEGIN FullName_fieldfootercolumn}
+<td class="{$FullName_class}">
 </td>
-{END DevoteeId_fieldfootercolumn}
+{END FullName_fieldfootercolumn}
 	{BEGIN DonationDate_fieldfootercolumn}
 <td class="{$DonationDate_class}">
 </td>
