@@ -1,0 +1,168 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_all}<div class="rnr-c rnr-cv rnr-c-all">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_view} rnr-wrapper rnr-cbw-view">
+
+{BEGIN container_view}<div class="rnr-c rnr-cv rnr-c-view">
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fields} rnr-wrapper rnr-cbw-fields">
+
+{BEGIN container_fields}<div class="rnr-c rnr-cv rnr-c-fields">
+
+{BEGIN viewheader}<div  class="rnr-brickcontents style2 rnr-b-viewheader {$brickclass_viewheader}"><span>	{$pagetitlelabel todel_vw_OwnProfile view}
+</span></div>{END viewheader}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-viewfields2 {$brickclass_viewfields2}"><table class="fieldGrid fieldGrid2">
+
+<tr>
+<td>
+	{BEGIN Title_fieldblock}<div data-fieldname="Title" class="rnr-field style1 {$fielddispclass_Title}">
+  <span class="rnr-label">{$label todel_vw_OwnProfile Title}:</span>
+  <span class="rnr-control style3">{$Title_value}</span>
+</div>
+{END Title_fieldblock}
+	{BEGIN FullName_fieldblock}<div data-fieldname="FullName" class="rnr-field style1 {$fielddispclass_FullName}">
+  <span class="rnr-label">{$label todel_vw_OwnProfile FullName}:</span>
+  <span class="rnr-control style3">{$FullName_value}</span>
+</div>
+{END FullName_fieldblock}
+	{BEGIN DateOfBirth_fieldblock}<div data-fieldname="DateOfBirth" class="rnr-field style1 {$fielddispclass_DateOfBirth}">
+  <span class="rnr-label">{$label todel_vw_OwnProfile DateOfBirth}:</span>
+  <span class="rnr-control style3">{$DateOfBirth_value}</span>
+</div>
+
+
+Date 
+                  of 
+                  Birth{END DateOfBirth_fieldblock}
+	{BEGIN MaritalStatus_fieldblock}<div data-fieldname="MaritalStatus" class="rnr-field style1 {$fielddispclass_MaritalStatus}">
+  <span class="rnr-label">{$label todel_vw_OwnProfile MaritalStatus}:</span>
+  <span class="rnr-control style3">{$MaritalStatus_value}</span>
+</div>
+{END MaritalStatus_fieldblock}
+	{BEGIN DateofMarriage_fieldblock}<div data-fieldname="DateofMarriage" class="rnr-field style1 {$fielddispclass_DateofMarriage}">
+  <span class="rnr-label">{$label todel_vw_OwnProfile DateofMarriage}:</span>
+  <span class="rnr-control style3">{$DateofMarriage_value}</span>
+</div>
+
+
+Date 
+                  of Marriage{END DateofMarriage_fieldblock}
+	{BEGIN SpouseName_fieldblock}<div data-fieldname="SpouseName" class="rnr-field style1 {$fielddispclass_SpouseName}">
+  <span class="rnr-label">{$label todel_vw_OwnProfile SpouseName}:</span>
+  <span class="rnr-control style3">{$SpouseName_value}</span>
+</div>
+{END SpouseName_fieldblock}
+</td>
+<td>
+	{BEGIN MobilePhone_fieldblock}<div data-fieldname="MobilePhone" class="rnr-field style1 {$fielddispclass_MobilePhone}">
+  <span class="rnr-label">{$label todel_vw_OwnProfile MobilePhone}:</span>
+  <span class="rnr-control style3">{$MobilePhone_value}</span>
+</div>
+{END MobilePhone_fieldblock}
+	{BEGIN WorkPhone_fieldblock}<div data-fieldname="WorkPhone" class="rnr-field style1 {$fielddispclass_WorkPhone}">
+  <span class="rnr-label">{$label todel_vw_OwnProfile WorkPhone}:</span>
+  <span class="rnr-control style3">{$WorkPhone_value}</span>
+</div>
+{END WorkPhone_fieldblock}
+	{BEGIN EmailPrimary_fieldblock}<div data-fieldname="EmailPrimary" class="rnr-field style1 {$fielddispclass_EmailPrimary}">
+  <span class="rnr-label">{$label todel_vw_OwnProfile EmailPrimary}:</span>
+  <span class="rnr-control style3">{$EmailPrimary_value}</span>
+</div>
+{END EmailPrimary_fieldblock}
+	{BEGIN EmailSecondary_fieldblock}<div data-fieldname="EmailSecondary" class="rnr-field style1 {$fielddispclass_EmailSecondary}">
+  <span class="rnr-label">{$label todel_vw_OwnProfile EmailSecondary}:</span>
+  <span class="rnr-control style3">{$EmailSecondary_value}</span>
+</div>
+{END EmailSecondary_fieldblock}
+	{BEGIN CounsellorName_fieldblock}<div data-fieldname="CounsellorName" class="rnr-field style1 {$fielddispclass_CounsellorName}">
+  <span class="rnr-label">{$label todel_vw_OwnProfile CounsellorName}:</span>
+  <span class="rnr-control style3">{$CounsellorName_value}</span>
+</div>
+{END CounsellorName_fieldblock}
+</td>
+</tr>
+</table></div>
+
+
+{BEGIN viewbuttons}<div  class="rnr-brickcontents style2 rnr-b-viewbuttons {$brickclass_viewbuttons}"><div class="rnr-buttons-right">
+{BEGIN prev_button}<a href="#" class="rnr-button {$prevbutton_class}" {$prevbutton_attrs}>&lt;&lt;&lt;</a>
+{END prev_button}
+{BEGIN next_button}<a href="#" class="rnr-button {$nextbutton_class}" {$nextbutton_attrs}>&gt;&gt;&gt;</a>
+{END next_button}
+</div>
+<div class="rnr-buttons-left">
+{BEGIN back_button}<a href="#" class="rnr-button" {$backbutton_attrs}>Back to list</a>
+{END back_button}
+{BEGIN close_button}<a href="#" class="rnr-button" {$closebutton_attrs}>Close window</a>
+{END close_button}
+{BEGIN edit_page_button}<a href="#" class="rnr-button" {$edit_page_button_attrs}>Edit</a>
+{END edit_page_button}
+</div>
+</div>{END viewbuttons}
+
+
+</div>
+{END container_fields}
+
+</div>
+
+
+</div>
+{END container_view}
+
+</div>
+
+
+
+</div>
+{END container_all}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>
