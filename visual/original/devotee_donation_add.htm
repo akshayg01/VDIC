@@ -1,8 +1,9 @@
 <!doctype html>
 <html  {$html_attrs}>
 	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 		<title>{$pagetitle}</title>
-		<meta http-equiv="X-UA-Compatible" content="IE=7">
+
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<link REL="stylesheet" href="styles/default.css" type="text/css">
 		{BEGIN rtlCSS}
@@ -14,295 +15,178 @@
 		{BEGIN pageCSSFiles}
 		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
 		{END pageCSSFiles}
-		<!--[if IE]>
-			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
-			{BEGIN IEcssFiles}
-			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
-			{END IEcssFiles}
-		<![endif]-->
 	</head>
 	
-	<body class="{$stylename}" {$bodyattrs}>
+	<body class="{$stylename} function-add" {$bodyattrs}>
 	{BEGIN body}
 		{$header}
-		<table   cellpadding="0" class="runner-toptable">
-			<tr class="runner-header">
-				<td class="runner-top" colspan=3>
-					
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_all}
+<div class="rnr-c rnr-cv rnr-c-all">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_add} rnr-wrapper rnr-cbw-add">
 
 {BEGIN container_add}
-<table class="runner-c runner-c-add" cellpadding="0" align=center>
+<div class="rnr-c rnr-cv rnr-c-add">
 
-
-<tr class="runner-toprow style2 header"><td class="runner-cl"><img src="images/spacer.gif"></td><td class="runner-cc" ><div  class="runner-b-addheader {$brickclass_addheader}">Devotee Donation, Add new record</div></td><td class="runner-cr"><img src="images/spacer.gif"></td></tr>
+{BEGIN addheader}
+<div  class="rnr-brickcontents style2 rnr-b-addheader {$brickclass_addheader}"><span>	{$pagetitlelabel devotee_donation add}
+</span></div>{END addheader}
 
 
 {BEGIN message_block}
-<tr  class="runner-row style1 runner-b-message {$brickclass_message}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" ><div class="runner-message">{$message}</div></td><td class="runner-cr"></td></tr>{END message_block}
+<div  class="rnr-brickcontents style1 rnr-b-message {$brickclass_message}"><div class="rnr-message">{$message}</div></div>{END message_block}
 
 
 
-<tr  class="runner-row style1 runner-b-wrapper {$wrapperclass_fields}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents runner-wrapper" >
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fields} rnr-wrapper rnr-cbw-fields">
 
 {BEGIN container_fields}
-<table class="runner-c runner-c-fields" cellpadding="0" >
-<tr class="{$cheaderclass_fields}">
-<td class="runner-cl"><img src="images/spacer.gif"></td>
-<td class="runner-cc"></td><td class="runner-cc alt"></td><td class="runner-cr alt"><img src="images/spacer.gif"></td>
-</tr>
+<div class="rnr-c rnr-cv rnr-c-fields">
 
 
+<div  class="rnr-brickcontents style1 rnr-b-addfields2_atop {$brickclass_addfields2_atop}"><table class="fieldGrid fieldGrid2 edit">
+
+<tr>
+<td>
 	{BEGIN DonationDate_fieldblock}
-	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
-	<td class="runner-cc runner-cc1">
-		<div class="fieldlabel_DonationDate {$fielddispclass_DonationDate}">
-			{BEGIN DonationDate_label}Donation Date{END DonationDate_label}
-		</div>
-	</td>
-	<td class="runner-cc alt runner-fixedcell">
-		<div class="fieldcontrol_DonationDate {$fielddispclass_DonationDate}">
-			{$DonationDate_editcontrol}&nbsp;
-		</div>
-	</td>
-	<td class="runner-cr alt"></td></tr>
+<div data-fieldname="DonationDate" class="rnr-field style1 {$fielddispclass_DonationDate}">
+  <div class="rnr-label above">{BEGIN DonationDate_label}{$label devotee_donation DonationDate}{END DonationDate_label}</div>
+  <div class="rnr-control style3">{$DonationDate_editcontrol}</div>
+</div>
 {END DonationDate_fieldblock}
 	{BEGIN DonationOnName_fieldblock}
-	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
-	<td class="runner-cc runner-cc1">
-		<div class="fieldlabel_DonationOnName {$fielddispclass_DonationOnName}">
-			{BEGIN DonationOnName_label}Donation On Name{END DonationOnName_label}
-		</div>
-	</td>
-	<td class="runner-cc alt runner-fixedcell">
-		<div class="fieldcontrol_DonationOnName {$fielddispclass_DonationOnName}">
-			{$DonationOnName_editcontrol}&nbsp;
-		</div>
-	</td>
-	<td class="runner-cr alt"></td></tr>
+<div data-fieldname="DonationOnName" class="rnr-field style1 {$fielddispclass_DonationOnName}">
+  <div class="rnr-label above">{BEGIN DonationOnName_label}{$label devotee_donation DonationOnName}{END DonationOnName_label}</div>
+  <div class="rnr-control style3">{$DonationOnName_editcontrol}</div>
+</div>
 {END DonationOnName_fieldblock}
-	{BEGIN DonationOnNamePanNumber_fieldblock}
-	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
-	<td class="runner-cc runner-cc1">
-		<div class="fieldlabel_DonationOnNamePanNumber {$fielddispclass_DonationOnNamePanNumber}">
-			{BEGIN DonationOnNamePanNumber_label}Donation On Name Pan Number{END DonationOnNamePanNumber_label}
-		</div>
-	</td>
-	<td class="runner-cc alt runner-fixedcell">
-		<div class="fieldcontrol_DonationOnNamePanNumber {$fielddispclass_DonationOnNamePanNumber}">
-			{$DonationOnNamePanNumber_editcontrol}&nbsp;
-		</div>
-	</td>
-	<td class="runner-cr alt"></td></tr>
-{END DonationOnNamePanNumber_fieldblock}
+	{BEGIN CostCenterId_fieldblock}
+<div data-fieldname="CostCenterId" class="rnr-field style1 {$fielddispclass_CostCenterId}">
+  <div class="rnr-label above">{BEGIN CostCenterId_label}{$label devotee_donation CostCenterId}{END CostCenterId_label}</div>
+  <div class="rnr-control style3">{$CostCenterId_editcontrol}</div>
+</div>
+{END CostCenterId_fieldblock}
 	{BEGIN DonationPurposeId_fieldblock}
-	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
-	<td class="runner-cc runner-cc1">
-		<div class="fieldlabel_DonationPurposeId {$fielddispclass_DonationPurposeId}">
-			{BEGIN DonationPurposeId_label}Donation Purpose Id{END DonationPurposeId_label}
-		</div>
-	</td>
-	<td class="runner-cc alt runner-fixedcell">
-		<div class="fieldcontrol_DonationPurposeId {$fielddispclass_DonationPurposeId}">
-			{$DonationPurposeId_editcontrol}&nbsp;
-		</div>
-	</td>
-	<td class="runner-cr alt"></td></tr>
+<div data-fieldname="DonationPurposeId" class="rnr-field style1 {$fielddispclass_DonationPurposeId}">
+  <div class="rnr-label above">{BEGIN DonationPurposeId_label}{$label devotee_donation DonationPurposeId}{END DonationPurposeId_label}</div>
+  <div class="rnr-control style3">{$DonationPurposeId_editcontrol}</div>
+</div>
 {END DonationPurposeId_fieldblock}
+	{BEGIN DonationOnNamePanNumber_fieldblock}
+<div data-fieldname="DonationOnNamePanNumber" class="rnr-field style1 {$fielddispclass_DonationOnNamePanNumber}">
+  <div class="rnr-label above">{BEGIN DonationOnNamePanNumber_label}{$label devotee_donation DonationOnNamePanNumber}{END DonationOnNamePanNumber_label}</div>
+  <div class="rnr-control style3">{$DonationOnNamePanNumber_editcontrol}</div>
+</div>
+{END DonationOnNamePanNumber_fieldblock}
 	{BEGIN Amount_fieldblock}
-	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
-	<td class="runner-cc runner-cc1">
-		<div class="fieldlabel_Amount {$fielddispclass_Amount}">
-			{BEGIN Amount_label}Amount{END Amount_label}
-		</div>
-	</td>
-	<td class="runner-cc alt runner-fixedcell">
-		<div class="fieldcontrol_Amount {$fielddispclass_Amount}">
-			{$Amount_editcontrol}&nbsp;
-		</div>
-	</td>
-	<td class="runner-cr alt"></td></tr>
+<div data-fieldname="Amount" class="rnr-field style1 {$fielddispclass_Amount}">
+  <div class="rnr-label above">{BEGIN Amount_label}{$label devotee_donation Amount}{END Amount_label}</div>
+  <div class="rnr-control style3">{$Amount_editcontrol}</div>
+</div>
 {END Amount_fieldblock}
+	{BEGIN CheckCleared_fieldblock}
+<div data-fieldname="CheckCleared" class="rnr-field style1 {$fielddispclass_CheckCleared}">
+  <div class="rnr-label above">{BEGIN CheckCleared_label}{$label devotee_donation CheckCleared}{END CheckCleared_label}</div>
+  <div class="rnr-control style3">{$CheckCleared_editcontrol}</div>
+</div>
+{END CheckCleared_fieldblock}
+</td>
+<td>
 	{BEGIN ReceiptNumber_fieldblock}
-	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
-	<td class="runner-cc runner-cc1">
-		<div class="fieldlabel_ReceiptNumber {$fielddispclass_ReceiptNumber}">
-			{BEGIN ReceiptNumber_label}Receipt Number{END ReceiptNumber_label}
-		</div>
-	</td>
-	<td class="runner-cc alt runner-fixedcell">
-		<div class="fieldcontrol_ReceiptNumber {$fielddispclass_ReceiptNumber}">
-			{$ReceiptNumber_editcontrol}&nbsp;
-		</div>
-	</td>
-	<td class="runner-cr alt"></td></tr>
+<div data-fieldname="ReceiptNumber" class="rnr-field style1 {$fielddispclass_ReceiptNumber}">
+  <div class="rnr-label above">{BEGIN ReceiptNumber_label}{$label devotee_donation ReceiptNumber}{END ReceiptNumber_label}</div>
+  <div class="rnr-control style3">{$ReceiptNumber_editcontrol}</div>
+</div>
 {END ReceiptNumber_fieldblock}
-	{BEGIN DonationMode_fieldblock}
-	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
-	<td class="runner-cc runner-cc1">
-		<div class="fieldlabel_DonationMode {$fielddispclass_DonationMode}">
-			{BEGIN DonationMode_label}Donation Mode{END DonationMode_label}
-		</div>
-	</td>
-	<td class="runner-cc alt runner-fixedcell">
-		<div class="fieldcontrol_DonationMode {$fielddispclass_DonationMode}">
-			{$DonationMode_editcontrol}&nbsp;
-		</div>
-	</td>
-	<td class="runner-cr alt"></td></tr>
-{END DonationMode_fieldblock}
 	{BEGIN CheckNumber_fieldblock}
-	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
-	<td class="runner-cc runner-cc1">
-		<div class="fieldlabel_CheckNumber {$fielddispclass_CheckNumber}">
-			{BEGIN CheckNumber_label}Check Number{END CheckNumber_label}
-		</div>
-	</td>
-	<td class="runner-cc alt runner-fixedcell">
-		<div class="fieldcontrol_CheckNumber {$fielddispclass_CheckNumber}">
-			{$CheckNumber_editcontrol}&nbsp;
-		</div>
-	</td>
-	<td class="runner-cr alt"></td></tr>
+<div data-fieldname="CheckNumber" class="rnr-field style1 {$fielddispclass_CheckNumber}">
+  <div class="rnr-label above">{BEGIN CheckNumber_label}{$label devotee_donation CheckNumber}{END CheckNumber_label}</div>
+  <div class="rnr-control style3">{$CheckNumber_editcontrol}</div>
+</div>
 {END CheckNumber_fieldblock}
+	{BEGIN DonationMode_fieldblock}
+<div data-fieldname="DonationMode" class="rnr-field style1 {$fielddispclass_DonationMode}">
+  <div class="rnr-label above">{BEGIN DonationMode_label}{$label devotee_donation DonationMode}{END DonationMode_label}</div>
+  <div class="rnr-control style3">{$DonationMode_editcontrol}</div>
+</div>
+{END DonationMode_fieldblock}
 	{BEGIN CheckBank_fieldblock}
-	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
-	<td class="runner-cc runner-cc1">
-		<div class="fieldlabel_CheckBank {$fielddispclass_CheckBank}">
-			{BEGIN CheckBank_label}Check Bank{END CheckBank_label}
-		</div>
-	</td>
-	<td class="runner-cc alt runner-fixedcell">
-		<div class="fieldcontrol_CheckBank {$fielddispclass_CheckBank}">
-			{$CheckBank_editcontrol}&nbsp;
-		</div>
-	</td>
-	<td class="runner-cr alt"></td></tr>
+<div data-fieldname="CheckBank" class="rnr-field style1 {$fielddispclass_CheckBank}">
+  <div class="rnr-label above">{BEGIN CheckBank_label}{$label devotee_donation CheckBank}{END CheckBank_label}</div>
+  <div class="rnr-control style3">{$CheckBank_editcontrol}</div>
+</div>
 {END CheckBank_fieldblock}
 	{BEGIN CheckBranch_fieldblock}
-	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
-	<td class="runner-cc runner-cc1">
-		<div class="fieldlabel_CheckBranch {$fielddispclass_CheckBranch}">
-			{BEGIN CheckBranch_label}Check Branch{END CheckBranch_label}
-		</div>
-	</td>
-	<td class="runner-cc alt runner-fixedcell">
-		<div class="fieldcontrol_CheckBranch {$fielddispclass_CheckBranch}">
-			{$CheckBranch_editcontrol}&nbsp;
-		</div>
-	</td>
-	<td class="runner-cr alt"></td></tr>
+<div data-fieldname="CheckBranch" class="rnr-field style1 {$fielddispclass_CheckBranch}">
+  <div class="rnr-label above">{BEGIN CheckBranch_label}{$label devotee_donation CheckBranch}{END CheckBranch_label}</div>
+  <div class="rnr-control style3">{$CheckBranch_editcontrol}</div>
+</div>
 {END CheckBranch_fieldblock}
-	{BEGIN CheckCleared_fieldblock}
-	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
-	<td class="runner-cc runner-cc1">
-		<div class="fieldlabel_CheckCleared {$fielddispclass_CheckCleared}">
-			{BEGIN CheckCleared_label}Check Cleared{END CheckCleared_label}
-		</div>
-	</td>
-	<td class="runner-cc alt runner-fixedcell">
-		<div class="fieldcontrol_CheckCleared {$fielddispclass_CheckCleared}">
-			{$CheckCleared_editcontrol}&nbsp;
-		</div>
-	</td>
-	<td class="runner-cr alt"></td></tr>
-{END CheckCleared_fieldblock}
 	{BEGIN CheckClearedDate_fieldblock}
-	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
-	<td class="runner-cc runner-cc1">
-		<div class="fieldlabel_CheckClearedDate {$fielddispclass_CheckClearedDate}">
-			{BEGIN CheckClearedDate_label}Check Cleared Date{END CheckClearedDate_label}
-		</div>
-	</td>
-	<td class="runner-cc alt runner-fixedcell">
-		<div class="fieldcontrol_CheckClearedDate {$fielddispclass_CheckClearedDate}">
-			{$CheckClearedDate_editcontrol}&nbsp;
-		</div>
-	</td>
-	<td class="runner-cr alt"></td></tr>
+<div data-fieldname="CheckClearedDate" class="rnr-field style1 {$fielddispclass_CheckClearedDate}">
+  <div class="rnr-label above">{BEGIN CheckClearedDate_label}{$label devotee_donation CheckClearedDate}{END CheckClearedDate_label}</div>
+  <div class="rnr-control style3">{$CheckClearedDate_editcontrol}</div>
+</div>
 {END CheckClearedDate_fieldblock}
+</td>
+</tr>
+</table></div>
 
 
-
-{BEGIN legend}
-<tr  class="runner-row style3 runner-b-legend {$brickclass_legend}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" colspan=2><span id="required_block{$id}">
-<img src="images/icon_required.gif" alt="bullet"> - Required field
-</span>
-</td><td class="runner-cr"></td></tr>{END legend}
-
-
-
-<tr  class="runner-row style2 runner-b-addbuttons {$brickclass_addbuttons}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" colspan=2>{BEGIN save_button}
-<span class="runner-btnframe">
-<span class="runner-btnleft"></span>
-<span class="runner-btnright"></span>
-<a href="#" class="runner-button" {$savebutton_attrs}>Save</a>
-</span>
+{BEGIN addbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-addbuttons {$brickclass_addbuttons}">{BEGIN save_button}
+<a href="#" class="rnr-button main" {$savebutton_attrs}>Save</a>
 {END save_button}
 {BEGIN cancel_button}
-<span class="runner-btnframe">
-<span class="runner-btnleft"></span>
-<span class="runner-btnright"></span>
-<a href="#" class="runner-button" {$cancelbutton_attrs}>Cancel</a>
-</span>
+<a href="#" class="rnr-button" {$cancelbutton_attrs}>Cancel</a>
 {END cancel_button}
 {BEGIN back_button}
-<span class="runner-btnframe">
-<span class="runner-btnleft"></span>
-<span class="runner-btnright"></span>
-<a href="#" class="runner-button" {$backbutton_attrs}>Back to list</a>
-</span>
+<a href="#" class="rnr-button" {$backbutton_attrs}>Back to list</a>
 {END back_button}
 {BEGIN backToMenu_button}
-<span class="runner-btnframe">
-<span class="runner-btnleft"></span>
-<span class="runner-btnright"></span>
-<a href="#" class="runner-button" {$backToMenubutton_attrs}>Back to menu</a>
-</span>
-{END backToMenu_button}</td><td class="runner-cr"></td></tr>
+<a href="#" class="rnr-button" {$backToMenubutton_attrs}>Back to menu</a>
+{END backToMenu_button}</div>{END addbuttons}
 
 
-<tr class="{$cfooterclass_fields}">
-<td class="runner-cl"><img src="images/spacer.gif"></td>
-<td class="runner-cc"></td><td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
-</tr>
-</table>
+</div>
 {END container_fields}
 
-</td><td class="runner-cr"></td></tr>
+</div>
 
 
-<tr class="{$cfooterclass_add}">
-<td class="runner-cl"><img src="images/spacer.gif"></td>
-<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
-</tr>
-</table>
+</div>
 {END container_add}
 
+</div>
 
 
 
-				</td>
-			</tr>
-			<tr class="runner-body">
+</div>
+{END container_all}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
 				
-				<td class="runner-left {$blockclass_left}" >
-					
-				</td>	
+			</div>
+			<div class="rnr-center {$blockclass_center}">
 				
-				<td class="runner-center {$blockclass_center}">
-					
-				</td>	
-
-				<td class="runner-right {$blockclass_right}">
-					
-				</td>	
-			</tr>
-			<tr class="runner-footer">
-				<td class="runner-bottom" colspan=3>
-					<!--%%bottom%%-->
-				</td>
-			</tr>
-		</table>
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
 		{$footer}
 	{END body}
 	</body>

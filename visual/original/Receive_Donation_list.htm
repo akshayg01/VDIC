@@ -335,6 +335,16 @@
 									</th>
 									{END DonationDate_fieldheadercolumn}
 
+																	{BEGIN CostCenterId_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$CostCenterId_class}">
+									{BEGIN CostCenterId_fieldheader}
+																				<span {$CostCenterId_orderlinkattrs}>
+											{$label Receive_Donation CostCenterId}
+										</span>
+									{END CostCenterId_fieldheader}
+									</th>
+									{END CostCenterId_fieldheadercolumn}
+
 																	{BEGIN DonationPurposeId_fieldheadercolumn}
 									<th class="rnr-gridfieldlabel {$DonationPurposeId_class}">
 									{BEGIN DonationPurposeId_fieldheader}
@@ -442,6 +452,12 @@
 	</td>
 {END DonationDate_fieldcolumn}
 
+	{BEGIN CostCenterId_fieldcolumn}
+	<td class="{$CostCenterId_class}" {$CostCenterId_style} {$recordattrs}>
+		{$CostCenterId_value}
+	</td>
+{END CostCenterId_fieldcolumn}
+
 	{BEGIN DonationPurposeId_fieldcolumn}
 	<td class="{$DonationPurposeId_class}" {$DonationPurposeId_style} {$recordattrs}>
 		{$DonationPurposeId_value}
@@ -502,6 +518,10 @@
 <td class="{$DonationDate_class}">
 </td>
 {END DonationDate_fieldfootercolumn}
+	{BEGIN CostCenterId_fieldfootercolumn}
+<td class="{$CostCenterId_class}">
+</td>
+{END CostCenterId_fieldfootercolumn}
 	{BEGIN DonationPurposeId_fieldfootercolumn}
 <td class="{$DonationPurposeId_class}">
 </td>

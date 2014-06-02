@@ -92,13 +92,13 @@ Per Page:&nbsp;{$recsPerPage} </SPAN>	</DIV>{END recordspp_block}</DIV></DIV>{EN
     {BEGIN endrecordheader_block}<TH class="rnr-cs">&nbsp;</TH>{END endrecordheader_block}{END record_header}</TR>{END grid_header}</THEAD>
   <TBODY>
   {BEGIN grid_row}<TR class="rnr-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>{BEGIN grid_record}
-    {BEGIN listIcons_column}<TD class="rnr-cc rnr-bc rnr-icons" ieditcont="all" {$rowstyle} {$recordattrs}>{BEGIN edit_column}{BEGIN edit_link}<A title="Edit" class="rnr-button-img" data-icon="edit" {$editlink_attrs}></A> 
-      {END edit_link}{END edit_column}{BEGIN view_column}{BEGIN view_link}<A title="View" class="rnr-button-img" data-icon="view" {$viewlink_attrs}></A> {END view_link}{END view_column}</TD>
+    {BEGIN listIcons_column}<TD class="rnr-cc rnr-bc rnr-icons" ieditcont="all" {$rowstyle} {$recordattrs}>{BEGIN edit_column}{BEGIN edit_link}<A title="Edit" class="rnr-button-img" data-icon="edit" {$editlink_attrs}></A> {END edit_link}{END edit_column}{BEGIN view_column}{BEGIN view_link}<A title="View" class="rnr-button-img" data-icon="view" {$viewlink_attrs}></A> {END view_link}{END view_column}</TD>
     {END listIcons_column}{BEGIN checkbox_column}<TD class="rnr-bc" ieditcont="checkBox" {$rowstyle} {$recordattrs}>{BEGIN checkbox}<INPUT type="checkbox" {$checkbox_attrs}>{END checkbox} 
     </TD>
     {END checkbox_column}{BEGIN devotee_dtable_column}<TD class="rnr-nowrap" {$rowstyle} {$recordattrs}>{BEGIN devotee_donation_dtable_link}<SPAN><A {$devotee_donation_dtablelink_attrs}>	Donation 
       <SPAN dir="ltr" {$devotee_donation_childnumber_attr}>{BEGIN devotee_donation_childcount}({$devotee_donation_childnumber}){END devotee_donation_childcount}</SPAN> 
-      </A>&nbsp;&nbsp;&nbsp;</SPAN>{END devotee_donation_dtable_link}{BEGIN devotee_family_member_dtable_link}<SPAN>&nbsp;</SPAN> {END devotee_family_member_dtable_link}</TD>
+      </A></SPAN>{END devotee_donation_dtable_link}{BEGIN devotee_family_member_dtable_link}<SPAN> 
+      </SPAN>{END devotee_family_member_dtable_link} </TD>
     {END devotee_dtable_column}{BEGIN FirstName_fieldcolumn}<TD class="{$FirstName_class}" {$FirstName_style} {$recordattrs}>{$FirstName_value} </TD>
     {END FirstName_fieldcolumn}{BEGIN LastName_fieldcolumn}<TD class="{$LastName_class}" {$LastName_style} {$recordattrs}>{$LastName_value} </TD>
     {END LastName_fieldcolumn}{BEGIN InitiatedName_fieldcolumn}<TD class="{$InitiatedName_class}" {$InitiatedName_style} {$recordattrs}>{$InitiatedName_value} </TD>

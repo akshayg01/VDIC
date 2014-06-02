@@ -77,6 +77,12 @@
   <div class="rnr-control style3">{$DonationOnNamePanNumber_editcontrol}</div>
 </div>
 {END DonationOnNamePanNumber_fieldblock}
+	{BEGIN CostCenterId_fieldblock}
+<div data-fieldname="CostCenterId" class="rnr-field style1 {$fielddispclass_CostCenterId}">
+  <div class="rnr-label above">{BEGIN CostCenterId_label}{$label Receive_Donation CostCenterId}{END CostCenterId_label}</div>
+  <div class="rnr-control style3">{$CostCenterId_editcontrol}</div>
+</div>
+{END CostCenterId_fieldblock}
 	{BEGIN DonationPurposeId_fieldblock}
 <div data-fieldname="DonationPurposeId" class="rnr-field style1 {$fielddispclass_DonationPurposeId}">
   <div class="rnr-label above">{BEGIN DonationPurposeId_label}{$label Receive_Donation DonationPurposeId}{END DonationPurposeId_label}</div>
@@ -89,14 +95,14 @@
   <div class="rnr-control style3">{$Amount_editcontrol}</div>
 </div>
 {END Amount_fieldblock}
+</td>
+<td>
 	{BEGIN ReceiptNumber_fieldblock}
 <div data-fieldname="ReceiptNumber" class="rnr-field style1 {$fielddispclass_ReceiptNumber}">
   <div class="rnr-label above">{BEGIN ReceiptNumber_label}{$label Receive_Donation ReceiptNumber}{END ReceiptNumber_label}</div>
   <div class="rnr-control style3">{$ReceiptNumber_editcontrol}</div>
 </div>
 {END ReceiptNumber_fieldblock}
-</td>
-<td>
 	{BEGIN DonationMode_fieldblock}
 <div data-fieldname="DonationMode" class="rnr-field style1 {$fielddispclass_DonationMode}">
   <div class="rnr-label above">{BEGIN DonationMode_label}{$label Receive_Donation DonationMode}{END DonationMode_label}</div>
