@@ -317,8 +317,7 @@
 
 						</thead>
 						<tbody>	
-															{BEGIN grid_row}<TBODY>
-        <tr class="rnr-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>
+															{BEGIN grid_row}<tr class="rnr-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>
 									{BEGIN grid_record}{BEGIN listIcons_column}<td class="rnr-cc rnr-bc rnr-icons" iEditCont="all" {$rowstyle} {$recordattrs}>
 																		{BEGIN edit_column}{BEGIN edit_link}<a class="rnr-button-img" {$editlink_attrs} data-icon="edit" title="Edit"></a>
 									{END edit_link}
@@ -370,7 +369,7 @@
 									{END grid_record}
 
 								</tr>
-								</TBODY>{END grid_row}
+								{END grid_row}
 															
 						</tbody>
 					</table>

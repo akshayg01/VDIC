@@ -195,7 +195,10 @@
 
 
 {BEGIN record_controls_block}
-<div  class="style1 rnr-bl rnr-b-recordcontrol {$brickclass_recordcontrol}">{BEGIN widhtSelected}
+<div  class="style1 rnr-bl rnr-b-recordcontrol {$brickclass_recordcontrol}">{BEGIN selectall_link}
+	<a href="#" class="rnr-button" {$selectalllink_span} {$selectalllink_attrs}>Select all</a>
+{END selectall_link}
+{BEGIN widhtSelected}
 <span class="rnr-buttons-group">
 <a class="rnr-button {$withSelectedClass}" href="#" id="selectButtonsToggler{$id}">With selected...</a>
 <ul class="rnr-list" id="selectButtonsGroup{$id}">
@@ -324,224 +327,100 @@
 
 
 {BEGIN grid_block}
-						<table class="rnr-c rnr-cont rnr-c-grid rnr-b-grid rnr-gridtable  hoverable " cellpadding="0" >
-						<thead>
-															{BEGIN grid_header}
-								<tr class="rnr-toprow style1 {$gridHeader_class}" >
-									{BEGIN record_header}
-									{BEGIN listIcons_column}
-									<th iEditCont="all">&nbsp;</th>
-									{END listIcons_column}	
+	
+						<table cellpadding="0" class="rnr-cont rnr-c-grid rnr-b-grid vertical">
+							{BEGIN grid_row}
+							<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+								{BEGIN grid_record}
+								<td class="rnr-cg" style="width:100%;" {$recordattrs}>
+									{BEGIN grid_vrecord}
+									<table class="rnr-c rnr-vrecord " cellpadding="0" >
+										{BEGIN grid_recordheader}
+										<thead>
+										<tr class="rnr-toprow style1">
+											<th class="rnr-edge" colspan="2" iEditCont="all">
+																								{BEGIN edit_column}
+												{BEGIN edit_link}
+																								<a {$editlink_attrs} title="Edit" data-icon="edit" class="rnr-verticalicons"></a>
+												{END edit_link}
+												{END edit_column}
 
-																		{BEGIN checkbox_column}
-									<th class="rnr-bc">
-										<input type="checkbox" {$checkboxheader_attrs}>
-									</th>
-									{END checkbox_column}
+												
+												
+																								{BEGIN view_column}
+												{BEGIN view_link}
+																								<a {$viewlink_attrs} title="View" data-icon="view" class="rnr-verticalicons"></a>
+												{END view_link}
+												{END view_column}
 
-																																			{BEGIN DonationDate_fieldheadercolumn}
-									<th class="rnr-gridfieldlabel {$DonationDate_class}">
-									{BEGIN DonationDate_fieldheader}
-																				<span {$DonationDate_orderlinkattrs}>
-											{$label devotee_donation DonationDate}
-										</span>
-									{END DonationDate_fieldheader}
-									</th>
-									{END DonationDate_fieldheadercolumn}
+																								{BEGIN checkbox_column}
+												{BEGIN checkbox}
+												<input type="checkbox" {$checkbox_attrs} class="rnr-verticalcheckbox">
+												{END checkbox}
+												{END checkbox_column}
 
-																	{BEGIN DonationPurposeId_fieldheadercolumn}
-									<th class="rnr-gridfieldlabel {$DonationPurposeId_class}">
-									{BEGIN DonationPurposeId_fieldheader}
-																				<span {$DonationPurposeId_orderlinkattrs}>
-											{$label devotee_donation DonationPurposeId}
-										</span>
-									{END DonationPurposeId_fieldheader}
-									</th>
-									{END DonationPurposeId_fieldheadercolumn}
-
-																	{BEGIN Amount_fieldheadercolumn}
-									<th class="rnr-gridfieldlabel {$Amount_class}">
-									{BEGIN Amount_fieldheader}
-																				<span {$Amount_orderlinkattrs}>
-											{$label devotee_donation Amount}
-										</span>
-									{END Amount_fieldheader}
-									</th>
-									{END Amount_fieldheadercolumn}
-
-																	{BEGIN CheckCleared_fieldheadercolumn}
-									<th class="rnr-gridfieldlabel {$CheckCleared_class}">
-									{BEGIN CheckCleared_fieldheader}
-																				<span {$CheckCleared_orderlinkattrs}>
-											{$label devotee_donation CheckCleared}
-										</span>
-									{END CheckCleared_fieldheader}
-									</th>
-									{END CheckCleared_fieldheadercolumn}
-
-																	{BEGIN CheckNumber_fieldheadercolumn}
-									<th class="rnr-gridfieldlabel {$CheckNumber_class}">
-									{BEGIN CheckNumber_fieldheader}
-																				<span {$CheckNumber_orderlinkattrs}>
-											{$label devotee_donation CheckNumber}
-										</span>
-									{END CheckNumber_fieldheader}
-									</th>
-									{END CheckNumber_fieldheadercolumn}
-
-																	{BEGIN CheckBank_fieldheadercolumn}
-									<th class="rnr-gridfieldlabel {$CheckBank_class}">
-									{BEGIN CheckBank_fieldheader}
-																				<span {$CheckBank_orderlinkattrs}>
-											{$label devotee_donation CheckBank}
-										</span>
-									{END CheckBank_fieldheader}
-									</th>
-									{END CheckBank_fieldheadercolumn}
-
-
-									
-									<th class="rnr-edge">&nbsp;</th>
-									{BEGIN endrecordheader_block}
-									<th class="rnr-cs">&nbsp;</th>
-									
-									{END endrecordheader_block}
-									
-									{END record_header}
-									
-								</tr>
-								{END grid_header}
-
-						</thead>
-						<tbody>	
-															{BEGIN grid_row}
-								<tr class="rnr-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>
-									{BEGIN grid_record}
-									{BEGIN listIcons_column}
-									<td class="rnr-cc rnr-bc rnr-icons" iEditCont="all" {$rowstyle} {$recordattrs}>
-																		{BEGIN edit_column}
-									{BEGIN edit_link}
-																			<a class="rnr-button-img" {$editlink_attrs} data-icon="edit" title="Edit"></a>
-									{END edit_link}
-									{END edit_column}
-
-									
-									
-																		{BEGIN view_column}
-									{BEGIN view_link}
-																			<a class="rnr-button-img" {$viewlink_attrs} data-icon="view" title="View"></a>
-									{END view_link}
-									{END view_column}
-									</td>	
-									{END listIcons_column}	
-
-																		{BEGIN checkbox_column}
-									<td class="rnr-bc" iEditCont="checkBox" {$rowstyle} {$recordattrs}>
-									{BEGIN checkbox}
-									<input type="checkbox" {$checkbox_attrs}>
-									{END checkbox}
-									</td>
-									{END checkbox_column}
-
-
-										{BEGIN DonationDate_fieldcolumn}
-	<td class="{$DonationDate_class}" {$DonationDate_style} {$recordattrs}>
-		{$DonationDate_value}
-	</td>
+											</th>
+										</tr>
+										</thead>
+										{END grid_recordheader}
+										<tbody>
+											{BEGIN DonationDate_fieldcolumn}
+<tr class="rnr-row style1">
+	<td class="rnr-gridfieldlabel {$DonationDate_label_class}">{$label devotee_donation DonationDate}</td>
+	<td class="alt rnr-edge {$DonationDate_class}" {$DonationDate_style}>{$DonationDate_value}&nbsp;</td>
+</tr>
 {END DonationDate_fieldcolumn}
-
 	{BEGIN DonationPurposeId_fieldcolumn}
-	<td class="{$DonationPurposeId_class}" {$DonationPurposeId_style} {$recordattrs}>
-		{$DonationPurposeId_value}
-	</td>
+<tr class="rnr-row style1">
+	<td class="rnr-gridfieldlabel {$DonationPurposeId_label_class}">{$label devotee_donation DonationPurposeId}</td>
+	<td class="alt rnr-edge {$DonationPurposeId_class}" {$DonationPurposeId_style}>{$DonationPurposeId_value}&nbsp;</td>
+</tr>
 {END DonationPurposeId_fieldcolumn}
-
 	{BEGIN Amount_fieldcolumn}
-	<td class="{$Amount_class}" {$Amount_style} {$recordattrs}>
-		{$Amount_value}
-	</td>
+<tr class="rnr-row style1">
+	<td class="rnr-gridfieldlabel {$Amount_label_class}">{$label devotee_donation Amount}</td>
+	<td class="alt rnr-edge {$Amount_class}" {$Amount_style}>{$Amount_value}&nbsp;</td>
+</tr>
 {END Amount_fieldcolumn}
-
 	{BEGIN CheckCleared_fieldcolumn}
-	<td class="{$CheckCleared_class}" {$CheckCleared_style} {$recordattrs}>
-		{$CheckCleared_value}
-	</td>
+<tr class="rnr-row style1">
+	<td class="rnr-gridfieldlabel {$CheckCleared_label_class}">{$label devotee_donation CheckCleared}</td>
+	<td class="alt rnr-edge {$CheckCleared_class}" {$CheckCleared_style}>{$CheckCleared_value}&nbsp;</td>
+</tr>
 {END CheckCleared_fieldcolumn}
-
 	{BEGIN CheckNumber_fieldcolumn}
-	<td class="{$CheckNumber_class}" {$CheckNumber_style} {$recordattrs}>
-		{$CheckNumber_value}
-	</td>
+<tr class="rnr-row style1">
+	<td class="rnr-gridfieldlabel {$CheckNumber_label_class}">{$label devotee_donation CheckNumber}</td>
+	<td class="alt rnr-edge {$CheckNumber_class}" {$CheckNumber_style}>{$CheckNumber_value}&nbsp;</td>
+</tr>
 {END CheckNumber_fieldcolumn}
-
 	{BEGIN CheckBank_fieldcolumn}
-	<td class="{$CheckBank_class}" {$CheckBank_style} {$recordattrs}>
-		{$CheckBank_value}
-	</td>
+<tr class="rnr-row style1">
+	<td class="rnr-gridfieldlabel {$CheckBank_label_class}">{$label devotee_donation CheckBank}</td>
+	<td class="alt rnr-edge {$CheckBank_class}" {$CheckBank_style}>{$CheckBank_value}&nbsp;</td>
+</tr>
 {END CheckBank_fieldcolumn}
 
-
-									<td class="rnr-edge" {$recordattrs}>&nbsp;</td>
-									{BEGIN endrecord_block}
-									<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
-									{END endrecord_block}
-																	
-									{END grid_record}
-
-								</tr>
-								{END grid_row}
-																							{BEGIN totals_row}
-								<tr class="rnr-bottomrow style1 {$gridFooter_class}">
-									{BEGIN totals_record}
-									{BEGIN listIcons_column}
-									<td class="rnr-cc"></td>
-									{END listIcons_column}	
-
-																		{BEGIN checkbox_column}
-									<td class="rnr-cc"></td>
-									{END checkbox_column}
-
-									
-										{BEGIN DonationDate_fieldfootercolumn}
-<td class="{$DonationDate_class}">
-</td>
-{END DonationDate_fieldfootercolumn}
-	{BEGIN DonationPurposeId_fieldfootercolumn}
-<td class="{$DonationPurposeId_class}">
-</td>
-{END DonationPurposeId_fieldfootercolumn}
-	{BEGIN Amount_fieldfootercolumn}
-<td class="{$Amount_class}">
-	{BEGIN Amount_showtotal}
-			Total:
-	{$Amount_total}
-	{END Amount_showtotal}
-</td>
-{END Amount_fieldfootercolumn}
-	{BEGIN CheckCleared_fieldfootercolumn}
-<td class="{$CheckCleared_class}">
-</td>
-{END CheckCleared_fieldfootercolumn}
-	{BEGIN CheckNumber_fieldfootercolumn}
-<td class="{$CheckNumber_class}">
-</td>
-{END CheckNumber_fieldfootercolumn}
-	{BEGIN CheckBank_fieldfootercolumn}
-<td class="{$CheckBank_class}">
-</td>
-{END CheckBank_fieldfootercolumn}
-
-									<td class="rnr-edge">&nbsp;</td>
-									{BEGIN endrecordtotals_block}
-									<td class="rnr-cs"></td>
-									{END endrecordtotals_block}
-									{END totals_record}
-								</tr>
-								{END totals_row}
-
-						</tbody>
-					</table>
-					
+										</tbody>
+									</table>
+									{END grid_vrecord}
+								</td>
+								{BEGIN endrecord_block}
+								<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+								{END endrecord_block}
+								{END grid_record}
+							</tr>
+							{BEGIN grid_rowspace}
+							<tr class="rnr-rs {$rsclass}">
+								{BEGIN grid_recordspace}
+								<td>&nbsp;</td>
+								{END grid_recordspace}
+							</tr>
+							{END grid_rowspace}
+							{END grid_row}
+						</table>
+						
+				
 
 {END grid_block}
 
