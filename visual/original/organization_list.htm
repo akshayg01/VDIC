@@ -328,6 +328,26 @@
 									</th>
 									{END InitiatedName_fieldheadercolumn}
 
+																	{BEGIN FirstName_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$FirstName_class}">
+									{BEGIN FirstName_fieldheader}
+																				<span {$FirstName_orderlinkattrs}>
+											{$label organization FirstName}
+										</span>
+									{END FirstName_fieldheader}
+									</th>
+									{END FirstName_fieldheadercolumn}
+
+																	{BEGIN LastName_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$LastName_class}">
+									{BEGIN LastName_fieldheader}
+																				<span {$LastName_orderlinkattrs}>
+											{$label organization LastName}
+										</span>
+									{END LastName_fieldheader}
+									</th>
+									{END LastName_fieldheadercolumn}
+
 
 									
 									<th class="rnr-edge">&nbsp;</th>
@@ -398,6 +418,18 @@
 		{$InitiatedName_value}
 	</td>
 {END InitiatedName_fieldcolumn}
+
+	{BEGIN FirstName_fieldcolumn}
+	<td class="{$FirstName_class}" {$FirstName_style} {$recordattrs}>
+		{$FirstName_value}
+	</td>
+{END FirstName_fieldcolumn}
+
+	{BEGIN LastName_fieldcolumn}
+	<td class="{$LastName_class}" {$LastName_style} {$recordattrs}>
+		{$LastName_value}
+	</td>
+{END LastName_fieldcolumn}
 
 
 									<td class="rnr-edge" {$recordattrs}>&nbsp;</td>
