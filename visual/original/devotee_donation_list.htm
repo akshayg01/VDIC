@@ -201,12 +201,7 @@
 <ul class="rnr-list" id="selectButtonsGroup{$id}">
 
 	
-		{BEGIN deleteselected_link}
-<li>
-		<a href="#" class="rnr-button link" {$deleteselectedlink_attrs} {$deleteselectedlink_span}>Delete</a>
-</li>
-	{END deleteselected_link}
-
+	
 		{BEGIN exportselected_link}
 <li>
 		<a href="#" class="rnr-button link" {$exportselectedlink_attrs} {$exportselectedlink_span}>Export</a>
@@ -253,11 +248,6 @@
 </li>
 {END export_link}
 
-{BEGIN import_link}
-<li>
-	<a href="devotee_donation_import.php?{$crosstable_attrs}" class="rnr-button link" {$importlink_attrs}>Import</a>
-</li>
-{END import_link}
 </ul>
 {END moreButtons}
 </span></div>
@@ -349,6 +339,16 @@
 									</th>
 									{END DonationDate_fieldheadercolumn}
 
+																	{BEGIN CostCenterId_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$CostCenterId_class}">
+									{BEGIN CostCenterId_fieldheader}
+																				<span {$CostCenterId_orderlinkattrs}>
+											{$label devotee_donation CostCenterId}
+										</span>
+									{END CostCenterId_fieldheader}
+									</th>
+									{END CostCenterId_fieldheadercolumn}
+
 																	{BEGIN DonationPurposeId_fieldheadercolumn}
 									<th class="rnr-gridfieldlabel {$DonationPurposeId_class}">
 									{BEGIN DonationPurposeId_fieldheader}
@@ -399,6 +399,26 @@
 									</th>
 									{END CheckBank_fieldheadercolumn}
 
+																	{BEGIN ReceivedBy_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$ReceivedBy_class}">
+									{BEGIN ReceivedBy_fieldheader}
+																				<span {$ReceivedBy_orderlinkattrs}>
+											{$label devotee_donation ReceivedBy}
+										</span>
+									{END ReceivedBy_fieldheader}
+									</th>
+									{END ReceivedBy_fieldheadercolumn}
+
+																	{BEGIN IsDeposited_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$IsDeposited_class}">
+									{BEGIN IsDeposited_fieldheader}
+																				<span {$IsDeposited_orderlinkattrs}>
+											{$label devotee_donation IsDeposited}
+										</span>
+									{END IsDeposited_fieldheader}
+									</th>
+									{END IsDeposited_fieldheadercolumn}
+
 
 									
 									<th class="rnr-edge">&nbsp;</th>
@@ -419,12 +439,7 @@
 									{BEGIN grid_record}
 									{BEGIN listIcons_column}
 									<td class="rnr-cc rnr-bc rnr-icons" iEditCont="all" {$rowstyle} {$recordattrs}>
-																		{BEGIN edit_column}
-									{BEGIN edit_link}
-																			<a class="rnr-button-img" {$editlink_attrs} data-icon="edit" title="Edit"></a>
-									{END edit_link}
-									{END edit_column}
-
+									
 									
 									
 																		{BEGIN view_column}
@@ -449,6 +464,12 @@
 		{$DonationDate_value}
 	</td>
 {END DonationDate_fieldcolumn}
+
+	{BEGIN CostCenterId_fieldcolumn}
+	<td class="{$CostCenterId_class}" {$CostCenterId_style} {$recordattrs}>
+		{$CostCenterId_value}
+	</td>
+{END CostCenterId_fieldcolumn}
 
 	{BEGIN DonationPurposeId_fieldcolumn}
 	<td class="{$DonationPurposeId_class}" {$DonationPurposeId_style} {$recordattrs}>
@@ -480,6 +501,18 @@
 	</td>
 {END CheckBank_fieldcolumn}
 
+	{BEGIN ReceivedBy_fieldcolumn}
+	<td class="{$ReceivedBy_class}" {$ReceivedBy_style} {$recordattrs}>
+		{$ReceivedBy_value}
+	</td>
+{END ReceivedBy_fieldcolumn}
+
+	{BEGIN IsDeposited_fieldcolumn}
+	<td class="{$IsDeposited_class}" {$IsDeposited_style} {$recordattrs}>
+		{$IsDeposited_value}
+	</td>
+{END IsDeposited_fieldcolumn}
+
 
 									<td class="rnr-edge" {$recordattrs}>&nbsp;</td>
 									{BEGIN endrecord_block}
@@ -506,6 +539,10 @@
 <td class="{$DonationDate_class}">
 </td>
 {END DonationDate_fieldfootercolumn}
+	{BEGIN CostCenterId_fieldfootercolumn}
+<td class="{$CostCenterId_class}">
+</td>
+{END CostCenterId_fieldfootercolumn}
 	{BEGIN DonationPurposeId_fieldfootercolumn}
 <td class="{$DonationPurposeId_class}">
 </td>
@@ -530,6 +567,14 @@
 <td class="{$CheckBank_class}">
 </td>
 {END CheckBank_fieldfootercolumn}
+	{BEGIN ReceivedBy_fieldfootercolumn}
+<td class="{$ReceivedBy_class}">
+</td>
+{END ReceivedBy_fieldfootercolumn}
+	{BEGIN IsDeposited_fieldfootercolumn}
+<td class="{$IsDeposited_class}">
+</td>
+{END IsDeposited_fieldfootercolumn}
 
 									<td class="rnr-edge">&nbsp;</td>
 									{BEGIN endrecordtotals_block}

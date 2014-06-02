@@ -395,6 +395,26 @@
 									</th>
 									{END CheckCleared_fieldheadercolumn}
 
+																	{BEGIN IsDeposited_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$IsDeposited_class}">
+									{BEGIN IsDeposited_fieldheader}
+																				<span {$IsDeposited_orderlinkattrs}>
+											{$label Receive_Donation IsDeposited}
+										</span>
+									{END IsDeposited_fieldheader}
+									</th>
+									{END IsDeposited_fieldheadercolumn}
+
+																	{BEGIN ReceivedBy_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$ReceivedBy_class}">
+									{BEGIN ReceivedBy_fieldheader}
+																				<span {$ReceivedBy_orderlinkattrs}>
+											{$label Receive_Donation ReceivedBy}
+										</span>
+									{END ReceivedBy_fieldheader}
+									</th>
+									{END ReceivedBy_fieldheadercolumn}
+
 
 									
 									<th class="rnr-edge">&nbsp;</th>
@@ -415,12 +435,7 @@
 									{BEGIN grid_record}
 									{BEGIN listIcons_column}
 									<td class="rnr-cc rnr-bc rnr-icons" iEditCont="all" {$rowstyle} {$recordattrs}>
-																		{BEGIN edit_column}
-									{BEGIN edit_link}
-																			<a class="rnr-button-img" {$editlink_attrs} data-icon="edit" title="Edit"></a>
-									{END edit_link}
-									{END edit_column}
-
+									
 									
 									
 																		{BEGIN view_column}
@@ -488,6 +503,18 @@
 	</td>
 {END CheckCleared_fieldcolumn}
 
+	{BEGIN IsDeposited_fieldcolumn}
+	<td class="{$IsDeposited_class}" {$IsDeposited_style} {$recordattrs}>
+		{$IsDeposited_value}
+	</td>
+{END IsDeposited_fieldcolumn}
+
+	{BEGIN ReceivedBy_fieldcolumn}
+	<td class="{$ReceivedBy_class}" {$ReceivedBy_style} {$recordattrs}>
+		{$ReceivedBy_value}
+	</td>
+{END ReceivedBy_fieldcolumn}
+
 
 									<td class="rnr-edge" {$recordattrs}>&nbsp;</td>
 									{BEGIN endrecord_block}
@@ -546,6 +573,14 @@
 <td class="{$CheckCleared_class}">
 </td>
 {END CheckCleared_fieldfootercolumn}
+	{BEGIN IsDeposited_fieldfootercolumn}
+<td class="{$IsDeposited_class}">
+</td>
+{END IsDeposited_fieldfootercolumn}
+	{BEGIN ReceivedBy_fieldfootercolumn}
+<td class="{$ReceivedBy_class}">
+</td>
+{END ReceivedBy_fieldfootercolumn}
 
 									<td class="rnr-edge">&nbsp;</td>
 									{BEGIN endrecordtotals_block}
