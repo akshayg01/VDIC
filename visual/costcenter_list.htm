@@ -334,26 +334,21 @@
 
 																		{BEGIN costcenter_dtable_column}<td class="rnr-nowrap" {$rowstyle} {$recordattrs}>
 									{BEGIN lu_donation_purpose_dtable_link}<span>
-									<a {$lu_donation_purpose_dtablelink_attrs}>	Purpose 
-      <span {$lu_donation_purpose_childnumber_attr} dir="ltr">{BEGIN lu_donation_purpose_childcount}({$lu_donation_purpose_childnumber}){END lu_donation_purpose_childcount}</span>
-									</a>
-																		<br/>
 									</span>
 									{END lu_donation_purpose_dtable_link}
 																											{BEGIN devotee_donation_dtable_link}<span>
-									<a {$devotee_donation_dtablelink_attrs}>	Donation 
-      <span {$devotee_donation_childnumber_attr} dir="ltr">{BEGIN devotee_donation_childcount}({$devotee_donation_childnumber}){END devotee_donation_childcount}</span>
+									<a {$devotee_donation_dtablelink_attrs}>
+										Devotee Donation
+																				<span {$devotee_donation_childnumber_attr} dir="ltr">{BEGIN devotee_donation_childcount}({$devotee_donation_childnumber}){END devotee_donation_childcount}</span>
 									</a>
-																		<br/>
-									</span>
+																		<BR></span>
 									{END devotee_donation_dtable_link}
 																											{BEGIN expenses_dtable_link}<span>
 									<a {$expenses_dtablelink_attrs}>
 										Expenses
 																				<span {$expenses_childnumber_attr} dir="ltr">{BEGIN expenses_childcount}({$expenses_childnumber}){END expenses_childcount}</span>
 									</a>
-																		<br/>
-									</span>
+																		<BR></span>
 									{END expenses_dtable_link}
 																		</td>
 									{END costcenter_dtable_column}
