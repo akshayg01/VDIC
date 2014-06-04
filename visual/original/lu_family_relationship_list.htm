@@ -63,6 +63,8 @@
 
 {BEGIN searchform_block}
 <div  class="style1 rnr-bl rnr-b-search {$brickclass_search}">	<span>
+		{$simpleSearchFieldCombo}
+		{$simpleSearchTypeCombo}
 		{BEGIN searchform_text}
 		<input type="text" {$searchfor_attrs} size="25">
 		{END searchform_text}
@@ -168,7 +170,10 @@
 <div class="rnr-c rnr-ch rnr-c-recordcontrols">
 
 {BEGIN newrecord_controls_block}
-<div  class="style1 rnr-bl rnr-b-recordcontrols_new {$brickclass_recordcontrols_new}">	
+<div  class="style1 rnr-bl rnr-b-recordcontrols_new {$brickclass_recordcontrols_new}">		{BEGIN add_link}
+		<a href="lu_family_relationship_add.php" class="rnr-button" {$addlink_attrs}>Add new</a>
+	{END add_link}
+
 		{BEGIN inlineadd_link}
 		<a href="#" class="rnr-button" {$inlineaddlink_attrs}>Inline Add</a>
 	{END inlineadd_link}
@@ -202,7 +207,12 @@
 </li>
 	{END exportselected_link}
 
-	</ul>
+		{BEGIN printselected_link}
+<li>
+		<a href="#" class="rnr-button link" {$printselectedlink_attrs} {$printselectedlink_span}>Print</a>
+</li>
+	{END printselected_link}
+</ul>
 </span>
 {END widhtSelected}
 		{BEGIN saveall_link}
@@ -220,22 +230,32 @@
 {BEGIN moreButtons}
 <a class="rnr-button" id="extraButtonsToggler{$id}" href="#">More...</a>
 <ul class="rnr-list rnr-buttons-group" id="extraButtonsGroup{$id}">
+{BEGIN print_link}
+<li>
+	<a target="_blank" href="lu_family_relationship_print.php?{$crosstable_attrs}" class="rnr-button link" {$printlink_attrs}>Print this page</a>
+</li>
+{END print_link}
+{BEGIN printall_link}
+<li>
+	<a target="_blank" href="lu_family_relationship_print.php?all=1&amp;{$crosstable_attrs}" class="rnr-button link" {$printalllink_attrs}>Print all pages</a>
+</li>
+{END printall_link}
 
 {BEGIN asearch_link}
 <li>
-	<a href="costcenter_search.php" class="rnr-button link" {$advsearchlink_attrs}>Advanced search</a>
+	<a href="lu_family_relationship_search.php" class="rnr-button link" {$advsearchlink_attrs}>Advanced search</a>
 </li>
 {END asearch_link}
 
 {BEGIN export_link}
 <li>
-	<a target="_blank" href="costcenter_export.php" class="rnr-button link" {$exportlink_attrs}>Export results</a>
+	<a target="_blank" href="lu_family_relationship_export.php" class="rnr-button link" {$exportlink_attrs}>Export results</a>
 </li>
 {END export_link}
 
 {BEGIN import_link}
 <li>
-	<a href="costcenter_import.php?{$crosstable_attrs}" class="rnr-button link" {$importlink_attrs}>Import</a>
+	<a href="lu_family_relationship_import.php?{$crosstable_attrs}" class="rnr-button link" {$importlink_attrs}>Import</a>
 </li>
 {END import_link}
 </ul>
@@ -319,48 +339,25 @@
 									</th>
 									{END checkbox_column}
 
-																		{BEGIN costcenter_dtable_column}
-									<th >&nbsp;</th>
-									{END costcenter_dtable_column}
-																										{BEGIN Code_fieldheadercolumn}
-									<th class="rnr-gridfieldlabel {$Code_class}">
-									{BEGIN Code_fieldheader}
-																				<span {$Code_orderlinkattrs}>
-											{$label costcenter Code}
+																																			{BEGIN RelationshipId_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$RelationshipId_class}">
+									{BEGIN RelationshipId_fieldheader}
+																				<span {$RelationshipId_orderlinkattrs}>
+											{$label lu_family_relationship RelationshipId}
 										</span>
-									{END Code_fieldheader}
+									{END RelationshipId_fieldheader}
 									</th>
-									{END Code_fieldheadercolumn}
+									{END RelationshipId_fieldheadercolumn}
 
-																	{BEGIN Owner1Id_fieldheadercolumn}
-									<th class="rnr-gridfieldlabel {$Owner1Id_class}">
-									{BEGIN Owner1Id_fieldheader}
-																				<span {$Owner1Id_orderlinkattrs}>
-											{$label costcenter Owner1Id}
+																	{BEGIN RelationshipName_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$RelationshipName_class}">
+									{BEGIN RelationshipName_fieldheader}
+																				<span {$RelationshipName_orderlinkattrs}>
+											{$label lu_family_relationship RelationshipName}
 										</span>
-									{END Owner1Id_fieldheader}
+									{END RelationshipName_fieldheader}
 									</th>
-									{END Owner1Id_fieldheadercolumn}
-
-																	{BEGIN Owner2Id_fieldheadercolumn}
-									<th class="rnr-gridfieldlabel {$Owner2Id_class}">
-									{BEGIN Owner2Id_fieldheader}
-																				<span {$Owner2Id_orderlinkattrs}>
-											{$label costcenter Owner2Id}
-										</span>
-									{END Owner2Id_fieldheader}
-									</th>
-									{END Owner2Id_fieldheadercolumn}
-
-																	{BEGIN Owner3Id_fieldheadercolumn}
-									<th class="rnr-gridfieldlabel {$Owner3Id_class}">
-									{BEGIN Owner3Id_fieldheader}
-																				<span {$Owner3Id_orderlinkattrs}>
-											{$label costcenter Owner3Id}
-										</span>
-									{END Owner3Id_fieldheader}
-									</th>
-									{END Owner3Id_fieldheadercolumn}
+									{END RelationshipName_fieldheadercolumn}
 
 
 									
@@ -382,15 +379,30 @@
 									{BEGIN grid_record}
 									{BEGIN listIcons_column}
 									<td class="rnr-cc rnr-bc rnr-icons" iEditCont="all" {$rowstyle} {$recordattrs}>
-									
+																		{BEGIN edit_column}
+									{BEGIN edit_link}
+																			<a class="rnr-button-img" {$editlink_attrs} data-icon="edit" title="Edit"></a>
+									{END edit_link}
+									{END edit_column}
+
 																		{BEGIN inlineedit_column}
 									{BEGIN inlineedit_link}
 																			<a class="rnr-button-img" {$inlineeditlink_attrs} data-icon="inlineedit" title="Inline Edit"></a>
 									{END inlineedit_link}
 									{END inlineedit_column}
 
-									
-																		</td>	
+																		{BEGIN copy_column}
+									{BEGIN copy_link}
+																			<a class="rnr-button-img" {$copylink_attrs} data-icon="copy" title="Copy"></a>
+									{END copy_link}
+									{END copy_column}
+
+																		{BEGIN view_column}
+									{BEGIN view_link}
+																			<a class="rnr-button-img" {$viewlink_attrs} data-icon="view" title="View"></a>
+									{END view_link}
+									{END view_column}
+									</td>	
 									{END listIcons_column}	
 
 																		{BEGIN checkbox_column}
@@ -401,70 +413,18 @@
 									</td>
 									{END checkbox_column}
 
-																		{BEGIN costcenter_dtable_column}
-									<td class="rnr-nowrap" {$rowstyle} {$recordattrs}>
-									{BEGIN lu_donation_purpose_dtable_link}
-									<span>
-									<a {$lu_donation_purpose_dtablelink_attrs}>
-										Lu Donation Purpose
-																				<span {$lu_donation_purpose_childnumber_attr} dir="ltr">{BEGIN lu_donation_purpose_childcount}({$lu_donation_purpose_childnumber}){END lu_donation_purpose_childcount}</span>
-									</a>
-																		<br/>
-									</span>
-									{END lu_donation_purpose_dtable_link}
-																											{BEGIN devotee_donation_dtable_link}
-									<span>
-									<a {$devotee_donation_dtablelink_attrs}>
-										Devotee Donation
-																				<span {$devotee_donation_childnumber_attr} dir="ltr">{BEGIN devotee_donation_childcount}({$devotee_donation_childnumber}){END devotee_donation_childcount}</span>
-									</a>
-																		<br/>
-									</span>
-									{END devotee_donation_dtable_link}
-																											{BEGIN expenses_dtable_link}
-									<span>
-									<a {$expenses_dtablelink_attrs}>
-										Expenses
-																				<span {$expenses_childnumber_attr} dir="ltr">{BEGIN expenses_childcount}({$expenses_childnumber}){END expenses_childcount}</span>
-									</a>
-																		<br/>
-									</span>
-									{END expenses_dtable_link}
-																											{BEGIN vw_passbook_dtable_link}
-									<span>
-									<a {$vw_passbook_dtablelink_attrs}>
-										Vw Passbook
-																				<span {$vw_passbook_childnumber_attr} dir="ltr">{BEGIN vw_passbook_childcount}({$vw_passbook_childnumber}){END vw_passbook_childcount}</span>
-									</a>
-																		<br/>
-									</span>
-									{END vw_passbook_dtable_link}
-																		</td>
-									{END costcenter_dtable_column}
 
-										{BEGIN Code_fieldcolumn}
-	<td class="{$Code_class}" {$Code_style} {$recordattrs}>
-		{$Code_value}
+										{BEGIN RelationshipId_fieldcolumn}
+	<td class="{$RelationshipId_class}" {$RelationshipId_style} {$recordattrs}>
+		{$RelationshipId_value}
 	</td>
-{END Code_fieldcolumn}
+{END RelationshipId_fieldcolumn}
 
-	{BEGIN Owner1Id_fieldcolumn}
-	<td class="{$Owner1Id_class}" {$Owner1Id_style} {$recordattrs}>
-		{$Owner1Id_value}
+	{BEGIN RelationshipName_fieldcolumn}
+	<td class="{$RelationshipName_class}" {$RelationshipName_style} {$recordattrs}>
+		{$RelationshipName_value}
 	</td>
-{END Owner1Id_fieldcolumn}
-
-	{BEGIN Owner2Id_fieldcolumn}
-	<td class="{$Owner2Id_class}" {$Owner2Id_style} {$recordattrs}>
-		{$Owner2Id_value}
-	</td>
-{END Owner2Id_fieldcolumn}
-
-	{BEGIN Owner3Id_fieldcolumn}
-	<td class="{$Owner3Id_class}" {$Owner3Id_style} {$recordattrs}>
-		{$Owner3Id_value}
-	</td>
-{END Owner3Id_fieldcolumn}
+{END RelationshipName_fieldcolumn}
 
 
 									<td class="rnr-edge" {$recordattrs}>&nbsp;</td>

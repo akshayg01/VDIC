@@ -350,6 +350,14 @@
 									</a>
 																		<BR></span>
 									{END expenses_dtable_link}
+																											{BEGIN vw_passbook_dtable_link}<span>
+									<a {$vw_passbook_dtablelink_attrs}>
+										Vw Passbook
+																				<span {$vw_passbook_childnumber_attr} dir="ltr">{BEGIN vw_passbook_childcount}({$vw_passbook_childnumber}){END vw_passbook_childcount}</span>
+									</a>
+																		<br/>
+									</span>
+									{END vw_passbook_dtable_link}
 																		</td>
 									{END costcenter_dtable_column}
 

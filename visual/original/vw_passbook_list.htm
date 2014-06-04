@@ -24,6 +24,20 @@
 		<div class="rnr-top {$blockclass_top}">
 			
 
+{BEGIN container_master}
+<div class="rnr-c rnr-ch rnr-c-master">
+
+{BEGIN mastertable_block}
+<div  class="style1 rnr-bl rnr-b-masterinfo {$brickclass_masterinfo}">{$showmasterfile}
+<a class="runner-link" {$backtomasterlink_attrs}>
+	<b>Back to {$backtomasterlink_caption}</b>
+</a></div>
+{END mastertable_block}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_master}
+
 
 
 {BEGIN container_toplinks}
@@ -199,11 +213,6 @@
 </li>
 {END export_link}
 
-{BEGIN import_link}
-<li>
-	<a href="vw_passbook_import.php?{$crosstable_attrs}" class="rnr-button link" {$importlink_attrs}>Import</a>
-</li>
-{END import_link}
 </ul>
 {END moreButtons}
 </span></div>
@@ -280,25 +289,25 @@
 									{END listIcons_column}	
 
 									
-																																			{BEGIN CostCenterId_fieldheadercolumn}
-									<th class="rnr-gridfieldlabel {$CostCenterId_class}">
-									{BEGIN CostCenterId_fieldheader}
-																				<span {$CostCenterId_orderlinkattrs}>
-											{$label vw_passbook CostCenterId}
+																																			{BEGIN Code_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Code_class}">
+									{BEGIN Code_fieldheader}
+																				<span {$Code_orderlinkattrs}>
+											{$label vw_passbook Code}
 										</span>
-									{END CostCenterId_fieldheader}
+									{END Code_fieldheader}
 									</th>
-									{END CostCenterId_fieldheadercolumn}
+									{END Code_fieldheadercolumn}
 
-																	{BEGIN TransactionDate_fieldheadercolumn}
-									<th class="rnr-gridfieldlabel {$TransactionDate_class}">
-									{BEGIN TransactionDate_fieldheader}
-																				<span {$TransactionDate_orderlinkattrs}>
-											{$label vw_passbook TransactionDate}
+																	{BEGIN Date_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Date_class}">
+									{BEGIN Date_fieldheader}
+																				<span {$Date_orderlinkattrs}>
+											{$label vw_passbook Date}
 										</span>
-									{END TransactionDate_fieldheader}
+									{END Date_fieldheader}
 									</th>
-									{END TransactionDate_fieldheadercolumn}
+									{END Date_fieldheadercolumn}
 
 																	{BEGIN Number_fieldheadercolumn}
 									<th class="rnr-gridfieldlabel {$Number_class}">
@@ -368,17 +377,17 @@
 
 									
 
-										{BEGIN CostCenterId_fieldcolumn}
-	<td class="{$CostCenterId_class}" {$CostCenterId_style} {$recordattrs}>
-		{$CostCenterId_value}
+										{BEGIN Code_fieldcolumn}
+	<td class="{$Code_class}" {$Code_style} {$recordattrs}>
+		{$Code_value}
 	</td>
-{END CostCenterId_fieldcolumn}
+{END Code_fieldcolumn}
 
-	{BEGIN TransactionDate_fieldcolumn}
-	<td class="{$TransactionDate_class}" {$TransactionDate_style} {$recordattrs}>
-		{$TransactionDate_value}
+	{BEGIN Date_fieldcolumn}
+	<td class="{$Date_class}" {$Date_style} {$recordattrs}>
+		{$Date_value}
 	</td>
-{END TransactionDate_fieldcolumn}
+{END Date_fieldcolumn}
 
 	{BEGIN Number_fieldcolumn}
 	<td class="{$Number_class}" {$Number_style} {$recordattrs}>
@@ -423,14 +432,14 @@
 
 									
 									
-										{BEGIN CostCenterId_fieldfootercolumn}
-<td class="{$CostCenterId_class}">
+										{BEGIN Code_fieldfootercolumn}
+<td class="{$Code_class}">
 </td>
-{END CostCenterId_fieldfootercolumn}
-	{BEGIN TransactionDate_fieldfootercolumn}
-<td class="{$TransactionDate_class}">
+{END Code_fieldfootercolumn}
+	{BEGIN Date_fieldfootercolumn}
+<td class="{$Date_class}">
 </td>
-{END TransactionDate_fieldfootercolumn}
+{END Date_fieldfootercolumn}
 	{BEGIN Number_fieldfootercolumn}
 <td class="{$Number_class}">
 </td>

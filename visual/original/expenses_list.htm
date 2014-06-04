@@ -335,15 +335,15 @@
 									</th>
 									{END CostCenterId_fieldheadercolumn}
 
-																	{BEGIN ExpensePurpose_fieldheadercolumn}
-									<th class="rnr-gridfieldlabel {$ExpensePurpose_class}">
-									{BEGIN ExpensePurpose_fieldheader}
-																				<span {$ExpensePurpose_orderlinkattrs}>
-											{$label expenses ExpensePurpose}
+																	{BEGIN ExpensePurposeId_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$ExpensePurposeId_class}">
+									{BEGIN ExpensePurposeId_fieldheader}
+																				<span {$ExpensePurposeId_orderlinkattrs}>
+											{$label expenses ExpensePurposeId}
 										</span>
-									{END ExpensePurpose_fieldheader}
+									{END ExpensePurposeId_fieldheader}
 									</th>
-									{END ExpensePurpose_fieldheadercolumn}
+									{END ExpensePurposeId_fieldheadercolumn}
 
 																	{BEGIN Description_fieldheadercolumn}
 									<th class="rnr-gridfieldlabel {$Description_class}">
@@ -421,11 +421,11 @@
 	</td>
 {END CostCenterId_fieldcolumn}
 
-	{BEGIN ExpensePurpose_fieldcolumn}
-	<td class="{$ExpensePurpose_class}" {$ExpensePurpose_style} {$recordattrs}>
-		{$ExpensePurpose_value}
+	{BEGIN ExpensePurposeId_fieldcolumn}
+	<td class="{$ExpensePurposeId_class}" {$ExpensePurposeId_style} {$recordattrs}>
+		{$ExpensePurposeId_value}
 	</td>
-{END ExpensePurpose_fieldcolumn}
+{END ExpensePurposeId_fieldcolumn}
 
 	{BEGIN Description_fieldcolumn}
 	<td class="{$Description_class}" {$Description_style} {$recordattrs}>
