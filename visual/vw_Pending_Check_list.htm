@@ -24,20 +24,21 @@
 
 {BEGIN container_toplinks}<div class="rnr-c rnr-ch rnr-c-toplinks">
 <div class="rnr-hfiller"></div>
-{BEGIN security_block}<div  class="style1 rnr-br rnr-b-loggedas {$brickclass_loggedas}">{BEGIN loggedas_message}<span>Logged on as&nbsp;<b>{$username}</b>&nbsp;</span> 
-{END loggedas_message}
-{BEGIN guestloginbutton}<span>
-<a href="#" class="rnr-button" {$guestloginlink_attrs}>Login</a>
-</span>
-{END guestloginbutton}
-{BEGIN logoutbutton}<a href="#" class="rnr-button" {$logoutlink_attrs}>Log out</a>
-{END logoutbutton}
-{BEGIN adminarea_link}<a href="admin_rights_list.php" class="rnr-button" {$adminarealink_attrs}>Admin Area</a>
-{END adminarea_link}
+{BEGIN security_block}<div  class="style1 rnr-br rnr-b-loggedas {$brickclass_loggedas}"><div id="login_block{$id}">
+	{BEGIN loggedas_message}<span>Logged on as&nbsp;<b>{$username}</b>&nbsp;</span> 
+	{END loggedas_message}
+	{BEGIN guestloginbutton}<span>
+		<a href="#" class="rnr-button" {$guestloginlink_attrs}>Login</a>
+	</span>
+	{END guestloginbutton}
+	{BEGIN logoutbutton}<a href="#" class="rnr-button" {$logoutlink_attrs}>Log out</a>
+	{END logoutbutton}
+	{BEGIN adminarea_link}<a href="admin_rights_list.php" class="rnr-button" {$adminarealink_attrs}>Admin Area</a>
+	{END adminarea_link}
 
-{BEGIN changepwd_link}<a href="#" class="rnr-button" {$changepwdlink_attrs}>Change password</a>
-{END changepwd_link}
-</div>
+	{BEGIN changepwd_link}<a href="#" class="rnr-button" {$changepwdlink_attrs}>Change password</a>
+	{END changepwd_link}
+</div></div>
 {END security_block}
 
 
@@ -97,9 +98,9 @@
 	
 	<div class="srchCritTop" style="display: none;">
 		Criteria:&nbsp;
-		<input type="radio" name="srchType" class="rnr-radio-button" {$all_checkbox}>&nbsp;{BEGIN all_checkbox_label}<span>all</span>{END all_checkbox_label}
+		<input type="radio" name="srchType{$id}" class="rnr-radio-button" {$all_checkbox}>&nbsp;{BEGIN all_checkbox_label}<span>all</span>{END all_checkbox_label}
 		&nbsp;&nbsp;&nbsp;
-		<input type="radio" name="srchType" class="rnr-radio-button" {$any_checkbox}>&nbsp;{BEGIN any_checkbox_label}<span>any</span>{END any_checkbox_label}
+		<input type="radio" name="srchType{$id}" class="rnr-radio-button" {$any_checkbox}>&nbsp;{BEGIN any_checkbox_label}<span>any</span>{END any_checkbox_label}
 	</div>
 	
 	<div class="addOption">

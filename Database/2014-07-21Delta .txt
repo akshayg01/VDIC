@@ -1,0 +1,2 @@
+ALTER TABLE `devotee` ADD `LoginId` VARCHAR( 50 ) NOT NULL AFTER `EmailSecondary` ;
+UPDATE `devotee` SET `LoginId` = `EmailPrimary` ;
