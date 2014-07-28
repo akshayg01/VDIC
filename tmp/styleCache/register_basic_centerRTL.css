@@ -1,0 +1,98 @@
+body.page-preview
+{
+padding-top:10px; padding-left:10px;
+}
+.page-preview .rnr-c-fields,
+  .rnr-pagewrapper .page-preview .rnr-c-fields,
+  .rnr-pagewrapper .rnr-pagewrapper .page-preview .rnr-c-fields
+{
+margin-bottom:5px;
+}
+.page-preview .rnr-c-fields,
+  .rnr-pagewrapper .page-preview .rnr-c-fields,
+  .rnr-pagewrapper .rnr-pagewrapper .page-preview .rnr-c-fields
+{
+min-width:400px; display:inline-block
+}
+.page-preview .rnr-cw-fields,
+  .rnr-pagewrapper .page-preview .rnr-cw-fields,
+  .rnr-pagewrapper .rnr-pagewrapper .page-preview .rnr-cw-fields
+{
+text-align: center;
+}
+.page-preview .rnr-b-regheader,
+  .rnr-pagewrapper .page-preview .rnr-b-regheader,
+  .rnr-pagewrapper .rnr-pagewrapper .page-preview .rnr-b-regheader
+{
+white-space: nowrap;
+}
+.page-preview .rnr-b-regheader,
+  .rnr-pagewrapper .page-preview .rnr-b-regheader,
+  .rnr-pagewrapper .rnr-pagewrapper .page-preview .rnr-b-regheader
+{
+text-align: right;
+}
+.page-preview .rnr-b-regheader > *,
+  .rnr-pagewrapper .page-preview .rnr-b-regheader > *,
+  .rnr-pagewrapper .rnr-pagewrapper .page-preview .rnr-b-regheader > *
+{
+font-size: 120%;
+}
+.page-preview .rnr-b-message,
+  .rnr-pagewrapper .page-preview .rnr-b-message,
+  .rnr-pagewrapper .rnr-pagewrapper .page-preview .rnr-b-message
+{
+white-space: nowrap;
+}
+.page-preview .rnr-b-message,
+  .rnr-pagewrapper .page-preview .rnr-b-message,
+  .rnr-pagewrapper .rnr-pagewrapper .page-preview .rnr-b-message
+{
+text-align: right;
+}
+.page-preview .rnr-b-message > *,
+  .rnr-pagewrapper .page-preview .rnr-b-message > *,
+  .rnr-pagewrapper .rnr-pagewrapper .page-preview .rnr-b-message > *
+{
+
+}
+.page-preview .rnr-b-regfields_simple,
+  .rnr-pagewrapper .page-preview .rnr-b-regfields_simple,
+  .rnr-pagewrapper .rnr-pagewrapper .page-preview .rnr-b-regfields_simple
+{
+white-space: nowrap;
+}
+.page-preview .rnr-b-regfields_simple,
+  .rnr-pagewrapper .page-preview .rnr-b-regfields_simple,
+  .rnr-pagewrapper .rnr-pagewrapper .page-preview .rnr-b-regfields_simple
+{
+text-align: right;
+}
+.page-preview .rnr-b-regfields_simple > *,
+  .rnr-pagewrapper .page-preview .rnr-b-regfields_simple > *,
+  .rnr-pagewrapper .rnr-pagewrapper .page-preview .rnr-b-regfields_simple > *
+{
+
+}
+.page-preview .rnr-b-regbuttons,
+  .rnr-pagewrapper .page-preview .rnr-b-regbuttons,
+  .rnr-pagewrapper .rnr-pagewrapper .page-preview .rnr-b-regbuttons
+{
+white-space: nowrap;
+}
+.page-preview .rnr-b-regbuttons,
+  .rnr-pagewrapper .page-preview .rnr-b-regbuttons,
+  .rnr-pagewrapper .rnr-pagewrapper .page-preview .rnr-b-regbuttons
+{
+text-align: center;
+}
+.page-preview .rnr-b-regbuttons > *,
+  .rnr-pagewrapper .page-preview .rnr-b-regbuttons > *,
+  .rnr-pagewrapper .rnr-pagewrapper .page-preview .rnr-b-regbuttons > *
+{
+
+}
+body.page-preview .rnr-top
+{
+padding-right: 5px;
+}

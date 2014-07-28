@@ -1,0 +1,200 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_all}<div class="rnr-c rnr-cv rnr-c-all">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_add} rnr-wrapper rnr-cbw-add">
+
+{BEGIN container_add}<div class="rnr-c rnr-cv rnr-c-add">
+
+{BEGIN addheader}<div  class="rnr-brickcontents style2 rnr-b-addheader {$brickclass_addheader}"><span>	{$pagetitlelabel devotee add}
+</span></div>{END addheader}
+
+
+{BEGIN message_block}<div  class="rnr-brickcontents style1 rnr-b-message {$brickclass_message}"><div class="rnr-message">{$message}</div></div>{END message_block}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fields} rnr-wrapper rnr-cbw-fields">
+
+{BEGIN container_fields}<div class="rnr-c rnr-cv rnr-c-fields">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-addfields2_atop {$brickclass_addfields2_atop}"><table class="fieldGrid fieldGrid2 edit">
+
+<TBODY>
+                                <tr>
+<td>
+	{BEGIN Photo_fieldblock}<div data-fieldname="Photo" class="rnr-field style1 {$fielddispclass_Photo}">
+  <div class="rnr-label above">{BEGIN Photo_label}{$label devotee Photo}{END Photo_label}</div>
+  <div class="rnr-control style3">{$Photo_editcontrol}</div>
+</div>
+{END Photo_fieldblock}
+	{BEGIN TitleId_fieldblock}<div data-fieldname="TitleId" class="rnr-field style1 {$fielddispclass_TitleId}">
+  <div class="rnr-label above">{BEGIN TitleId_label}{$label devotee TitleId}{END TitleId_label}</div>
+  <div class="rnr-control style3">{$TitleId_editcontrol}</div>
+</div>
+{END TitleId_fieldblock}
+	{BEGIN FirstName_fieldblock}<div data-fieldname="FirstName" class="rnr-field style1 {$fielddispclass_FirstName}">
+  <div class="rnr-label above">{BEGIN FirstName_label}{$label devotee FirstName}{END FirstName_label}</div>
+  <div class="rnr-control style3">{$FirstName_editcontrol}</div>
+</div>
+{END FirstName_fieldblock}
+	{BEGIN LastName_fieldblock}<div data-fieldname="LastName" class="rnr-field style1 {$fielddispclass_LastName}">
+  <div class="rnr-label above">{BEGIN LastName_label}{$label devotee LastName}{END LastName_label}</div>
+  <div class="rnr-control style3">{$LastName_editcontrol}</div>
+</div>
+{END LastName_fieldblock}
+	{BEGIN MiddleName_fieldblock}<div data-fieldname="MiddleName" class="rnr-field style1 {$fielddispclass_MiddleName}">
+  <div class="rnr-label above">{BEGIN MiddleName_label}{$label devotee MiddleName}{END MiddleName_label}</div>
+  <div class="rnr-control style3">{$MiddleName_editcontrol}</div>
+</div>
+{END MiddleName_fieldblock}
+	{BEGIN InitiatedName_fieldblock}<div data-fieldname="InitiatedName" class="rnr-field style1 {$fielddispclass_InitiatedName}">
+  <div class="rnr-label above">{BEGIN InitiatedName_label}{$label devotee InitiatedName}{END InitiatedName_label}</div>
+  <div class="rnr-control style3">{$InitiatedName_editcontrol}</div>
+</div>
+{END InitiatedName_fieldblock}
+	{BEGIN SpiritualMasterId_fieldblock}<div data-fieldname="SpiritualMasterId" class="rnr-field style1 {$fielddispclass_SpiritualMasterId}">
+  <div class="rnr-label above">{BEGIN SpiritualMasterId_label}{$label devotee SpiritualMasterId}{END SpiritualMasterId_label}</div>
+  <div class="rnr-control style3">{$SpiritualMasterId_editcontrol}</div>
+</div>
+{END SpiritualMasterId_fieldblock}
+</td>
+<td>
+	{BEGIN DateOfBirth_fieldblock}<div data-fieldname="DateOfBirth" class="rnr-field style1 {$fielddispclass_DateOfBirth}">
+  <div class="rnr-label above">{BEGIN DateOfBirth_label}{$label devotee DateOfBirth}{END DateOfBirth_label}</div>
+  <div class="rnr-control style3">{$DateOfBirth_editcontrol}</div>
+</div>
+{END DateOfBirth_fieldblock}
+	{BEGIN Gender_fieldblock}<div data-fieldname="Gender" class="rnr-field style1 {$fielddispclass_Gender}">
+  <div class="rnr-label above">{BEGIN Gender_label}{$label devotee Gender}{END Gender_label}</div>
+  <div class="rnr-control style3">{$Gender_editcontrol}</div>
+</div>
+{END Gender_fieldblock}
+	{BEGIN CounsellorDevoteeID_fieldblock}<div data-fieldname="CounsellorDevoteeID" class="rnr-field style1 {$fielddispclass_CounsellorDevoteeID}">
+  <div class="rnr-label above">{BEGIN CounsellorDevoteeID_label}{$label devotee CounsellorDevoteeID}{END CounsellorDevoteeID_label}</div>
+  <div class="rnr-control style3">{$CounsellorDevoteeID_editcontrol}</div>
+</div>
+{END CounsellorDevoteeID_fieldblock}
+	{BEGIN MobilePhone_fieldblock}<div data-fieldname="MobilePhone" class="rnr-field style1 {$fielddispclass_MobilePhone}">
+  <div class="rnr-label above">{BEGIN MobilePhone_label}{$label devotee MobilePhone}{END MobilePhone_label}</div>
+  <div class="rnr-control style3">{$MobilePhone_editcontrol}</div>
+</div>
+{END MobilePhone_fieldblock}
+	{BEGIN WorkPhone_fieldblock}<div data-fieldname="WorkPhone" class="rnr-field style1 {$fielddispclass_WorkPhone}">
+  <div class="rnr-label above">{BEGIN WorkPhone_label}{$label devotee WorkPhone}{END WorkPhone_label}</div>
+  <div class="rnr-control style3">{$WorkPhone_editcontrol}</div>
+</div>
+{END WorkPhone_fieldblock}
+	{BEGIN EmailPrimary_fieldblock}<div data-fieldname="EmailPrimary" class="rnr-field style1 {$fielddispclass_EmailPrimary}">
+  <div class="rnr-label above">{BEGIN EmailPrimary_label}{$label devotee EmailPrimary}{END EmailPrimary_label}</div>
+  <div class="rnr-control style3">{$EmailPrimary_editcontrol}</div>
+</div>
+{END EmailPrimary_fieldblock}
+	{BEGIN EmailSecondary_fieldblock}<div data-fieldname="EmailSecondary" class="rnr-field style1 {$fielddispclass_EmailSecondary}">
+  <div class="rnr-label above">{BEGIN EmailSecondary_label}{$label devotee EmailSecondary}{END EmailSecondary_label}</div>
+  <div class="rnr-control style3">{$EmailSecondary_editcontrol}</div>
+</div>
+{END EmailSecondary_fieldblock}
+</td>
+</tr>
+</TBODY>
+                            </table></div>
+
+
+{BEGIN addbuttons}<div  class="rnr-brickcontents style2 rnr-b-addbuttons {$brickclass_addbuttons}">{BEGIN save_button}<a href="#" class="rnr-button main" {$savebutton_attrs}>Save</a>
+{END save_button}
+{BEGIN cancel_button}<a href="#" class="rnr-button" {$cancelbutton_attrs}>Cancel</a>
+{END cancel_button}
+{BEGIN back_button}<a href="#" class="rnr-button" {$backbutton_attrs}>Back to list</a>
+{END back_button}
+{BEGIN backToMenu_button}<a href="#" class="rnr-button" {$backToMenubutton_attrs}>Back to menu</a>
+{END backToMenu_button}</div>{END addbuttons}
+
+
+</div>
+{END container_fields}
+
+</div>
+
+
+</div>
+{END container_add}
+
+</div>
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_details} rnr-wrapper rnr-cbw-details">
+
+{BEGIN container_details}<div class="rnr-c rnr-cv rnr-c-details">
+
+{BEGIN detail_tables}{BEGIN details_devotee_address}<div class="rnr-cw-detailsdevotee_address rnr-s-empty aslinks {$pageStyleName}">
+<div class="rnr-c rnr-cv rnr-c-detailsdevotee_address rnr-c-details">
+<div class="rnr-brickcontents style1 rnr-b-adddetailsdevotee_address rnr-b-adddetails">
+
+	<div class="rnr-dcaption">
+		Devotee Address
+	</div>
+	{$displayDetailTable_devotee_address}
+</div>
+</div>
+</div>
+	{END details_devotee_address}
+		{BEGIN details_devotee_donation}{END details_devotee_donation}
+                      
+                    {END detail_tables}
+
+
+</div>
+{END container_details}
+
+</div>
+
+
+</div>
+{END container_all}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

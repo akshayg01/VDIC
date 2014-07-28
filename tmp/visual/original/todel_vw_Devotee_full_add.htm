@@ -1,0 +1,243 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_all}
+<div class="rnr-c rnr-cv rnr-c-all">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_add} rnr-wrapper rnr-cbw-add">
+
+{BEGIN container_add}
+<div class="rnr-c rnr-cv rnr-c-add">
+
+{BEGIN addheader}
+<div  class="rnr-brickcontents style2 rnr-b-addheader {$brickclass_addheader}"><span>	{$pagetitlelabel todel_vw_Devotee_full add}
+</span></div>{END addheader}
+
+
+{BEGIN message_block}
+<div  class="rnr-brickcontents style1 rnr-b-message {$brickclass_message}"><div class="rnr-message">{$message}</div></div>{END message_block}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fields} rnr-wrapper rnr-cbw-fields">
+
+{BEGIN container_fields}
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-addfields2_atop {$brickclass_addfields2_atop}"><table class="fieldGrid fieldGrid2 edit">
+
+<tr>
+<td>
+	{BEGIN LoginAccessStatus_fieldblock}
+<div data-fieldname="LoginAccessStatus" class="rnr-field style1 {$fielddispclass_LoginAccessStatus}">
+  <div class="rnr-label above">{BEGIN LoginAccessStatus_label}{$label todel_vw_Devotee_full LoginAccessStatus}{END LoginAccessStatus_label}</div>
+  <div class="rnr-control style3">{$LoginAccessStatus_editcontrol}</div>
+</div>
+{END LoginAccessStatus_fieldblock}
+	{BEGIN CounsellorDevoteeID_fieldblock}
+<div data-fieldname="CounsellorDevoteeID" class="rnr-field style1 {$fielddispclass_CounsellorDevoteeID}">
+  <div class="rnr-label above">{BEGIN CounsellorDevoteeID_label}{$label todel_vw_Devotee_full CounsellorDevoteeID}{END CounsellorDevoteeID_label}</div>
+  <div class="rnr-control style3">{$CounsellorDevoteeID_editcontrol}</div>
+</div>
+{END CounsellorDevoteeID_fieldblock}
+	{BEGIN IsCounsellor_fieldblock}
+<div data-fieldname="IsCounsellor" class="rnr-field style1 {$fielddispclass_IsCounsellor}">
+  <div class="rnr-label above">{BEGIN IsCounsellor_label}{$label todel_vw_Devotee_full IsCounsellor}{END IsCounsellor_label}</div>
+  <div class="rnr-control style3">{$IsCounsellor_editcontrol}</div>
+</div>
+{END IsCounsellor_fieldblock}
+	{BEGIN NativeCity_fieldblock}
+<div data-fieldname="NativeCity" class="rnr-field style1 {$fielddispclass_NativeCity}">
+  <div class="rnr-label above">{BEGIN NativeCity_label}{$label todel_vw_Devotee_full NativeCity}{END NativeCity_label}</div>
+  <div class="rnr-control style3">{$NativeCity_editcontrol}</div>
+</div>
+{END NativeCity_fieldblock}
+	{BEGIN NativeState_fieldblock}
+<div data-fieldname="NativeState" class="rnr-field style1 {$fielddispclass_NativeState}">
+  <div class="rnr-label above">{BEGIN NativeState_label}{$label todel_vw_Devotee_full NativeState}{END NativeState_label}</div>
+  <div class="rnr-control style3">{$NativeState_editcontrol}</div>
+</div>
+{END NativeState_fieldblock}
+	{BEGIN BloodGroup_fieldblock}
+<div data-fieldname="BloodGroup" class="rnr-field style1 {$fielddispclass_BloodGroup}">
+  <div class="rnr-label above">{BEGIN BloodGroup_label}{$label todel_vw_Devotee_full BloodGroup}{END BloodGroup_label}</div>
+  <div class="rnr-control style3">{$BloodGroup_editcontrol}</div>
+</div>
+{END BloodGroup_fieldblock}
+	{BEGIN DateOfHarinamInitiation_fieldblock}
+<div data-fieldname="DateOfHarinamInitiation" class="rnr-field style1 {$fielddispclass_DateOfHarinamInitiation}">
+  <div class="rnr-label above">{BEGIN DateOfHarinamInitiation_label}{$label todel_vw_Devotee_full DateOfHarinamInitiation}{END DateOfHarinamInitiation_label}</div>
+  <div class="rnr-control style3">{$DateOfHarinamInitiation_editcontrol}</div>
+</div>
+{END DateOfHarinamInitiation_fieldblock}
+	{BEGIN DateOfBrahmanInitiation_fieldblock}
+<div data-fieldname="DateOfBrahmanInitiation" class="rnr-field style1 {$fielddispclass_DateOfBrahmanInitiation}">
+  <div class="rnr-label above">{BEGIN DateOfBrahmanInitiation_label}{$label todel_vw_Devotee_full DateOfBrahmanInitiation}{END DateOfBrahmanInitiation_label}</div>
+  <div class="rnr-control style3">{$DateOfBrahmanInitiation_editcontrol}</div>
+</div>
+{END DateOfBrahmanInitiation_fieldblock}
+	{BEGIN SpiritualMasterId_fieldblock}
+<div data-fieldname="SpiritualMasterId" class="rnr-field style1 {$fielddispclass_SpiritualMasterId}">
+  <div class="rnr-label above">{BEGIN SpiritualMasterId_label}{$label todel_vw_Devotee_full SpiritualMasterId}{END SpiritualMasterId_label}</div>
+  <div class="rnr-control style3">{$SpiritualMasterId_editcontrol}</div>
+</div>
+{END SpiritualMasterId_fieldblock}
+	{BEGIN PreviousReligion_fieldblock}
+<div data-fieldname="PreviousReligion" class="rnr-field style1 {$fielddispclass_PreviousReligion}">
+  <div class="rnr-label above">{BEGIN PreviousReligion_label}{$label todel_vw_Devotee_full PreviousReligion}{END PreviousReligion_label}</div>
+  <div class="rnr-control style3">{$PreviousReligion_editcontrol}</div>
+</div>
+{END PreviousReligion_fieldblock}
+</td>
+<td>
+	{BEGIN Chanting16RoundsSince_fieldblock}
+<div data-fieldname="Chanting16RoundsSince" class="rnr-field style1 {$fielddispclass_Chanting16RoundsSince}">
+  <div class="rnr-label above">{BEGIN Chanting16RoundsSince_label}{$label todel_vw_Devotee_full Chanting16RoundsSince}{END Chanting16RoundsSince_label}</div>
+  <div class="rnr-control style3">{$Chanting16RoundsSince_editcontrol}</div>
+</div>
+{END Chanting16RoundsSince_fieldblock}
+	{BEGIN IntroducedBy_fieldblock}
+<div data-fieldname="IntroducedBy" class="rnr-field style1 {$fielddispclass_IntroducedBy}">
+  <div class="rnr-label above">{BEGIN IntroducedBy_label}{$label todel_vw_Devotee_full IntroducedBy}{END IntroducedBy_label}</div>
+  <div class="rnr-control style3">{$IntroducedBy_editcontrol}</div>
+</div>
+{END IntroducedBy_fieldblock}
+	{BEGIN YearOfIntroduction_fieldblock}
+<div data-fieldname="YearOfIntroduction" class="rnr-field style1 {$fielddispclass_YearOfIntroduction}">
+  <div class="rnr-label above">{BEGIN YearOfIntroduction_label}{$label todel_vw_Devotee_full YearOfIntroduction}{END YearOfIntroduction_label}</div>
+  <div class="rnr-control style3">{$YearOfIntroduction_editcontrol}</div>
+</div>
+{END YearOfIntroduction_fieldblock}
+	{BEGIN IntroducedInCenter_fieldblock}
+<div data-fieldname="IntroducedInCenter" class="rnr-field style1 {$fielddispclass_IntroducedInCenter}">
+  <div class="rnr-label above">{BEGIN IntroducedInCenter_label}{$label todel_vw_Devotee_full IntroducedInCenter}{END IntroducedInCenter_label}</div>
+  <div class="rnr-control style3">{$IntroducedInCenter_editcontrol}</div>
+</div>
+{END IntroducedInCenter_fieldblock}
+	{BEGIN PreferedServices_fieldblock}
+<div data-fieldname="PreferedServices" class="rnr-field style1 {$fielddispclass_PreferedServices}">
+  <div class="rnr-label above">{BEGIN PreferedServices_label}{$label todel_vw_Devotee_full PreferedServices}{END PreferedServices_label}</div>
+  <div class="rnr-control style3">{$PreferedServices_editcontrol}</div>
+</div>
+{END PreferedServices_fieldblock}
+	{BEGIN ServicesRendered_fieldblock}
+<div data-fieldname="ServicesRendered" class="rnr-field style1 {$fielddispclass_ServicesRendered}">
+  <div class="rnr-label above">{BEGIN ServicesRendered_label}{$label todel_vw_Devotee_full ServicesRendered}{END ServicesRendered_label}</div>
+  <div class="rnr-control style3">{$ServicesRendered_editcontrol}</div>
+</div>
+{END ServicesRendered_fieldblock}
+	{BEGIN InitiatedName_fieldblock}
+<div data-fieldname="InitiatedName" class="rnr-field style1 {$fielddispclass_InitiatedName}">
+  <div class="rnr-label above">{BEGIN InitiatedName_label}{$label todel_vw_Devotee_full InitiatedName}{END InitiatedName_label}</div>
+  <div class="rnr-control style3">{$InitiatedName_editcontrol}</div>
+</div>
+{END InitiatedName_fieldblock}
+	{BEGIN SMSAuthCode_fieldblock}
+<div data-fieldname="SMSAuthCode" class="rnr-field style1 {$fielddispclass_SMSAuthCode}">
+  <div class="rnr-label above">{BEGIN SMSAuthCode_label}{$label todel_vw_Devotee_full SMSAuthCode}{END SMSAuthCode_label}</div>
+  <div class="rnr-control style3">{$SMSAuthCode_editcontrol}</div>
+</div>
+{END SMSAuthCode_fieldblock}
+	{BEGIN ProfileApprovalStatus_fieldblock}
+<div data-fieldname="ProfileApprovalStatus" class="rnr-field style1 {$fielddispclass_ProfileApprovalStatus}">
+  <div class="rnr-label above">{BEGIN ProfileApprovalStatus_label}{$label todel_vw_Devotee_full ProfileApprovalStatus}{END ProfileApprovalStatus_label}</div>
+  <div class="rnr-control style3">{$ProfileApprovalStatus_editcontrol}</div>
+</div>
+{END ProfileApprovalStatus_fieldblock}
+</td>
+</tr>
+		<tr>
+	<td colspan="2" >
+		<div class="rnr-field">
+		{$TabGroup Basic_Info1}&nbsp;		
+		</div>
+	</td>
+</tr>
+						
+								
+								
+								
+								
+								
+								
+</table></div>
+
+
+{BEGIN addbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-addbuttons {$brickclass_addbuttons}">{BEGIN save_button}
+<a href="#" class="rnr-button main" {$savebutton_attrs}>Save</a>
+{END save_button}
+{BEGIN cancel_button}
+<a href="#" class="rnr-button" {$cancelbutton_attrs}>Cancel</a>
+{END cancel_button}
+{BEGIN back_button}
+<a href="#" class="rnr-button" {$backbutton_attrs}>Back to list</a>
+{END back_button}
+{BEGIN backToMenu_button}
+<a href="#" class="rnr-button" {$backToMenubutton_attrs}>Back to menu</a>
+{END backToMenu_button}</div>{END addbuttons}
+
+
+</div>
+{END container_fields}
+
+</div>
+
+
+</div>
+{END container_add}
+
+</div>
+
+
+
+</div>
+{END container_all}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

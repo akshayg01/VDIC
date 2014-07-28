@@ -1,0 +1,510 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-list" {$bodyattrs}>
+	{BEGIN body}{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+
+
+{BEGIN container_master}<TABLE class="runner-c runner-c-master" cellPadding=0><TR class="{$cheaderclass_master}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
+        <TR class="runner-row style1"><TD class=runner-cl></TD>
+          <TD class=runner-cc><TABLE class=runner-hc cellPadding=0 border=0><TR>{BEGIN mastertable_block}<TD class="runner-cc runner-bl runner-b-masterinfo" {$brickclass_masterinfo}><SPAN>{$showmasterfile} <A class=runner-link 
+                  {$backtomasterlink_attrs}><B>Back to {$backtomasterlink_caption}</B> 
+                  </A></SPAN></TD>
+                {END mastertable_block}<TD class="runner-cc filler"></TD></TR></TABLE></TD>
+          <TD class=runner-cr></TD></TR>
+        <TR class="{$cfooterclass_master}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TABLE>{END container_master}
+      {BEGIN container_toplinks}<div class="rnr-c rnr-ch rnr-c-toplinks">
+<div class="rnr-hfiller"></div>
+{BEGIN security_block}<div  class="style1 rnr-br rnr-b-loggedas {$brickclass_loggedas}">{BEGIN loggedas_message}<span>Logged on as&nbsp;<b>{$username}</b>&nbsp;</span> 
+{END loggedas_message}
+{BEGIN guestloginbutton}<span>
+<a href="#" class="rnr-button" {$guestloginlink_attrs}>Login</a>
+</span>
+{END guestloginbutton}
+{BEGIN logoutbutton}<a href="#" class="rnr-button" {$logoutlink_attrs}>Log out</a>
+{END logoutbutton}
+{BEGIN adminarea_link}<a href="admin_rights_list.php" class="rnr-button" {$adminarealink_attrs}>Admin Area</a>
+{END adminarea_link}
+
+{BEGIN changepwd_link}<a href="#" class="rnr-button" {$changepwdlink_attrs}>Change password</a>
+{END changepwd_link}
+</div>
+{END security_block}
+
+
+
+</div>
+{END container_toplinks}
+
+
+
+{BEGIN container_hmenu}<div class="rnr-c rnr-ch rnr-c-hmenu">
+
+{BEGIN searchform_block}<div  class="style1 rnr-bl rnr-b-search {$brickclass_search}">	<span>
+		{$simpleSearchFieldCombo}
+		{$simpleSearchTypeCombo}
+		{BEGIN searchform_text}<input type="text" {$searchfor_attrs} size="25">
+		{END searchform_text}
+		{BEGIN searchform_search}<a href="#" class="rnr-button img" data-icon="search" {$searchbutton_attrs}></a>
+		{END searchform_search}
+		{BEGIN searchform_showall}<a href="#" class="rnr-button" {$showAllCont_attrs} {$showallbutton_attrs}>Show all</a>
+		{END searchform_showall}
+	</span>
+</div>
+{END searchform_block}
+
+
+{BEGIN searchformbuttons_block}<div  class="style1 rnr-bl rnr-b-search_buttons {$brickclass_search_buttons}">{BEGIN searchPanelTopButtons}<span>
+	<a href="#" class="rnr-button img" id="showSrchWin{$id}" data-icon="panelfloat" {$showHideSearchWin_attrs}></a>
+	<a href="#" class="rnr-button img" id="showOptPanel{$id}" data-icon="paneldown" {$showHideSearchPanel_attrs}></a>
+</span>
+{END searchPanelTopButtons}
+</div>
+{END searchformbuttons_block}
+
+
+{BEGIN searchsaving_block}<div  class="style1 rnr-bl rnr-b-search_saving_buttons {$brickclass_search_saving_buttons}"></div>
+{END searchsaving_block}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_hmenu}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+
+{BEGIN container_left}<div class="rnr-c rnr-cv rnr-c-left">
+
+{BEGIN menu_block}{$menu main}
+{END menu_block}
+
+
+{BEGIN searchPanel}<div  class="rnr-brickcontents style1 rnr-b-searchpanel {$brickclass_searchpanel}"><div class="searchPanelContainer">
+<div class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	
+	
+	<div class="srchCritTop" style="display: none;">
+		Criteria:&nbsp;
+		<input type="radio" name="srchType" class="rnr-radio-button" {$all_checkbox}>&nbsp;{BEGIN all_checkbox_label}<span>all</span>{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType" class="rnr-radio-button" {$any_checkbox}>&nbsp;{BEGIN any_checkbox_label}<span>any</span>{END any_checkbox_label}
+	</div>
+	
+	<div class="addOption">
+		<span class="rnr-buttons-group">
+			<a href="#" id="showHideControlChooseMenu{$id}" class="rnr-button" {$showHideCtrls_attrs}>Add field</a>
+		</span>
+		
+		<a href="#" id="showHideSearchType{$id}" class="rnr-button" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>
+	</div>
+	
+
+	<table class="controlsBlock {$controls_block_class}">
+				{BEGIN searchCtrlBlock}<tr class="srchPanelRow" {$filterRow_attrs}>
+			<td class="srchPanelCell">{$delCtrlButt}</td>	
+			<td class="srchPanelCell">{$fLabel}:&nbsp;</td>
+			<td class="srchPanelCell srchPanelCell2">
+				<div class="rnr-searchtype">{$searchtype}</div>
+				<div class="rnr-searchcontrol">{$searchcontrol}</div>
+				<div class="rnr-searchcontrol">{$searchcontrol1}</div>
+			</td>	
+		</tr>
+		{END searchCtrlBlock}
+	</table>	
+
+
+	
+	<div class="bottomSearchButt" align="left" {$bottomSearchButt_attrs}>
+		<a href="#" class="rnr-button" id="searchButton{$id}" {$searchbutton_attrs}>Search</a>
+	</div>
+</div>
+
+</div></div>{END searchPanel}
+
+
+
+</div>
+{END container_left}
+
+
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+
+{BEGIN container_recordcontrols}<div class="rnr-c rnr-ch rnr-c-recordcontrols">
+
+{BEGIN newrecord_controls_block}<div  class="style1 rnr-bl rnr-b-recordcontrols_new {$brickclass_recordcontrols_new}">		{BEGIN add_link}<a href="Receive_Donation_add.php" class="rnr-button" {$addlink_attrs}>Add new</a>
+	{END add_link}
+
+	
+
+</div>
+{END newrecord_controls_block}
+
+
+{BEGIN record_controls_block}<div  class="style1 rnr-bl rnr-b-recordcontrol {$brickclass_recordcontrol}">{BEGIN widhtSelected}<span class="rnr-buttons-group">
+<a class="rnr-button {$withSelectedClass}" href="#" id="selectButtonsToggler{$id}">With selected...</a>
+<ul class="rnr-list" id="selectButtonsGroup{$id}">
+
+	
+	
+		{BEGIN exportselected_link}<li>
+		<a href="#" class="rnr-button link" {$exportselectedlink_attrs} {$exportselectedlink_span}>Export</a>
+</li>
+	{END exportselected_link}
+
+		{BEGIN printselected_link}<li>
+		<a href="#" class="rnr-button link" {$printselectedlink_attrs} {$printselectedlink_span}>Print</a>
+</li>
+	{END printselected_link}
+</ul>
+</span>
+{END widhtSelected}
+	</div>
+{END record_controls_block}
+
+
+{BEGIN more_list}<div  class="style1 rnr-bl rnr-b-toplinks {$brickclass_toplinks}"><span class="rnr-buttons-group">
+{BEGIN moreButtons}<a class="rnr-button" id="extraButtonsToggler{$id}" href="#">More...</a>
+<ul class="rnr-list rnr-buttons-group" id="extraButtonsGroup{$id}">
+{BEGIN print_link}<li>
+	<a target="_blank" href="Receive_Donation_print.php?{$crosstable_attrs}" class="rnr-button link" {$printlink_attrs}>Print this page</a>
+</li>
+{END print_link}
+{BEGIN printall_link}<li>
+	<a target="_blank" href="Receive_Donation_print.php?all=1&amp;{$crosstable_attrs}" class="rnr-button link" {$printalllink_attrs}>Print all pages</a>
+</li>
+{END printall_link}
+
+{BEGIN asearch_link}<li>
+	<a href="Receive_Donation_search.php" class="rnr-button link" {$advsearchlink_attrs}>Advanced search</a>
+</li>
+{END asearch_link}
+
+{BEGIN export_link}<li>
+	<a target="_blank" href="Receive_Donation_export.php" class="rnr-button link" {$exportlink_attrs}>Export results</a>
+</li>
+<A class=runner-button href="devotee_donation_export.php" target=_blank {$exportlink_attrs}>{END export_link}
+
+</ul>
+{END moreButtons}
+</span></div>
+{END more_list}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_recordcontrols}
+
+
+
+{BEGIN container_message}<div class="rnr-c rnr-ch rnr-c-message">
+
+{BEGIN message_block}<div  class="style1 rnr-bc rnr-b-message {$brickclass_message}"><div class="rnr-message">{$message}</div></div>
+{END message_block}
+
+
+</div>
+{END container_message}
+
+
+
+{BEGIN container_pagination}<div class="rnr-c rnr-ch rnr-multialign rnr-c-pagination">
+
+{BEGIN pagination_block}<div  class="style1 rnr-bc rnr-b-pagination {$brickclass_pagination}">{$pagination}</div>
+{END pagination_block}
+
+<div class="rnr-leftbricks">
+{BEGIN details_block}<div  class="style1 rnr-bl rnr-b-details_found {$brickclass_details_found}">	<span {$details_attrs}>
+			Details found: <b><span class="rnr-details_found_count">{$records_found}</span></b>
+	</span>
+</div>
+{END details_block}
+
+</div><div class="rnr-rightbricks">
+{BEGIN pages_block}<div  class="style1 rnr-br rnr-b-page_of {$brickclass_page_of}">	<span {$pages_attrs}>
+		Page <b>{$page}</b> of <b>{$maxpages}</b>
+	</span>
+
+</div>
+{END pages_block}
+
+
+{BEGIN recordspp_block}<div  class="style1 rnr-br rnr-b-recsperpage {$brickclass_recsperpage}">	<span id="recordspp_block{$id}" name="recordspp_block{$id}">
+			Records Per Page:&nbsp;{$recsPerPage}
+	</span>	
+</div>
+{END recordspp_block}
+
+</div>
+</div>
+{END container_pagination}
+
+
+
+{BEGIN container_grid}{BEGIN grid_block}<table class="rnr-c rnr-cont rnr-c-grid rnr-b-grid rnr-gridtable  hoverable " cellpadding="0" >
+						<thead>
+															{BEGIN grid_header}<tr class="rnr-toprow style1 {$gridHeader_class}" >
+									{BEGIN record_header}{BEGIN listIcons_column}<th iEditCont="all">&nbsp;</th>
+									{END listIcons_column}	
+
+																		{BEGIN checkbox_column}<th class="rnr-bc">
+										<input type="checkbox" {$checkboxheader_attrs}>
+									</th>
+									{END checkbox_column}
+
+																																			{BEGIN FullName_fieldheadercolumn}<th class="rnr-gridfieldlabel {$FullName_class}">
+									{BEGIN FullName_fieldheader}<span {$FullName_orderlinkattrs}>
+											{$label Receive_Donation FullName}
+										</span>
+									{END FullName_fieldheader}
+									</th>
+									{END FullName_fieldheadercolumn}
+
+																	{BEGIN DonationDate_fieldheadercolumn}<th class="rnr-gridfieldlabel {$DonationDate_class}">
+									{BEGIN DonationDate_fieldheader}<span {$DonationDate_orderlinkattrs}>
+											{$label Receive_Donation DonationDate}
+										</span>
+									{END DonationDate_fieldheader}
+									</th>
+									{END DonationDate_fieldheadercolumn}
+
+																	{BEGIN DonationPurposeId_fieldheadercolumn}<th class="rnr-gridfieldlabel {$DonationPurposeId_class}">
+									{BEGIN DonationPurposeId_fieldheader}<span {$DonationPurposeId_orderlinkattrs}>
+											{$label Receive_Donation DonationPurposeId}
+										</span>
+									{END DonationPurposeId_fieldheader}
+									</th>
+									{END DonationPurposeId_fieldheadercolumn}
+
+																	{BEGIN Amount_fieldheadercolumn}<th class="rnr-gridfieldlabel {$Amount_class}">
+									{BEGIN Amount_fieldheader}<span {$Amount_orderlinkattrs}>
+											{$label Receive_Donation Amount}
+										</span>
+									{END Amount_fieldheader}
+									</th>
+									{END Amount_fieldheadercolumn}
+
+																	{BEGIN ReceiptNumber_fieldheadercolumn}<th class="rnr-gridfieldlabel {$ReceiptNumber_class}">
+									{BEGIN ReceiptNumber_fieldheader}<span {$ReceiptNumber_orderlinkattrs}>
+											{$label Receive_Donation ReceiptNumber}
+										</span>
+									{END ReceiptNumber_fieldheader}
+									</th>
+									{END ReceiptNumber_fieldheadercolumn}
+
+																	{BEGIN DonationMode_fieldheadercolumn}<th class="rnr-gridfieldlabel {$DonationMode_class}">
+									{BEGIN DonationMode_fieldheader}<span {$DonationMode_orderlinkattrs}>
+											{$label Receive_Donation DonationMode}
+										</span>
+									{END DonationMode_fieldheader}
+									</th>
+									{END DonationMode_fieldheadercolumn}
+
+																	{BEGIN CheckCleared_fieldheadercolumn}<th class="rnr-gridfieldlabel {$CheckCleared_class}">
+									{BEGIN CheckCleared_fieldheader}<span {$CheckCleared_orderlinkattrs}>
+											{$label Receive_Donation CheckCleared}
+										</span>
+									{END CheckCleared_fieldheader}
+									</th>
+									{END CheckCleared_fieldheadercolumn}
+
+
+									
+									<th class="rnr-edge">&nbsp;</th>
+									{BEGIN endrecordheader_block}<th class="rnr-cs">&nbsp;</th>
+									
+									{END endrecordheader_block}
+									
+									{END record_header}
+									
+								</tr>
+								{END grid_header}
+
+						</thead>
+						{BEGIN grid_row}<tr class="rnr-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>
+									{BEGIN grid_record}{BEGIN listIcons_column}<td class="rnr-cc rnr-bc rnr-icons" iEditCont="all" {$rowstyle} {$recordattrs}>
+																		{BEGIN edit_column}{BEGIN edit_link}<a class="rnr-button-img" {$editlink_attrs} data-icon="edit" title="Edit"></a>
+									{END edit_link}
+									{END edit_column}
+
+									
+									
+																		{BEGIN view_column}{BEGIN view_link}<a class="rnr-button-img" {$viewlink_attrs} data-icon="view" title="View"></a>
+									{END view_link}
+									{END view_column}
+									</td>	
+									{END listIcons_column}	
+
+																		{BEGIN checkbox_column}<td class="rnr-bc" iEditCont="checkBox" {$rowstyle} {$recordattrs}>
+									{BEGIN checkbox}<input type="checkbox" {$checkbox_attrs}>
+									{END checkbox}
+									</td>
+									{END checkbox_column}
+
+
+										{BEGIN FullName_fieldcolumn}<td class="{$FullName_class}" {$FullName_style} {$recordattrs}>
+		{$FullName_value}
+	</td>
+{END FullName_fieldcolumn}
+
+	{BEGIN DonationDate_fieldcolumn}<td class="{$DonationDate_class}" {$DonationDate_style} {$recordattrs}>
+		{$DonationDate_value}
+	</td>
+{END DonationDate_fieldcolumn}
+
+	{BEGIN DonationPurposeId_fieldcolumn}<td class="{$DonationPurposeId_class}" {$DonationPurposeId_style} {$recordattrs}>
+		{$DonationPurposeId_value}
+	</td>
+{END DonationPurposeId_fieldcolumn}
+
+	{BEGIN Amount_fieldcolumn}<td class="{$Amount_class}" {$Amount_style} {$recordattrs}>
+		{$Amount_value}
+	</td>
+{END Amount_fieldcolumn}
+
+	{BEGIN ReceiptNumber_fieldcolumn}<td class="{$ReceiptNumber_class}" {$ReceiptNumber_style} {$recordattrs}>
+		{$ReceiptNumber_value}
+	</td>
+{END ReceiptNumber_fieldcolumn}
+
+	{BEGIN DonationMode_fieldcolumn}<td class="{$DonationMode_class}" {$DonationMode_style} {$recordattrs}>
+		{$DonationMode_value}
+	</td>
+{END DonationMode_fieldcolumn}
+
+	{BEGIN CheckCleared_fieldcolumn}<td class="{$CheckCleared_class}" {$CheckCleared_style} {$recordattrs}>
+		{$CheckCleared_value}
+	</td>
+{END CheckCleared_fieldcolumn}
+
+
+									<td class="rnr-edge" {$recordattrs}>&nbsp;</td>
+									{BEGIN endrecord_block}<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+									{END endrecord_block}
+																	
+									{END grid_record}
+
+								</tr>
+								{END grid_row}
+																							{BEGIN totals_row}<tr class="rnr-bottomrow style1 {$gridFooter_class}">
+									{BEGIN totals_record}{BEGIN listIcons_column}<td class="rnr-cc"></td>
+									{END listIcons_column}	
+
+																		{BEGIN checkbox_column}<td class="rnr-cc"></td>
+									{END checkbox_column}
+
+									
+										{BEGIN FullName_fieldfootercolumn}<td class="{$FullName_class}">
+</td>
+{END FullName_fieldfootercolumn}
+	{BEGIN DonationDate_fieldfootercolumn}<td class="{$DonationDate_class}">
+</td>
+{END DonationDate_fieldfootercolumn}
+	{BEGIN DonationPurposeId_fieldfootercolumn}<td class="{$DonationPurposeId_class}">
+</td>
+{END DonationPurposeId_fieldfootercolumn}
+	{BEGIN Amount_fieldfootercolumn}<td class="{$Amount_class}">
+	{BEGIN Amount_showtotal}
+			Total:
+	{$Amount_total}
+	{END Amount_showtotal}
+</td>
+{END Amount_fieldfootercolumn}
+	{BEGIN ReceiptNumber_fieldfootercolumn}<td class="{$ReceiptNumber_class}">
+</td>
+{END ReceiptNumber_fieldfootercolumn}
+	{BEGIN DonationMode_fieldfootercolumn}<td class="{$DonationMode_class}">
+</td>
+{END DonationMode_fieldfootercolumn}
+	{BEGIN CheckCleared_fieldfootercolumn}<td class="{$CheckCleared_class}">
+</td>
+{END CheckCleared_fieldfootercolumn}
+
+									<td class="rnr-edge">&nbsp;</td>
+									{BEGIN endrecordtotals_block}<td class="rnr-cs"></td>
+									{END endrecordtotals_block}
+									{END totals_record}
+								</tr>
+								{END totals_row}
+
+						</table>
+					
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+
+{BEGIN container_pagination_bottom}<div class="rnr-c rnr-ch rnr-multialign rnr-c-pagination_bottom">
+
+{BEGIN pagination_block}<div  class="style1 rnr-bc rnr-b-pagination {$brickclass_pagination}">{$pagination}</div>
+{END pagination_block}
+
+<div class="rnr-leftbricks">
+{BEGIN details_block}<div  class="style1 rnr-bl rnr-b-details_found {$brickclass_details_found}">	<span {$details_attrs}>
+			Details found: <b><span class="rnr-details_found_count">{$records_found}</span></b>
+	</span>
+</div>
+{END details_block}
+
+</div><div class="rnr-rightbricks">
+{BEGIN pages_block}<div  class="style1 rnr-br rnr-b-page_of {$brickclass_page_of}">	<span {$pages_attrs}>
+		Page <b>{$page}</b> of <b>{$maxpages}</b>
+	</span>
+
+</div>
+{END pages_block}
+
+
+{BEGIN recordspp_block}<div  class="style1 rnr-br rnr-b-recsperpage {$brickclass_recsperpage}">	<span id="recordspp_block{$id}" name="recordspp_block{$id}">
+			Records Per Page:&nbsp;{$recsPerPage}
+	</span>	
+</div>
+{END recordspp_block}
+
+</div>
+</div>
+{END container_pagination_bottom}
+
+
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

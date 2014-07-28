@@ -1,0 +1,86 @@
+.showborders table > * > * > *
+{
+	border-left: solid #808080 1px !important;
+	border-top: solid #808080 1px !important;
+}
+
+.showborders table 
+{
+	border-right: solid #808080 1px !important;
+	border-bottom: solid #808080 1px !important;
+}
+
+.edit-control, .search-control, .filter-control, .view-control {
+display: inline-block; vertical-align: middle; border: #c0c0c0 1px solid; padding: 2px 2px 2px 2px; text-indent: 18px; line-height: 1; background-color: #FFFF99; 
+background-position: top left; 
+background-repeat:no-repeat;
+}
+
+.plugin-preview{
+vertical-align: middle; display: inline-block; border: #c0c0c0 1px solid; padding: 2px 2px 2px 2px;background-color: #FFFF99; background-position: top left; background-repeat:no-repeat;
+}
+
+.simple-xt-tag {
+display: inline-block; vertical-align: middle;text-align:center;border: #c0c0c0 1px solid; padding: 1px 3px; background-color: #FFFF99;font-family:Verdana;font-size:9pt;font-weight:normal;color:black;
+}
+
+
+
+
+
+
+	.edit-control, .search-control
+	{
+		padding: 3px;
+		border-radius: 1px;
+		border: 1px solid #c3c2c2;
+		box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+		background-position: 3px 1px; 
+	}
+
+	.rnr-control .edit-control
+	{
+		padding: 5px;
+		border-radius: 3px;
+		background-position: 5px 3px; 
+	}
+	.function-login  .edit-control
+	{
+		width: 200px;
+	}
+.crossTabFieldsPreview{
+	border:1px solid silver;
+	background-color:#ffffff;
+}
+.crossTabFieldsPreview th.runner-cc > span{
+	font-weight:bold;
+}
+.crossTabFieldsPreview th,.crossTabFieldsPreview td{
+	padding:0;
+	border:1px solid silver;
+	vertical-align:top;
+}
+.crossTabFieldsPreview th{
+	padding:5px;
+}
+.crossTabFieldsPreview .fieldPreviewBox{
+	display:block;
+	padding:6px 5px 5px 5px;
+	vertical-align:top;
+	border-bottom:1px solid silver;
+	position:relative;
+	bottom:-1px;
+	margin-top:-1px;
+}
+.crossTabFieldsPreview .fieldPreviewBox:hover{
+	background:silver;
+}
+.crossTabFieldsPreview .fieldPreviewBox .view-control{
+	font-size:12px;
+	line-height:12px;
+	padding:2px 5px 3px 2px;
+	display:block;
+}
+.crossTabFieldsPreview .fieldPreviewBox .view-control:hover{
+	cursor:pointer;
+}

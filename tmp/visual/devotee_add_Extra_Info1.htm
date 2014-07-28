@@ -1,0 +1,105 @@
+<TABLE width="100%" bgcolor="#cfdbea" border="0" cellspacing="0" 
+cellpadding="0">
+  <TBODY>
+    <TR>
+      <TD>
+        <DIV {$pageattrs}>
+          {BEGIN container_1}
+            <TABLE class="fieldGrid">
+              <TBODY>
+                {BEGIN NativeCity_tabfieldblock}
+                  <TR class="{$fielddispclass_NativeCity}" data-fieldname="NativeCity">
+                    <TD class="style1 rnr-label">
+                      {BEGIN NativeCity_label}
+                        {$label devotee NativeCity}
+                      {END NativeCity_label}
+                    </TD>
+                    <TD class="rnr-control style3">
+                      {$NativeCity_editcontrol}
+                      &nbsp;
+                    </TD>
+                  </TR>
+                {END NativeCity_tabfieldblock}
+                {BEGIN NativeState_tabfieldblock}
+                  <TR class="{$fielddispclass_NativeState}" data-fieldname="NativeState">
+                    <TD class="style1 rnr-label">
+                      {BEGIN NativeState_label}
+                        {$label devotee NativeState}
+                      {END NativeState_label}
+                    </TD>
+                    <TD class="rnr-control style3">
+                      {$NativeState_editcontrol}
+                      &nbsp;
+                    </TD>
+                  </TR>
+                {END NativeState_tabfieldblock}
+                {BEGIN BloodGroup_tabfieldblock}
+                  <TR class="{$fielddispclass_BloodGroup}" data-fieldname="BloodGroup">
+                    <TD class="style1 rnr-label">
+                      {BEGIN BloodGroup_label}
+                        {$label devotee BloodGroup}
+                      {END BloodGroup_label}
+                    </TD>
+                    <TD class="rnr-control style3">
+                      {$BloodGroup_editcontrol}
+                      &nbsp;
+                    </TD>
+                  </TR>
+                {END BloodGroup_tabfieldblock}
+              </TBODY>
+            </TABLE>
+          {END container_1}
+        </DIV>
+ {BEGIN details_devotee_language}
+                        <DIV class="rnr-cw-detailsdevotee_language rnr-s-empty aslinks {$pageStyleName}">
+                          <DIV class="rnr-c rnr-cv rnr-c-detailsdevotee_language rnr-c-details">
+                            <DIV class="rnr-brickcontents style1 rnr-b-adddetailsdevotee_language rnr-b-adddetails">
+                              <DIV class="rnr-dcaption">
+                                Devotee Language
+                              </DIV>
+                              {$displayDetailTable_devotee_language}
+                            </DIV>
+                          </DIV>
+                        </DIV>
+                      {END details_devotee_language}
+					  
+                      {BEGIN details_devotee_org}
+                        <DIV class="rnr-cw-detailsdevotee_org rnr-s-empty aslinks {$pageStyleName}">
+                          <DIV class="rnr-c rnr-cv rnr-c-detailsdevotee_org rnr-c-details">
+                            <DIV class="rnr-brickcontents style1 rnr-b-adddetailsdevotee_org rnr-b-adddetails">
+                              <DIV class="rnr-dcaption">
+                                Devotee Org
+                              </DIV>
+                              {$displayDetailTable_devotee_org}
+                            </DIV>
+                          </DIV>
+                        </DIV>
+                      {END details_devotee_org}
+					   {BEGIN details_devotee_company}
+                        <DIV class="rnr-cw-detailsdevotee_company rnr-s-empty aslinks {$pageStyleName}">
+                          <DIV class="rnr-c rnr-cv rnr-c-detailsdevotee_company rnr-c-details">
+                            <DIV class="rnr-brickcontents style1 rnr-b-adddetailsdevotee_company rnr-b-adddetails">
+                              <DIV class="rnr-dcaption">
+                                Devotee Company
+                              </DIV>
+                              {$displayDetailTable_devotee_company}
+                            </DIV>
+                          </DIV>
+                        </DIV>
+                      {END details_devotee_company}
+                      {BEGIN details_devotee_family_member}
+                        <DIV class="rnr-cw-detailsdevotee_family_member rnr-s-empty aslinks {$pageStyleName}">
+                          <DIV class="rnr-c rnr-cv rnr-c-detailsdevotee_family_member rnr-c-details">
+                            <DIV class="rnr-brickcontents style1 rnr-b-adddetailsdevotee_family_member rnr-b-adddetails">
+                              <DIV class="rnr-dcaption">
+                                Devotee Family Member
+                              </DIV>
+                              {$displayDetailTable_devotee_family_member}
+                            </DIV>
+                          </DIV>
+                        </DIV>
+                      {END details_devotee_family_member}
+      </TD>
+    </TR>
+  </TBODY>
+</TABLE>

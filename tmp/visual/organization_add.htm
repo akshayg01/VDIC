@@ -1,0 +1,150 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_all}<div class="rnr-c rnr-cv rnr-c-all">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_add} rnr-wrapper rnr-cbw-add">
+
+{BEGIN container_add}<div class="rnr-c rnr-cv rnr-c-add">
+
+{BEGIN addheader}<div  class="rnr-brickcontents style2 rnr-b-addheader {$brickclass_addheader}"><span>	{$pagetitlelabel organization add}
+</span></div>{END addheader}
+
+
+{BEGIN message_block}<div  class="rnr-brickcontents style1 rnr-b-message {$brickclass_message}"><div class="rnr-message">{$message}</div></div>{END message_block}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fields} rnr-wrapper rnr-cbw-fields">
+
+{BEGIN container_fields}<div class="rnr-c rnr-cv rnr-c-fields">
+
+
+<TBODY>
+              <div  class="rnr-brickcontents style1 rnr-b-addfields2_atop {$brickclass_addfields2_atop}"><table class="fieldGrid fieldGrid2 edit">
+
+<tr>
+<td>
+	{BEGIN OrgName_fieldblock}<div data-fieldname="OrgName" class="rnr-field style1 {$fielddispclass_OrgName}">
+  <div class="rnr-label above">{BEGIN OrgName_label}{$label organization OrgName}{END OrgName_label}</div>
+  <div class="rnr-control style3">{$OrgName_editcontrol}</div>
+</div>
+{END OrgName_fieldblock}
+	{BEGIN Location_fieldblock}<div data-fieldname="Location" class="rnr-field style1 {$fielddispclass_Location}">
+  <div class="rnr-label above">{BEGIN Location_label}{$label organization Location}{END Location_label}</div>
+  <div class="rnr-control style3">{$Location_editcontrol}</div>
+</div>
+{END Location_fieldblock}
+</td>
+<td>
+	{BEGIN OrgOwnerId_fieldblock}<div data-fieldname="OrgOwnerId" class="rnr-field style1 {$fielddispclass_OrgOwnerId}">
+  <div class="rnr-label above">{BEGIN OrgOwnerId_label}{$label organization OrgOwnerId}Org Owner{END OrgOwnerId_label}</div>
+  <div class="rnr-control style3">{$OrgOwnerId_editcontrol}</div>
+</div>
+{END OrgOwnerId_fieldblock}
+</td>
+</tr>
+		<tr>
+	<td colspan="2" >
+		<div class="rnr-field">
+		{$TabGroup Members1}&nbsp;		
+		</div>
+	</td>
+</tr>
+
+</TBODY></table></div>
+
+
+{BEGIN addbuttons}<div  class="rnr-brickcontents style2 rnr-b-addbuttons {$brickclass_addbuttons}">{BEGIN save_button}<a href="#" class="rnr-button main" {$savebutton_attrs}>Save</a>
+{END save_button}
+{BEGIN cancel_button}<a href="#" class="rnr-button" {$cancelbutton_attrs}>Cancel</a>
+{END cancel_button}
+{BEGIN back_button}<a href="#" class="rnr-button" {$backbutton_attrs}>Back to list</a>
+{END back_button}
+{BEGIN backToMenu_button}<a href="#" class="rnr-button" {$backToMenubutton_attrs}>Back to menu</a>
+{END backToMenu_button}</div>{END addbuttons}
+
+
+</div>
+{END container_fields}
+
+</div>
+
+
+</div>
+{END container_add}
+
+</div>
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_details} rnr-wrapper rnr-cbw-details">
+
+{BEGIN container_details}<div class="rnr-c rnr-cv rnr-c-details">
+
+{BEGIN detail_tables}{BEGIN details_devotee_org}<div class="rnr-cw-detailsdevotee_org rnr-s-empty aslinks {$pageStyleName}">
+<div class="rnr-c rnr-cv rnr-c-detailsdevotee_org rnr-c-details">
+<div class="rnr-brickcontents style1 rnr-b-adddetailsdevotee_org rnr-b-adddetails">
+
+	<div class="rnr-dcaption">
+		Devotee Org
+	</div>
+	{$displayDetailTable_devotee_org}
+</div>
+</div>
+</div>
+	{END details_devotee_org}
+{END detail_tables}
+
+
+</div>
+{END container_details}
+
+</div>
+
+
+</div>
+{END container_all}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

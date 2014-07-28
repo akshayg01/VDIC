@@ -1,0 +1,174 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_all}
+<div class="rnr-c rnr-cv rnr-c-all">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_view} rnr-wrapper rnr-cbw-view">
+
+{BEGIN container_view}
+<div class="rnr-c rnr-cv rnr-c-view">
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fields} rnr-wrapper rnr-cbw-fields">
+
+{BEGIN container_fields}
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+{BEGIN viewheader}
+<div  class="rnr-brickcontents style2 rnr-b-viewheader {$brickclass_viewheader}"><span>	{$pagetitlelabel devotee_address view}
+</span></div>{END viewheader}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-viewfields2 {$brickclass_viewfields2}"><table class="fieldGrid fieldGrid2">
+
+<tr>
+<td>
+	{BEGIN AddressType_fieldblock}
+<div data-fieldname="AddressType" class="rnr-field style1 {$fielddispclass_AddressType}">
+  <span class="rnr-label">{$label devotee_address AddressType}:</span>
+  <span class="rnr-control style3">{$AddressType_value}</span>
+</div>
+{END AddressType_fieldblock}
+	{BEGIN AddressLine1_fieldblock}
+<div data-fieldname="AddressLine1" class="rnr-field style1 {$fielddispclass_AddressLine1}">
+  <span class="rnr-label">{$label devotee_address AddressLine1}:</span>
+  <span class="rnr-control style3">{$AddressLine1_value}</span>
+</div>
+{END AddressLine1_fieldblock}
+	{BEGIN AddressLine2_fieldblock}
+<div data-fieldname="AddressLine2" class="rnr-field style1 {$fielddispclass_AddressLine2}">
+  <span class="rnr-label">{$label devotee_address AddressLine2}:</span>
+  <span class="rnr-control style3">{$AddressLine2_value}</span>
+</div>
+{END AddressLine2_fieldblock}
+	{BEGIN State_fieldblock}
+<div data-fieldname="State" class="rnr-field style1 {$fielddispclass_State}">
+  <span class="rnr-label">{$label devotee_address State}:</span>
+  <span class="rnr-control style3">{$State_value}</span>
+</div>
+{END State_fieldblock}
+	{BEGIN City_fieldblock}
+<div data-fieldname="City" class="rnr-field style1 {$fielddispclass_City}">
+  <span class="rnr-label">{$label devotee_address City}:</span>
+  <span class="rnr-control style3">{$City_value}</span>
+</div>
+{END City_fieldblock}
+</td>
+<td>
+	{BEGIN Country_fieldblock}
+<div data-fieldname="Country" class="rnr-field style1 {$fielddispclass_Country}">
+  <span class="rnr-label">{$label devotee_address Country}:</span>
+  <span class="rnr-control style3">{$Country_value}</span>
+</div>
+{END Country_fieldblock}
+	{BEGIN Pincode_fieldblock}
+<div data-fieldname="Pincode" class="rnr-field style1 {$fielddispclass_Pincode}">
+  <span class="rnr-label">{$label devotee_address Pincode}:</span>
+  <span class="rnr-control style3">{$Pincode_value}</span>
+</div>
+{END Pincode_fieldblock}
+	{BEGIN IsVerified_fieldblock}
+<div data-fieldname="IsVerified" class="rnr-field style1 {$fielddispclass_IsVerified}">
+  <span class="rnr-label">{$label devotee_address IsVerified}:</span>
+  <span class="rnr-control style3">{$IsVerified_value}</span>
+</div>
+{END IsVerified_fieldblock}
+	{BEGIN IsWrong_fieldblock}
+<div data-fieldname="IsWrong" class="rnr-field style1 {$fielddispclass_IsWrong}">
+  <span class="rnr-label">{$label devotee_address IsWrong}:</span>
+  <span class="rnr-control style3">{$IsWrong_value}</span>
+</div>
+{END IsWrong_fieldblock}
+</td>
+</tr>
+</table></div>
+
+
+{BEGIN viewbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-viewbuttons {$brickclass_viewbuttons}"><div class="rnr-buttons-right">
+{BEGIN prev_button}
+<a href="#" class="rnr-button {$prevbutton_class}" {$prevbutton_attrs}>&lt;&lt;&lt;</a>
+{END prev_button}
+{BEGIN next_button}
+<a href="#" class="rnr-button {$nextbutton_class}" {$nextbutton_attrs}>&gt;&gt;&gt;</a>
+{END next_button}
+</div>
+<div class="rnr-buttons-left">
+{BEGIN back_button}
+<a href="#" class="rnr-button" {$backbutton_attrs}>Back to list</a>
+{END back_button}
+{BEGIN close_button}
+<a href="#" class="rnr-button" {$closebutton_attrs}>Close window</a>
+{END close_button}
+{BEGIN edit_page_button}
+<a href="#" class="rnr-button" {$edit_page_button_attrs}>Edit</a>
+{END edit_page_button}
+</div>
+</div>{END viewbuttons}
+
+
+</div>
+{END container_fields}
+
+</div>
+
+
+</div>
+{END container_view}
+
+</div>
+
+
+
+</div>
+{END container_all}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

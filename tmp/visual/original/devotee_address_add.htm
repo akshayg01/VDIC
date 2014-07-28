@@ -1,0 +1,169 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_all}
+<div class="rnr-c rnr-cv rnr-c-all">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_add} rnr-wrapper rnr-cbw-add">
+
+{BEGIN container_add}
+<div class="rnr-c rnr-cv rnr-c-add">
+
+{BEGIN addheader}
+<div  class="rnr-brickcontents style2 rnr-b-addheader {$brickclass_addheader}"><span>	{$pagetitlelabel devotee_address add}
+</span></div>{END addheader}
+
+
+{BEGIN message_block}
+<div  class="rnr-brickcontents style1 rnr-b-message {$brickclass_message}"><div class="rnr-message">{$message}</div></div>{END message_block}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fields} rnr-wrapper rnr-cbw-fields">
+
+{BEGIN container_fields}
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-addfields2_atop {$brickclass_addfields2_atop}"><table class="fieldGrid fieldGrid2 edit">
+
+<tr>
+<td>
+	{BEGIN AddressType_fieldblock}
+<div data-fieldname="AddressType" class="rnr-field style1 {$fielddispclass_AddressType}">
+  <div class="rnr-label above">{BEGIN AddressType_label}{$label devotee_address AddressType}{END AddressType_label}</div>
+  <div class="rnr-control style3">{$AddressType_editcontrol}</div>
+</div>
+{END AddressType_fieldblock}
+	{BEGIN AddressLine1_fieldblock}
+<div data-fieldname="AddressLine1" class="rnr-field style1 {$fielddispclass_AddressLine1}">
+  <div class="rnr-label above">{BEGIN AddressLine1_label}{$label devotee_address AddressLine1}{END AddressLine1_label}</div>
+  <div class="rnr-control style3">{$AddressLine1_editcontrol}</div>
+</div>
+{END AddressLine1_fieldblock}
+	{BEGIN AddressLine2_fieldblock}
+<div data-fieldname="AddressLine2" class="rnr-field style1 {$fielddispclass_AddressLine2}">
+  <div class="rnr-label above">{BEGIN AddressLine2_label}{$label devotee_address AddressLine2}{END AddressLine2_label}</div>
+  <div class="rnr-control style3">{$AddressLine2_editcontrol}</div>
+</div>
+{END AddressLine2_fieldblock}
+	{BEGIN State_fieldblock}
+<div data-fieldname="State" class="rnr-field style1 {$fielddispclass_State}">
+  <div class="rnr-label above">{BEGIN State_label}{$label devotee_address State}{END State_label}</div>
+  <div class="rnr-control style3">{$State_editcontrol}</div>
+</div>
+{END State_fieldblock}
+	{BEGIN City_fieldblock}
+<div data-fieldname="City" class="rnr-field style1 {$fielddispclass_City}">
+  <div class="rnr-label above">{BEGIN City_label}{$label devotee_address City}{END City_label}</div>
+  <div class="rnr-control style3">{$City_editcontrol}</div>
+</div>
+{END City_fieldblock}
+</td>
+<td>
+	{BEGIN Country_fieldblock}
+<div data-fieldname="Country" class="rnr-field style1 {$fielddispclass_Country}">
+  <div class="rnr-label above">{BEGIN Country_label}{$label devotee_address Country}{END Country_label}</div>
+  <div class="rnr-control style3">{$Country_editcontrol}</div>
+</div>
+{END Country_fieldblock}
+	{BEGIN Pincode_fieldblock}
+<div data-fieldname="Pincode" class="rnr-field style1 {$fielddispclass_Pincode}">
+  <div class="rnr-label above">{BEGIN Pincode_label}{$label devotee_address Pincode}{END Pincode_label}</div>
+  <div class="rnr-control style3">{$Pincode_editcontrol}</div>
+</div>
+{END Pincode_fieldblock}
+	{BEGIN IsVerified_fieldblock}
+<div data-fieldname="IsVerified" class="rnr-field style1 {$fielddispclass_IsVerified}">
+  <div class="rnr-label above">{BEGIN IsVerified_label}{$label devotee_address IsVerified}{END IsVerified_label}</div>
+  <div class="rnr-control style3">{$IsVerified_editcontrol}</div>
+</div>
+{END IsVerified_fieldblock}
+	{BEGIN IsWrong_fieldblock}
+<div data-fieldname="IsWrong" class="rnr-field style1 {$fielddispclass_IsWrong}">
+  <div class="rnr-label above">{BEGIN IsWrong_label}{$label devotee_address IsWrong}{END IsWrong_label}</div>
+  <div class="rnr-control style3">{$IsWrong_editcontrol}</div>
+</div>
+{END IsWrong_fieldblock}
+</td>
+</tr>
+</table></div>
+
+
+{BEGIN addbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-addbuttons {$brickclass_addbuttons}">{BEGIN save_button}
+<a href="#" class="rnr-button main" {$savebutton_attrs}>Save</a>
+{END save_button}
+{BEGIN cancel_button}
+<a href="#" class="rnr-button" {$cancelbutton_attrs}>Cancel</a>
+{END cancel_button}
+{BEGIN back_button}
+<a href="#" class="rnr-button" {$backbutton_attrs}>Back to list</a>
+{END back_button}
+{BEGIN backToMenu_button}
+<a href="#" class="rnr-button" {$backToMenubutton_attrs}>Back to menu</a>
+{END backToMenu_button}</div>{END addbuttons}
+
+
+</div>
+{END container_fields}
+
+</div>
+
+
+</div>
+{END container_add}
+
+</div>
+
+
+
+</div>
+{END container_all}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

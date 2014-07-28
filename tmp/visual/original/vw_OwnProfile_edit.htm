@@ -1,0 +1,225 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-edit" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_all}
+<div class="rnr-c rnr-cv rnr-c-all">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_edit} rnr-wrapper rnr-cbw-edit">
+
+{BEGIN container_edit}
+<div class="rnr-c rnr-cv rnr-c-edit">
+
+{BEGIN editheader}
+<div  class="rnr-brickcontents style2 rnr-b-editheader {$brickclass_editheader}"><span>	{$pagetitlelabel vw_OwnProfile edit}
+</span></div>{END editheader}
+
+
+{BEGIN message_block}
+<div  class="rnr-brickcontents style1 rnr-b-message {$brickclass_message}"><div class="rnr-message">{$message}</div></div>{END message_block}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fields} rnr-wrapper rnr-cbw-fields">
+
+{BEGIN container_fields}
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-editfields2_atop {$brickclass_editfields2_atop}"><table class="fieldGrid fieldGrid2 edit">
+
+<tr>
+<td>
+	{BEGIN SpouseName_fieldblock}
+<div data-fieldname="SpouseName" class="rnr-field style1 {$fielddispclass_SpouseName}">
+  <div class="rnr-label above">{BEGIN SpouseName_label}{$label vw_OwnProfile SpouseName}{END SpouseName_label}</div>
+  <div class="rnr-control style3">{$SpouseName_editcontrol}</div>
+</div>
+{END SpouseName_fieldblock}
+	{BEGIN MaritalStatus_fieldblock}
+<div data-fieldname="MaritalStatus" class="rnr-field style1 {$fielddispclass_MaritalStatus}">
+  <div class="rnr-label above">{BEGIN MaritalStatus_label}{$label vw_OwnProfile MaritalStatus}{END MaritalStatus_label}</div>
+  <div class="rnr-control style3">{$MaritalStatus_editcontrol}</div>
+</div>
+{END MaritalStatus_fieldblock}
+	{BEGIN TitleId_fieldblock}
+<div data-fieldname="TitleId" class="rnr-field style1 {$fielddispclass_TitleId}">
+  <div class="rnr-label above">{BEGIN TitleId_label}{$label vw_OwnProfile TitleId}{END TitleId_label}</div>
+  <div class="rnr-control style3">{$TitleId_editcontrol}</div>
+</div>
+{END TitleId_fieldblock}
+	{BEGIN Photo_fieldblock}
+<div data-fieldname="Photo" class="rnr-field style1 {$fielddispclass_Photo}">
+  <div class="rnr-label above">{BEGIN Photo_label}{$label vw_OwnProfile Photo}{END Photo_label}</div>
+  <div class="rnr-control style3">{$Photo_editcontrol}</div>
+</div>
+{END Photo_fieldblock}
+	{BEGIN FirstName_fieldblock}
+<div data-fieldname="FirstName" class="rnr-field style1 {$fielddispclass_FirstName}">
+  <div class="rnr-label above">{BEGIN FirstName_label}{$label vw_OwnProfile FirstName}{END FirstName_label}</div>
+  <div class="rnr-control style3">{$FirstName_editcontrol}</div>
+</div>
+{END FirstName_fieldblock}
+	{BEGIN LastName_fieldblock}
+<div data-fieldname="LastName" class="rnr-field style1 {$fielddispclass_LastName}">
+  <div class="rnr-label above">{BEGIN LastName_label}{$label vw_OwnProfile LastName}{END LastName_label}</div>
+  <div class="rnr-control style3">{$LastName_editcontrol}</div>
+</div>
+{END LastName_fieldblock}
+	{BEGIN MiddleName_fieldblock}
+<div data-fieldname="MiddleName" class="rnr-field style1 {$fielddispclass_MiddleName}">
+  <div class="rnr-label above">{BEGIN MiddleName_label}{$label vw_OwnProfile MiddleName}{END MiddleName_label}</div>
+  <div class="rnr-control style3">{$MiddleName_editcontrol}</div>
+</div>
+{END MiddleName_fieldblock}
+	{BEGIN Gender_fieldblock}
+<div data-fieldname="Gender" class="rnr-field style1 {$fielddispclass_Gender}">
+  <div class="rnr-label above">{BEGIN Gender_label}{$label vw_OwnProfile Gender}{END Gender_label}</div>
+  <div class="rnr-control style3">{$Gender_editcontrol}</div>
+</div>
+{END Gender_fieldblock}
+</td>
+<td>
+	{BEGIN DateOfBirth_fieldblock}
+<div data-fieldname="DateOfBirth" class="rnr-field style1 {$fielddispclass_DateOfBirth}">
+  <div class="rnr-label above">{BEGIN DateOfBirth_label}{$label vw_OwnProfile DateOfBirth}{END DateOfBirth_label}</div>
+  <div class="rnr-control style3">{$DateOfBirth_editcontrol}</div>
+</div>
+{END DateOfBirth_fieldblock}
+	{BEGIN MaritalStatusId_fieldblock}
+<div data-fieldname="MaritalStatusId" class="rnr-field style1 {$fielddispclass_MaritalStatusId}">
+  <div class="rnr-label above">{BEGIN MaritalStatusId_label}{$label vw_OwnProfile MaritalStatusId}{END MaritalStatusId_label}</div>
+  <div class="rnr-control style3">{$MaritalStatusId_editcontrol}</div>
+</div>
+{END MaritalStatusId_fieldblock}
+	{BEGIN DateofMarriage_fieldblock}
+<div data-fieldname="DateofMarriage" class="rnr-field style1 {$fielddispclass_DateofMarriage}">
+  <div class="rnr-label above">{BEGIN DateofMarriage_label}{$label vw_OwnProfile DateofMarriage}{END DateofMarriage_label}</div>
+  <div class="rnr-control style3">{$DateofMarriage_editcontrol}</div>
+</div>
+{END DateofMarriage_fieldblock}
+	{BEGIN SpouseDevoteeId_fieldblock}
+<div data-fieldname="SpouseDevoteeId" class="rnr-field style1 {$fielddispclass_SpouseDevoteeId}">
+  <div class="rnr-label above">{BEGIN SpouseDevoteeId_label}{$label vw_OwnProfile SpouseDevoteeId}{END SpouseDevoteeId_label}</div>
+  <div class="rnr-control style3">{$SpouseDevoteeId_editcontrol}</div>
+</div>
+{END SpouseDevoteeId_fieldblock}
+	{BEGIN MobilePhone_fieldblock}
+<div data-fieldname="MobilePhone" class="rnr-field style1 {$fielddispclass_MobilePhone}">
+  <div class="rnr-label above">{BEGIN MobilePhone_label}{$label vw_OwnProfile MobilePhone}{END MobilePhone_label}</div>
+  <div class="rnr-control style3">{$MobilePhone_editcontrol}</div>
+</div>
+{END MobilePhone_fieldblock}
+	{BEGIN WorkPhone_fieldblock}
+<div data-fieldname="WorkPhone" class="rnr-field style1 {$fielddispclass_WorkPhone}">
+  <div class="rnr-label above">{BEGIN WorkPhone_label}{$label vw_OwnProfile WorkPhone}{END WorkPhone_label}</div>
+  <div class="rnr-control style3">{$WorkPhone_editcontrol}</div>
+</div>
+{END WorkPhone_fieldblock}
+	{BEGIN EmailPrimary_fieldblock}
+<div data-fieldname="EmailPrimary" class="rnr-field style1 {$fielddispclass_EmailPrimary}">
+  <div class="rnr-label above">{BEGIN EmailPrimary_label}{$label vw_OwnProfile EmailPrimary}{END EmailPrimary_label}</div>
+  <div class="rnr-control style3">{$EmailPrimary_editcontrol}</div>
+</div>
+{END EmailPrimary_fieldblock}
+	{BEGIN EmailSecondary_fieldblock}
+<div data-fieldname="EmailSecondary" class="rnr-field style1 {$fielddispclass_EmailSecondary}">
+  <div class="rnr-label above">{BEGIN EmailSecondary_label}{$label vw_OwnProfile EmailSecondary}{END EmailSecondary_label}</div>
+  <div class="rnr-control style3">{$EmailSecondary_editcontrol}</div>
+</div>
+{END EmailSecondary_fieldblock}
+</td>
+</tr>
+</table></div>
+
+
+{BEGIN editbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-editbuttons {$brickclass_editbuttons}"><div class="rnr-buttons-right">
+{BEGIN prev_button}
+<a href="#" class="rnr-button {$prevbutton_class}" {$prevbutton_attrs}>&lt;&lt;&lt;</a>
+{END prev_button}
+{BEGIN next_button}
+<a href="#" class="rnr-button  {$nextbutton_class}" {$nextbutton_attrs}>&gt;&gt;&gt;</a>
+{END next_button}
+</div>
+<div class="rnr-buttons-left">
+{BEGIN save_button}
+<a href="#" class="rnr-button main" {$savebutton_attrs}>Save</a>
+{END save_button}
+{BEGIN reset_button}
+<a href="#" class="rnr-button" {$resetbutton_attrs}>Reset</a>
+{END reset_button}
+{BEGIN back_button}
+<a href="#" class="rnr-button" {$backbutton_attrs}>Back to list</a>
+{END back_button}
+{BEGIN close_button}
+<a href="#" class="rnr-button" {$closebutton_attrs}>Close window</a>
+{END close_button}
+{BEGIN view_page_button}
+<a href="#" class="rnr-button" {$view_page_button_attrs}>View</a>
+{END view_page_button}
+</div>
+</div>{END editbuttons}
+
+
+</div>
+{END container_fields}
+
+</div>
+
+
+</div>
+{END container_edit}
+
+</div>
+
+
+
+</div>
+{END container_all}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

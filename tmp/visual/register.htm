@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<HTML {$html_attrs}>
+  <HEAD>
+    <META http-equiv="X-UA-Compatible" content="IE=Edge">
+    <TITLE>
+      {$pagetitle}
+    </TITLE>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <LINK href="styles/default.css" rel="stylesheet" type="text/css">
+    {BEGIN rtlCSS}
+      <LINK href="styles/defaultRTL.css" rel="stylesheet" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <LINK href="{$stylepath}" rel="stylesheet" type="text/css">
+    {END styleCSSFiles}
+    {BEGIN pageCSSFiles}
+      <LINK href="{$pagestylepath}" rel="stylesheet" type="text/css">
+    {END pageCSSFiles}
+    <META name="GENERATOR" content="MSHTML 10.00.9200.16736">
+  </HEAD>
+  <BODY class="{$stylename} function-register" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <DIV class="rnr-page">
+        <DIV class="rnr-top {$blockclass_top}">
+          {BEGIN container_fields}
+            <DIV class="rnr-c rnr-cv rnr-c-fields">
+              {BEGIN regheader}
+                <DIV class="rnr-brickcontents style2 rnr-b-regheader {$brickclass_regheader}">
+                  <SPAN>
+                    {$pagetitlelabel register}
+                  </SPAN>
+                </DIV>
+              {END regheader}
+              {BEGIN message_block}
+                <DIV class="rnr-brickcontents style1 rnr-b-message {$brickclass_message}">
+                  <DIV class="rnr-message">
+                    {$message}
+                  </DIV>
+                </DIV>
+              {END message_block}
+              <DIV class="rnr-brickcontents style1 rnr-b-regfields_simple {$brickclass_regfields_simple}">
+                <DIV class="rnr-simplefields edit register">
+                  {BEGIN EmailPrimary_fieldblock}
+                    <DIV class="rnr-field style1 {$fielddispclass_EmailPrimary}" data-fieldname="EmailPrimary">
+                      <SPAN class="rnr-label">
+                        {BEGIN EmailPrimary_label}
+                          {$label devotee EmailPrimary}
+                        {END EmailPrimary_label}
+                      </SPAN>
+                      <SPAN class="rnr-control style3">
+                        {$EmailPrimary_editcontrol}
+                      </SPAN>
+                    </DIV>
+                  {END EmailPrimary_fieldblock}
+                  {BEGIN _fieldblock}
+                    <DIV class="rnr-field style1 {$fielddispclass_}" data-fieldname>
+                      <SPAN class="rnr-label">
+                        {BEGIN _label}
+                          {$label devotee}
+                        {END _label}
+                      </SPAN>
+                      <SPAN class="rnr-control style3">
+                        {$_editcontrol}
+                      </SPAN>
+                    </DIV>
+                  {END _fieldblock}
+                  {BEGIN Password_fieldblock}
+                    <DIV class="rnr-field style1 {$fielddispclass_Password}" data-fieldname="Password">
+                      <SPAN class="rnr-label">
+                        {BEGIN Password_label}
+                          {$label devotee Password}
+                        {END Password_label}
+                      </SPAN>
+                      <SPAN class="rnr-control style3">
+                        {$Password_editcontrol}
+                      </SPAN>
+                    </DIV>
+                  {END Password_fieldblock}
+                  {BEGIN confirm_block}
+                    <DIV class="rnr-field style1 {$fielddispclass_Password}" data-fieldname="Password">
+                      <SPAN class="rnr-label">
+                        {BEGIN confirm_label}
+                          Re-enter password
+                        {END confirm_label}
+                      </SPAN>
+                      <SPAN class="rnr-control style3">
+                        {$confirm_editcontrol1}
+                      </SPAN>
+                      <DIV class="error">
+                        {$reenter_msg}
+                      </DIV>
+                    </DIV>
+                  {END confirm_block}
+                  {BEGIN FirstName_fieldblock}
+                    <DIV class="rnr-field style1 {$fielddispclass_FirstName}" data-fieldname="FirstName">
+                      <SPAN class="rnr-label">
+                        {BEGIN FirstName_label}
+                          {$label devotee FirstName}
+                        {END FirstName_label}
+                      </SPAN>
+                      <SPAN class="rnr-control style3">
+                        {$FirstName_editcontrol}
+                      </SPAN>
+                    </DIV>
+                  {END FirstName_fieldblock}
+                  {BEGIN LastName_fieldblock}
+                    <DIV class="rnr-field style1 {$fielddispclass_LastName}" data-fieldname="LastName">
+                      <SPAN class="rnr-label">
+                        {BEGIN LastName_label}
+                          {$label devotee LastName}
+                        {END LastName_label}
+                      </SPAN>
+                      <SPAN class="rnr-control style3">
+                        {$LastName_editcontrol}
+                      </SPAN>
+                    </DIV>
+                  {END LastName_fieldblock}
+                  {BEGIN CounsellorDevoteeID_fieldblock}
+                    <DIV class="rnr-field style1 {$fielddispclass_CounsellorDevoteeID}" data-fieldname="CounsellorDevoteeID">
+                      <SPAN class="rnr-label">
+                        {BEGIN CounsellorDevoteeID_label}
+                          {$label devotee CounsellorDevoteeID}
+                        {END CounsellorDevoteeID_label}
+                      </SPAN>
+                      <SPAN 
+class="rnr-control style3">
+                        {$CounsellorDevoteeID_editcontrol}
+                      </SPAN>
+                    </DIV>
+                  {END CounsellorDevoteeID_fieldblock}
+{$event captcha1}
+                </DIV>
+              </DIV>
+              {BEGIN regbuttons}
+                <DIV class="rnr-brickcontents style2 rnr-b-regbuttons {$brickclass_regbuttons}">
+                  <DIV class="rnr-withsidelink">
+                    <A class="rnr-button main" href="#" {$submit_attrs}>
+                      Register
+                    </A>
+                    <A class="rnr-button link rnr-sidelink" href="login.php" {$backlink_attrs}>
+                      Back to login page
+                    </A>
+                  </DIV>
+                </DIV>
+              {END regbuttons}
+            </DIV>
+          {END container_fields}
+        </DIV>
+        <DIV class="rnr-middle">
+          <DIV class="rnr-left {$blockclass_left}">
+          </DIV>
+          <DIV class="rnr-center {$blockclass_center}">
+          </DIV>
+          <DIV class="rnr-right {$blockclass_right}">
+          </DIV>
+        </DIV>
+        <DIV class="rnr-bottom {$blockclass_bottom}">
+          <!--%%bottom%%-->
+        </DIV>
+      </DIV>
+      {$footer}
+    {END body}
+  </BODY>
+</HTML>

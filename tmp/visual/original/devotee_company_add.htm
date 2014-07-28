@@ -1,0 +1,139 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_all}
+<div class="rnr-c rnr-cv rnr-c-all">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_add} rnr-wrapper rnr-cbw-add">
+
+{BEGIN container_add}
+<div class="rnr-c rnr-cv rnr-c-add">
+
+{BEGIN addheader}
+<div  class="rnr-brickcontents style2 rnr-b-addheader {$brickclass_addheader}"><span>	{$pagetitlelabel devotee_company add}
+</span></div>{END addheader}
+
+
+{BEGIN message_block}
+<div  class="rnr-brickcontents style1 rnr-b-message {$brickclass_message}"><div class="rnr-message">{$message}</div></div>{END message_block}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fields} rnr-wrapper rnr-cbw-fields">
+
+{BEGIN container_fields}
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-addfields2_atop {$brickclass_addfields2_atop}"><table class="fieldGrid fieldGrid2 edit">
+
+<tr>
+<td>
+	{BEGIN CompanyId_fieldblock}
+<div data-fieldname="CompanyId" class="rnr-field style1 {$fielddispclass_CompanyId}">
+  <div class="rnr-label above">{BEGIN CompanyId_label}{$label devotee_company CompanyId}{END CompanyId_label}</div>
+  <div class="rnr-control style3">{$CompanyId_editcontrol}</div>
+</div>
+{END CompanyId_fieldblock}
+	{BEGIN FromDate_fieldblock}
+<div data-fieldname="FromDate" class="rnr-field style1 {$fielddispclass_FromDate}">
+  <div class="rnr-label above">{BEGIN FromDate_label}{$label devotee_company FromDate}{END FromDate_label}</div>
+  <div class="rnr-control style3">{$FromDate_editcontrol}</div>
+</div>
+{END FromDate_fieldblock}
+</td>
+<td>
+	{BEGIN ToDate_fieldblock}
+<div data-fieldname="ToDate" class="rnr-field style1 {$fielddispclass_ToDate}">
+  <div class="rnr-label above">{BEGIN ToDate_label}{$label devotee_company ToDate}{END ToDate_label}</div>
+  <div class="rnr-control style3">{$ToDate_editcontrol}</div>
+</div>
+{END ToDate_fieldblock}
+	{BEGIN Designation_fieldblock}
+<div data-fieldname="Designation" class="rnr-field style1 {$fielddispclass_Designation}">
+  <div class="rnr-label above">{BEGIN Designation_label}{$label devotee_company Designation}{END Designation_label}</div>
+  <div class="rnr-control style3">{$Designation_editcontrol}</div>
+</div>
+{END Designation_fieldblock}
+</td>
+</tr>
+</table></div>
+
+
+{BEGIN addbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-addbuttons {$brickclass_addbuttons}">{BEGIN save_button}
+<a href="#" class="rnr-button main" {$savebutton_attrs}>Save</a>
+{END save_button}
+{BEGIN cancel_button}
+<a href="#" class="rnr-button" {$cancelbutton_attrs}>Cancel</a>
+{END cancel_button}
+{BEGIN back_button}
+<a href="#" class="rnr-button" {$backbutton_attrs}>Back to list</a>
+{END back_button}
+{BEGIN backToMenu_button}
+<a href="#" class="rnr-button" {$backToMenubutton_attrs}>Back to menu</a>
+{END backToMenu_button}</div>{END addbuttons}
+
+
+</div>
+{END container_fields}
+
+</div>
+
+
+</div>
+{END container_add}
+
+</div>
+
+
+
+</div>
+{END container_all}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,121 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-register" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_fields}
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+{BEGIN regheader}
+<div  class="rnr-brickcontents style2 rnr-b-regheader {$brickclass_regheader}"><span>	{$pagetitlelabel  register}
+</span></div>{END regheader}
+
+
+{BEGIN message_block}
+<div  class="rnr-brickcontents style1 rnr-b-message {$brickclass_message}"><div class="rnr-message">{$message}</div></div>{END message_block}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-regfields_simple {$brickclass_regfields_simple}"><div class="rnr-simplefields edit register">
+	{BEGIN EmailPrimary_fieldblock}
+<div data-fieldname="EmailPrimary" class="rnr-field style1 {$fielddispclass_EmailPrimary}">
+  <span class="rnr-label">{BEGIN EmailPrimary_label}{$label devotee EmailPrimary}{END EmailPrimary_label}</span>
+  <span class="rnr-control style3">{$EmailPrimary_editcontrol}</span>
+</div>
+{END EmailPrimary_fieldblock}
+	{BEGIN _fieldblock}
+<div data-fieldname="" class="rnr-field style1 {$fielddispclass_}">
+  <span class="rnr-label">{BEGIN _label}{$label devotee }{END _label}</span>
+  <span class="rnr-control style3">{$_editcontrol}</span>
+</div>
+{END _fieldblock}
+	{BEGIN Password_fieldblock}
+<div data-fieldname="Password" class="rnr-field style1 {$fielddispclass_Password}">
+  <span class="rnr-label">{BEGIN Password_label}{$label devotee Password}{END Password_label}</span>
+  <span class="rnr-control style3">{$Password_editcontrol}</span>
+</div>
+{END Password_fieldblock}
+	{BEGIN confirm_block}
+<div data-fieldname="Password" class="rnr-field style1 {$fielddispclass_Password}">
+  <span class="rnr-label">{BEGIN confirm_label}Re-enter password{END confirm_label}</span>
+  <span class="rnr-control style3">{$confirm_editcontrol1}</span>
+	<div class="error">{$reenter_msg}</div>
+
+</div>
+{END confirm_block}
+	{BEGIN FirstName_fieldblock}
+<div data-fieldname="FirstName" class="rnr-field style1 {$fielddispclass_FirstName}">
+  <span class="rnr-label">{BEGIN FirstName_label}{$label devotee FirstName}{END FirstName_label}</span>
+  <span class="rnr-control style3">{$FirstName_editcontrol}</span>
+</div>
+{END FirstName_fieldblock}
+	{BEGIN LastName_fieldblock}
+<div data-fieldname="LastName" class="rnr-field style1 {$fielddispclass_LastName}">
+  <span class="rnr-label">{BEGIN LastName_label}{$label devotee LastName}{END LastName_label}</span>
+  <span class="rnr-control style3">{$LastName_editcontrol}</span>
+</div>
+{END LastName_fieldblock}
+	{BEGIN CounsellorDevoteeID_fieldblock}
+<div data-fieldname="CounsellorDevoteeID" class="rnr-field style1 {$fielddispclass_CounsellorDevoteeID}">
+  <span class="rnr-label">{BEGIN CounsellorDevoteeID_label}{$label devotee CounsellorDevoteeID}{END CounsellorDevoteeID_label}</span>
+  <span class="rnr-control style3">{$CounsellorDevoteeID_editcontrol}</span>
+</div>
+{END CounsellorDevoteeID_fieldblock}
+</div></div>
+
+
+{BEGIN regbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-regbuttons {$brickclass_regbuttons}"><div class="rnr-withsidelink">
+	<a href="#" class="rnr-button main" {$submit_attrs}>Register</a>
+	<a href="login.php" class="rnr-button link rnr-sidelink" {$backlink_attrs}>Back to login page</a>
+</div>
+
+</div>{END regbuttons}
+
+
+</div>
+{END container_fields}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>
